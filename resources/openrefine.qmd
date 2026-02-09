@@ -54,6 +54,7 @@ subtitle: "Data Cleaning & Transformation for SSH Research"
   - GREL expressions
 
 **Written lesson:**
+
 - **URL:** <https://librarycarpentry.org/lc-open-refine/>
 - **Self-paced:** 3-4 hours
 - **Includes:** Practice datasets
@@ -228,7 +229,8 @@ subtitle: "Data Cleaning & Transformation for SSH Research"
 - **Reconciliation** to match authority records
 
 **Example workflow:**
-```
+
+```txt
 1. Import metadata CSV
 2. Cluster names (Edit cells > Cluster and edit)
 3. Standardize dates (Transform > value.toDate())

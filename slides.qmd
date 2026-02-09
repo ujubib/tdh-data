@@ -1,16 +1,17 @@
 ---
-title: "Organize, Clean & Enrich Data"
-subtitle: "With Archifiltre and OpenRefine"
+title: "Personal and Research Data Management"
+subtitle: "Organize, Clean & Enrich<br> (With Archifiltre and OpenRefine)"
 author: "Julien Rabaud"
 institute: "SCD & Pôle Numérique - UPPA"
 date: "February 9, 2026"
 format:
   revealjs:
     logo: img/logoUPPA-RepFr.png
-    theme: default
+    theme: [default, custom.scss]
     slide-number: true
     chalkboard: true
     preview-links: auto
+    code-copy: true
     css: styles.css
     footer: "Personal and Research Data Management: Organize, Clean & Enrich - UPPA SSH Doctoral School"
 ---
@@ -115,7 +116,7 @@ The CARE principles for Indigenous Data Governance (Collective benefit, Authorit
 
 **Good examples:**
 
-```
+```text
 2026-02-09_interview_participant-01_v1.docx
 experiment-data_2026-01_temperature.csv
 thesis_chapter-03_draft-02.pdf
@@ -123,7 +124,7 @@ thesis_chapter-03_draft-02.pdf
 
 **Bad examples:**
 
-```
+```text
 Final.docx
 Final_FINAL.docx
 data.csv
@@ -143,7 +144,7 @@ thesis new version (1).pdf
 
 ## Directory Structure
 
-```
+```text
 my-research-project/
 ├── 01-raw-data/
 ├── 02-processed-data/
@@ -422,7 +423,7 @@ In a real project, you'd decide how to handle duplicates (merge, keep first, etc
 2. Select: `Edit cells` → `Transform...`
 3. Enter expression:
 
-```
+```text
 value.replace("/", "-").replace(" ", "-")
 ```
 
@@ -449,7 +450,7 @@ value.replace("/", "-").replace(" ", "-")
 2. Select: `Edit cells` → `Transform...`
 3. Enter expression:
 
-```
+```txt
 if(value == "N/A", null, value)
 ```
 
@@ -531,10 +532,8 @@ Mention this as bonus for those working with visual materials
 
 **All materials available:**
 
-- Codeberg repository: <https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data>
-- Archifiltre: <https://archifiltre.fabrique.social.gouv.fr>
-- OpenRefine: <https://openrefine.org>
-- DORANum: <https://doranum.fr>
+- Github repository: <https://github.com/ujubib/tdh-data>
+- Companion Website with additional resources: <https://ujubib.github.io/tdh-data>
 
 **Contact:**
 
@@ -551,4 +550,4 @@ Please share your thoughts on today's workshop.
 
 # {.center}
 
-**Good luck with your research data**
+**Good luck with your research data :)**

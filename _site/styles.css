@@ -4,7 +4,6 @@ body {
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
-    text-align: justify;
 }
 figcaption{
     text-align: center;

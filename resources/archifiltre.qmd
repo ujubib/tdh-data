@@ -30,6 +30,7 @@ subtitle: "Archifiltre and Alternatives"
 ::: {.columns}
 ::: {.column width="50%"}
 **Managing sources:**
+
 - Organize interview recordings
 - Track multiple transcription versions
 - Map archival photograph collections
@@ -38,6 +39,7 @@ subtitle: "Archifiltre and Alternatives"
 
 ::: {.column width="50%"}
 **Project documentation:**
+
 - Prepare data for deposit (Zenodo, Nakala)
 - Document for Data Management Plans
 - Clean up before thesis submission

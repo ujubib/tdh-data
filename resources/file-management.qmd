@@ -22,7 +22,7 @@ With projects spanning 3-5 years, involving multiple institutions, and generatin
 ::: {.callout-tip}
 ## Quick Reference: File Naming Rules
 
-1. **Use dates:** YYYY-MM-DD format (ISO 8601) - universal across countries
+1. **Use dates:** `YYYY-MM-DD` format (ISO 8601) - universal across countries
 2. **No spaces:** Use hyphens `-` or underscores `_`
 3. **Be descriptive:** Include project, source, version
 4. **Version numbers:** v01, v02, v03 (not "final")
@@ -46,17 +46,20 @@ With projects spanning 3-5 years, involving multiple institutions, and generatin
 ## DoRANum in English
 
 As of January 2025, DoRANum offers:
+
 - **[9 thematic fact sheets in English](https://doranum.fr/)** (Stor age, File naming, Metadata, etc.)
 - **9 "Minute" videos with English subtitles** (short, practical guides)
 - Discipline-specific learning paths on [Callisto platform](https://callisto.inist.fr/)
 :::
 
 **Key English resources:**
+
 - **General RDM:** [Research Data Management tag](https://doranum.fr/tag/research-data-management-rdm/)
 - **File naming:** Check the fact sheets section (under "Storage and Archiving")
 - **Videos:** [DoRANum Minutes](https://doranum.fr/) - now with English subtitles
 
 **Why DoRANum?**
+
 - Developed for French research community (includes CNRS, ANR requirements)
 - Humanities-friendly (not just STEM-focused)
 - FAIR principles integrated
@@ -73,11 +76,13 @@ As of January 2025, DoRANum offers:
 - **Focus:** Arts, humanities, cultural heritage
 
 **Essential resources:**
+
 - [DARIAH Research Data Management Guide](https://www.dariah.eu/activities/research-data-management/)
 - [PARTHENOS Training Materials](http://training.parthenos-project.eu/) - Cultural heritage specific
 - [Digital Humanities Course Registry](https://registries.clarin-dariah.eu/courses/)
 
 **Best practices documents:**
+
 - File organization for multilingual projects
 - Managing transcriptions and editions
 - Metadata for cultural objects
@@ -93,6 +98,7 @@ As of January 2025, DoRANum offers:
 - **Examples:** By discipline including humanities
 
 **Key takeaways:**
+
 - 3 elements: date, description, version
 - Avoid names >32 characters when possible
 - Document naming conventions in README
@@ -123,7 +129,7 @@ As of January 2025, DoRANum offers:
 
 ### Transcriptions
 
-```
+```txt
 [date]_[source-archive]_[document-id]_transcription_[version].txt
 
 Example:
@@ -132,7 +138,7 @@ Example:
 
 ### Digitized Images
 
-```
+```txt
 [date]_[archive]_[collection]_[item-id]_[folio/page]_[version].jpg
 
 Example:
@@ -141,7 +147,7 @@ Example:
 
 ### Interview Recordings
 
-```
+```txt
 [date]_interview_[participant-id]_[location]_[recorder].mp3
 
 Example:
@@ -150,7 +156,7 @@ Example:
 
 ### 3D Models
 
-```
+```txt
 [date]_[site]_[object-type]_[scan-method]_[processing-stage].obj
 
 Example:
@@ -160,7 +166,7 @@ Example:
 
 ### Metadata Files
 
-```
+```txt
 [date]_[project]_[data-type]_metadata_[version].csv
 
 Example:
@@ -173,7 +179,7 @@ Example:
 
 ### Recommended Structure
 
-```
+```txt
 choral-phd-project/
 ├── 00-admin/
 │   ├── dmp/                     # Data Management Plans
@@ -244,11 +250,13 @@ choral-phd-project/
 **Challenge:** Managing data across multiple work locations
 
 **Solution:**
+
 1. **Primary working storage:** University Nextcloud/cloud (syncs everywhere)
 2. **Local backup:** External hard drive at office or home
 3. **Off-site backup:** Institutional server or Huma-Num
 
 **Best practices:**
+
 - Keep active projects on cloud storage for easy access
 - Carry external drive for large files (videos, high-res images)
 - Test restoration periodically to verify backups work
@@ -281,15 +289,18 @@ choral-phd-project/
 - **Documentation:** <https://documentation.huma-num.fr>
 
 **Two modes:**
+
 - **Storage mode:** Like Nextcloud, for active files
 - **Processing mode:** For data preparation before archiving
 
 **Best for:**
+
 - Humanities-specific workflows
 - Collaboration with researchers outside UPPA
 - Preparing data for long-term archiving
 
 **Also from Huma-Num:**
+
 - **Nakala:** Data repository for research data (FAIR-compliant)
 - **ISIDORE:** Search engine for SSH research
 
@@ -317,6 +328,7 @@ choral-phd-project/
   - FAIR-compliant
 
 **Perfect for:**
+
 - Publishing research data
 - Sharing datasets linked to publications
 - Making CHORAL research outputs discoverable
@@ -331,6 +343,7 @@ choral-phd-project/
 ## Prioritize open, documented formats
 
 Proprietary formats risk obsolescence. Choose formats with:
+
 - Open specifications
 - Wide tool support
 - No licensing restrictions
@@ -362,6 +375,7 @@ Proprietary formats risk obsolescence. Choose formats with:
   - Long-term preservation
 
 **Learning resources:**
+
 - [TEI by Example](https://teibyexample.org/)
 - [Women Writers Project Guide](https://wwp.northeastern.edu/outreach/seminars/)
 - [TEI Course at DARIAH](https://teach.dariah.eu/course/view.php?id=32)
@@ -373,11 +387,13 @@ Proprietary formats risk obsolescence. Choose formats with:
 ### Why DMPs Matter
 
 **Required by:**
+
 - European Commission (Horizon Europe)
 - National funders (ANR, ERC)
 - Many doctoral schools
 
 **A DMP specifies:**
+
 - What data you'll collect/create
 - How it will be stored and backed up
 - Who can access it
@@ -426,6 +442,7 @@ Proprietary formats risk obsolescence. Choose formats with:
 ### Why Metadata Matters
 
 **Without metadata, your data is useless:**
+
 - Where was this photo taken?
 - Who created this document?
 - What do these column headers mean?
@@ -446,6 +463,7 @@ Proprietary formats risk obsolescence. Choose formats with:
 ### Minimal Metadata for Any File
 
 **Always include:**
+
 - **Creator/Author:** Who made this?
 - **Date:** When (YYYY-MM-DD)?
 - **Description:** What is it?
@@ -453,6 +471,7 @@ Proprietary formats risk obsolescence. Choose formats with:
 - **License/Rights:** Can others use it?
 
 **For images, also include:**
+
 - Archive/institution
 - Collection name
 - Shelfmark/identifier
@@ -585,18 +604,22 @@ Example: `YYYY-MM-DD_source_description_version.ext`
 ## Support Resources
 
 **At UPPA:**
+
 - Julien Rabaud (SCD & Pôle Numérique): [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
 - Research Data Management support
 
 **National (France):**
+
 - [DoRANum FAQ](https://doranum.fr/faq-donnees-recherche/)
 - [Huma-Num support](https://www.huma-num.fr/nous-contacter)
 
 **European:**
+
 - [DARIAH Helpdesk](https://www.dariah.eu/helpdesk/)
 - [CLARIN Service Centres](https://www.clarin.eu/content/service-centres)
 
 **International:**
+
 - [Research Data Alliance](https://www.rd-alliance.org/) - Global community
 - [DH Slack channels](https://digitalhumanities.slack.com/)
 :::

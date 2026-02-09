@@ -45,7 +45,7 @@ site-date: 2026-02-09
 
 format:
   html:
-    theme: journal
+    theme: [journal, custom.scss]
     css: styles.css
     backgroundcolor: FloralWhite
     lang: en
@@ -56,8 +56,3 @@ format:
     link-external-newwindow: true
     reference-location: margin
     number-sections: false
-    grid:
-      sidebar-width: 300px
-      body-width: 900px
-      margin-width: 300px
-      gutter-width: 1.5rem

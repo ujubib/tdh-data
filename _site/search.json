@@ -2,7 +2,7 @@
   {
     "objectID": "slides.html#todays-agenda",
     "href": "slides.html#todays-agenda",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Today’s Agenda",
     "text": "Today’s Agenda\n\nIntroduction: Research data & FAIR principles (10 min)\nArchifiltre: Explore your data organization (20 min)\nBreak (5 min)\nStoring & Backing up: Best practices (20 min)\nOpenRefine: Hands-on data cleaning (60 min)\nQ&A & Wrap-up (5 min)",
     "crumbs": [
@@ -13,7 +13,7 @@
   {
     "objectID": "slides.html#learning-objectives",
     "href": "slides.html#learning-objectives",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Learning Objectives",
     "text": "Learning Objectives\nBy the end of this workshop, you will be able to:\n\nUnderstand key methods for organizing research data\nEffectively sort and structure your datasets\nUse powerful tools for data cleaning and quality control",
     "crumbs": [
@@ -24,7 +24,7 @@
   {
     "objectID": "slides.html#what-are-research-data",
     "href": "slides.html#what-are-research-data",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "What are Research Data?",
     "text": "What are Research Data?\n\nFactual records (numerical scores, textual records, images and sound) used as primary sources for scientific research, and that are commonly accepted in the scientific community as necessary to validate research findings.\n\nSource : OECD, OECD Principles and Guidelines for Access to Research Data from Public Funding, Paris, 2007\n\nOECD definition (2007)",
     "crumbs": [
@@ -35,7 +35,7 @@
   {
     "objectID": "slides.html#the-research-data-lifecycle",
     "href": "slides.html#the-research-data-lifecycle",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "The Research Data Lifecycle",
     "text": "The Research Data Lifecycle\n\nSource: Callisto",
     "crumbs": [
@@ -46,7 +46,7 @@
   {
     "objectID": "slides.html#fair-principles",
     "href": "slides.html#fair-principles",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "FAIR Principles",
     "text": "FAIR Principles\n\nImage credit: ARDC licensed under a Creative Commons Attribution 4.0 International License",
     "crumbs": [
@@ -57,7 +57,7 @@
   {
     "objectID": "slides.html#fair-principles-explained",
     "href": "slides.html#fair-principles-explained",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "FAIR Principles Explained",
     "text": "FAIR Principles Explained\n\n\nFindable\n\nPersistent identifiers\nRich metadata\n\nAccessible\n\nOpen protocols\nClear access conditions\n\n\nInteroperable\n\nStandard formats\nVocabularies & ontologies\n\nReusable\n\nClear licensing\nProvenance information",
     "crumbs": [
@@ -68,7 +68,7 @@
   {
     "objectID": "slides.html#why-this-matters",
     "href": "slides.html#why-this-matters",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Why This Matters",
     "text": "Why This Matters\n\nReproducibility of research\nCollaboration with colleagues\nCompliance with funder requirements\nLong-term preservation of your work\nIncreased visibility and citations",
     "crumbs": [
@@ -79,7 +79,7 @@
   {
     "objectID": "slides.html#fair-open",
     "href": "slides.html#fair-open",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "FAIR / OPEN",
     "text": "FAIR / OPEN\n\nImage source : Consortium of European Social Science Data Archives (CESSDA)",
     "crumbs": [
@@ -90,7 +90,7 @@
   {
     "objectID": "slides.html#fair-care",
     "href": "slides.html#fair-care",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "FAIR / CARE",
     "text": "FAIR / CARE\n\nImage source : Consortium of European Social Science Data Archives (CESSDA)\nThe CARE principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility, and Ethics) specifically concern Indigenous data and govern the control and (re)use of such data under the principles of open science (Carroll et al. 2020). For instance, the Collective Benefit principle states that data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive benefit from the data, e.g. for improved government and citizen engagement. The CARE principles are complementary to the FAIR principles, under the motto ‘be FAIR and CARE’ (Carroll et al. 2020).",
     "crumbs": [
@@ -101,7 +101,7 @@
   {
     "objectID": "slides.html#file-naming-conventions",
     "href": "slides.html#file-naming-conventions",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "File Naming Conventions",
     "text": "File Naming Conventions\nGood examples:\n2026-02-09_interview_participant-01_v1.docx\nexperiment-data_2026-01_temperature.csv\nthesis_chapter-03_draft-02.pdf\nBad examples:\nFinal.docx\nFinal_FINAL.docx\ndata.csv\nthesis new version (1).pdf",
     "crumbs": [
@@ -112,7 +112,7 @@
   {
     "objectID": "slides.html#file-naming-rules",
     "href": "slides.html#file-naming-rules",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "File Naming Rules",
     "text": "File Naming Rules\n\nUse dates: YYYY-MM-DD format (ISO 8601)\nNo spaces: use hyphens - or underscores _\nBe descriptive: but concise\nVersion numbers: v01, v02 or draft-01, draft-02\nAvoid special characters: é, à, /, , ?, *, etc.\nUse lowercase: for consistency",
     "crumbs": [
@@ -123,7 +123,7 @@
   {
     "objectID": "slides.html#directory-structure",
     "href": "slides.html#directory-structure",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Directory Structure",
     "text": "Directory Structure\nmy-research-project/\n├── 01-raw-data/\n├── 02-processed-data/\n├── 03-analysis/\n├── 04-results/\n├── 05-manuscripts/\n├── documentation/\n│   ├── codebook.md\n│   └── README.md\n└── archive/",
     "crumbs": [
@@ -134,7 +134,7 @@
   {
     "objectID": "slides.html#what-is-archifiltre",
     "href": "slides.html#what-is-archifiltre",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "What is Archifiltre?",
     "text": "What is Archifiltre?\n\nArchifiltre is a free tool to:\n\nVisualize your file tree structure\nIdentify duplicates and unused files\nClean up your directories\nDocument your data organization\nPrepare data for archiving or sharing",
     "crumbs": [
@@ -145,7 +145,7 @@
   {
     "objectID": "slides.html#archifiltre-features",
     "href": "slides.html#archifiltre-features",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Archifiltre Features",
     "text": "Archifiltre Features\n\n\nVisual Analysis\n\nInteractive treemap\nFile size visualization\nDate analysis\nType distribution\n\n\nPractical Tools\n\nDuplicate detection\nBatch operations\nTagging system\nExport reports",
     "crumbs": [
@@ -156,7 +156,7 @@
   {
     "objectID": "slides.html#live-demo-archifiltre",
     "href": "slides.html#live-demo-archifiltre",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Live Demo: Archifiltre",
     "text": "Live Demo: Archifiltre\n\n\n\n\n\n\nFollow along!\n\n\n\nOpen Archifiltre on your computer\nSelect a research folder to analyze\nExplore the visualization\n\n\n\n\nWhat to look for:\n\nLarge files taking up space\nOld files not modified recently\nDuplicate files\nPoorly organized subdirectories",
     "crumbs": [
@@ -167,7 +167,7 @@
   {
     "objectID": "slides.html#hands-on-exercise-10-min",
     "href": "slides.html#hands-on-exercise-10-min",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Hands-On Exercise (10 min)",
     "text": "Hands-On Exercise (10 min)\n\nChoose one of your research folders\nLoad it into Archifiltre\nIdentify:\n\nDuplicates\nFiles you could delete or archive\nFolders that need reorganization\n\n\n\n\n\n\n\n\nTip\n\n\nDon’t delete anything yet! Just explore and take notes.",
     "crumbs": [
@@ -178,7 +178,7 @@
   {
     "objectID": "slides.html#the-3-2-1-backup-rule",
     "href": "slides.html#the-3-2-1-backup-rule",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "The 3-2-1 Backup Rule",
     "text": "The 3-2-1 Backup Rule\n\n\n3 copies of your data\nOn 2 different media types\nWith 1 copy off-site",
     "crumbs": [
@@ -189,7 +189,7 @@
   {
     "objectID": "slides.html#storage-solutions-at-uppa",
     "href": "slides.html#storage-solutions-at-uppa",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Storage Solutions at UPPA",
     "text": "Storage Solutions at UPPA\nNuage (Nextcloud)\n\nhttps://nuage.univ-pau.fr\nUniversity-hosted cloud storage\nSync clients for desktop & mobile\nCollaborative features\n\n\n\n\n\n\n\nNote\n\n\nIdeal for active research data and collaboration",
     "crumbs": [
@@ -200,7 +200,7 @@
   {
     "objectID": "slides.html#national-solutions-huma-num",
     "href": "slides.html#national-solutions-huma-num",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "National Solutions: Huma-Num",
     "text": "National Solutions: Huma-Num\nShareDocs\n\nFor humanities & social sciences researchers\nFileRun-based platform\nCompatible with Nextcloud clients\nDocumentation: https://documentation.huma-num.fr",
     "crumbs": [
@@ -211,7 +211,7 @@
   {
     "objectID": "slides.html#file-formats-for-preservation",
     "href": "slides.html#file-formats-for-preservation",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "File Formats for Preservation",
     "text": "File Formats for Preservation\n\n\nPreferred formats:\n\nText: .txt, .pdf/A, .xml\nImages: .tiff, .png, .jpg\nData: .csv, .json, .xml\nVideo: .mp4, .mkv\n\n\nAvoid if possible:\n\nProprietary formats\nOutdated formats\nFormats requiring specific software\nEncrypted formats (for archiving)",
     "crumbs": [
@@ -222,7 +222,7 @@
   {
     "objectID": "slides.html#resources",
     "href": "slides.html#resources",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Resources",
     "text": "Resources\n\n\n\n\n\n\nDORANum - French Research Data Portal\n\n\n\nFile naming guide: https://doranum.fr\nStorage & archiving best practices\nFormat recommendations\nVideo tutorials (in French)\n\n\n\n\n\n\n\n\n\n\nStanford - University Libraries\n\n\n\nData best practices and case studies\nName files\nFormat files\nSensitive data",
     "crumbs": [
@@ -233,7 +233,7 @@
   {
     "objectID": "slides.html#what-is-openrefine",
     "href": "slides.html#what-is-openrefine",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "What is OpenRefine?",
     "text": "What is OpenRefine?\n\nOpenRefine is a powerful tool for:\n\nCleaning messy data\nTransforming data formats\nReconciling data with external sources\nExtending data with additional information",
     "crumbs": [
@@ -244,7 +244,7 @@
   {
     "objectID": "slides.html#why-use-openrefine",
     "href": "slides.html#why-use-openrefine",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Why Use OpenRefine?",
     "text": "Why Use OpenRefine?\n\nWorks with large datasets (millions of rows)\nNon-destructive: keeps history of all operations\nReproducible: export and reuse cleaning scripts\nNo programming required (but supports expressions)\nFree and open-source",
     "crumbs": [
@@ -255,7 +255,7 @@
   {
     "objectID": "slides.html#common-data-quality-issues",
     "href": "slides.html#common-data-quality-issues",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Common Data Quality Issues",
     "text": "Common Data Quality Issues\n\n\nStructure issues:\n\nInconsistent formatting\nExtra whitespace\nMixed case (UPPER/lower)\nWrong data types\n\n\nContent issues:\n\nDuplicates\nMissing values\nSpelling variations\nInconsistent dates",
     "crumbs": [
@@ -266,7 +266,7 @@
   {
     "objectID": "slides.html#live-demo-openrefine-interface",
     "href": "slides.html#live-demo-openrefine-interface",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Live Demo: OpenRefine Interface",
     "text": "Live Demo: OpenRefine Interface\nKey components:\n\nProject creation\nData preview\nFacets & filters\nCell transformations\nHistory & undo",
     "crumbs": [
@@ -277,7 +277,7 @@
   {
     "objectID": "slides.html#hands-on-exercise-dirty-data",
     "href": "slides.html#hands-on-exercise-dirty-data",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Hands-On Exercise: Dirty Data",
     "text": "Hands-On Exercise: Dirty Data\nWe’ll clean a messy dataset together\n\n\nDownload dirty_data.csv\n\n\nIssues in the data:\n\nName: inconsistent capitalization, extra spaces\nEmail: duplicates\nDate: multiple formats, missing values\nCountry: inconsistent capitalization\nScore: “N/A” values mixed with numbers",
     "crumbs": [
@@ -288,7 +288,7 @@
   {
     "objectID": "slides.html#step-1-load-the-data",
     "href": "slides.html#step-1-load-the-data",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 1: Load the Data",
     "text": "Step 1: Load the Data\n\nClick “Create Project”\nChoose “This Computer”\nSelect dirty_data.csv\nClick “Next”\nVerify preview and click “Create Project”",
     "crumbs": [
@@ -299,7 +299,7 @@
   {
     "objectID": "slides.html#step-2-clean-the-name-column",
     "href": "slides.html#step-2-clean-the-name-column",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 2: Clean the “Name” Column",
     "text": "Step 2: Clean the “Name” Column\nRemove extra whitespace:\n\nClick dropdown on “Name” column\nSelect: Edit cells → Common transforms → Trim leading and trailing whitespace\n\nStandardize capitalization:\n\nSame menu: Common transforms → To titlecase",
     "crumbs": [
@@ -310,7 +310,7 @@
   {
     "objectID": "slides.html#step-3-find-duplicates-in-email",
     "href": "slides.html#step-3-find-duplicates-in-email",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 3: Find Duplicates in “Email”",
     "text": "Step 3: Find Duplicates in “Email”\n\nClick dropdown on “Email” column\nSelect: Facet → Text facet\nLook at the facet panel (left side)\nClick on “Sort by: count”\nDuplicates appear at the top!\n\n\n\n\n\n\n\nTip\n\n\nIn a real project, you’d decide how to handle duplicates (merge, keep first, etc.)",
     "crumbs": [
@@ -321,7 +321,7 @@
   {
     "objectID": "slides.html#step-4-standardize-dates",
     "href": "slides.html#step-4-standardize-dates",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 4: Standardize Dates",
     "text": "Step 4: Standardize Dates\nTransform date format:\n\nClick dropdown on “Date d’inscription” column\nSelect: Edit cells → Transform...\nEnter expression:\n\nvalue.replace(\"/\", \"-\").replace(\" \", \"-\")\n\nPreview and click OK",
     "crumbs": [
@@ -332,7 +332,7 @@
   {
     "objectID": "slides.html#step-5-clean-country-column",
     "href": "slides.html#step-5-clean-country-column",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 5: Clean “Country” Column",
     "text": "Step 5: Clean “Country” Column\nCombine operations:\n\nClick dropdown on “Country” column\nTrim whitespace (as before)\nApply titlecase (as before)\n\nCheck results with facet:\n\nFacet → Text facet\nVerify all countries are now standardized",
     "crumbs": [
@@ -343,7 +343,7 @@
   {
     "objectID": "slides.html#step-6-fix-score-column",
     "href": "slides.html#step-6-fix-score-column",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 6: Fix “Score” Column",
     "text": "Step 6: Fix “Score” Column\nReplace “N/A” with null:\n\nClick dropdown on “Score” column\nSelect: Edit cells → Transform...\nEnter expression:\n\nif(value == \"N/A\", null, value)\n\nClick OK",
     "crumbs": [
@@ -354,7 +354,7 @@
   {
     "objectID": "slides.html#step-7-export-clean-data",
     "href": "slides.html#step-7-export-clean-data",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Step 7: Export Clean Data",
     "text": "Step 7: Export Clean Data\n\nClick “Export” (top right)\nChoose format: “Comma-separated value”\nSave as clean_data.csv\n\nDon’t forget:\n\nYou can export your cleaning operations (JSON) to reuse them!\nClick Undo / Redo tab → Extract...",
     "crumbs": [
@@ -365,7 +365,7 @@
   {
     "objectID": "slides.html#openrefine-best-practices",
     "href": "slides.html#openrefine-best-practices",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "OpenRefine Best Practices",
     "text": "OpenRefine Best Practices\n\nAlways work on a copy of your data\nUse facets to explore data before transforming\nCheck the preview before applying transformations\nTake notes of your cleaning steps\nExport operations for reproducibility\nValidate results after each major transformation",
     "crumbs": [
@@ -376,7 +376,7 @@
   {
     "objectID": "slides.html#going-further-with-openrefine",
     "href": "slides.html#going-further-with-openrefine",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Going Further with OpenRefine",
     "text": "Going Further with OpenRefine\nAdvanced features:\n\nReconciliation: match your data with Wikidata, VIAF, etc.\nClustering: find similar values automatically\nGREL expressions: powerful transformation language\nAPI calls: enrich data from external sources\n\nLearn more:\n\nProgramming Historian tutorials\nOpenRefine documentation: https://openrefine.org/docs",
     "crumbs": [
@@ -387,7 +387,7 @@
   {
     "objectID": "slides.html#what-we-covered-today",
     "href": "slides.html#what-we-covered-today",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "What We Covered Today",
     "text": "What We Covered Today\n\nResearch data & FAIR principles\nFile organization best practices\nArchifiltre for visualizing & organizing\nStorage & backup strategies\nOpenRefine for data cleaning",
     "crumbs": [
@@ -398,7 +398,7 @@
   {
     "objectID": "slides.html#key-takeaways",
     "href": "slides.html#key-takeaways",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\n\n\n\n\n\nRemember\n\n\n\nOrganize early: don’t wait until you have chaos\nName carefully: your future self will thank you\nBackup regularly: 3-2-1 rule\nClean systematically: use tools like OpenRefine\nDocument everything: README files are your friends",
     "crumbs": [
@@ -409,7 +409,7 @@
   {
     "objectID": "slides.html#additional-tools-to-explore",
     "href": "slides.html#additional-tools-to-explore",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Additional Tools to Explore",
     "text": "Additional Tools to Explore\nTropy - for organizing research images\n\nhttps://tropy.org\nPerfect for archival photos, scanned documents\nPowerfull built-in metadata management\n\n\nMention this as bonus for those working with visual materials",
     "crumbs": [
@@ -420,9 +420,9 @@
   {
     "objectID": "slides.html#resources-documentation",
     "href": "slides.html#resources-documentation",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Resources & Documentation",
-    "text": "Resources & Documentation\nAll materials available:\n\nCodeberg repository: https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data\nArchifiltre: https://archifiltre.fabrique.social.gouv.fr\nOpenRefine: https://openrefine.org\nDORANum: https://doranum.fr\n\nContact:\n\njulien.rabaud@univ-pau.fr",
+    "text": "Resources & Documentation\nAll materials available:\n\nGithub repository: https://github.com/ujubib/tdh-data\nCompanion Website with additional resources: https://ujubib.github.io/tdh-data\n\nContact:\n\njulien.rabaud@univ-pau.fr",
     "crumbs": [
       "Workshop",
       "Slides"
@@ -431,7 +431,7 @@
   {
     "objectID": "slides.html#questions",
     "href": "slides.html#questions",
-    "title": "Organize, Clean & Enrich Data",
+    "title": "Personal and Research Data Management",
     "section": "Questions?",
     "text": "Questions?\nThank you for your participation\n\n\n\n\n\n\nFeedback\n\n\nPlease share your thoughts on today’s workshop.",
     "crumbs": [
@@ -477,7 +477,7 @@
     "href": "resources/file-management.html#comprehensive-guides---international",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Comprehensive Guides - International",
-    "text": "Comprehensive Guides - International\n\n1. DoRANum Resources (French Platform - English Available)\nDoRANum (Données de la Recherche: Apprentissage Numérique) - France’s premier research data management platform.\n\n\n\n\n\n\nNoteDoRANum in English\n\n\n\nAs of January 2025, DoRANum offers: - 9 thematic fact sheets in English (Stor age, File naming, Metadata, etc.) - 9 “Minute” videos with English subtitles (short, practical guides) - Discipline-specific learning paths on Callisto platform\n\n\nKey English resources: - General RDM: Research Data Management tag - File naming: Check the fact sheets section (under “Storage and Archiving”) - Videos: DoRANum Minutes - now with English subtitles\nWhy DoRANum? - Developed for French research community (includes CNRS, ANR requirements) - Humanities-friendly (not just STEM-focused) - FAIR principles integrated - Free and openly licensed\n\n\n\n2. DARIAH-EU - Digital Research Infrastructure for Arts & Humanities\nThe European reference for DH data management\n\nLink: https://www.dariah.eu/\nTraining materials: https://campus.dariah.eu/\nFocus: Arts, humanities, cultural heritage\n\nEssential resources: - DARIAH Research Data Management Guide - PARTHENOS Training Materials - Cultural heritage specific - Digital Humanities Course Registry\nBest practices documents: - File organization for multilingual projects - Managing transcriptions and editions - Metadata for cultural objects\n\n\n\n3. Stanford Libraries - File Naming Best Practices\nClear, practical, with examples\n\nLink: https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming\nCovers: Basic rules, versioning, sequential numbering\nExamples: By discipline including humanities\n\nKey takeaways: - 3 elements: date, description, version - Avoid names &gt;32 characters when possible - Document naming conventions in README\n\n\n\n4. UK Data Service - Organizing Data\nComprehensive, humanities-inclusive\n\nLink: https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/\nStrength: Examples from social sciences and humanities\nIncludes: Large project workflows, team collaboration\n\n\n\n\n5. Edinburgh Research Data Service\nDetailed with discipline-specific examples\n\nLink: https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming\nPDF Guide: File Naming Conventions\nHighlights: Templates you can adapt, common pitfalls",
+    "text": "Comprehensive Guides - International\n\n1. DoRANum Resources (French Platform - English Available)\nDoRANum (Données de la Recherche: Apprentissage Numérique) - France’s premier research data management platform.\n\n\n\n\n\n\nNoteDoRANum in English\n\n\n\nAs of January 2025, DoRANum offers:\n\n9 thematic fact sheets in English (Stor age, File naming, Metadata, etc.)\n9 “Minute” videos with English subtitles (short, practical guides)\nDiscipline-specific learning paths on Callisto platform\n\n\n\nKey English resources:\n\nGeneral RDM: Research Data Management tag\nFile naming: Check the fact sheets section (under “Storage and Archiving”)\nVideos: DoRANum Minutes - now with English subtitles\n\nWhy DoRANum?\n\nDeveloped for French research community (includes CNRS, ANR requirements)\nHumanities-friendly (not just STEM-focused)\nFAIR principles integrated\nFree and openly licensed\n\n\n\n\n2. DARIAH-EU - Digital Research Infrastructure for Arts & Humanities\nThe European reference for DH data management\n\nLink: https://www.dariah.eu/\nTraining materials: https://campus.dariah.eu/\nFocus: Arts, humanities, cultural heritage\n\nEssential resources:\n\nDARIAH Research Data Management Guide\nPARTHENOS Training Materials - Cultural heritage specific\nDigital Humanities Course Registry\n\nBest practices documents:\n\nFile organization for multilingual projects\nManaging transcriptions and editions\nMetadata for cultural objects\n\n\n\n\n3. Stanford Libraries - File Naming Best Practices\nClear, practical, with examples\n\nLink: https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming\nCovers: Basic rules, versioning, sequential numbering\nExamples: By discipline including humanities\n\nKey takeaways:\n\n3 elements: date, description, version\nAvoid names &gt;32 characters when possible\nDocument naming conventions in README\n\n\n\n\n4. UK Data Service - Organizing Data\nComprehensive, humanities-inclusive\n\nLink: https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/\nStrength: Examples from social sciences and humanities\nIncludes: Large project workflows, team collaboration\n\n\n\n\n5. Edinburgh Research Data Service\nDetailed with discipline-specific examples\n\nLink: https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming\nPDF Guide: File Naming Conventions\nHighlights: Templates you can adapt, common pitfalls",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -510,7 +510,7 @@
     "href": "resources/file-management.html#backup-strategies-the-3-2-1-rule",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Backup Strategies: The 3-2-1 Rule",
-    "text": "Backup Strategies: The 3-2-1 Rule\n\nUnderstanding 3-2-1 for Research Projects\n\n\n\n\n\n\nTipThe 3-2-1 Backup Rule\n\n\n\n\n3 copies of your data\n\nOriginal working copy\nBackup at institution\nBackup at home OR cloud\n\n2 different media types\n\nLocal hard drive (laptop/desktop)\nExternal hard drive OR university server\nCloud storage (Nextcloud, Huma-Num)\n\n1 copy off-site\n\nGeographically separate\nProtected from local disasters (fire, theft)\nAccessible when traveling or working remotely\n\n\n\n\n\n\nPractical Implementation\nChallenge: Managing data across multiple work locations\nSolution: 1. Primary working storage: University Nextcloud/cloud (syncs everywhere) 2. Local backup: External hard drive at office or home 3. Off-site backup: Institutional server or Huma-Num\nBest practices: - Keep active projects on cloud storage for easy access - Carry external drive for large files (videos, high-res images) - Test restoration periodically to verify backups work",
+    "text": "Backup Strategies: The 3-2-1 Rule\n\nUnderstanding 3-2-1 for Research Projects\n\n\n\n\n\n\nTipThe 3-2-1 Backup Rule\n\n\n\n\n3 copies of your data\n\nOriginal working copy\nBackup at institution\nBackup at home OR cloud\n\n2 different media types\n\nLocal hard drive (laptop/desktop)\nExternal hard drive OR university server\nCloud storage (Nextcloud, Huma-Num)\n\n1 copy off-site\n\nGeographically separate\nProtected from local disasters (fire, theft)\nAccessible when traveling or working remotely\n\n\n\n\n\n\nPractical Implementation\nChallenge: Managing data across multiple work locations\nSolution:\n\nPrimary working storage: University Nextcloud/cloud (syncs everywhere)\nLocal backup: External hard drive at office or home\nOff-site backup: Institutional server or Huma-Num\n\nBest practices:\n\nKeep active projects on cloud storage for easy access\nCarry external drive for large files (videos, high-res images)\nTest restoration periodically to verify backups work",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -521,7 +521,7 @@
     "href": "resources/file-management.html#cloud-storage-solutions---european-fair-compliant",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Cloud Storage Solutions - European & FAIR-compliant",
-    "text": "Cloud Storage Solutions - European & FAIR-compliant\n\n1. Institutional Nextcloud (UPPA Nuage)\nUPPA’s Nextcloud instance\n\nURL: https://nuage.univ-pau.fr\nCapacity: Generous (check with IT)\nFeatures:\n\nAutomatic sync across devices\nFile sharing (internal/external)\nCollaborative editing (OnlyOffice)\nGDPR compliant (data in France)\n\n\nBest for: Active research files, collaboration within UPPA\n\n\n\n2. Huma-Num ShareDocs (For Humanities Research)\nNational infrastructure for humanities & social sciences\n\nURL: https://www.huma-num.fr/services-et-outils\nDocumentation: https://documentation.huma-num.fr\n\nTwo modes: - Storage mode: Like Nextcloud, for active files - Processing mode: For data preparation before archiving\nBest for: - Humanities-specific workflows - Collaboration with researchers outside UPPA - Preparing data for long-term archiving\nAlso from Huma-Num: - Nakala: Data repository for research data (FAIR-compliant) - ISIDORE: Search engine for SSH research\n\n\n\n3. DARIAH-DE Repository\nFor DH projects in the DARIAH network\n\nURL: https://de.dariah.eu/repository\nPurpose: Long-term preservation of DH research data\nAccepts: Texts, corpora, databases, research tools\n\n\n\n\n4. Zenodo - Open Science Repository\nEuropean Commission-funded repository\n\nURL: https://zenodo.org\nFeatures:\n\nDOI for every dataset\nIntegration with GitHub\nVersioning support\nFAIR-compliant\n\n\nPerfect for: - Publishing research data - Sharing datasets linked to publications - Making CHORAL research outputs discoverable",
+    "text": "Cloud Storage Solutions - European & FAIR-compliant\n\n1. Institutional Nextcloud (UPPA Nuage)\nUPPA’s Nextcloud instance\n\nURL: https://nuage.univ-pau.fr\nCapacity: Generous (check with IT)\nFeatures:\n\nAutomatic sync across devices\nFile sharing (internal/external)\nCollaborative editing (OnlyOffice)\nGDPR compliant (data in France)\n\n\nBest for: Active research files, collaboration within UPPA\n\n\n\n2. Huma-Num ShareDocs (For Humanities Research)\nNational infrastructure for humanities & social sciences\n\nURL: https://www.huma-num.fr/services-et-outils\nDocumentation: https://documentation.huma-num.fr\n\nTwo modes:\n\nStorage mode: Like Nextcloud, for active files\nProcessing mode: For data preparation before archiving\n\nBest for:\n\nHumanities-specific workflows\nCollaboration with researchers outside UPPA\nPreparing data for long-term archiving\n\nAlso from Huma-Num:\n\nNakala: Data repository for research data (FAIR-compliant)\nISIDORE: Search engine for SSH research\n\n\n\n\n3. DARIAH-DE Repository\nFor DH projects in the DARIAH network\n\nURL: https://de.dariah.eu/repository\nPurpose: Long-term preservation of DH research data\nAccepts: Texts, corpora, databases, research tools\n\n\n\n\n4. Zenodo - Open Science Repository\nEuropean Commission-funded repository\n\nURL: https://zenodo.org\nFeatures:\n\nDOI for every dataset\nIntegration with GitHub\nVersioning support\nFAIR-compliant\n\n\nPerfect for:\n\nPublishing research data\nSharing datasets linked to publications\nMaking CHORAL research outputs discoverable",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -532,7 +532,7 @@
     "href": "resources/file-management.html#file-formats-for-digital-humanities",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "File Formats for Digital Humanities",
-    "text": "File Formats for Digital Humanities\n\nPreservation-Friendly Formats by Data Type\n\n\n\n\n\n\nNotePrioritize open, documented formats\n\n\n\nProprietary formats risk obsolescence. Choose formats with: - Open specifications - Wide tool support - No licensing restrictions - Good for long-term preservation\n\n\n\n\n\n\n\n\n\n\n\nData Type\nPreferred Formats\nAvoid\nNotes\n\n\n\n\nPlain text\n.txt, .md\n.pages, .doc\nUTF-8 encoding!\n\n\nStructured text\n.xml (TEI), .json\nProprietary XML\nTEI for scholarly editions\n\n\nTabular data\n.csv, .tsv\n.xlsx, .numbers\nUse semicolons for European locales\n\n\nImages (photos)\n.tiff (archival), .jpg (access)\n.psd, proprietary RAW\nKeep RAW separately\n\n\nImages (diagrams)\n.svg, .png\n.ai, .sketch\nSVG is scalable\n\n\n3D models\n.obj, .ply, .gltf\n.max, .blend\nInclude textures separately\n\n\nAudio\n.wav, .flac\n.mp3 (lossy)\nLossless for primary sources\n\n\nVideo\n.mp4 (H.264), .mkv\n.mov, proprietary codecs\nDocument settings\n\n\nDatabases\n.sql, .csv exports\n.mdb, .accdb\nExport to open formats\n\n\nManuscripts\n.pdf/A, TEI .xml\n.docx, .indd\nPDF/A for archival\n\n\n\n\n\nTEI (Text Encoding Initiative)\nThe DH standard for encoding texts\n\nWebsite: https://tei-c.org/\nWhy use TEI:\n\nScholarly standard for digital editions\nCaptures textual structure and features\nInteroperable across projects\nLong-term preservation\n\n\nLearning resources: - TEI by Example - Women Writers Project Guide - TEI Course at DARIAH",
+    "text": "File Formats for Digital Humanities\n\nPreservation-Friendly Formats by Data Type\n\n\n\n\n\n\nNotePrioritize open, documented formats\n\n\n\nProprietary formats risk obsolescence. Choose formats with:\n\nOpen specifications\nWide tool support\nNo licensing restrictions\nGood for long-term preservation\n\n\n\n\n\n\n\n\n\n\n\n\nData Type\nPreferred Formats\nAvoid\nNotes\n\n\n\n\nPlain text\n.txt, .md\n.pages, .doc\nUTF-8 encoding!\n\n\nStructured text\n.xml (TEI), .json\nProprietary XML\nTEI for scholarly editions\n\n\nTabular data\n.csv, .tsv\n.xlsx, .numbers\nUse semicolons for European locales\n\n\nImages (photos)\n.tiff (archival), .jpg (access)\n.psd, proprietary RAW\nKeep RAW separately\n\n\nImages (diagrams)\n.svg, .png\n.ai, .sketch\nSVG is scalable\n\n\n3D models\n.obj, .ply, .gltf\n.max, .blend\nInclude textures separately\n\n\nAudio\n.wav, .flac\n.mp3 (lossy)\nLossless for primary sources\n\n\nVideo\n.mp4 (H.264), .mkv\n.mov, proprietary codecs\nDocument settings\n\n\nDatabases\n.sql, .csv exports\n.mdb, .accdb\nExport to open formats\n\n\nManuscripts\n.pdf/A, TEI .xml\n.docx, .indd\nPDF/A for archival\n\n\n\n\n\nTEI (Text Encoding Initiative)\nThe DH standard for encoding texts\n\nWebsite: https://tei-c.org/\nWhy use TEI:\n\nScholarly standard for digital editions\nCaptures textual structure and features\nInteroperable across projects\nLong-term preservation\n\n\nLearning resources:\n\nTEI by Example\nWomen Writers Project Guide\nTEI Course at DARIAH",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -543,7 +543,7 @@
     "href": "resources/file-management.html#data-management-plans-dmp",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Data Management Plans (DMP)",
-    "text": "Data Management Plans (DMP)\n\nWhy DMPs Matter\nRequired by: - European Commission (Horizon Europe) - National funders (ANR, ERC) - Many doctoral schools\nA DMP specifies: - What data you’ll collect/create - How it will be stored and backed up - Who can access it - How it will be preserved after your PhD - Costs and responsibilities\n\n\nDMP Tools\n\n1. DMP OPIDoR (Recommended for French institutions)\n\nURL: https://dmp.opidor.fr/\nFeatures:\n\nFrench and English interface\nTemplates for ANR, H2020, ERC\nIntegration with institutional systems\nSupport for collaborative projects\n\n\nTutorial: DoRANum DMP Guide (French with some English)\n\n\n2. DMPonline (UK-based, international)\n\nURL: https://dmponline.dcc.ac.uk/\nFeatures:\n\nFunder-specific templates\nGuidance for each question\nInstitutional branding\n\n\n\n\n3. ARGOS (European)\n\nURL: https://argos.openaire.eu/\nFeatures:\n\nPart of OpenAIRE infrastructure\nSupports collaborative editing\nMachine-actionable DMPs\n\n\n\n\n\nDMP Resources\n\nDARIAH DMP Guidelines - Arts & humanities focus\nDCC DMP Checklist - Comprehensive\nScience Europe DMP Evaluation Rubric - What funders look for",
+    "text": "Data Management Plans (DMP)\n\nWhy DMPs Matter\nRequired by:\n\nEuropean Commission (Horizon Europe)\nNational funders (ANR, ERC)\nMany doctoral schools\n\nA DMP specifies:\n\nWhat data you’ll collect/create\nHow it will be stored and backed up\nWho can access it\nHow it will be preserved after your PhD\nCosts and responsibilities\n\n\n\nDMP Tools\n\n1. DMP OPIDoR (Recommended for French institutions)\n\nURL: https://dmp.opidor.fr/\nFeatures:\n\nFrench and English interface\nTemplates for ANR, H2020, ERC\nIntegration with institutional systems\nSupport for collaborative projects\n\n\nTutorial: DoRANum DMP Guide (French with some English)\n\n\n2. DMPonline (UK-based, international)\n\nURL: https://dmponline.dcc.ac.uk/\nFeatures:\n\nFunder-specific templates\nGuidance for each question\nInstitutional branding\n\n\n\n\n3. ARGOS (European)\n\nURL: https://argos.openaire.eu/\nFeatures:\n\nPart of OpenAIRE infrastructure\nSupports collaborative editing\nMachine-actionable DMPs\n\n\n\n\n\nDMP Resources\n\nDARIAH DMP Guidelines - Arts & humanities focus\nDCC DMP Checklist - Comprehensive\nScience Europe DMP Evaluation Rubric - What funders look for",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -554,7 +554,7 @@
     "href": "resources/file-management.html#metadata-best-practices-for-cultural-heritage",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Metadata Best Practices for Cultural Heritage",
-    "text": "Metadata Best Practices for Cultural Heritage\n\nWhy Metadata Matters\nWithout metadata, your data is useless: - Where was this photo taken? - Who created this document? - What do these column headers mean? - Can I reuse this 3D model?\n\n\nMetadata Standards for DH\n\n\n\nDomain\nStandard\nLink\n\n\n\n\nCultural Objects\nCIDOC-CRM\nhttp://www.cidoc-crm.org/\n\n\nLibraries\nDublin Core, MARC\nhttps://www.dublincore.org/\n\n\nArchives\nEAD, ISAD(G)\nhttps://www.loc.gov/ead/\n\n\nMuseums\nLIDO, SPECTRUM\nhttp://lido-schema.org/\n\n\nManuscripts\nTEI msDesc\nhttps://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html\n\n\nImages\nIIIF\nhttps://iiif.io/\n\n\nGeographic\nGeoJSON, KML\nhttps://geojson.org/\n\n\n\n\n\nMinimal Metadata for Any File\nAlways include: - Creator/Author: Who made this? - Date: When (YYYY-MM-DD)? - Description: What is it? - Source: Where did it come from? - License/Rights: Can others use it?\nFor images, also include: - Archive/institution - Collection name - Shelfmark/identifier - Physical description",
+    "text": "Metadata Best Practices for Cultural Heritage\n\nWhy Metadata Matters\nWithout metadata, your data is useless:\n\nWhere was this photo taken?\nWho created this document?\nWhat do these column headers mean?\nCan I reuse this 3D model?\n\n\n\nMetadata Standards for DH\n\n\n\nDomain\nStandard\nLink\n\n\n\n\nCultural Objects\nCIDOC-CRM\nhttp://www.cidoc-crm.org/\n\n\nLibraries\nDublin Core, MARC\nhttps://www.dublincore.org/\n\n\nArchives\nEAD, ISAD(G)\nhttps://www.loc.gov/ead/\n\n\nMuseums\nLIDO, SPECTRUM\nhttp://lido-schema.org/\n\n\nManuscripts\nTEI msDesc\nhttps://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html\n\n\nImages\nIIIF\nhttps://iiif.io/\n\n\nGeographic\nGeoJSON, KML\nhttps://geojson.org/\n\n\n\n\n\nMinimal Metadata for Any File\nAlways include:\n\nCreator/Author: Who made this?\nDate: When (YYYY-MM-DD)?\nDescription: What is it?\nSource: Where did it come from?\nLicense/Rights: Can others use it?\n\nFor images, also include:\n\nArchive/institution\nCollection name\nShelfmark/identifier\nPhysical description",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -609,7 +609,7 @@
     "href": "resources/file-management.html#getting-help",
     "title": "File Naming & Backup for Digital Humanities",
     "section": "Getting Help",
-    "text": "Getting Help\n\n\n\n\n\n\nNoteSupport Resources\n\n\n\nAt UPPA: - Julien Rabaud (SCD & Pôle Numérique): julien.rabaud@univ-pau.fr - Research Data Management support\nNational (France): - DoRANum FAQ - Huma-Num support\nEuropean: - DARIAH Helpdesk - CLARIN Service Centres\nInternational: - Research Data Alliance - Global community - DH Slack channels",
+    "text": "Getting Help\n\n\n\n\n\n\nNoteSupport Resources\n\n\n\nAt UPPA:\n\nJulien Rabaud (SCD & Pôle Numérique): julien.rabaud@univ-pau.fr\nResearch Data Management support\n\nNational (France):\n\nDoRANum FAQ\nHuma-Num support\n\nEuropean:\n\nDARIAH Helpdesk\nCLARIN Service Centres\n\nInternational:\n\nResearch Data Alliance - Global community\nDH Slack channels",
     "crumbs": [
       "Additional Resources",
       "File Naming & Backup"
@@ -664,7 +664,7 @@
     "href": "resources/archifiltre.html",
     "title": "File Organization Tools",
     "section": "",
-    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure. It is a free, open-source tool developed by French archivists, particularly relevant for humanities researchers.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nVisualize research archives - see your entire project structure at a glance\nIdentify duplicates - find redundant files across versions\nDate analysis - track when files were created/modified across long-term projects\nPrepare for data deposit - organize before archiving in institutional repositories\nDocument collections - generate reports for data management plans\n\n\n\n\n\n\nManaging sources: - Organize interview recordings - Track multiple transcription versions - Map archival photograph collections - Identify gaps in data collection\n\nProject documentation: - Prepare data for deposit (Zenodo, Nakala) - Document for Data Management Plans - Clean up before thesis submission - Create inventory for collaborators\n\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
+    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure. It is a free, open-source tool developed by French archivists, particularly relevant for humanities researchers.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nVisualize research archives - see your entire project structure at a glance\nIdentify duplicates - find redundant files across versions\nDate analysis - track when files were created/modified across long-term projects\nPrepare for data deposit - organize before archiving in institutional repositories\nDocument collections - generate reports for data management plans\n\n\n\n\n\n\nManaging sources:\n\nOrganize interview recordings\nTrack multiple transcription versions\nMap archival photograph collections\nIdentify gaps in data collection\n\n\nProject documentation:\n\nPrepare data for deposit (Zenodo, Nakala)\nDocument for Data Management Plans\nClean up before thesis submission\nCreate inventory for collaborators\n\n\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
     "crumbs": [
       "Additional Resources",
       "File Organization Tools"
@@ -675,7 +675,7 @@
     "href": "resources/archifiltre.html#archifiltre",
     "title": "File Organization Tools",
     "section": "",
-    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure. It is a free, open-source tool developed by French archivists, particularly relevant for humanities researchers.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nVisualize research archives - see your entire project structure at a glance\nIdentify duplicates - find redundant files across versions\nDate analysis - track when files were created/modified across long-term projects\nPrepare for data deposit - organize before archiving in institutional repositories\nDocument collections - generate reports for data management plans\n\n\n\n\n\n\nManaging sources: - Organize interview recordings - Track multiple transcription versions - Map archival photograph collections - Identify gaps in data collection\n\nProject documentation: - Prepare data for deposit (Zenodo, Nakala) - Document for Data Management Plans - Clean up before thesis submission - Create inventory for collaborators\n\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
+    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure. It is a free, open-source tool developed by French archivists, particularly relevant for humanities researchers.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nVisualize research archives - see your entire project structure at a glance\nIdentify duplicates - find redundant files across versions\nDate analysis - track when files were created/modified across long-term projects\nPrepare for data deposit - organize before archiving in institutional repositories\nDocument collections - generate reports for data management plans\n\n\n\n\n\n\nManaging sources:\n\nOrganize interview recordings\nTrack multiple transcription versions\nMap archival photograph collections\nIdentify gaps in data collection\n\n\nProject documentation:\n\nPrepare data for deposit (Zenodo, Nakala)\nDocument for Data Management Plans\nClean up before thesis submission\nCreate inventory for collaborators\n\n\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
     "crumbs": [
       "Additional Resources",
       "File Organization Tools"
@@ -774,7 +774,7 @@
     "href": "resources/openrefine.html#video-tutorials---by-level",
     "title": "OpenRefine for Digital Humanities",
     "section": "Video Tutorials - By Level",
-    "text": "Video Tutorials - By Level\n\nBeginner Level (Start Here!)\n\n1. Library Carpentry OpenRefine\nBest comprehensive introduction for humanities scholars\n\nPlaylist: Library Carpentry OpenRefine\nDuration: ~2 hours total (short segments)\nContent:\n\nInstalling OpenRefine\nCreating projects\nFaceting and filtering\nBasic transformations\nGREL expressions\n\n\nWritten lesson: - URL: https://librarycarpentry.org/lc-open-refine/ - Self-paced: 3-4 hours - Includes: Practice datasets - Why it’s great: Designed for librarians and humanities researchers\n\n\n\n2. Programming Historian - Cleaning Data\nText-based tutorial with cultural heritage examples\n\nTutorial: Cleaning Data with OpenRefine\nLevel: Beginner\nTime: 1-2 hours\nExample: Museum collection data\nStrength: Screenshots for every step, clear explanations\n\n\n\n\n3. OpenRefine Basics (Harvard GIS)\nQuick 15-minute overview\n\nVideo: OpenRefine Basics\nDuration: 15 minutes\nBest for: Quick demo or refresher\n\n\n\n\n\nIntermediate Level\n\n4. Advanced Clustering & Reconciliation\nStanford University Workshop\n\nVideo: Stanford OpenRefine Workshop\nDuration: 90 minutes\nTopics:\n\nAdvanced clustering algorithms\nWorking across multiple columns\nData reconciliation\nExporting clean data\n\n\n\n\n\n5. OpenRefine for Historical Data\nUniversity of Michigan\n\nVideo: Cleaning Historical Census Data\nFocus: Dealing with historical spelling variations, old place names\nDuration: 45 minutes\n\n\n\n\n6. GREL: Expression Language\nTutorial on transformation expressions\n\nVideo: GREL Tutorial\nDuration: 45 minutes\nTopics:\n\nGREL syntax\nString operations\nConditional statements\nDate parsing\n\n\n\n\n\n\nAdvanced Level\n\n7. Reconciliation with Authority Files\nEssential for cultural heritage - match names to standard vocabularies\n\nVideo: Reconciliation with Wikidata\nDuration: 30 minutes\nUse cases:\n\nAuthor names → VIAF IDs\nPlace names → GeoNames/Wikidata\nStandardizing historical terminology\n\n\nWritten guide:\n\nReconciliation Services Overview\n\n\n\n\n8. API Calls & Web Scraping\nEnrich data from external sources\n\nBlog post: Tony Hirst - OpenRefine & APIs\nTopics:\n\nHTTP requests\nParsing JSON\nRate limiting\nError handling",
+    "text": "Video Tutorials - By Level\n\nBeginner Level (Start Here!)\n\n1. Library Carpentry OpenRefine\nBest comprehensive introduction for humanities scholars\n\nPlaylist: Library Carpentry OpenRefine\nDuration: ~2 hours total (short segments)\nContent:\n\nInstalling OpenRefine\nCreating projects\nFaceting and filtering\nBasic transformations\nGREL expressions\n\n\nWritten lesson:\n\nURL: https://librarycarpentry.org/lc-open-refine/\nSelf-paced: 3-4 hours\nIncludes: Practice datasets\nWhy it’s great: Designed for librarians and humanities researchers\n\n\n\n\n2. Programming Historian - Cleaning Data\nText-based tutorial with cultural heritage examples\n\nTutorial: Cleaning Data with OpenRefine\nLevel: Beginner\nTime: 1-2 hours\nExample: Museum collection data\nStrength: Screenshots for every step, clear explanations\n\n\n\n\n3. OpenRefine Basics (Harvard GIS)\nQuick 15-minute overview\n\nVideo: OpenRefine Basics\nDuration: 15 minutes\nBest for: Quick demo or refresher\n\n\n\n\n\nIntermediate Level\n\n4. Advanced Clustering & Reconciliation\nStanford University Workshop\n\nVideo: Stanford OpenRefine Workshop\nDuration: 90 minutes\nTopics:\n\nAdvanced clustering algorithms\nWorking across multiple columns\nData reconciliation\nExporting clean data\n\n\n\n\n\n5. OpenRefine for Historical Data\nUniversity of Michigan\n\nVideo: Cleaning Historical Census Data\nFocus: Dealing with historical spelling variations, old place names\nDuration: 45 minutes\n\n\n\n\n6. GREL: Expression Language\nTutorial on transformation expressions\n\nVideo: GREL Tutorial\nDuration: 45 minutes\nTopics:\n\nGREL syntax\nString operations\nConditional statements\nDate parsing\n\n\n\n\n\n\nAdvanced Level\n\n7. Reconciliation with Authority Files\nEssential for cultural heritage - match names to standard vocabularies\n\nVideo: Reconciliation with Wikidata\nDuration: 30 minutes\nUse cases:\n\nAuthor names → VIAF IDs\nPlace names → GeoNames/Wikidata\nStandardizing historical terminology\n\n\nWritten guide:\n\nReconciliation Services Overview\n\n\n\n\n8. API Calls & Web Scraping\nEnrich data from external sources\n\nBlog post: Tony Hirst - OpenRefine & APIs\nTopics:\n\nHTTP requests\nParsing JSON\nRate limiting\nError handling",
     "crumbs": [
       "Additional Resources",
       "OpenRefine Tutorials"
