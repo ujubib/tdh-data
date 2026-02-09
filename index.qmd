@@ -50,7 +50,7 @@ This website contains all materials for the **Personal and Research Data Managem
 
 - [View Slides](slides.qmd)
 - [Download `dirty_data.csv`](dirty_data.csv)
-- [Codeberg Repository](hhttps://codeberg.org/uju/ED_Organize-Clean-Enrich-Data)
+- [Github Repository](https://github.com/ujubib/tdh-data)
 :::
 
 ::: {.g-col-6}
@@ -85,7 +85,7 @@ Please complete the following **before** the workshop:
 If you encounter any installation issues or have questions, please contact:
 
 **Julien Rabaud**  
-📧 [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
+[julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
 
 ---
 

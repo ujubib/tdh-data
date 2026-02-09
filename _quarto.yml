@@ -8,10 +8,12 @@ website:
   title: "Personal and Research Data Management: Organize, Clean & Enrich"
   description: "Workshop materials for doctoral students - UPPA & CHORAL"
   favicon: img/favicon.png
+  repo-url: "https://github.com/ujubib/tdh-data"
+  repo-actions: [source, issue]
   navbar:
     right:
       - icon: git
-        href: https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data
+        href: https://github.com/ujubib/tdh-data
       - icon: envelope
         href: mailto:julien.rabaud@univ-pau.fr
 

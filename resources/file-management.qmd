@@ -1,353 +1,603 @@
 ---
-title: "File Naming & Backup Best Practices"
-subtitle: "Resources and Guidelines"
+title: "File Naming & Backup for Digital Humanities"
+subtitle: "Best Practices for SSH Research"
 ---
 
-## File Naming Conventions
+## Introduction
 
-Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.
-
-### Key Principles
+Systematic file management is essential for Digital Humanities research, especially for projects involving multiple sources, collaborators, or long-term data collection.
 
 ::: {.callout-important}
-## Quick Reference: File Naming Rules
+## For Doctoral Researchers
 
-1. **Use dates:** YYYY-MM-DD format (ISO 8601)
-2. **No spaces:** Use hyphens `-` or underscores `_`
-3. **Be descriptive:** But keep it concise
-4. **Version numbers:** v01, v02, not "final" or "final2"
-5. **Avoid special characters:** No é, à, /, \, ?, *, etc.
-6. **Lowercase:** For consistency (optional but recommended)
-
-**Example:** `2026-02-09_interview_participant-05_v02.docx`
+With projects spanning 3-5 years, involving multiple institutions, and generating diverse data types, consistent file naming and backup strategies prevent data loss and enable collaboration.
 :::
 
 ---
 
-## Comprehensive Guides & Resources
+## File Naming Conventions
 
-### 1. Stanford Libraries - Best Practices for File Naming
+### Core Principles
 
-**Excellent starting point with clear examples**
+::: {.callout-tip}
+## Quick Reference: File Naming Rules
 
-- **Link:** <https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming>
-- **Covers:** Basic rules, versioning, sequential numbering, examples by discipline
+1. **Use dates:** YYYY-MM-DD format (ISO 8601) - universal across countries
+2. **No spaces:** Use hyphens `-` or underscores `_`
+3. **Be descriptive:** Include project, source, version
+4. **Version numbers:** v01, v02, v03 (not "final")
+5. **No special characters:** Avoid é, à, ç, ñ, /, \, ?, *
+6. **Language-neutral:** Use English or transliterated names for international collaboration
 
-**Key takeaways:**
-- Use 3 elements: date, brief description, version
-- Keep names under 32 characters when possible
-- Document your naming convention in a README file
+**Example for archival photos:**  
+`2025-06-15_paris-natlib_ms-fr-12345_fol-23r_v01.jpg`  
+(Date_Archive_Manuscript_Folio_Version)
+:::
 
 ---
 
-### 2. University of Edinburgh - Naming Conventions
+## Comprehensive Guides - International
 
-**Detailed guide with discipline-specific examples**
+### 1. DoRANum Resources (French Platform - English Available)
+
+**DoRANum** (Données de la Recherche: Apprentissage Numérique) - France's premier research data management platform.
+
+::: {.callout-note}
+## DoRANum in English
+
+As of January 2025, DoRANum offers:
+- **[9 thematic fact sheets in English](https://doranum.fr/)** (Stor age, File naming, Metadata, etc.)
+- **9 "Minute" videos with English subtitles** (short, practical guides)
+- Discipline-specific learning paths on [Callisto platform](https://callisto.inist.fr/)
+:::
+
+**Key English resources:**
+- **General RDM:** [Research Data Management tag](https://doranum.fr/tag/research-data-management-rdm/)
+- **File naming:** Check the fact sheets section (under "Storage and Archiving")
+- **Videos:** [DoRANum Minutes](https://doranum.fr/) - now with English subtitles
+
+**Why DoRANum?**
+- Developed for French research community (includes CNRS, ANR requirements)
+- Humanities-friendly (not just STEM-focused)
+- FAIR principles integrated
+- Free and openly licensed
+
+---
+
+### 2. DARIAH-EU - Digital Research Infrastructure for Arts & Humanities
+
+**The European reference for DH data management**
+
+- **Link:** <https://www.dariah.eu/>
+- **Training materials:** <https://campus.dariah.eu/>
+- **Focus:** Arts, humanities, cultural heritage
+
+**Essential resources:**
+- [DARIAH Research Data Management Guide](https://www.dariah.eu/activities/research-data-management/)
+- [PARTHENOS Training Materials](http://training.parthenos-project.eu/) - Cultural heritage specific
+- [Digital Humanities Course Registry](https://registries.clarin-dariah.eu/courses/)
+
+**Best practices documents:**
+- File organization for multilingual projects
+- Managing transcriptions and editions
+- Metadata for cultural objects
+
+---
+
+### 3. Stanford Libraries - File Naming Best Practices
+
+**Clear, practical, with examples**
+
+- **Link:** <https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming>
+- **Covers:** Basic rules, versioning, sequential numbering
+- **Examples:** By discipline including humanities
+
+**Key takeaways:**
+- 3 elements: date, description, version
+- Avoid names >32 characters when possible
+- Document naming conventions in README
+
+---
+
+### 4. UK Data Service - Organizing Data
+
+**Comprehensive, humanities-inclusive**
+
+- **Link:** <https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/>
+- **Strength:** Examples from social sciences and humanities
+- **Includes:** Large project workflows, team collaboration
+
+---
+
+### 5. Edinburgh Research Data Service
+
+**Detailed with discipline-specific examples**
 
 - **Link:** <https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming>
 - **PDF Guide:** [File Naming Conventions](https://www.ed.ac.uk/files/atoms/files/file-naming-conventions.pdf)
-
-**Highlights:**
-- Examples for different research contexts
-- Common pitfalls to avoid
-- Templates you can adapt
+- **Highlights:** Templates you can adapt, common pitfalls
 
 ---
 
-### 3. Princeton Research Data Service
+## Naming Conventions for Specific DH Data Types
 
-**Short, practical guide with a focus on reproducibility**
+### Transcriptions
 
-- **Link:** <https://libguides.princeton.edu/c.php?g=102546&p=930626>
+```
+[date]_[source-archive]_[document-id]_transcription_[version].txt
 
-**Topics covered:**
-- Why naming matters for reproducibility
-- Handling versions vs. dates
-- Special considerations for code files
+Example:
+2025-06-20_bnf_ms-lat-8501_fol-12v_transcription_v03.txt
+```
 
----
+### Digitized Images
 
-### 4. MIT Libraries - File Naming
+```
+[date]_[archive]_[collection]_[item-id]_[folio/page]_[version].jpg
 
-**Quick reference card and checklist**
+Example:
+2025-03-15_vat-lib_pal-lat_1071_fol-45r_v01.tif
+```
 
-- **Link:** <https://libraries.mit.edu/data-management/store/organize/>
+### Interview Recordings
 
-**Useful for:**
-- Quick decision-making
-- Team agreements on naming
-- Printable reference guide
+```
+[date]_interview_[participant-id]_[location]_[recorder].mp3
 
----
+Example:
+2025-09-10_interview_p05_rome_audio-01.mp3
+```
 
-### 5. UK Data Service - Organizing Data
+### 3D Models
 
-**Comprehensive resource covering both naming and organization**
+```
+[date]_[site]_[object-type]_[scan-method]_[processing-stage].obj
 
-- **Link:** <https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/>
+Example:
+2025-07-22_pompeii_fresco_photogrammetry_raw.obj
+2025-07-22_pompeii_fresco_photogrammetry_cleaned.obj
+```
 
-**Excellent for:**
-- Large projects with multiple contributors
-- Long-term archival planning
-- Sharing data with collaborators
+### Metadata Files
 
----
+```
+[date]_[project]_[data-type]_metadata_[version].csv
 
-## Video Tutorials on File Naming
-
-### 📹 File Naming and Folder Structures
-
-- **Video:** [Organizing Research Data](https://www.youtube.com/watch?v=ES1LTlnpLMk) by New York University (8 min)
-- **Content:** Visual walkthrough of good vs bad naming practices
-
-### 📹 Data Organization in Spreadsheets for Social Scientists
-
-- **Video:** [Data Carpentry](https://www.youtube.com/watch?v=3MEJ38BO6Mo) (15 min)
-- **Content:** Beyond file names—organizing data *within* files
+Example:
+2025-11-05_choral-manuscripts_images_metadata_v02.csv
+```
 
 ---
 
-## Directory Structure Best Practices
+## Directory Structure for DH Projects
 
-### Recommended Reading
+### Recommended Structure
 
-1. **[Project Organization](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)** - PLoS Computational Biology
-   - Classic paper: "A Quick Guide to Organizing Computational Biology Projects"
-   - Focuses on reproducible research structures
-
-2. **[Folder Structure for Research Data](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions)** - Harvard Medical School
-   - Template directory structures
-   - How to organize across project phases
-
-3. **[File Organization Tutorial](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html)** - The Turing Way
-   - Modern, community-driven guide
-   - Includes code and data organization
+```
+choral-phd-project/
+├── 00-admin/
+│   ├── dmp/                     # Data Management Plans
+│   ├── ethics/                  # Ethics documentation
+│   └── funding/                 # Grant documents
+├── 01-primary-sources/
+│   ├── archives/
+│   │   ├── raw-images/         # Original photos from archives
+│   │   ├── processed/          # Cropped, enhanced versions
+│   │   └── metadata/           # Spreadsheets with source info
+│   ├── transcriptions/
+│   │   ├── draft/
+│   │   └── final/
+│   └── fieldnotes/
+├── 02-secondary-sources/
+│   ├── literature/
+│   └── bibliography/           # Zotero exports, etc.
+├── 03-datasets/
+│   ├── raw/                    # Never modify!
+│   ├── cleaned/                # OpenRefine outputs
+│   └── analysis-ready/
+├── 04-analysis/
+│   ├── scripts/                # R, Python, etc.
+│   ├── outputs/
+│   └── visualizations/
+├── 05-publications/
+│   ├── article-01/
+│   ├── dissertation/
+│   └── conference-posters/
+├── 06-public-engagement/
+│   ├── exhibition-materials/
+│   └── teaching-resources/
+├── documentation/
+│   ├── README.md              # Project overview
+│   ├── codebook.md            # Variable definitions
+│   ├── changelog.md           # Project history
+│   └── file-naming-guide.md   # Your conventions
+└── archive/                    # Deprecated versions
+```
 
 ---
 
 ## Backup Strategies: The 3-2-1 Rule
 
-### Understanding 3-2-1
+### Understanding 3-2-1 for Research Projects
 
 ::: {.callout-tip}
 ## The 3-2-1 Backup Rule
 
-- **3** copies of your data (original + 2 backups)
-- **2** different media types (e.g., local drive + cloud)
-- **1** copy off-site (cloud or physically elsewhere)
+- **3** copies of your data
+  - Original working copy
+  - Backup at institution
+  - Backup at home OR cloud
+  
+- **2** different media types
+  - Local hard drive (laptop/desktop)
+  - External hard drive OR university server
+  - Cloud storage (Nextcloud, Huma-Num)
+  
+- **1** copy off-site
+  - Geographically separate
+  - Protected from local disasters (fire, theft)
+  - Accessible when traveling or working remotely
 :::
 
-### Authoritative Resources
+### Practical Implementation
 
-#### 1. US-CERT (Cybersecurity & Infrastructure Security Agency)
+**Challenge:** Managing data across multiple work locations
 
-- **Link:** <https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf>
-- **Content:** Government guidelines on backup strategies
+**Solution:**
+1. **Primary working storage:** University Nextcloud/cloud (syncs everywhere)
+2. **Local backup:** External hard drive at office or home
+3. **Off-site backup:** Institutional server or Huma-Num
 
-#### 2. Digital Preservation Coalition Handbook
-
-- **Link:** <https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery>
-- **Content:** Long-term preservation perspective
-
-#### 3. Library of Congress - Personal Digital Archiving
-
-- **Link:** <https://www.digitalpreservation.gov/personalarchiving/>
-- **Content:** Practical advice for individuals
+**Best practices:**
+- Keep active projects on cloud storage for easy access
+- Carry external drive for large files (videos, high-res images)
+- Test restoration periodically to verify backups work
 
 ---
 
-## Cloud Storage Options for Researchers
+## Cloud Storage Solutions - European & FAIR-compliant
 
-### University/Institutional Storage
+### 1. Institutional Nextcloud (UPPA Nuage)
 
-Most universities provide storage solutions. Check with your institution for:
+**UPPA's Nextcloud instance**
 
-- Storage quotas
-- Backup policies
-- Access after graduation
-- Data security and compliance
+- **URL:** <https://nuage.univ-pau.fr>
+- **Capacity:** Generous (check with IT)
+- **Features:**
+  - Automatic sync across devices
+  - File sharing (internal/external)
+  - Collaborative editing (OnlyOffice)
+  - GDPR compliant (data in France)
 
-**UPPA-specific:**
-- **Nuage:** <https://nuage.univ-pau.fr> (Nextcloud)
-- **Huma-Num ShareDocs:** <https://documentation.huma-num.fr> (for humanities/social sciences)
+**Best for:** Active research files, collaboration within UPPA
 
-### General Cloud Services
+---
 
-::: {.callout-warning}
-## Privacy & Compliance
+### 2. Huma-Num ShareDocs (For Humanities Research)
 
-Before using commercial cloud services, check:
-- Your institution's data policies
-- Funder requirements (e.g., GDPR compliance)
-- Whether data contains sensitive information
+**National infrastructure for humanities & social sciences**
+
+- **URL:** <https://www.huma-num.fr/services-et-outils>
+- **Documentation:** <https://documentation.huma-num.fr>
+
+**Two modes:**
+- **Storage mode:** Like Nextcloud, for active files
+- **Processing mode:** For data preparation before archiving
+
+**Best for:**
+- Humanities-specific workflows
+- Collaboration with researchers outside UPPA
+- Preparing data for long-term archiving
+
+**Also from Huma-Num:**
+- **Nakala:** Data repository for research data (FAIR-compliant)
+- **ISIDORE:** Search engine for SSH research
+
+---
+
+### 3. DARIAH-DE Repository
+
+**For DH projects in the DARIAH network**
+
+- **URL:** <https://de.dariah.eu/repository>
+- **Purpose:** Long-term preservation of DH research data
+- **Accepts:** Texts, corpora, databases, research tools
+
+---
+
+### 4. Zenodo - Open Science Repository
+
+**European Commission-funded repository**
+
+- **URL:** <https://zenodo.org>
+- **Features:**
+  - DOI for every dataset
+  - Integration with GitHub
+  - Versioning support
+  - FAIR-compliant
+
+**Perfect for:**
+- Publishing research data
+- Sharing datasets linked to publications
+- Making CHORAL research outputs discoverable
+
+---
+
+## File Formats for Digital Humanities
+
+### Preservation-Friendly Formats by Data Type
+
+::: {.callout-note}
+## Prioritize open, documented formats
+
+Proprietary formats risk obsolescence. Choose formats with:
+- Open specifications
+- Wide tool support
+- No licensing restrictions
+- Good for long-term preservation
 :::
 
-**Research-friendly options:**
+| Data Type | Preferred Formats | Avoid | Notes |
+|-----------|-------------------|-------|-------|
+| **Plain text** | .txt, .md | .pages, .doc | UTF-8 encoding! |
+| **Structured text** | .xml (TEI), .json | Proprietary XML | TEI for scholarly editions |
+| **Tabular data** | .csv, .tsv | .xlsx, .numbers | Use semicolons for European locales |
+| **Images (photos)** | .tiff (archival), .jpg (access) | .psd, proprietary RAW | Keep RAW separately |
+| **Images (diagrams)** | .svg, .png | .ai, .sketch | SVG is scalable |
+| **3D models** | .obj, .ply, .gltf | .max, .blend | Include textures separately |
+| **Audio** | .wav, .flac | .mp3 (lossy) | Lossless for primary sources |
+| **Video** | .mp4 (H.264), .mkv | .mov, proprietary codecs | Document settings |
+| **Databases** | .sql, .csv exports | .mdb, .accdb | Export to open formats |
+| **Manuscripts** | .pdf/A, TEI .xml | .docx, .indd | PDF/A for archival |
 
-- **Nextcloud** (self-hosted or providers): Privacy-focused, open source
-- **Box** (many universities have partnerships)
-- **Google Drive** (check institutional agreement)
-- **Microsoft OneDrive** (if your university uses Microsoft 365)
-- **Zenodo** (for published research data): <https://zenodo.org>
+### TEI (Text Encoding Initiative)
 
----
+**The DH standard for encoding texts**
 
-## Automated Backup Tools
+- **Website:** <https://tei-c.org/>
+- **Why use TEI:**
+  - Scholarly standard for digital editions
+  - Captures textual structure and features
+  - Interoperable across projects
+  - Long-term preservation
 
-### Recommended Software
-
-| Tool | Platform | Type | Open Source |
-|------|----------|------|-------------|
-| **FreeFileSync** | Win/Mac/Linux | Sync & Mirror | ✅ Yes |
-| **rsync** | Mac/Linux/Win | Command-line sync | ✅ Yes |
-| **Rclone** | Win/Mac/Linux | Cloud sync | ✅ Yes |
-| **Duplicati** | Win/Mac/Linux | Encrypted backups | ✅ Yes |
-| **Backblaze** | Win/Mac | Cloud backup | ❌ Paid |
-| **Arq Backup** | Win/Mac | Cloud backup | ❌ Paid |
-
-### For Beginners: FreeFileSync Tutorial
-
-1. **Download:** <https://freefilesync.org/>
-2. **Tutorial:** [How to Use FreeFileSync](https://freefilesync.org/tutorials.php)
-3. **Video:** [FreeFileSync Basics](https://www.youtube.com/watch?v=example) (YouTube)
-
-### For Advanced Users: rsync
-
-- **Guide:** [rsync Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
-- **For researchers:** [Backing Up Your Research Data with rsync](https://researchcomputing.princeton.edu/support/knowledge-base/rclone)
+**Learning resources:**
+- [TEI by Example](https://teibyexample.org/)
+- [Women Writers Project Guide](https://wwp.northeastern.edu/outreach/seminars/)
+- [TEI Course at DARIAH](https://teach.dariah.eu/course/view.php?id=32)
 
 ---
 
-## File Format Best Practices
+## Data Management Plans (DMP)
 
-### Choosing Preservation-Friendly Formats
+### Why DMPs Matter
 
-Long-term accessibility depends on choosing the right file formats.
+**Required by:**
+- European Commission (Horizon Europe)
+- National funders (ANR, ERC)
+- Many doctoral schools
 
-#### Key Resources
+**A DMP specifies:**
+- What data you'll collect/create
+- How it will be stored and backed up
+- Who can access it
+- How it will be preserved after your PhD
+- Costs and responsibilities
 
-1. **[Recommended Formats Statement](https://www.loc.gov/preservation/resources/rfs/)** - Library of Congress
-   - Authoritative list of preservation formats by type
-   - Updated regularly
+### DMP Tools
 
-2. **[File Formats for Preservation](https://www.dcc.ac.uk/guidance/briefing-papers/standards-watch-papers/overview-file-formats-preservation)** - Digital Curation Centre
-   - Explains format characteristics
-   - Risk assessment for formats
+#### 1. DMP OPIDoR (Recommended for French institutions)
 
-3. **[Format Recommendations](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-formats)** - Stanford Libraries
-   - Discipline-specific recommendations
+- **URL:** <https://dmp.opidor.fr/>
+- **Features:**
+  - French and English interface
+  - Templates for ANR, H2020, ERC
+  - Integration with institutional systems
+  - Support for collaborative projects
 
-#### Quick Reference
+**Tutorial:** [DoRANum DMP Guide](https://doranum.fr/tag/plan-de-gestion-des-donnees/) (French with some English)
 
-| Data Type | Preferred Formats | Avoid |
-|-----------|-------------------|-------|
-| **Text** | .txt, .pdf/A, .xml, .html | .doc, .pages |
-| **Tabular** | .csv, .tsv, .xml | .xlsx, .numbers |
-| **Images** | .tiff, .png, .jpg | .psd, proprietary RAW |
-| **Audio** | .wav, .flac | .mp3 (lossy) |
-| **Video** | .mp4 (H.264), .mkv | .mov, proprietary codecs |
-| **Code** | .py, .r, .txt | IDE-specific formats |
+#### 2. DMPonline (UK-based, international)
 
----
+- **URL:** <https://dmponline.dcc.ac.uk/>
+- **Features:**
+  - Funder-specific templates
+  - Guidance for each question
+  - Institutional branding
 
-## Metadata & Documentation
+#### 3. ARGOS (European)
 
-File names and backups are only part of the story. Document your data!
+- **URL:** <https://argos.openaire.eu/>
+- **Features:**
+  - Part of OpenAIRE infrastructure
+  - Supports collaborative editing
+  - Machine-actionable DMPs
 
-### README Files
+### DMP Resources
 
-Every research project should have a README file explaining:
-- Purpose of the project/dataset
-- File naming conventions used
-- Directory structure
-- Data collection methods
-- Variable definitions (for datasets)
-
-**Templates:**
-
-- [README Template](https://cornell.app.box.com/v/ReadmeTemplate) - Cornell University
-- [Guide to Writing README](https://data.research.cornell.edu/content/readme) - Cornell RDM
-- [README Generator](https://readme.so/) - Interactive tool
-
----
-
-## Checklists & Quick Guides
-
-### Downloadable Resources
-
-1. **[Data Organization Checklist](https://osf.io/mv8pj/)** (Open Science Framework)
-   - PDF checklist for file organization
-   - Version control tips
-
-2. **[File Naming Cheat Sheet](https://speakerdeck.com/jennybc/how-to-name-files)** by Jenny Bryan
-   - Famous presentation on file naming
-   - Funny, practical, memorable
-
-3. **[Data Management Plan Checklist](https://dmptool.org/)** - DMPTool
-   - Includes file organization sections
-   - Funder-specific templates
+- **[DARIAH DMP Guidelines](https://www.dariah.eu/)** - Arts & humanities focus
+- **[DCC DMP Checklist](https://www.dcc.ac.uk/resources/data-management-plans)** - Comprehensive
+- **[Science Europe DMP Evaluation Rubric](https://www.scienceeurope.org/our-priorities/research-data/research-data-management/)** - What funders look for
 
 ---
 
-## Books & Long-Form Resources
+## Metadata Best Practices for Cultural Heritage
 
-### Recommended Reading
+### Why Metadata Matters
 
-1. **[The Turing Way](https://the-turing-way.netlify.app/)**
-   - Free, community-driven guide to reproducible research
-   - Excellent chapters on data management
+**Without metadata, your data is useless:**
+- Where was this photo taken?
+- Who created this document?
+- What do these column headers mean?
+- Can I reuse this 3D model?
 
-2. **[Research Data Management for Academics](https://oxford.universitypressscholarship.com/view/10.1093/oso/9780190051488.001.0001/oso-9780190051488)** - Oxford University Press
-   - Comprehensive textbook
+### Metadata Standards for DH
 
-3. **[MANTRA: Research Data Management Training](https://mantra.edina.ac.uk/)**
-   - Free online course from University of Edinburgh
-   - Includes file organization module
+| Domain | Standard | Link |
+|--------|----------|------|
+| **Cultural Objects** | CIDOC-CRM | <http://www.cidoc-crm.org/> |
+| **Libraries** | Dublin Core, MARC | <https://www.dublincore.org/> |
+| **Archives** | EAD, ISAD(G) | <https://www.loc.gov/ead/> |
+| **Museums** | LIDO, SPECTRUM | <http://lido-schema.org/> |
+| **Manuscripts** | TEI msDesc | <https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html> |
+| **Images** | IIIF | <https://iiif.io/> |
+| **Geographic** | GeoJSON, KML | <https://geojson.org/> |
+
+### Minimal Metadata for Any File
+
+**Always include:**
+- **Creator/Author:** Who made this?
+- **Date:** When (YYYY-MM-DD)?
+- **Description:** What is it?
+- **Source:** Where did it come from?
+- **License/Rights:** Can others use it?
+
+**For images, also include:**
+- Archive/institution
+- Collection name
+- Shelfmark/identifier
+- Physical description
 
 ---
 
-## Discipline-Specific Guides
+## Checklists & Templates
 
-### By Field
+### File Organization Checklist
 
-- **Social Sciences:** [CESSDA Data Management Expert Guide](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide)
-- **Humanities:** [Humanities Data Management](https://hcommons.org/deposits/item/hc:44127/)
-- **Life Sciences:** [EMBL-EBI Data Management](https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website)
-- **Physical Sciences:** [UK Data Archive](https://ukdataservice.ac.uk/) (various disciplines)
-- **Engineering:** [Purdue Data Management](https://www.lib.purdue.edu/research/data)
+::: {.callout-tip}
+## Before Starting Your PhD
+
+- [ ] Define file naming convention (document it!)
+- [ ] Create directory structure
+- [ ] Set up cloud sync (Nextcloud/Huma-Num)
+- [ ] Configure external hard drive backup
+- [ ] Write initial README file
+- [ ] Draft Data Management Plan (if required)
+
+## During Your PhD
+
+- [ ] Name files consistently (review quarterly)
+- [ ] Backup data weekly (automate!)
+- [ ] Update README with changes
+- [ ] Version important files clearly
+- [ ] Document data collection methods
+
+## Before Graduation
+
+- [ ] Clean up directory structure
+- [ ] Remove duplicates
+- [ ] Finalize all documentation
+- [ ] Deposit data in repository (Zenodo/Nakala)
+- [ ] Update DMP with final information
+:::
+
+### README Template for Research Projects
+
+```markdown
+# Project Title
+
+## Project Information
+- **PI:** Your Name
+- **Institution:** UPPA / ED 481 SSH
+- **Start date:** YYYY-MM-DD
+- **End date:** YYYY-MM-DD
+- **Funding:** [If applicable]
+
+## Project Description
+[2-3 paragraph description of research]
+
+## Directory Structure
+- `/01-primary-sources` - Source materials
+- `/02-secondary-sources` - Literature
+- `/03-datasets` - Structured data
+- [etc.]
+
+## File Naming Convention
+[Explain your system]
+
+Example: `YYYY-MM-DD_source_description_version.ext`
+
+## Data Collection
+- **Archives visited:** [list]
+- **Dates:** [list]
+- **Equipment used:** [camera, scanner, etc.]
+
+## Software & Tools
+- Transcription: [tool]
+- Analysis: [tool]
+- Visualization: [tool]
+
+## Data Formats
+- Images: TIFF (archival), JPEG (access copies)
+- Text: TEI XML for editions, TXT for notes
+- Tabular: CSV with UTF-8 encoding
+
+## Backup Strategy
+- Primary: UPPA Nextcloud
+- Secondary: External HD (weekly)
+- Tertiary: Huma-Num (monthly)
+
+## Rights & Licensing
+- **Data license:** [CC-BY, CC0, etc.]
+- **Code license:** [if applicable]
+- **Restrictions:** [e.g., embargo until publication]
+
+## Contact
+- **Email:** your.email@univ-pau.fr
+- **ORCID:** 0000-0000-0000-0000
+
+## Changelog
+- 2025-09-15: Initial setup
+- 2026-01-10: Added transcriptions folder
+- [etc.]
+```
+
+---
+
+## Additional Resources - European & International
+
+### Training Platforms
+
+- **[DARIAH-Campus](https://campus.dariah.eu/)** - DH training courses
+- **[FOSTLH](https://fostlh.eu/)** - Heritage science training
+- **[PARTHENOS Training](http://training.parthenos-project.eu/)** - Research infrastructures
+- **[Library Carpentry](https://librarycarpentry.org/)** - Data skills for librarians/researchers
+
+### Guidelines & Standards
+
+- **[FAIR Principles](https://www.go-fair.org/)** - Findable, Accessible, Interoperable, Reusable
+- **[CARE Principles](https://www.gida-global.org/care)** - For Indigenous data governance
+- **[Dublin Core](https://www.dublincore.org/)** - Metadata standard
+- **[IIIF](https://iiif.io/)** - International Image Interoperability Framework
+
+### Communities
+
+- **[ADHO](https://adho.org/)** - Alliance of Digital Humanities Organizations
+- **[Humanistica](https://www.humanisti.ca/)** - French-speaking DH association
+- **[DHd](https://dig-hum.de/)** - German-language DH community
+- **[centerNet](https://dhcenternet.org/)** - International DH centers network
 
 ---
 
 ## Getting Help
 
-### Online Communities
-
-- **[Research Data Alliance](https://www.rd-alliance.org/)** - Global community
-- **[Data Curation Network](https://datacurationnetwork.org/)** - Curators helping researchers
-- **Reddit:** r/datahoarder, r/datacurator (practical tips)
-
-### Workshops & Training
-
-- **MANTRA:** <https://mantra.edina.ac.uk/>
-- **Data Carpentry:** <https://datacarpentry.org/lessons/>
-- **FOSTER Open Science:** <https://www.fosteropenscience.eu/learning>
-
----
-
 ::: {.callout-note}
-## Stay Updated
+## Support Resources
 
-Data management best practices evolve. Bookmark a few key resources and check back periodically for updates:
+**At UPPA:**
+- Julien Rabaud (SCD & Pôle Numérique): [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
+- Research Data Management support
 
-- Library of Congress Preservation Formats
-- Digital Preservation Coalition Handbook
-- Your institutional data repository guidelines
+**National (France):**
+- [DoRANum FAQ](https://doranum.fr/faq-donnees-recherche/)
+- [Huma-Num support](https://www.huma-num.fr/nous-contacter)
+
+**European:**
+- [DARIAH Helpdesk](https://www.dariah.eu/helpdesk/)
+- [CLARIN Service Centres](https://www.clarin.eu/content/service-centres)
+
+**International:**
+- [Research Data Alliance](https://www.rd-alliance.org/) - Global community
+- [DH Slack channels](https://digitalhumanities.slack.com/)
 :::
 
----
-
-## Questions?
-
-For personalized advice on your specific research data management needs:
-
-📧 [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)

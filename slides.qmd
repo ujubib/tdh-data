@@ -6,6 +6,7 @@ institute: "SCD & Pôle Numérique - UPPA"
 date: "February 9, 2026"
 format:
   revealjs:
+    logo: img/logoUPPA-RepFr.png
     theme: default
     slide-number: true
     chalkboard: true
@@ -98,11 +99,11 @@ OECD definition (2007)
 
 ## FAIR / OPEN
 
-![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR)](/img/FAIR-OPEN.webp)
+![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR) (CESSDA)](/img/FAIR-OPEN.webp)
 
 ## FAIR / CARE
 
-![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR)](img/FAIR-CARE.webp)
+![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR) (CESSDA)](img/FAIR-CARE.webp)
 
 ::: {.notes}
 The CARE principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility, and Ethics) specifically concern Indigenous data and govern the control and (re)use of such data under the principles of open science (Carroll et al. 2020). For instance, the **Collective Benefit** principle states that data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive benefit from the data, e.g. for improved government and citizen engagement. The CARE principles are complementary to the FAIR principles, under the motto ‘be FAIR and CARE’ (Carroll et al. 2020).

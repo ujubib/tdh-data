@@ -1,530 +1,834 @@
 ---
-title: "OpenRefine Tutorials & Resources"
-subtitle: "Videos, Guides, and Advanced Techniques"
+title: "OpenRefine for Digital Humanities"
+subtitle: "Data Cleaning & Transformation for SSH Research"
 ---
 
-## Getting Started with OpenRefine
+## Introduction to OpenRefine
 
 ![](https://openrefine.org/img/openrefine_logo.svg){width=200px}
 
-OpenRefine is a powerful, free tool for working with messy data. Below you'll find curated resources to continue learning beyond our workshop.
+**OpenRefine** is an essential tool for Digital Humanities researchers working with messy, heterogeneous data from diverse sources—archives, surveys, databases, and digitized collections.
+
+::: {.callout-note}
+## Why OpenRefine for SSH Research?
+
+- Clean inconsistent names (people, places, institutions)
+- Standardize dates across different systems
+- Reconcile data with authority files (VIAF, GeoNames, Wikidata)
+- Prepare data for visualization and analysis
+- **Reproducible** - export cleaning scripts to reuse
+:::
 
 ---
 
-## Official Documentation
+## Getting Started
 
-### OpenRefine Documentation
-
-The official docs are comprehensive and well-maintained:
+### Official Documentation
 
 - **User Manual:** <https://openrefine.org/docs>
-  - Getting started guide
-  - Interface overview
-  - All functions explained
-  - Expression language (GREL) reference
-
-- **FAQ:** <https://openrefine.org/docs/faq>
-  - Common questions answered
-  - Troubleshooting tips
+  - Complete guide to all features
+  - GREL (expression language) reference
+  - FAQ and troubleshooting
 
 - **Community Forum:** <https://forum.openrefine.org/>
-  - Active community for questions
-  - Share workflows and solutions
+  - Active community
+  - Search before posting - many answers already exist
 
 ---
 
-## Video Tutorials
+## Video Tutorials - By Level
 
-### 📹 Beginner Level
+### Beginner Level (Start Here!)
 
-#### 1. Introduction to OpenRefine (The Carpentries)
+#### 1. Library Carpentry OpenRefine
 
-**Excellent starting point - clear, well-paced**
+**Best comprehensive introduction for humanities scholars**
 
-- **Video Series:** [Library Carpentry OpenRefine](https://www.youtube.com/playlist?list=PLXaKS7yupYiC7eN5Z1G2LLk2qBz8t0FeH)
-- **Duration:** ~2 hours total (broken into short segments)
-- **Covers:**
+- **Playlist:** [Library Carpentry OpenRefine](https://www.youtube.com/playlist?list=PLXaKS7yupYiC7eN5Z1G2LLk2qBz8t0FeH)
+- **Duration:** ~2 hours total (short segments)
+- **Content:**
   - Installing OpenRefine
   - Creating projects
-  - Basic transformations
   - Faceting and filtering
+  - Basic transformations
   - GREL expressions
 
-**Companion materials:**
-- **Written lesson:** <https://librarycarpentry.org/lc-open-refine/>
-- **Sample datasets** included
+**Written lesson:**
+- **URL:** <https://librarycarpentry.org/lc-open-refine/>
+- **Self-paced:** 3-4 hours
+- **Includes:** Practice datasets
+- **Why it's great:** Designed for librarians and humanities researchers
 
 ---
 
-#### 2. OpenRefine for Data Cleaning (Programming Historian)
+#### 2. Programming Historian - Cleaning Data
 
-**Text tutorial with step-by-step instructions**
+**Text-based tutorial with cultural heritage examples**
 
 - **Tutorial:** [Cleaning Data with OpenRefine](https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine)
 - **Level:** Beginner
 - **Time:** 1-2 hours
-- **Highlights:**
-  - Real-world example (museum data)
-  - Screenshots for every step
-  - Common pitfalls explained
+- **Example:** Museum collection data
+- **Strength:** Screenshots for every step, clear explanations
 
 ---
 
-#### 3. OpenRefine Tutorial (Harvard GIS Lab)
+#### 3. OpenRefine Basics (Harvard GIS)
 
-**Quick 15-minute introduction**
+**Quick 15-minute overview**
 
 - **Video:** [OpenRefine Basics](https://www.youtube.com/watch?v=B70J_H_zAWM)
 - **Duration:** 15 minutes
-- **Best for:** Quick refresher or demo
+- **Best for:** Quick demo or refresher
 
 ---
 
-### 📹 Intermediate Level
+### Intermediate Level
 
-#### 4. Data Cleaning with OpenRefine (Stanford University)
+#### 4. Advanced Clustering & Reconciliation
 
-**Comprehensive workshop recording**
+**Stanford University Workshop**
 
 - **Video:** [Stanford OpenRefine Workshop](https://www.youtube.com/watch?v=wGVtycv3SS0)
 - **Duration:** 90 minutes
-- **Covers:**
-  - Advanced clustering
-  - Working with multiple columns
-  - Splitting and concatenating data
+- **Topics:**
+  - Advanced clustering algorithms
+  - Working across multiple columns
+  - Data reconciliation
   - Exporting clean data
-
-**Materials:**
-- **Slides:** Available on [Stanford website](https://library.stanford.edu/research/data-management-services/data-best-practices)
 
 ---
 
-#### 5. OpenRefine: Transformations and GREL
+#### 5. OpenRefine for Historical Data
 
-**Focus on expression language**
+**University of Michigan**
+
+- **Video:** [Cleaning Historical Census Data](https://www.youtube.com/results?search_query=openrefine+historical+data)
+- **Focus:** Dealing with historical spelling variations, old place names
+- **Duration:** 45 minutes
+
+---
+
+#### 6. GREL: Expression Language
+
+**Tutorial on transformation expressions**
 
 - **Video:** [GREL Tutorial](https://www.youtube.com/watch?v=5tsyz3ibYzk)
 - **Duration:** 45 minutes
 - **Topics:**
-  - GREL syntax explained
+  - GREL syntax
   - String operations
   - Conditional statements
   - Date parsing
 
 ---
 
-### 📹 Advanced Level
+### Advanced Level
 
-#### 6. Web Scraping and API Calls with OpenRefine
+#### 7. Reconciliation with Authority Files
 
-**Enriching data from external sources**
+**Essential for cultural heritage - match names to standard vocabularies**
 
-- **Video Tutorial:** [Fetching Data from APIs](https://www.youtube.com/watch?v=Example_Advanced)
-- **Written guide:** <https://blog.ouseful.info/tag/openrefine/>
-- **Covers:**
+- **Video:** [Reconciliation with Wikidata](https://www.youtube.com/watch?v=5vTjJjWllV4)
+- **Duration:** 30 minutes
+- **Use cases:**
+  - Author names → VIAF IDs
+  - Place names → GeoNames/Wikidata
+  - Standardizing historical terminology
+
+**Written guide:**
+
+- [Reconciliation Services Overview](https://openrefine.org/docs/manual/reconciling)
+
+---
+
+#### 8. API Calls & Web Scraping
+
+**Enrich data from external sources**
+
+- **Blog post:** [Tony Hirst - OpenRefine & APIs](https://blog.ouseful.info/tag/openrefine/)
+- **Topics:**
   - HTTP requests
-  - Parsing JSON responses
+  - Parsing JSON
   - Rate limiting
   - Error handling
 
 ---
 
-#### 7. OpenRefine Reconciliation Services
+## Text-Based Tutorials - Recommended
 
-**Matching your data with external databases**
+### 1. Library Carpentry (Comprehensive)
 
-- **Video:** [Reconciliation with Wikidata](https://www.youtube.com/watch?v=5vTjJjWllV4)
-- **Duration:** 30 minutes
-- **Use cases:**
-  - Matching author names to VIAF IDs
-  - Geocoding place names
-  - Standardizing terminology
+**The gold standard**
 
-**Documentation:**
-- [Reconciliation Services Overview](https://openrefine.org/docs/manual/reconciling)
-
----
-
-## Text-Based Tutorials
-
-### Step-by-Step Guides
-
-#### 1. Library Carpentry: OpenRefine Lesson
-
-**Gold standard tutorial - widely used in workshops**
-
-- **Link:** <https://librarycarpentry.org/lc-open-refine/>
-- **Time:** 3-4 hours (self-paced)
-- **Format:** Interactive web lesson
-- **Datasets:** Included
-- **Topics:**
+- **URL:** <https://librarycarpentry.org/lc-open-refine/>
+- **Time:** 3-4 hours self-paced
+- **Format:** Interactive web lesson with datasets
+- **Covers:**
   - Importing data
-  - Layout of OpenRefine
+  - Interface overview
   - Faceting and filtering
   - Clustering
-  - Transforming data
+  - Transforming data with GREL
   - Exporting and scripts
 
-**Why it's great:** Designed for librarians and researchers, no coding background assumed.
+**Why it's excellent:** No coding background needed, humanities-friendly
 
 ---
 
-#### 2. GESIS: OpenRefine Tutorial
+### 2. Programming Historian Series
 
-**Academic-focused, very thorough**
+**Multiple OpenRefine lessons for different tasks**
 
-- **Link:** <https://www.gesis.org/en/services/research/tools/openrefine>
-- **Format:** PDF guide + sample data
-- **Level:** Beginner to Intermediate
-- **Specialization:** Social science data
+1. **[Cleaning Data](https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine)**
+2. **[Fetching and Parsing Data from APIs](https://programminghistorian.org/en/lessons/fetch-and-parse-data-with-openrefine)**
+3. **[Working with Linked Open Data](https://programminghistorian.org/en/lessons/retired/generating-an-ordered-data-set-from-an-OCR-text-file)**
+
+**Strength:** Step-by-step, peer-reviewed, maintained
 
 ---
 
-#### 3. Data Carpentry: OpenRefine for Social Science Data
+### 3. Data Carpentry: Social Science Data
 
-**Discipline-specific approach**
+**Discipline-specific approach for survey/interview data**
 
-- **Link:** <https://datacarpentry.org/openrefine-socialsci/>
+- **URL:** <https://datacarpentry.org/openrefine-socialsci/>
 - **Time:** 2 hours
-- **Focus:** Survey data, interview transcripts
+- **Focus:** Survey data, qualitative coding
 - **Includes:** Practice dataset
 
 ---
 
-#### 4. Illinois Data Bank: OpenRefine Guide
+### 4. GESIS: OpenRefine Tutorial
 
-**Quick reference with examples**
+**Academic-focused, social sciences**
 
-- **Link:** <https://researchguides.library.wisc.edu/c.php?g=975747&p=7044099>
-- **Best for:** Quick lookup of specific functions
-- **Format:** Searchable guide
+- **URL:** <https://www.gesis.org/en/services/research/tools/openrefine>
+- **Format:** PDF guide + datasets
+- **Level:** Beginner to Intermediate
+
+---
+
+## OpenRefine for Specific DH Tasks
+
+### Cleaning Archival Metadata
+
+**Common issues in archival data:**
+
+- Inconsistent date formats (12/3/1887 vs March 12, 1887)
+- Variant spellings (François vs Francois)
+- Multiple languages (Rome, Roma, Rôme)
+- Incomplete records
+
+**OpenRefine solutions:**
+
+- **Clustering** to find variants
+- **GREL** to standardize dates
+- **Facets** to identify gaps
+- **Reconciliation** to match authority records
+
+**Example workflow:**
+```
+1. Import metadata CSV
+2. Cluster names (Edit cells > Cluster and edit)
+3. Standardize dates (Transform > value.toDate())
+4. Fill down missing data (Edit cells > Fill down)
+5. Reconcile with VIAF (Reconcile > Start reconciling)
+```
+
+---
+
+### Working with Historical Names & Places
+
+**Challenges:**
+
+- Historical spellings (Wien vs Vienna, Pressburg vs Bratislava)
+- Name changes over time
+- Vernacular vs standardized forms
+
+
+- **GeoNames reconciliation** - modern place names
+- **Pleiades** - ancient places (<https://pleiades.stoa.org/>)
+- **Wikidata** - multilingual, historical entities
+- **Getty TGN** - Thesaurus of Geographic Names
+
+**Tutorial:**
+
+- [Reconciling Historical Place Names](https://programminghistorian.org/en/lessons/geocoding-qgis) (includes OpenRefine)
+
+---
+
+### Preparing Data for Visualization
+
+**From messy spreadsheet to clean dataset:**
+
+**Before OpenRefine:**
+
+```
+Date       | Event              | Location
+3/12/1848  | Revolution         | paris
+March 1848 | Protests           | PARIS
+12.03.1848 | Declaration signed | Paris, France
+```
+
+**After OpenRefine:**
+
+```
+Date       | Event              | City  | Country
+1848-03-12 | Revolution         | Paris | France
+1848-03-01 | Protests           | Paris | France
+1848-03-12 | Declaration signed | Paris | France
+```
+
+**Now ready for:** Timeline visualization, mapping, network analysis
+
+---
+
+### Transcription Quality Control
+
+**Using OpenRefine to validate crowdsourced transcriptions:**
+
+1. **Import** transcriptions from Transkribus, FromThePage, etc.
+2. **Cluster** variant spellings
+3. **Facet** by transcriber to check consistency
+4. **Filter** blank/incomplete entries
+5. **Flag** suspicious values for review
 
 ---
 
 ## GREL (Google Refine Expression Language)
 
-### Understanding GREL
+### Essential GREL Functions
 
-GREL is OpenRefine's expression language for transformations.
-
-#### Official GREL Reference
-
-- **Documentation:** <https://openrefine.org/docs/manual/grel>
-- **All functions:** Listed with examples
-- **Use as:** Cheat sheet while working
-
-#### GREL Cheat Sheet
-
-**Quick reference guide:**
-
-- **PDF:** [GREL Functions Cheat Sheet](https://web.archive.org/web/20190105063215/code4lib.org/conference/2015/tingle)
-
-#### Common GREL Recipes
-
-**Curated examples:**
-
-1. **Cleaning text:**
-   ```
-   value.trim()                    # Remove whitespace
-   value.toLowercase()             # Convert to lowercase
-   value.toTitlecase()             # Title case
-   value.replace("old", "new")     # Replace text
-   ```
-
-2. **Working with dates:**
-   ```
-   value.toDate()                          # Parse date
-   value.toDate().toString("yyyy-MM-dd")   # Format date
-   ```
-
-3. **Conditional logic:**
-   ```
-   if(value == "N/A", null, value)         # Replace N/A with null
-   if(value.length() > 10, "long", "short") # Categorize by length
-   ```
-
-4. **Splitting text:**
-   ```
-   value.split(",")                # Split by comma
-   value.split(",")[0]             # Get first element
-   ```
-
-**More recipes:** <https://github.com/OpenRefine/OpenRefine/wiki/Recipes>
-
----
-
-## Datasets for Practice
-
-### Sample Datasets
-
-Practice with these publicly available messy datasets:
-
-#### 1. Museum Collections Data
-
-- **Source:** <https://github.com/MuseumAPI/collection-downloads>
-- **What's messy:** Inconsistent dates, duplicate entries, mixed formats
-- **Good for:** Cultural heritage researchers
-
-#### 2. Dirty Survey Data
-
-- **Source:** [Bad Data Repository](https://github.com/Quartz/bad-data-guide)
-- **What's messy:** Missing values, encoding issues, outliers
-- **Good for:** Social scientists
-
-#### 3. Public Library Data
-
-- **Source:** <https://data.imls.gov/>
-- **What's messy:** Inconsistent naming, special characters
-- **Good for:** General practice
-
-#### 4. OpenRefine Sample Data
-
-- **Source:** <https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets>
-- **Official examples:** Used in documentation
-
----
-
-## Use Case Libraries
-
-### Real-World Examples
-
-Learn from how others use OpenRefine:
-
-#### 1. OpenRefine in Digital Humanities
-
-- **Examples:** <https://digitalhumanities.berkeley.edu/resources/openrefine-dh>
-- **Use cases:**
-  - Cleaning historical records
-  - Standardizing place names
-  - Parsing archival metadata
-
-#### 2. OpenRefine for Bibliographic Data
-
-- **Guide:** <https://www.library.illinois.edu/dcl/openrefine/>
-- **Examples:**
-  - Author name disambiguation
-  - ISBN cleaning
-  - Subject heading normalization
-
-#### 3. OpenRefine in Scientific Research
-
-- **Case studies:** <https://riojournal.com/articles.php?journal_name=rio&id=10.3897/rio.5.e38136>
-- **Applications:**
-  - Species name reconciliation
-  - Geographic coordinates cleanup
-  - Laboratory data standardization
-
----
-
-## Advanced Topics
-
-### Extensions and Plugins
-
-OpenRefine supports extensions for specialized tasks:
-
-#### 1. RDF Extension
-
-**For linked data work**
-
-- **Info:** <https://openrefine.org/docs/manual/rdfextension>
-- **Use cases:** Semantic web, knowledge graphs
-
-#### 2. Geocoding Extensions
-
-**Add geographic coordinates**
-
-- **Guide:** <https://github.com/OpenRefine/OpenRefine/wiki/Geocoding>
-
-#### 3. Named Entity Recognition (NER)
-
-**Extract entities from text**
-
-- **Extension:** <https://github.com/stkenny/Refine-NER-Extension>
-- **Use case:** Text mining
-
----
-
-## Troubleshooting & Tips
-
-### Common Issues
-
-::: {.callout-warning}
-## Frequent Problems & Solutions
-
-**Problem:** OpenRefine won't start
-- **Solution:** Check if port 3333 is in use, restart computer
-
-**Problem:** Large files crash OpenRefine
-- **Solution:** Increase memory allocation (see [documentation](https://openrefine.org/docs/manual/installing#increasing-memory-allocation))
-
-**Problem:** Can't undo after closing project
-- **Solution:** Export operations before closing, reimport if needed
-
-**Problem:** Lost work
-- **Solution:** OpenRefine auto-saves, but export projects regularly
-:::
-
-### Performance Tips
-
-- **Filter before transforming:** Narrow down data first
-- **Use facets efficiently:** Close unused facets
-- **Export regularly:** Don't rely on auto-save alone
-- **Split large files:** Process in chunks if very large
-
----
-
-## Community & Support
-
-### Getting Help
-
-#### 1. OpenRefine Forum
-
-- **Link:** <https://forum.openrefine.org/>
-- **Very active:** Questions usually answered within 24 hours
-- **Search first:** Many questions already answered
-
-#### 2. GitHub Issues
-
-- **Link:** <https://github.com/OpenRefine/OpenRefine/issues>
-- **For:** Bug reports, feature requests
-- **Check existing issues** before posting
-
-#### 3. Stack Overflow
-
-- **Tag:** `openrefine`
-- **Link:** <https://stackoverflow.com/questions/tagged/openrefine>
-- **Good for:** Programming-related questions
-
----
-
-## Comparison with Other Tools
-
-### When to Use OpenRefine vs. Alternatives
-
-| Task | OpenRefine | Excel/Sheets | Python/R | Database |
-|------|------------|--------------|----------|----------|
-| Quick data cleaning | ✅ Ideal | ✅ OK | ❌ Overkill | ❌ Overkill |
-| Large datasets (>100k rows) | ✅ Good | ❌ Slow | ✅ Better | ✅ Best |
-| Reconciliation with external data | ✅ Built-in | ❌ Manual | ⚠️ Complex | ⚠️ Complex |
-| Reproducible workflows | ✅ Yes (export JSON) | ❌ Manual | ✅ Yes (scripts) | ✅ Yes (SQL) |
-| Learning curve | ⚠️ Moderate | ✅ Easy | ❌ Steep | ❌ Steep |
-| No programming required | ✅ Yes | ✅ Yes | ❌ No | ❌ No |
-
-**Bottom line:** OpenRefine excels at exploratory data cleaning and transformation without programming.
-
----
-
-## Regular Expressions in OpenRefine
-
-### Regex Resources
-
-GREL supports regular expressions for advanced pattern matching.
-
-#### Learn Regex
-
-- **Interactive tutorial:** <https://regexone.com/>
-- **Regex tester:** <https://regex101.com/> (test patterns before using)
-- **Cheat sheet:** <https://www.rexegg.com/regex-quickstart.html>
-
-#### Regex in OpenRefine
-
-**Common patterns:**
+#### Basic String Operations
 
 ```grel
-# Match emails
-value.match(/[\w.-]+@[\w.-]+\.\w+/)
+# Remove whitespace
+value.trim()
 
-# Extract numbers
-value.match(/\d+/)
+# Change case
+value.toLowercase()
+value.toUppercase()
+value.toTitlecase()
 
-# Remove non-alphanumeric
-value.replace(/[^a-zA-Z0-9]/, "")
+# Replace text
+value.replace("old", "new")
+value.replace(/[^a-zA-Z]/, "")    # Regex: keep only letters
 
-# Find phone numbers (US format)
-value.match(/\d{3}-\d{3}-\d{4}/)
+# Extract parts
+value.substring(0, 4)              # First 4 characters
+value.split(",")[0]                # Split by comma, take first
+```
+
+#### Working with Dates
+
+```grel
+# Parse date strings
+value.toDate()
+value.toDate("dd/MM/yyyy")         # Specify format
+
+# Format dates
+value.toDate().toString("yyyy-MM-dd")
+value.toDate().toString("MMMM dd, yyyy")
+
+# Date components
+value.toDate().year()
+value.toDate().month()
+```
+
+#### Conditional Logic
+
+```grel
+# If-then-else
+if(value == "N/A", null, value)
+if(value.length() > 10, "long", "short")
+
+# Multiple conditions
+if(value.contains("manuscript"), 
+   "MS", 
+   if(value.contains("book"), "Book", "Other"))
+```
+
+#### Array Operations
+
+```grel
+# Split and join
+value.split(";")                   # Create array
+value.split(";").join(" | ")       # Split then rejoin
+forEach(value.split(","), v, v.trim())  # Trim each element
+```
+
+#### Cross-Column References
+
+```grel
+# Reference another column
+cells["Column Name"].value
+
+# Combine columns
+cells["First"].value + " " + cells["Last"].value
+
+# Conditional based on other column
+if(cells["Language"].value == "Latin", "LA", "EN")
 ```
 
 ---
 
-## Books & Long-Form Resources
+### GREL Recipes for Cultural Heritage
 
-### Recommended Reading
+#### 1. Standardize Multiple Date Formats
 
-#### 1. Using OpenRefine (Packt Publishing)
+```grel
+# Handle: "12/3/1887", "March 12 1887", "1887-03-12"
+if(value.contains("/"), 
+   value.toDate("dd/MM/yyyy"), 
+   if(value.contains("-"),
+      value.toDate("yyyy-MM-dd"),
+      value.toDate("MMMM dd yyyy")
+   )
+).toString("yyyy-MM-dd")
+```
 
-- **Author:** Ruben Verborgh, Max De Wilde
-- **Link:** Available on O'Reilly Learning Platform
-- **Level:** Beginner to Advanced
-- **Why it's good:** Comprehensive, includes real projects
+#### 2. Clean Shelfmark/Call Numbers
 
-#### 2. Data Wrangling with Python (O'Reilly)
+```grel
+# "Ms. Lat. 123" → "MS-LAT-123"
+value.toUppercase()
+     .replace(/[^A-Z0-9]+/, "-")
+     .replace(/^-|-$/, "")
+```
 
-- Includes OpenRefine workflows
-- Shows how to combine OpenRefine with Python
+#### 3. Extract Folio/Page Numbers
+
+```grel
+# From "fol. 23r" or "f.23v" → "23r"
+value.replace(/^f(ol)?\.?\s*/i, "")
+```
+
+#### 4. Transliterate Characters
+
+```grel
+# Basic Latin to ASCII (remove diacritics)
+value.replace("é", "e")
+     .replace("à", "a")
+     .replace("ü", "u")
+     # etc.
+```
+
+#### 5. Generate URLs from Identifiers
+
+```grel
+# Create archive.org link from ID
+"https://archive.org/details/" + value
+
+# BnF Gallica link
+"https://gallica.bnf.fr/ark:/12148/" + value
+```
 
 ---
 
-## Workshops & Training Opportunities
+### GREL Cheat Sheet
+
+**Official reference:** <https://openrefine.org/docs/manual/grel>
+
+**Printable cheat sheet:**
+
+- [GREL Quick Reference](https://gist.github.com/pmgreen/6e133c5dcde65762d29c) (GitHub Gist)
+
+---
+
+## Reconciliation Services for DH
+
+### What is Reconciliation?
+
+**Match your data against authoritative sources:**
+
+- Standardize names → VIAF, ISNI
+- Places → GeoNames, Wikidata
+- Concepts → Getty AAT, LCSH
+- Historical entities → Wikidata, DBpedia
+
+### Built-in Services
+
+1. **Wikidata** - Universal multilingual knowledge base
+2. **VIAF** - Virtual International Authority File (people, institutions)
+3. **GeoNames** - Geographic names database
+
+### Adding Custom Services
+
+**For Cultural Heritage:**
+
+- **Getty Vocabularies** (AAT, ULAN, TGN)
+  - Guide: <https://www.getty.edu/research/tools/vocabularies/>
+  
+- **FAST** (Faceted Application of Subject Terminology)
+  - <https://www.oclc.org/research/areas/data-science/fast.html>
+
+- **Pleiades** (Ancient places)
+  - <https://pleiades.stoa.org/>
+
+**How to add:**
+
+1. Reconcile > Start reconciling
+2. Add Standard Service
+3. Enter reconciliation endpoint URL
+
+**Tutorial:** [Using Reconciliation Services](https://openrefine.org/docs/manual/reconciling)
+
+---
+
+## Practice Datasets for DH
+
+### 1. Museum/Gallery Collections
+
+- **Carnegie Museum of Art:** <https://github.com/cmoa/collection>
+  - 30,000+ artworks with metadata
+  - CSV format, ready to clean
+
+- **Tate Collection:** <https://github.com/tategallery/collection>
+  - 70,000+ artworks and artists
+  - Various data quality issues
+
+- **Rijksmuseum:** <https://data.rijksmuseum.nl/>
+  - Dutch masters collection
+  - Messy creator names, dates
+
+---
+
+### 2. Historical Datasets
+
+- **19th Century British Library Books:** 
+  - <https://doi.org/10.23636/1112>
+  - OCR text, cataloging data
+
+- **Colonial Correspondence:**
+
+  - [Unsilencing Colonial Archives](https://doi.org/10.5281/zenodo.5886025)
+  - Named entity recognition dataset
+
+- **Historical Census Data:**
+
+  - Various historical census projects
+  - Inconsistent place names, occupations
+
+---
+
+### 3. Archival Finding Aids
+
+- **EAD (Encoded Archival Description) exports**
+  - Convert to CSV/Excel
+  - Clean dates, names, locations
+
+**Example workflow:**
+
+1. Export EAD as spreadsheet
+2. Import to OpenRefine
+3. Standardize date ranges
+4. Reconcile place names
+5. Export clean version
+
+---
+
+### 4. OpenRefine Sample Datasets
+
+- **Official examples:** <https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets>
+
+---
+
+## Case Studies: OpenRefine in DH Projects
+
+### 1. Mapping the Republic of Letters
+
+**Project:** Stanford visualization of early modern correspondence
+
+**OpenRefine used for:**
+
+- Cleaning 55,000+ letters
+- Standardizing correspondent names
+- Geocoding locations
+- Reconciling with VIAF
+
+**Result:** Network visualization, interactive map
+
+**More info:** <http://republicofletters.stanford.edu/>
+
+---
+
+### 2. Pelagios Project
+
+**Project:** Linking historical places across ancient sources
+
+**OpenRefine workflow:**
+
+- Import various gazetteers
+- Standardize place name variants
+- Reconcile with Pleiades
+- Generate RDF/Linked Data
+
+**More info:** <https://pelagios.org/>
+
+---
+
+### 3. British Library Labs
+
+**Various projects using BL datasets**
+
+**Common OpenRefine tasks:**
+
+- OCR error correction
+- Metadata enhancement
+- Classification/tagging
+- Preparing for visualization
+
+**Competitions:** <https://blogs.bl.uk/digital-scholarship/>
+
+---
+
+## OpenRefine Extensions
+
+### Recommended Extensions for DH
+
+#### 1. RDF Extension
+
+**For Linked Open Data projects**
+
+- **Info:** <https://openrefine.org/docs/manual/rdfextension>
+- **Use:** Generate RDF triples, work with ontologies
+- **Example:** Creating LOD from museum collections
+
+#### 2. Named Entity Recognition (NER)
+
+**Extract entities from text automatically**
+
+- **Extension:** <https://github.com/stkenny/Refine-NER-Extension>
+- **Use:** Identify people, places, organizations in corpus
+- **Example:** Processing historical documents
+
+#### 3. Wikibase Extension
+
+**For projects using Wikibase (like Wikidata)**
+
+- **Info:** <https://openrefine.org/docs/manual/wikibase>
+- **Use:** Upload data to institutional Wikibase
+- **Example:** Creating structured cultural heritage database
+
+---
+
+## Performance Tips
+
+**For large cultural heritage datasets:**
+
+1. **Filter first** - narrow data before complex operations
+2. **Close unused facets** - they consume memory
+3. **Export regularly** - don't rely only on auto-save
+4. **Use batches** - process 10k rows at a time
+5. **Document workflow** - export operations as JSON
+
+---
+
+## Going Further - Advanced Topics
+
+### 1. Regular Expressions (Regex)
+
+**Essential for pattern matching in historical text**
+
+**Learn regex:**
+- **Interactive tutorial:** <https://regexone.com/>
+- **Tester:** <https://regex101.com/>
+- **For historians:** [Regex for Archival Research](https://regex.libraries.stackexchange.com/)
+
+**Example regex for OpenRefine:**
+```grel
+# Match folio numbers (f. 23r, fol. 45v, etc.)
+value.match(/f(ol)?\.?\s*(\d+[rv]?)/)
+
+# Extract years (1500-1999)
+value.match(/\b(1[5-9]\d{2})\b/)
+
+# Find capitalized words (potential names)
+value.match(/\b[A-Z][a-z]+\b/)
+```
+
+---
+
+### 2. Batch Processing Multiple Files
+
+**Process many similar files with same operations:**
+
+1. **Create and test** workflow on sample file
+2. **Export operations** (Extract... in Undo/Redo tab)
+3. **Apply to new files** (Apply... with saved JSON)
+
+**Use case:** Cleaning multiple finding aids, multiple years of data
+
+---
+
+### 3. Combining OpenRefine with Other Tools
+
+**Typical DH workflow:**
+
+```
+1. Data collection (archives, databases)
+2. Digitization/transcription
+3. Initial organization (Tropy, file system)
+4. ↓
+5. OPENREFINE: Clean, standardize, reconcile
+6. ↓
+7. Export clean data
+8. Analysis (R, Python, Gephi, Palladio)
+9. Visualization (maps, networks, timelines)
+10. Publication (online exhibit, article, data paper)
+```
+
+---
+
+## Complementary Tools
+
+### Before OpenRefine
+
+- **Tropy** - organize images, extract metadata
+- **Transkribus** - transcribe handwritten sources
+- **csvkit** - command-line CSV manipulation (for very large files)
+
+### After OpenRefine
+
+**For analysis & visualization:**
+
+- **Palladio** - Network & geo visualization (Stanford)
+  - <https://hdlab.stanford.edu/palladio/>
+  
+- **Gephi** - Network analysis
+  - <https://gephi.org/>
+  
+- **Voyant Tools** - Text analysis
+  - <https://voyant-tools.org/>
+  
+- **R / Python** - Statistical analysis, custom visualizations
+  - R: `tidyverse` package
+  - Python: `pandas` library
+
+### Integrated workflows
+
+- **Zotero** → metadata export → OpenRefine → clean data
+- **Omeka** → item export → OpenRefine → enhanced metadata → Omeka import
+
+---
+
+## Learning Resources - Digital Humanities Focus
 
 ### Online Courses
 
-#### 1. Data Carpentry Workshops
+1. **DARIAH-Campus**
+   - <https://campus.dariah.eu/>
+   - European DH training platform
+   - Includes data management modules
 
-- **Schedule:** <https://datacarpentry.org/workshops-host/>
-- **Free:** Community-taught workshops
-- **Global:** Available worldwide
+2. **Programming Historian**
+   - <https://programminghistorian.org/>
+   - Peer-reviewed tutorials
+   - OpenRefine + other DH tools
 
-#### 2. FOSTER Open Science
-
-- **Link:** <https://www.fosteropenscience.eu/node/2437>
-- **Includes:** Data management with OpenRefine module
-
----
-
-## Project Showcase
-
-### Inspiration from Real Projects
-
-See how researchers have used OpenRefine:
-
-1. **[British Library Digital Collections](https://www.bl.uk/projects/british-library-openrefine)** - Metadata cleanup
-2. **[Europeana](https://pro.europeana.eu/post/data-quality-committee-recommends-openrefine-for-cultural-heritage-data-work)** - Cultural heritage aggregation
-3. **[GBIF](https://www.gbif.org/tool/81747/openrefine)** - Biodiversity data cleaning
+3. **PARTHENOS Training**
+   - <http://training.parthenos-project.eu/>
+   - Research infrastructure training
+   - Cultural heritage specific
 
 ---
 
-## Keep Learning
+### Books & Long-Form Guides
+
+1. **"Using OpenRefine"** - Packt Publishing
+   - Ruben Verborgh, Max De Wilde
+   - Comprehensive, includes real projects
+
+2. **"The Historian's Macroscope"**
+   - Free online: <http://www.themacroscope.org/>
+   - Includes OpenRefine chapter for historians
+
+3. **"The Programming Historian"** - Lessons
+   - <https://programminghistorian.org/en/lessons/>
+   - Multiple OpenRefine tutorials
+
+---
+
+### Communities
+
+**Where to ask questions:**
+
+1. **OpenRefine Forum**
+   - <https://forum.openrefine.org/>
+   - Very active, friendly community
+   - Search before asking!
+
+2. **DH Slack**
+   - <https://digitalhumanities.slack.com/>
+   - #openrefine channel
+   - Real-time help
+
+3. **Digital Humanities Questions (DHQ)**
+   - <https://digitalhumanities.stackexchange.com/>
+   - Q&A format
+
+---
+
+## Resources in Other Languages
+
+### French Resources
+
+**DoRANum** materials (some in French):
+- <https://doranum.fr/>
+- Video guides, fact sheets
+- Check for English subtitles
+
+**Huma-Num** training:
+- <https://www.huma-num.fr/formations>
+- Sometimes offers OpenRefine workshops
+
+**TGIR Huma-Num tools:**
+- <https://www.huma-num.fr/services-et-outils>
+
+### Other European Languages
+
+- **Italian:** [AIuCD resources](https://www.aiucd.it/)
+- **German:** [DHd tutorials](https://dig-hum.de/)
+- **Spanish:** [Humanidades Digitales Hispánicas](http://www.humanidadesdigitales.net/)
+
+---
+
+## Final Tips for SSH Researchers
 
 ::: {.callout-tip}
-## Next Steps
+## Best Practices
 
-1. **Practice regularly:** Work with your own research data
-2. **Join the forum:** Learn from others' questions
-3. **Export your scripts:** Build a personal library of operations
-4. **Share your workflows:** Help the community
-5. **Stay updated:** OpenRefine releases new versions regularly
+**For long-term projects:**
+
+1. **Document everything** - Export operations as JSON, keep notes
+2. **Version your datasets** - Name files with dates and versions
+3. **Test workflows early** - Don't wait until deadline to clean data
+4. **Share knowledge** - Help colleagues learn OpenRefine
+5. **Think FAIR** - Clean data is the first step to FAIR data
+
+**Remember:**
+- OpenRefine is **non-destructive** - you can always undo
+- Operations are **reproducible** - save and reuse workflows
+- The community is **helpful** - don't hesitate to ask questions
 :::
 
 ---
 
-## Additional Resources
+## Questions & Support
 
-### Blogs & Tutorials
+**For OpenRefine help:**
+- Forum: <https://forum.openrefine.org/>
+- Documentation: <https://openrefine.org/docs>
 
-- **Tony Hirst's Blog:** <https://blog.ouseful.info/tag/openrefine/> (Advanced tips)
-- **School of Data:** <https://schoolofdata.org/courses/> (General data literacy)
+**For workshop-specific questions:**
+[julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
 
-### Cheat Sheets
-
-- **[OpenRefine Cheat Sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf)** (PDF)
-- **[GREL Quick Reference](https://gist.github.com/pmgreen/6e133c5dcde65762d29c)** (GitHub Gist)
+**Additional DH support:**
+- [DARIAH Helpdesk](https://www.dariah.eu/helpdesk/)
+- [Huma-Num contact](https://www.huma-num.fr/nous-contacter)
 
 ---
 
-## Questions?
 
-For help with OpenRefine in your specific research context:
 
-📧 [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
-
-Or post on the [OpenRefine Forum](https://forum.openrefine.org/) for community support!
