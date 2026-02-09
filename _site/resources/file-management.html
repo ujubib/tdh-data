@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>File Naming &amp; Backup Best Practices – Personal and Research Data Management: Organize, Clean &amp; Enrich</title>
+<title>File Naming &amp; Backup for Digital Humanities – Personal and Research Data Management: Organize, Clean &amp; Enrich</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -100,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data"> <i class="bi bi-git" role="img">
+    <a class="nav-link" href="https://github.com/ujubib/tdh-data"> <i class="bi bi-git" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -200,79 +235,82 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#file-naming-conventions" id="toc-file-naming-conventions" class="nav-link active" data-scroll-target="#file-naming-conventions">File Naming Conventions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#file-naming-conventions" id="toc-file-naming-conventions" class="nav-link" data-scroll-target="#file-naming-conventions">File Naming Conventions</a>
   <ul class="collapse">
-  <li><a href="#key-principles" id="toc-key-principles" class="nav-link" data-scroll-target="#key-principles">Key Principles</a></li>
+  <li><a href="#core-principles" id="toc-core-principles" class="nav-link" data-scroll-target="#core-principles">Core Principles</a></li>
   </ul></li>
-  <li><a href="#comprehensive-guides-resources" id="toc-comprehensive-guides-resources" class="nav-link" data-scroll-target="#comprehensive-guides-resources">Comprehensive Guides &amp; Resources</a>
+  <li><a href="#comprehensive-guides---international" id="toc-comprehensive-guides---international" class="nav-link" data-scroll-target="#comprehensive-guides---international">Comprehensive Guides - International</a>
   <ul class="collapse">
-  <li><a href="#stanford-libraries---best-practices-for-file-naming" id="toc-stanford-libraries---best-practices-for-file-naming" class="nav-link" data-scroll-target="#stanford-libraries---best-practices-for-file-naming">1. Stanford Libraries - Best Practices for File Naming</a></li>
-  <li><a href="#university-of-edinburgh---naming-conventions" id="toc-university-of-edinburgh---naming-conventions" class="nav-link" data-scroll-target="#university-of-edinburgh---naming-conventions">2. University of Edinburgh - Naming Conventions</a></li>
-  <li><a href="#princeton-research-data-service" id="toc-princeton-research-data-service" class="nav-link" data-scroll-target="#princeton-research-data-service">3. Princeton Research Data Service</a></li>
-  <li><a href="#mit-libraries---file-naming" id="toc-mit-libraries---file-naming" class="nav-link" data-scroll-target="#mit-libraries---file-naming">4. MIT Libraries - File Naming</a></li>
-  <li><a href="#uk-data-service---organizing-data" id="toc-uk-data-service---organizing-data" class="nav-link" data-scroll-target="#uk-data-service---organizing-data">5. UK Data Service - Organizing Data</a></li>
+  <li><a href="#doranum-resources-french-platform---english-available" id="toc-doranum-resources-french-platform---english-available" class="nav-link" data-scroll-target="#doranum-resources-french-platform---english-available">1. DoRANum Resources (French Platform - English Available)</a></li>
+  <li><a href="#dariah-eu---digital-research-infrastructure-for-arts-humanities" id="toc-dariah-eu---digital-research-infrastructure-for-arts-humanities" class="nav-link" data-scroll-target="#dariah-eu---digital-research-infrastructure-for-arts-humanities">2. DARIAH-EU - Digital Research Infrastructure for Arts &amp; Humanities</a></li>
+  <li><a href="#stanford-libraries---file-naming-best-practices" id="toc-stanford-libraries---file-naming-best-practices" class="nav-link" data-scroll-target="#stanford-libraries---file-naming-best-practices">3. Stanford Libraries - File Naming Best Practices</a></li>
+  <li><a href="#uk-data-service---organizing-data" id="toc-uk-data-service---organizing-data" class="nav-link" data-scroll-target="#uk-data-service---organizing-data">4. UK Data Service - Organizing Data</a></li>
+  <li><a href="#edinburgh-research-data-service" id="toc-edinburgh-research-data-service" class="nav-link" data-scroll-target="#edinburgh-research-data-service">5. Edinburgh Research Data Service</a></li>
   </ul></li>
-  <li><a href="#video-tutorials-on-file-naming" id="toc-video-tutorials-on-file-naming" class="nav-link" data-scroll-target="#video-tutorials-on-file-naming">Video Tutorials on File Naming</a>
+  <li><a href="#naming-conventions-for-specific-dh-data-types" id="toc-naming-conventions-for-specific-dh-data-types" class="nav-link" data-scroll-target="#naming-conventions-for-specific-dh-data-types">Naming Conventions for Specific DH Data Types</a>
   <ul class="collapse">
-  <li><a href="#file-naming-and-folder-structures" id="toc-file-naming-and-folder-structures" class="nav-link" data-scroll-target="#file-naming-and-folder-structures">📹 File Naming and Folder Structures</a></li>
-  <li><a href="#data-organization-in-spreadsheets-for-social-scientists" id="toc-data-organization-in-spreadsheets-for-social-scientists" class="nav-link" data-scroll-target="#data-organization-in-spreadsheets-for-social-scientists">📹 Data Organization in Spreadsheets for Social Scientists</a></li>
+  <li><a href="#transcriptions" id="toc-transcriptions" class="nav-link" data-scroll-target="#transcriptions">Transcriptions</a></li>
+  <li><a href="#digitized-images" id="toc-digitized-images" class="nav-link" data-scroll-target="#digitized-images">Digitized Images</a></li>
+  <li><a href="#interview-recordings" id="toc-interview-recordings" class="nav-link" data-scroll-target="#interview-recordings">Interview Recordings</a></li>
+  <li><a href="#d-models" id="toc-d-models" class="nav-link" data-scroll-target="#d-models">3D Models</a></li>
+  <li><a href="#metadata-files" id="toc-metadata-files" class="nav-link" data-scroll-target="#metadata-files">Metadata Files</a></li>
   </ul></li>
-  <li><a href="#directory-structure-best-practices" id="toc-directory-structure-best-practices" class="nav-link" data-scroll-target="#directory-structure-best-practices">Directory Structure Best Practices</a>
+  <li><a href="#directory-structure-for-dh-projects" id="toc-directory-structure-for-dh-projects" class="nav-link" data-scroll-target="#directory-structure-for-dh-projects">Directory Structure for DH Projects</a>
   <ul class="collapse">
-  <li><a href="#recommended-reading" id="toc-recommended-reading" class="nav-link" data-scroll-target="#recommended-reading">Recommended Reading</a></li>
+  <li><a href="#recommended-structure" id="toc-recommended-structure" class="nav-link" data-scroll-target="#recommended-structure">Recommended Structure</a></li>
   </ul></li>
   <li><a href="#backup-strategies-the-3-2-1-rule" id="toc-backup-strategies-the-3-2-1-rule" class="nav-link" data-scroll-target="#backup-strategies-the-3-2-1-rule">Backup Strategies: The 3-2-1 Rule</a>
   <ul class="collapse">
-  <li><a href="#understanding-3-2-1" id="toc-understanding-3-2-1" class="nav-link" data-scroll-target="#understanding-3-2-1">Understanding 3-2-1</a></li>
-  <li><a href="#authoritative-resources" id="toc-authoritative-resources" class="nav-link" data-scroll-target="#authoritative-resources">Authoritative Resources</a></li>
+  <li><a href="#understanding-3-2-1-for-research-projects" id="toc-understanding-3-2-1-for-research-projects" class="nav-link" data-scroll-target="#understanding-3-2-1-for-research-projects">Understanding 3-2-1 for Research Projects</a></li>
+  <li><a href="#practical-implementation" id="toc-practical-implementation" class="nav-link" data-scroll-target="#practical-implementation">Practical Implementation</a></li>
   </ul></li>
-  <li><a href="#cloud-storage-options-for-researchers" id="toc-cloud-storage-options-for-researchers" class="nav-link" data-scroll-target="#cloud-storage-options-for-researchers">Cloud Storage Options for Researchers</a>
+  <li><a href="#cloud-storage-solutions---european-fair-compliant" id="toc-cloud-storage-solutions---european-fair-compliant" class="nav-link" data-scroll-target="#cloud-storage-solutions---european-fair-compliant">Cloud Storage Solutions - European &amp; FAIR-compliant</a>
   <ul class="collapse">
-  <li><a href="#universityinstitutional-storage" id="toc-universityinstitutional-storage" class="nav-link" data-scroll-target="#universityinstitutional-storage">University/Institutional Storage</a></li>
-  <li><a href="#general-cloud-services" id="toc-general-cloud-services" class="nav-link" data-scroll-target="#general-cloud-services">General Cloud Services</a></li>
+  <li><a href="#institutional-nextcloud-uppa-nuage" id="toc-institutional-nextcloud-uppa-nuage" class="nav-link" data-scroll-target="#institutional-nextcloud-uppa-nuage">1. Institutional Nextcloud (UPPA Nuage)</a></li>
+  <li><a href="#huma-num-sharedocs-for-humanities-research" id="toc-huma-num-sharedocs-for-humanities-research" class="nav-link" data-scroll-target="#huma-num-sharedocs-for-humanities-research">2. Huma-Num ShareDocs (For Humanities Research)</a></li>
+  <li><a href="#dariah-de-repository" id="toc-dariah-de-repository" class="nav-link" data-scroll-target="#dariah-de-repository">3. DARIAH-DE Repository</a></li>
+  <li><a href="#zenodo---open-science-repository" id="toc-zenodo---open-science-repository" class="nav-link" data-scroll-target="#zenodo---open-science-repository">4. Zenodo - Open Science Repository</a></li>
   </ul></li>
-  <li><a href="#automated-backup-tools" id="toc-automated-backup-tools" class="nav-link" data-scroll-target="#automated-backup-tools">Automated Backup Tools</a>
+  <li><a href="#file-formats-for-digital-humanities" id="toc-file-formats-for-digital-humanities" class="nav-link" data-scroll-target="#file-formats-for-digital-humanities">File Formats for Digital Humanities</a>
   <ul class="collapse">
-  <li><a href="#recommended-software" id="toc-recommended-software" class="nav-link" data-scroll-target="#recommended-software">Recommended Software</a></li>
-  <li><a href="#for-beginners-freefilesync-tutorial" id="toc-for-beginners-freefilesync-tutorial" class="nav-link" data-scroll-target="#for-beginners-freefilesync-tutorial">For Beginners: FreeFileSync Tutorial</a></li>
-  <li><a href="#for-advanced-users-rsync" id="toc-for-advanced-users-rsync" class="nav-link" data-scroll-target="#for-advanced-users-rsync">For Advanced Users: rsync</a></li>
+  <li><a href="#preservation-friendly-formats-by-data-type" id="toc-preservation-friendly-formats-by-data-type" class="nav-link" data-scroll-target="#preservation-friendly-formats-by-data-type">Preservation-Friendly Formats by Data Type</a></li>
+  <li><a href="#tei-text-encoding-initiative" id="toc-tei-text-encoding-initiative" class="nav-link" data-scroll-target="#tei-text-encoding-initiative">TEI (Text Encoding Initiative)</a></li>
   </ul></li>
-  <li><a href="#file-format-best-practices" id="toc-file-format-best-practices" class="nav-link" data-scroll-target="#file-format-best-practices">File Format Best Practices</a>
+  <li><a href="#data-management-plans-dmp" id="toc-data-management-plans-dmp" class="nav-link" data-scroll-target="#data-management-plans-dmp">Data Management Plans (DMP)</a>
   <ul class="collapse">
-  <li><a href="#choosing-preservation-friendly-formats" id="toc-choosing-preservation-friendly-formats" class="nav-link" data-scroll-target="#choosing-preservation-friendly-formats">Choosing Preservation-Friendly Formats</a></li>
+  <li><a href="#why-dmps-matter" id="toc-why-dmps-matter" class="nav-link" data-scroll-target="#why-dmps-matter">Why DMPs Matter</a></li>
+  <li><a href="#dmp-tools" id="toc-dmp-tools" class="nav-link" data-scroll-target="#dmp-tools">DMP Tools</a></li>
+  <li><a href="#dmp-resources" id="toc-dmp-resources" class="nav-link" data-scroll-target="#dmp-resources">DMP Resources</a></li>
   </ul></li>
-  <li><a href="#metadata-documentation" id="toc-metadata-documentation" class="nav-link" data-scroll-target="#metadata-documentation">Metadata &amp; Documentation</a>
+  <li><a href="#metadata-best-practices-for-cultural-heritage" id="toc-metadata-best-practices-for-cultural-heritage" class="nav-link" data-scroll-target="#metadata-best-practices-for-cultural-heritage">Metadata Best Practices for Cultural Heritage</a>
   <ul class="collapse">
-  <li><a href="#readme-files" id="toc-readme-files" class="nav-link" data-scroll-target="#readme-files">README Files</a></li>
+  <li><a href="#why-metadata-matters" id="toc-why-metadata-matters" class="nav-link" data-scroll-target="#why-metadata-matters">Why Metadata Matters</a></li>
+  <li><a href="#metadata-standards-for-dh" id="toc-metadata-standards-for-dh" class="nav-link" data-scroll-target="#metadata-standards-for-dh">Metadata Standards for DH</a></li>
+  <li><a href="#minimal-metadata-for-any-file" id="toc-minimal-metadata-for-any-file" class="nav-link" data-scroll-target="#minimal-metadata-for-any-file">Minimal Metadata for Any File</a></li>
   </ul></li>
-  <li><a href="#checklists-quick-guides" id="toc-checklists-quick-guides" class="nav-link" data-scroll-target="#checklists-quick-guides">Checklists &amp; Quick Guides</a>
+  <li><a href="#checklists-templates" id="toc-checklists-templates" class="nav-link" data-scroll-target="#checklists-templates">Checklists &amp; Templates</a>
   <ul class="collapse">
-  <li><a href="#downloadable-resources" id="toc-downloadable-resources" class="nav-link" data-scroll-target="#downloadable-resources">Downloadable Resources</a></li>
+  <li><a href="#file-organization-checklist" id="toc-file-organization-checklist" class="nav-link" data-scroll-target="#file-organization-checklist">File Organization Checklist</a></li>
+  <li><a href="#readme-template-for-research-projects" id="toc-readme-template-for-research-projects" class="nav-link" data-scroll-target="#readme-template-for-research-projects">README Template for Research Projects</a></li>
   </ul></li>
-  <li><a href="#books-long-form-resources" id="toc-books-long-form-resources" class="nav-link" data-scroll-target="#books-long-form-resources">Books &amp; Long-Form Resources</a>
+  <li><a href="#additional-resources---european-international" id="toc-additional-resources---european-international" class="nav-link" data-scroll-target="#additional-resources---european-international">Additional Resources - European &amp; International</a>
   <ul class="collapse">
-  <li><a href="#recommended-reading-1" id="toc-recommended-reading-1" class="nav-link" data-scroll-target="#recommended-reading-1">Recommended Reading</a></li>
+  <li><a href="#training-platforms" id="toc-training-platforms" class="nav-link" data-scroll-target="#training-platforms">Training Platforms</a></li>
+  <li><a href="#guidelines-standards" id="toc-guidelines-standards" class="nav-link" data-scroll-target="#guidelines-standards">Guidelines &amp; Standards</a></li>
+  <li><a href="#communities" id="toc-communities" class="nav-link" data-scroll-target="#communities">Communities</a></li>
   </ul></li>
-  <li><a href="#discipline-specific-guides" id="toc-discipline-specific-guides" class="nav-link" data-scroll-target="#discipline-specific-guides">Discipline-Specific Guides</a>
-  <ul class="collapse">
-  <li><a href="#by-field" id="toc-by-field" class="nav-link" data-scroll-target="#by-field">By Field</a></li>
-  </ul></li>
-  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a>
-  <ul class="collapse">
-  <li><a href="#online-communities" id="toc-online-communities" class="nav-link" data-scroll-target="#online-communities">Online Communities</a></li>
-  <li><a href="#workshops-training" id="toc-workshops-training" class="nav-link" data-scroll-target="#workshops-training">Workshops &amp; Training</a></li>
-  </ul></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/file-management.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/archifiltre.html">Additional Resources</a></li><li class="breadcrumb-item"><a href="../resources/file-management.html">File Naming &amp; Backup</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">File Naming &amp; Backup Best Practices</h1>
-<p class="subtitle lead">Resources and Guidelines</p>
+<h1 class="title">File Naming &amp; Backup for Digital Humanities</h1>
+<p class="subtitle lead">Best Practices for SSH Research</p>
 </div>
 
 
@@ -289,131 +327,209 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="file-naming-conventions" class="level2">
-<h2 class="anchored" data-anchor-id="file-naming-conventions">File Naming Conventions</h2>
-<p>Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.</p>
-<section id="key-principles" class="level3">
-<h3 class="anchored" data-anchor-id="key-principles">Key Principles</h3>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Systematic file management is essential for Digital Humanities research, especially for projects involving multiple sources, collaborators, or long-term data collection.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Quick Reference: File Naming Rules
+<span class="screen-reader-only">Important</span>For Doctoral Researchers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With projects spanning 3-5 years, involving multiple institutions, and generating diverse data types, consistent file naming and backup strategies prevent data loss and enable collaboration.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="file-naming-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="file-naming-conventions">File Naming Conventions</h2>
+<section id="core-principles" class="level3">
+<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Quick Reference: File Naming Rules
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><strong>Use dates:</strong> YYYY-MM-DD format (ISO 8601)</li>
+<li><strong>Use dates:</strong> YYYY-MM-DD format (ISO 8601) - universal across countries</li>
 <li><strong>No spaces:</strong> Use hyphens <code>-</code> or underscores <code>_</code></li>
-<li><strong>Be descriptive:</strong> But keep it concise</li>
-<li><strong>Version numbers:</strong> v01, v02, not “final” or “final2”</li>
-<li><strong>Avoid special characters:</strong> No é, à, /, , ?, *, etc.</li>
-<li><strong>Lowercase:</strong> For consistency (optional but recommended)</li>
+<li><strong>Be descriptive:</strong> Include project, source, version</li>
+<li><strong>Version numbers:</strong> v01, v02, v03 (not “final”)</li>
+<li><strong>No special characters:</strong> Avoid é, à, ç, ñ, /, , ?, *</li>
+<li><strong>Language-neutral:</strong> Use English or transliterated names for international collaboration</li>
 </ol>
-<p><strong>Example:</strong> <code>2026-02-09_interview_participant-05_v02.docx</code></p>
+<p><strong>Example for archival photos:</strong><br>
+<code>2025-06-15_paris-natlib_ms-fr-12345_fol-23r_v01.jpg</code><br>
+(Date_Archive_Manuscript_Folio_Version)</p>
 </div>
 </div>
 <hr>
 </section>
 </section>
-<section id="comprehensive-guides-resources" class="level2">
-<h2 class="anchored" data-anchor-id="comprehensive-guides-resources">Comprehensive Guides &amp; Resources</h2>
-<section id="stanford-libraries---best-practices-for-file-naming" class="level3">
-<h3 class="anchored" data-anchor-id="stanford-libraries---best-practices-for-file-naming">1. Stanford Libraries - Best Practices for File Naming</h3>
-<p><strong>Excellent starting point with clear examples</strong></p>
+<section id="comprehensive-guides---international" class="level2">
+<h2 class="anchored" data-anchor-id="comprehensive-guides---international">Comprehensive Guides - International</h2>
+<section id="doranum-resources-french-platform---english-available" class="level3">
+<h3 class="anchored" data-anchor-id="doranum-resources-french-platform---english-available">1. DoRANum Resources (French Platform - English Available)</h3>
+<p><strong>DoRANum</strong> (Données de la Recherche: Apprentissage Numérique) - France’s premier research data management platform.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>DoRANum in English
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As of January 2025, DoRANum offers: - <strong><a href="https://doranum.fr/">9 thematic fact sheets in English</a></strong> (Stor age, File naming, Metadata, etc.) - <strong>9 “Minute” videos with English subtitles</strong> (short, practical guides) - Discipline-specific learning paths on <a href="https://callisto.inist.fr/">Callisto platform</a></p>
+</div>
+</div>
+<p><strong>Key English resources:</strong> - <strong>General RDM:</strong> <a href="https://doranum.fr/tag/research-data-management-rdm/">Research Data Management tag</a> - <strong>File naming:</strong> Check the fact sheets section (under “Storage and Archiving”) - <strong>Videos:</strong> <a href="https://doranum.fr/">DoRANum Minutes</a> - now with English subtitles</p>
+<p><strong>Why DoRANum?</strong> - Developed for French research community (includes CNRS, ANR requirements) - Humanities-friendly (not just STEM-focused) - FAIR principles integrated - Free and openly licensed</p>
+<hr>
+</section>
+<section id="dariah-eu---digital-research-infrastructure-for-arts-humanities" class="level3">
+<h3 class="anchored" data-anchor-id="dariah-eu---digital-research-infrastructure-for-arts-humanities">2. DARIAH-EU - Digital Research Infrastructure for Arts &amp; Humanities</h3>
+<p><strong>The European reference for DH data management</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://www.dariah.eu/" class="uri">https://www.dariah.eu/</a></li>
+<li><strong>Training materials:</strong> <a href="https://campus.dariah.eu/" class="uri">https://campus.dariah.eu/</a></li>
+<li><strong>Focus:</strong> Arts, humanities, cultural heritage</li>
+</ul>
+<p><strong>Essential resources:</strong> - <a href="https://www.dariah.eu/activities/research-data-management/">DARIAH Research Data Management Guide</a> - <a href="http://training.parthenos-project.eu/">PARTHENOS Training Materials</a> - Cultural heritage specific - <a href="https://registries.clarin-dariah.eu/courses/">Digital Humanities Course Registry</a></p>
+<p><strong>Best practices documents:</strong> - File organization for multilingual projects - Managing transcriptions and editions - Metadata for cultural objects</p>
+<hr>
+</section>
+<section id="stanford-libraries---file-naming-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="stanford-libraries---file-naming-best-practices">3. Stanford Libraries - File Naming Best Practices</h3>
+<p><strong>Clear, practical, with examples</strong></p>
 <ul>
 <li><strong>Link:</strong> <a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming" class="uri">https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming</a></li>
-<li><strong>Covers:</strong> Basic rules, versioning, sequential numbering, examples by discipline</li>
+<li><strong>Covers:</strong> Basic rules, versioning, sequential numbering</li>
+<li><strong>Examples:</strong> By discipline including humanities</li>
 </ul>
-<p><strong>Key takeaways:</strong> - Use 3 elements: date, brief description, version - Keep names under 32 characters when possible - Document your naming convention in a README file</p>
-<hr>
-</section>
-<section id="university-of-edinburgh---naming-conventions" class="level3">
-<h3 class="anchored" data-anchor-id="university-of-edinburgh---naming-conventions">2. University of Edinburgh - Naming Conventions</h3>
-<p><strong>Detailed guide with discipline-specific examples</strong></p>
-<ul>
-<li><strong>Link:</strong> <a href="https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming" class="uri">https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming</a></li>
-<li><strong>PDF Guide:</strong> <a href="https://www.ed.ac.uk/files/atoms/files/file-naming-conventions.pdf">File Naming Conventions</a></li>
-</ul>
-<p><strong>Highlights:</strong> - Examples for different research contexts - Common pitfalls to avoid - Templates you can adapt</p>
-<hr>
-</section>
-<section id="princeton-research-data-service" class="level3">
-<h3 class="anchored" data-anchor-id="princeton-research-data-service">3. Princeton Research Data Service</h3>
-<p><strong>Short, practical guide with a focus on reproducibility</strong></p>
-<ul>
-<li><strong>Link:</strong> <a href="https://libguides.princeton.edu/c.php?g=102546&amp;p=930626" class="uri">https://libguides.princeton.edu/c.php?g=102546&amp;p=930626</a></li>
-</ul>
-<p><strong>Topics covered:</strong> - Why naming matters for reproducibility - Handling versions vs.&nbsp;dates - Special considerations for code files</p>
-<hr>
-</section>
-<section id="mit-libraries---file-naming" class="level3">
-<h3 class="anchored" data-anchor-id="mit-libraries---file-naming">4. MIT Libraries - File Naming</h3>
-<p><strong>Quick reference card and checklist</strong></p>
-<ul>
-<li><strong>Link:</strong> <a href="https://libraries.mit.edu/data-management/store/organize/" class="uri">https://libraries.mit.edu/data-management/store/organize/</a></li>
-</ul>
-<p><strong>Useful for:</strong> - Quick decision-making - Team agreements on naming - Printable reference guide</p>
+<p><strong>Key takeaways:</strong> - 3 elements: date, description, version - Avoid names &gt;32 characters when possible - Document naming conventions in README</p>
 <hr>
 </section>
 <section id="uk-data-service---organizing-data" class="level3">
-<h3 class="anchored" data-anchor-id="uk-data-service---organizing-data">5. UK Data Service - Organizing Data</h3>
-<p><strong>Comprehensive resource covering both naming and organization</strong></p>
+<h3 class="anchored" data-anchor-id="uk-data-service---organizing-data">4. UK Data Service - Organizing Data</h3>
+<p><strong>Comprehensive, humanities-inclusive</strong></p>
 <ul>
 <li><strong>Link:</strong> <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/" class="uri">https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/</a></li>
+<li><strong>Strength:</strong> Examples from social sciences and humanities</li>
+<li><strong>Includes:</strong> Large project workflows, team collaboration</li>
 </ul>
-<p><strong>Excellent for:</strong> - Large projects with multiple contributors - Long-term archival planning - Sharing data with collaborators</p>
 <hr>
 </section>
-</section>
-<section id="video-tutorials-on-file-naming" class="level2">
-<h2 class="anchored" data-anchor-id="video-tutorials-on-file-naming">Video Tutorials on File Naming</h2>
-<section id="file-naming-and-folder-structures" class="level3">
-<h3 class="anchored" data-anchor-id="file-naming-and-folder-structures">📹 File Naming and Folder Structures</h3>
+<section id="edinburgh-research-data-service" class="level3">
+<h3 class="anchored" data-anchor-id="edinburgh-research-data-service">5. Edinburgh Research Data Service</h3>
+<p><strong>Detailed with discipline-specific examples</strong></p>
 <ul>
-<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=ES1LTlnpLMk">Organizing Research Data</a> by New York University (8 min)</li>
-<li><strong>Content:</strong> Visual walkthrough of good vs bad naming practices</li>
-</ul>
-</section>
-<section id="data-organization-in-spreadsheets-for-social-scientists" class="level3">
-<h3 class="anchored" data-anchor-id="data-organization-in-spreadsheets-for-social-scientists">📹 Data Organization in Spreadsheets for Social Scientists</h3>
-<ul>
-<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=3MEJ38BO6Mo">Data Carpentry</a> (15 min)</li>
-<li><strong>Content:</strong> Beyond file names—organizing data <em>within</em> files</li>
+<li><strong>Link:</strong> <a href="https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming" class="uri">https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming</a></li>
+<li><strong>PDF Guide:</strong> <a href="https://www.ed.ac.uk/files/atoms/files/file-naming-conventions.pdf">File Naming Conventions</a></li>
+<li><strong>Highlights:</strong> Templates you can adapt, common pitfalls</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="directory-structure-best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="directory-structure-best-practices">Directory Structure Best Practices</h2>
-<section id="recommended-reading" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-reading">Recommended Reading</h3>
-<ol type="1">
-<li><strong><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424">Project Organization</a></strong> - PLoS Computational Biology
-<ul>
-<li>Classic paper: “A Quick Guide to Organizing Computational Biology Projects”</li>
-<li>Focuses on reproducible research structures</li>
-</ul></li>
-<li><strong><a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">Folder Structure for Research Data</a></strong> - Harvard Medical School
-<ul>
-<li>Template directory structures</li>
-<li>How to organize across project phases</li>
-</ul></li>
-<li><strong><a href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html">File Organization Tutorial</a></strong> - The Turing Way
-<ul>
-<li>Modern, community-driven guide</li>
-<li>Includes code and data organization</li>
-</ul></li>
-</ol>
+<section id="naming-conventions-for-specific-dh-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="naming-conventions-for-specific-dh-data-types">Naming Conventions for Specific DH Data Types</h2>
+<section id="transcriptions" class="level3">
+<h3 class="anchored" data-anchor-id="transcriptions">Transcriptions</h3>
+<pre><code>[date]_[source-archive]_[document-id]_transcription_[version].txt
+
+Example:
+2025-06-20_bnf_ms-lat-8501_fol-12v_transcription_v03.txt</code></pre>
+</section>
+<section id="digitized-images" class="level3">
+<h3 class="anchored" data-anchor-id="digitized-images">Digitized Images</h3>
+<pre><code>[date]_[archive]_[collection]_[item-id]_[folio/page]_[version].jpg
+
+Example:
+2025-03-15_vat-lib_pal-lat_1071_fol-45r_v01.tif</code></pre>
+</section>
+<section id="interview-recordings" class="level3">
+<h3 class="anchored" data-anchor-id="interview-recordings">Interview Recordings</h3>
+<pre><code>[date]_interview_[participant-id]_[location]_[recorder].mp3
+
+Example:
+2025-09-10_interview_p05_rome_audio-01.mp3</code></pre>
+</section>
+<section id="d-models" class="level3">
+<h3 class="anchored" data-anchor-id="d-models">3D Models</h3>
+<pre><code>[date]_[site]_[object-type]_[scan-method]_[processing-stage].obj
+
+Example:
+2025-07-22_pompeii_fresco_photogrammetry_raw.obj
+2025-07-22_pompeii_fresco_photogrammetry_cleaned.obj</code></pre>
+</section>
+<section id="metadata-files" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-files">Metadata Files</h3>
+<pre><code>[date]_[project]_[data-type]_metadata_[version].csv
+
+Example:
+2025-11-05_choral-manuscripts_images_metadata_v02.csv</code></pre>
+<hr>
+</section>
+</section>
+<section id="directory-structure-for-dh-projects" class="level2">
+<h2 class="anchored" data-anchor-id="directory-structure-for-dh-projects">Directory Structure for DH Projects</h2>
+<section id="recommended-structure" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-structure">Recommended Structure</h3>
+<pre><code>choral-phd-project/
+├── 00-admin/
+│   ├── dmp/                     # Data Management Plans
+│   ├── ethics/                  # Ethics documentation
+│   └── funding/                 # Grant documents
+├── 01-primary-sources/
+│   ├── archives/
+│   │   ├── raw-images/         # Original photos from archives
+│   │   ├── processed/          # Cropped, enhanced versions
+│   │   └── metadata/           # Spreadsheets with source info
+│   ├── transcriptions/
+│   │   ├── draft/
+│   │   └── final/
+│   └── fieldnotes/
+├── 02-secondary-sources/
+│   ├── literature/
+│   └── bibliography/           # Zotero exports, etc.
+├── 03-datasets/
+│   ├── raw/                    # Never modify!
+│   ├── cleaned/                # OpenRefine outputs
+│   └── analysis-ready/
+├── 04-analysis/
+│   ├── scripts/                # R, Python, etc.
+│   ├── outputs/
+│   └── visualizations/
+├── 05-publications/
+│   ├── article-01/
+│   ├── dissertation/
+│   └── conference-posters/
+├── 06-public-engagement/
+│   ├── exhibition-materials/
+│   └── teaching-resources/
+├── documentation/
+│   ├── README.md              # Project overview
+│   ├── codebook.md            # Variable definitions
+│   ├── changelog.md           # Project history
+│   └── file-naming-guide.md   # Your conventions
+└── archive/                    # Deprecated versions</code></pre>
 <hr>
 </section>
 </section>
 <section id="backup-strategies-the-3-2-1-rule" class="level2">
 <h2 class="anchored" data-anchor-id="backup-strategies-the-3-2-1-rule">Backup Strategies: The 3-2-1 Rule</h2>
-<section id="understanding-3-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-3-2-1">Understanding 3-2-1</h3>
+<section id="understanding-3-2-1-for-research-projects" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-3-2-1-for-research-projects">Understanding 3-2-1 for Research Projects</h3>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -425,338 +541,482 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>3</strong> copies of your data (original + 2 backups)</li>
-<li><strong>2</strong> different media types (e.g., local drive + cloud)</li>
-<li><strong>1</strong> copy off-site (cloud or physically elsewhere)</li>
+<li><strong>3</strong> copies of your data
+<ul>
+<li>Original working copy</li>
+<li>Backup at institution</li>
+<li>Backup at home OR cloud</li>
+</ul></li>
+<li><strong>2</strong> different media types
+<ul>
+<li>Local hard drive (laptop/desktop)</li>
+<li>External hard drive OR university server</li>
+<li>Cloud storage (Nextcloud, Huma-Num)</li>
+</ul></li>
+<li><strong>1</strong> copy off-site
+<ul>
+<li>Geographically separate</li>
+<li>Protected from local disasters (fire, theft)</li>
+<li>Accessible when traveling or working remotely</li>
+</ul></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="authoritative-resources" class="level3">
-<h3 class="anchored" data-anchor-id="authoritative-resources">Authoritative Resources</h3>
-<section id="us-cert-cybersecurity-infrastructure-security-agency" class="level4">
-<h4 class="anchored" data-anchor-id="us-cert-cybersecurity-infrastructure-security-agency">1. US-CERT (Cybersecurity &amp; Infrastructure Security Agency)</h4>
-<ul>
-<li><strong>Link:</strong> <a href="https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf" class="uri">https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf</a></li>
-<li><strong>Content:</strong> Government guidelines on backup strategies</li>
-</ul>
-</section>
-<section id="digital-preservation-coalition-handbook" class="level4">
-<h4 class="anchored" data-anchor-id="digital-preservation-coalition-handbook">2. Digital Preservation Coalition Handbook</h4>
-<ul>
-<li><strong>Link:</strong> <a href="https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery" class="uri">https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery</a></li>
-<li><strong>Content:</strong> Long-term preservation perspective</li>
-</ul>
-</section>
-<section id="library-of-congress---personal-digital-archiving" class="level4">
-<h4 class="anchored" data-anchor-id="library-of-congress---personal-digital-archiving">3. Library of Congress - Personal Digital Archiving</h4>
-<ul>
-<li><strong>Link:</strong> <a href="https://www.digitalpreservation.gov/personalarchiving/" class="uri">https://www.digitalpreservation.gov/personalarchiving/</a></li>
-<li><strong>Content:</strong> Practical advice for individuals</li>
-</ul>
+<section id="practical-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="practical-implementation">Practical Implementation</h3>
+<p><strong>Challenge:</strong> Managing data across multiple work locations</p>
+<p><strong>Solution:</strong> 1. <strong>Primary working storage:</strong> University Nextcloud/cloud (syncs everywhere) 2. <strong>Local backup:</strong> External hard drive at office or home 3. <strong>Off-site backup:</strong> Institutional server or Huma-Num</p>
+<p><strong>Best practices:</strong> - Keep active projects on cloud storage for easy access - Carry external drive for large files (videos, high-res images) - Test restoration periodically to verify backups work</p>
 <hr>
 </section>
 </section>
-</section>
-<section id="cloud-storage-options-for-researchers" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-storage-options-for-researchers">Cloud Storage Options for Researchers</h2>
-<section id="universityinstitutional-storage" class="level3">
-<h3 class="anchored" data-anchor-id="universityinstitutional-storage">University/Institutional Storage</h3>
-<p>Most universities provide storage solutions. Check with your institution for:</p>
+<section id="cloud-storage-solutions---european-fair-compliant" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-storage-solutions---european-fair-compliant">Cloud Storage Solutions - European &amp; FAIR-compliant</h2>
+<section id="institutional-nextcloud-uppa-nuage" class="level3">
+<h3 class="anchored" data-anchor-id="institutional-nextcloud-uppa-nuage">1. Institutional Nextcloud (UPPA Nuage)</h3>
+<p><strong>UPPA’s Nextcloud instance</strong></p>
 <ul>
-<li>Storage quotas</li>
-<li>Backup policies</li>
-<li>Access after graduation</li>
-<li>Data security and compliance</li>
-</ul>
-<p><strong>UPPA-specific:</strong> - <strong>Nuage:</strong> <a href="https://nuage.univ-pau.fr" class="uri">https://nuage.univ-pau.fr</a> (Nextcloud) - <strong>Huma-Num ShareDocs:</strong> <a href="https://documentation.huma-num.fr" class="uri">https://documentation.huma-num.fr</a> (for humanities/social sciences)</p>
-</section>
-<section id="general-cloud-services" class="level3">
-<h3 class="anchored" data-anchor-id="general-cloud-services">General Cloud Services</h3>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Privacy &amp; Compliance
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before using commercial cloud services, check: - Your institution’s data policies - Funder requirements (e.g., GDPR compliance) - Whether data contains sensitive information</p>
-</div>
-</div>
-<p><strong>Research-friendly options:</strong></p>
+<li><strong>URL:</strong> <a href="https://nuage.univ-pau.fr" class="uri">https://nuage.univ-pau.fr</a></li>
+<li><strong>Capacity:</strong> Generous (check with IT)</li>
+<li><strong>Features:</strong>
 <ul>
-<li><strong>Nextcloud</strong> (self-hosted or providers): Privacy-focused, open source</li>
-<li><strong>Box</strong> (many universities have partnerships)</li>
-<li><strong>Google Drive</strong> (check institutional agreement)</li>
-<li><strong>Microsoft OneDrive</strong> (if your university uses Microsoft 365)</li>
-<li><strong>Zenodo</strong> (for published research data): <a href="https://zenodo.org" class="uri">https://zenodo.org</a></li>
+<li>Automatic sync across devices</li>
+<li>File sharing (internal/external)</li>
+<li>Collaborative editing (OnlyOffice)</li>
+<li>GDPR compliant (data in France)</li>
+</ul></li>
 </ul>
+<p><strong>Best for:</strong> Active research files, collaboration within UPPA</p>
 <hr>
 </section>
-</section>
-<section id="automated-backup-tools" class="level2">
-<h2 class="anchored" data-anchor-id="automated-backup-tools">Automated Backup Tools</h2>
-<section id="recommended-software" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-software">Recommended Software</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Platform</th>
-<th>Type</th>
-<th>Open Source</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>FreeFileSync</strong></td>
-<td>Win/Mac/Linux</td>
-<td>Sync &amp; Mirror</td>
-<td>✅ Yes</td>
-</tr>
-<tr class="even">
-<td><strong>rsync</strong></td>
-<td>Mac/Linux/Win</td>
-<td>Command-line sync</td>
-<td>✅ Yes</td>
-</tr>
-<tr class="odd">
-<td><strong>Rclone</strong></td>
-<td>Win/Mac/Linux</td>
-<td>Cloud sync</td>
-<td>✅ Yes</td>
-</tr>
-<tr class="even">
-<td><strong>Duplicati</strong></td>
-<td>Win/Mac/Linux</td>
-<td>Encrypted backups</td>
-<td>✅ Yes</td>
-</tr>
-<tr class="odd">
-<td><strong>Backblaze</strong></td>
-<td>Win/Mac</td>
-<td>Cloud backup</td>
-<td>❌ Paid</td>
-</tr>
-<tr class="even">
-<td><strong>Arq Backup</strong></td>
-<td>Win/Mac</td>
-<td>Cloud backup</td>
-<td>❌ Paid</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="for-beginners-freefilesync-tutorial" class="level3">
-<h3 class="anchored" data-anchor-id="for-beginners-freefilesync-tutorial">For Beginners: FreeFileSync Tutorial</h3>
-<ol type="1">
-<li><strong>Download:</strong> <a href="https://freefilesync.org/" class="uri">https://freefilesync.org/</a></li>
-<li><strong>Tutorial:</strong> <a href="https://freefilesync.org/tutorials.php">How to Use FreeFileSync</a></li>
-<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=example">FreeFileSync Basics</a> (YouTube)</li>
-</ol>
-</section>
-<section id="for-advanced-users-rsync" class="level3">
-<h3 class="anchored" data-anchor-id="for-advanced-users-rsync">For Advanced Users: rsync</h3>
+<section id="huma-num-sharedocs-for-humanities-research" class="level3">
+<h3 class="anchored" data-anchor-id="huma-num-sharedocs-for-humanities-research">2. Huma-Num ShareDocs (For Humanities Research)</h3>
+<p><strong>National infrastructure for humanities &amp; social sciences</strong></p>
 <ul>
-<li><strong>Guide:</strong> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories">rsync Tutorial</a></li>
-<li><strong>For researchers:</strong> <a href="https://researchcomputing.princeton.edu/support/knowledge-base/rclone">Backing Up Your Research Data with rsync</a></li>
+<li><strong>URL:</strong> <a href="https://www.huma-num.fr/services-et-outils" class="uri">https://www.huma-num.fr/services-et-outils</a></li>
+<li><strong>Documentation:</strong> <a href="https://documentation.huma-num.fr" class="uri">https://documentation.huma-num.fr</a></li>
+</ul>
+<p><strong>Two modes:</strong> - <strong>Storage mode:</strong> Like Nextcloud, for active files - <strong>Processing mode:</strong> For data preparation before archiving</p>
+<p><strong>Best for:</strong> - Humanities-specific workflows - Collaboration with researchers outside UPPA - Preparing data for long-term archiving</p>
+<p><strong>Also from Huma-Num:</strong> - <strong>Nakala:</strong> Data repository for research data (FAIR-compliant) - <strong>ISIDORE:</strong> Search engine for SSH research</p>
+<hr>
+</section>
+<section id="dariah-de-repository" class="level3">
+<h3 class="anchored" data-anchor-id="dariah-de-repository">3. DARIAH-DE Repository</h3>
+<p><strong>For DH projects in the DARIAH network</strong></p>
+<ul>
+<li><strong>URL:</strong> <a href="https://de.dariah.eu/repository" class="uri">https://de.dariah.eu/repository</a></li>
+<li><strong>Purpose:</strong> Long-term preservation of DH research data</li>
+<li><strong>Accepts:</strong> Texts, corpora, databases, research tools</li>
 </ul>
 <hr>
 </section>
-</section>
-<section id="file-format-best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="file-format-best-practices">File Format Best Practices</h2>
-<section id="choosing-preservation-friendly-formats" class="level3">
-<h3 class="anchored" data-anchor-id="choosing-preservation-friendly-formats">Choosing Preservation-Friendly Formats</h3>
-<p>Long-term accessibility depends on choosing the right file formats.</p>
-<section id="key-resources" class="level4">
-<h4 class="anchored" data-anchor-id="key-resources">Key Resources</h4>
-<ol type="1">
-<li><strong><a href="https://www.loc.gov/preservation/resources/rfs/">Recommended Formats Statement</a></strong> - Library of Congress
+<section id="zenodo---open-science-repository" class="level3">
+<h3 class="anchored" data-anchor-id="zenodo---open-science-repository">4. Zenodo - Open Science Repository</h3>
+<p><strong>European Commission-funded repository</strong></p>
 <ul>
-<li>Authoritative list of preservation formats by type</li>
-<li>Updated regularly</li>
+<li><strong>URL:</strong> <a href="https://zenodo.org" class="uri">https://zenodo.org</a></li>
+<li><strong>Features:</strong>
+<ul>
+<li>DOI for every dataset</li>
+<li>Integration with GitHub</li>
+<li>Versioning support</li>
+<li>FAIR-compliant</li>
 </ul></li>
-<li><strong><a href="https://www.dcc.ac.uk/guidance/briefing-papers/standards-watch-papers/overview-file-formats-preservation">File Formats for Preservation</a></strong> - Digital Curation Centre
-<ul>
-<li>Explains format characteristics</li>
-<li>Risk assessment for formats</li>
-</ul></li>
-<li><strong><a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-formats">Format Recommendations</a></strong> - Stanford Libraries
-<ul>
-<li>Discipline-specific recommendations</li>
-</ul></li>
-</ol>
-</section>
-<section id="quick-reference" class="level4">
-<h4 class="anchored" data-anchor-id="quick-reference">Quick Reference</h4>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Data Type</th>
-<th>Preferred Formats</th>
-<th>Avoid</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Text</strong></td>
-<td>.txt, .pdf/A, .xml, .html</td>
-<td>.doc, .pages</td>
-</tr>
-<tr class="even">
-<td><strong>Tabular</strong></td>
-<td>.csv, .tsv, .xml</td>
-<td>.xlsx, .numbers</td>
-</tr>
-<tr class="odd">
-<td><strong>Images</strong></td>
-<td>.tiff, .png, .jpg</td>
-<td>.psd, proprietary RAW</td>
-</tr>
-<tr class="even">
-<td><strong>Audio</strong></td>
-<td>.wav, .flac</td>
-<td>.mp3 (lossy)</td>
-</tr>
-<tr class="odd">
-<td><strong>Video</strong></td>
-<td>.mp4 (H.264), .mkv</td>
-<td>.mov, proprietary codecs</td>
-</tr>
-<tr class="even">
-<td><strong>Code</strong></td>
-<td>.py, .r, .txt</td>
-<td>IDE-specific formats</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-</section>
-</section>
-<section id="metadata-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="metadata-documentation">Metadata &amp; Documentation</h2>
-<p>File names and backups are only part of the story. Document your data!</p>
-<section id="readme-files" class="level3">
-<h3 class="anchored" data-anchor-id="readme-files">README Files</h3>
-<p>Every research project should have a README file explaining: - Purpose of the project/dataset - File naming conventions used - Directory structure - Data collection methods - Variable definitions (for datasets)</p>
-<p><strong>Templates:</strong></p>
-<ul>
-<li><a href="https://cornell.app.box.com/v/ReadmeTemplate">README Template</a> - Cornell University</li>
-<li><a href="https://data.research.cornell.edu/content/readme">Guide to Writing README</a> - Cornell RDM</li>
-<li><a href="https://readme.so/">README Generator</a> - Interactive tool</li>
 </ul>
+<p><strong>Perfect for:</strong> - Publishing research data - Sharing datasets linked to publications - Making CHORAL research outputs discoverable</p>
 <hr>
 </section>
 </section>
-<section id="checklists-quick-guides" class="level2">
-<h2 class="anchored" data-anchor-id="checklists-quick-guides">Checklists &amp; Quick Guides</h2>
-<section id="downloadable-resources" class="level3">
-<h3 class="anchored" data-anchor-id="downloadable-resources">Downloadable Resources</h3>
-<ol type="1">
-<li><strong><a href="https://osf.io/mv8pj/">Data Organization Checklist</a></strong> (Open Science Framework)
-<ul>
-<li>PDF checklist for file organization</li>
-<li>Version control tips</li>
-</ul></li>
-<li><strong><a href="https://speakerdeck.com/jennybc/how-to-name-files">File Naming Cheat Sheet</a></strong> by Jenny Bryan
-<ul>
-<li>Famous presentation on file naming</li>
-<li>Funny, practical, memorable</li>
-</ul></li>
-<li><strong><a href="https://dmptool.org/">Data Management Plan Checklist</a></strong> - DMPTool
-<ul>
-<li>Includes file organization sections</li>
-<li>Funder-specific templates</li>
-</ul></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="books-long-form-resources" class="level2">
-<h2 class="anchored" data-anchor-id="books-long-form-resources">Books &amp; Long-Form Resources</h2>
-<section id="recommended-reading-1" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-reading-1">Recommended Reading</h3>
-<ol type="1">
-<li><strong><a href="https://the-turing-way.netlify.app/">The Turing Way</a></strong>
-<ul>
-<li>Free, community-driven guide to reproducible research</li>
-<li>Excellent chapters on data management</li>
-</ul></li>
-<li><strong><a href="https://oxford.universitypressscholarship.com/view/10.1093/oso/9780190051488.001.0001/oso-9780190051488">Research Data Management for Academics</a></strong> - Oxford University Press
-<ul>
-<li>Comprehensive textbook</li>
-</ul></li>
-<li><strong><a href="https://mantra.edina.ac.uk/">MANTRA: Research Data Management Training</a></strong>
-<ul>
-<li>Free online course from University of Edinburgh</li>
-<li>Includes file organization module</li>
-</ul></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="discipline-specific-guides" class="level2">
-<h2 class="anchored" data-anchor-id="discipline-specific-guides">Discipline-Specific Guides</h2>
-<section id="by-field" class="level3">
-<h3 class="anchored" data-anchor-id="by-field">By Field</h3>
-<ul>
-<li><strong>Social Sciences:</strong> <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide">CESSDA Data Management Expert Guide</a></li>
-<li><strong>Humanities:</strong> <a href="https://hcommons.org/deposits/item/hc:44127/">Humanities Data Management</a></li>
-<li><strong>Life Sciences:</strong> <a href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website">EMBL-EBI Data Management</a></li>
-<li><strong>Physical Sciences:</strong> <a href="https://ukdataservice.ac.uk/">UK Data Archive</a> (various disciplines)</li>
-<li><strong>Engineering:</strong> <a href="https://www.lib.purdue.edu/research/data">Purdue Data Management</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="getting-help" class="level2">
-<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
-<section id="online-communities" class="level3">
-<h3 class="anchored" data-anchor-id="online-communities">Online Communities</h3>
-<ul>
-<li><strong><a href="https://www.rd-alliance.org/">Research Data Alliance</a></strong> - Global community</li>
-<li><strong><a href="https://datacurationnetwork.org/">Data Curation Network</a></strong> - Curators helping researchers</li>
-<li><strong>Reddit:</strong> r/datahoarder, r/datacurator (practical tips)</li>
-</ul>
-</section>
-<section id="workshops-training" class="level3">
-<h3 class="anchored" data-anchor-id="workshops-training">Workshops &amp; Training</h3>
-<ul>
-<li><strong>MANTRA:</strong> <a href="https://mantra.edina.ac.uk/" class="uri">https://mantra.edina.ac.uk/</a></li>
-<li><strong>Data Carpentry:</strong> <a href="https://datacarpentry.org/lessons/" class="uri">https://datacarpentry.org/lessons/</a></li>
-<li><strong>FOSTER Open Science:</strong> <a href="https://www.fosteropenscience.eu/learning" class="uri">https://www.fosteropenscience.eu/learning</a></li>
-</ul>
-<hr>
+<section id="file-formats-for-digital-humanities" class="level2">
+<h2 class="anchored" data-anchor-id="file-formats-for-digital-humanities">File Formats for Digital Humanities</h2>
+<section id="preservation-friendly-formats-by-data-type" class="level3">
+<h3 class="anchored" data-anchor-id="preservation-friendly-formats-by-data-type">Preservation-Friendly Formats by Data Type</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Stay Updated
+<span class="screen-reader-only">Note</span>Prioritize open, documented formats
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Data management best practices evolve. Bookmark a few key resources and check back periodically for updates:</p>
+<p>Proprietary formats risk obsolescence. Choose formats with: - Open specifications - Wide tool support - No licensing restrictions - Good for long-term preservation</p>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 43%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data Type</th>
+<th>Preferred Formats</th>
+<th>Avoid</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Plain text</strong></td>
+<td>.txt, .md</td>
+<td>.pages, .doc</td>
+<td>UTF-8 encoding!</td>
+</tr>
+<tr class="even">
+<td><strong>Structured text</strong></td>
+<td>.xml (TEI), .json</td>
+<td>Proprietary XML</td>
+<td>TEI for scholarly editions</td>
+</tr>
+<tr class="odd">
+<td><strong>Tabular data</strong></td>
+<td>.csv, .tsv</td>
+<td>.xlsx, .numbers</td>
+<td>Use semicolons for European locales</td>
+</tr>
+<tr class="even">
+<td><strong>Images (photos)</strong></td>
+<td>.tiff (archival), .jpg (access)</td>
+<td>.psd, proprietary RAW</td>
+<td>Keep RAW separately</td>
+</tr>
+<tr class="odd">
+<td><strong>Images (diagrams)</strong></td>
+<td>.svg, .png</td>
+<td>.ai, .sketch</td>
+<td>SVG is scalable</td>
+</tr>
+<tr class="even">
+<td><strong>3D models</strong></td>
+<td>.obj, .ply, .gltf</td>
+<td>.max, .blend</td>
+<td>Include textures separately</td>
+</tr>
+<tr class="odd">
+<td><strong>Audio</strong></td>
+<td>.wav, .flac</td>
+<td>.mp3 (lossy)</td>
+<td>Lossless for primary sources</td>
+</tr>
+<tr class="even">
+<td><strong>Video</strong></td>
+<td>.mp4 (H.264), .mkv</td>
+<td>.mov, proprietary codecs</td>
+<td>Document settings</td>
+</tr>
+<tr class="odd">
+<td><strong>Databases</strong></td>
+<td>.sql, .csv exports</td>
+<td>.mdb, .accdb</td>
+<td>Export to open formats</td>
+</tr>
+<tr class="even">
+<td><strong>Manuscripts</strong></td>
+<td>.pdf/A, TEI .xml</td>
+<td>.docx, .indd</td>
+<td>PDF/A for archival</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tei-text-encoding-initiative" class="level3">
+<h3 class="anchored" data-anchor-id="tei-text-encoding-initiative">TEI (Text Encoding Initiative)</h3>
+<p><strong>The DH standard for encoding texts</strong></p>
 <ul>
-<li>Library of Congress Preservation Formats</li>
-<li>Digital Preservation Coalition Handbook</li>
-<li>Your institutional data repository guidelines</li>
+<li><strong>Website:</strong> <a href="https://tei-c.org/" class="uri">https://tei-c.org/</a></li>
+<li><strong>Why use TEI:</strong>
+<ul>
+<li>Scholarly standard for digital editions</li>
+<li>Captures textual structure and features</li>
+<li>Interoperable across projects</li>
+<li>Long-term preservation</li>
+</ul></li>
 </ul>
-</div>
-</div>
+<p><strong>Learning resources:</strong> - <a href="https://teibyexample.org/">TEI by Example</a> - <a href="https://wwp.northeastern.edu/outreach/seminars/">Women Writers Project Guide</a> - <a href="https://teach.dariah.eu/course/view.php?id=32">TEI Course at DARIAH</a></p>
 <hr>
 </section>
 </section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
-<p>For personalized advice on your specific research data management needs:</p>
-<p>📧 <a href="mailto:julien.rabaud@univ-pau.fr">julien.rabaud@univ-pau.fr</a></p>
+<section id="data-management-plans-dmp" class="level2">
+<h2 class="anchored" data-anchor-id="data-management-plans-dmp">Data Management Plans (DMP)</h2>
+<section id="why-dmps-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-dmps-matter">Why DMPs Matter</h3>
+<p><strong>Required by:</strong> - European Commission (Horizon Europe) - National funders (ANR, ERC) - Many doctoral schools</p>
+<p><strong>A DMP specifies:</strong> - What data you’ll collect/create - How it will be stored and backed up - Who can access it - How it will be preserved after your PhD - Costs and responsibilities</p>
+</section>
+<section id="dmp-tools" class="level3">
+<h3 class="anchored" data-anchor-id="dmp-tools">DMP Tools</h3>
+<section id="dmp-opidor-recommended-for-french-institutions" class="level4">
+<h4 class="anchored" data-anchor-id="dmp-opidor-recommended-for-french-institutions">1. DMP OPIDoR (Recommended for French institutions)</h4>
+<ul>
+<li><strong>URL:</strong> <a href="https://dmp.opidor.fr/" class="uri">https://dmp.opidor.fr/</a></li>
+<li><strong>Features:</strong>
+<ul>
+<li>French and English interface</li>
+<li>Templates for ANR, H2020, ERC</li>
+<li>Integration with institutional systems</li>
+<li>Support for collaborative projects</li>
+</ul></li>
+</ul>
+<p><strong>Tutorial:</strong> <a href="https://doranum.fr/tag/plan-de-gestion-des-donnees/">DoRANum DMP Guide</a> (French with some English)</p>
+</section>
+<section id="dmponline-uk-based-international" class="level4">
+<h4 class="anchored" data-anchor-id="dmponline-uk-based-international">2. DMPonline (UK-based, international)</h4>
+<ul>
+<li><strong>URL:</strong> <a href="https://dmponline.dcc.ac.uk/" class="uri">https://dmponline.dcc.ac.uk/</a></li>
+<li><strong>Features:</strong>
+<ul>
+<li>Funder-specific templates</li>
+<li>Guidance for each question</li>
+<li>Institutional branding</li>
+</ul></li>
+</ul>
+</section>
+<section id="argos-european" class="level4">
+<h4 class="anchored" data-anchor-id="argos-european">3. ARGOS (European)</h4>
+<ul>
+<li><strong>URL:</strong> <a href="https://argos.openaire.eu/" class="uri">https://argos.openaire.eu/</a></li>
+<li><strong>Features:</strong>
+<ul>
+<li>Part of OpenAIRE infrastructure</li>
+<li>Supports collaborative editing</li>
+<li>Machine-actionable DMPs</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="dmp-resources" class="level3">
+<h3 class="anchored" data-anchor-id="dmp-resources">DMP Resources</h3>
+<ul>
+<li><strong><a href="https://www.dariah.eu/">DARIAH DMP Guidelines</a></strong> - Arts &amp; humanities focus</li>
+<li><strong><a href="https://www.dcc.ac.uk/resources/data-management-plans">DCC DMP Checklist</a></strong> - Comprehensive</li>
+<li><strong><a href="https://www.scienceeurope.org/our-priorities/research-data/research-data-management/">Science Europe DMP Evaluation Rubric</a></strong> - What funders look for</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="metadata-best-practices-for-cultural-heritage" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-best-practices-for-cultural-heritage">Metadata Best Practices for Cultural Heritage</h2>
+<section id="why-metadata-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-metadata-matters">Why Metadata Matters</h3>
+<p><strong>Without metadata, your data is useless:</strong> - Where was this photo taken? - Who created this document? - What do these column headers mean? - Can I reuse this 3D model?</p>
+</section>
+<section id="metadata-standards-for-dh" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-standards-for-dh">Metadata Standards for DH</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Standard</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cultural Objects</strong></td>
+<td>CIDOC-CRM</td>
+<td><a href="http://www.cidoc-crm.org/" class="uri">http://www.cidoc-crm.org/</a></td>
+</tr>
+<tr class="even">
+<td><strong>Libraries</strong></td>
+<td>Dublin Core, MARC</td>
+<td><a href="https://www.dublincore.org/" class="uri">https://www.dublincore.org/</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Archives</strong></td>
+<td>EAD, ISAD(G)</td>
+<td><a href="https://www.loc.gov/ead/" class="uri">https://www.loc.gov/ead/</a></td>
+</tr>
+<tr class="even">
+<td><strong>Museums</strong></td>
+<td>LIDO, SPECTRUM</td>
+<td><a href="http://lido-schema.org/" class="uri">http://lido-schema.org/</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Manuscripts</strong></td>
+<td>TEI msDesc</td>
+<td><a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html" class="uri">https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html</a></td>
+</tr>
+<tr class="even">
+<td><strong>Images</strong></td>
+<td>IIIF</td>
+<td><a href="https://iiif.io/" class="uri">https://iiif.io/</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Geographic</strong></td>
+<td>GeoJSON, KML</td>
+<td><a href="https://geojson.org/" class="uri">https://geojson.org/</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="minimal-metadata-for-any-file" class="level3">
+<h3 class="anchored" data-anchor-id="minimal-metadata-for-any-file">Minimal Metadata for Any File</h3>
+<p><strong>Always include:</strong> - <strong>Creator/Author:</strong> Who made this? - <strong>Date:</strong> When (YYYY-MM-DD)? - <strong>Description:</strong> What is it? - <strong>Source:</strong> Where did it come from? - <strong>License/Rights:</strong> Can others use it?</p>
+<p><strong>For images, also include:</strong> - Archive/institution - Collection name - Shelfmark/identifier - Physical description</p>
+<hr>
+</section>
+</section>
+<section id="checklists-templates" class="level2">
+<h2 class="anchored" data-anchor-id="checklists-templates">Checklists &amp; Templates</h2>
+<section id="file-organization-checklist" class="level3">
+<h3 class="anchored">File Organization Checklist</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Before Starting Your PhD
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul class="task-list">
+<li><label><input type="checkbox">Define file naming convention (document it!)</label></li>
+<li><label><input type="checkbox">Create directory structure</label></li>
+<li><label><input type="checkbox">Set up cloud sync (Nextcloud/Huma-Num)</label></li>
+<li><label><input type="checkbox">Configure external hard drive backup</label></li>
+<li><label><input type="checkbox">Write initial README file</label></li>
+<li><label><input type="checkbox">Draft Data Management Plan (if required)</label></li>
+</ul>
+<section id="during-your-phd" class="level2">
+<h2 class="anchored" data-anchor-id="during-your-phd">During Your PhD</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Name files consistently (review quarterly)</label></li>
+<li><label><input type="checkbox">Backup data weekly (automate!)</label></li>
+<li><label><input type="checkbox">Update README with changes</label></li>
+<li><label><input type="checkbox">Version important files clearly</label></li>
+<li><label><input type="checkbox">Document data collection methods</label></li>
+</ul>
+</section>
+<section id="before-graduation" class="level2">
+<h2 class="anchored" data-anchor-id="before-graduation">Before Graduation</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Clean up directory structure</label></li>
+<li><label><input type="checkbox">Remove duplicates</label></li>
+<li><label><input type="checkbox">Finalize all documentation</label></li>
+<li><label><input type="checkbox">Deposit data in repository (Zenodo/Nakala)</label></li>
+<li><label><input type="checkbox">Update DMP with final information</label></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="readme-template-for-research-projects" class="level3">
+<h3 class="anchored" data-anchor-id="readme-template-for-research-projects">README Template for Research Projects</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project Title</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Information</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**PI:** Your Name</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Institution:** UPPA / ED 481 SSH</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Start date:** YYYY-MM-DD</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**End date:** YYYY-MM-DD</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Funding:** <span class="co">[</span><span class="ot">If applicable</span><span class="co">]</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Project Description</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">2-3 paragraph description of research</span><span class="co">]</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Directory Structure</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`/01-primary-sources`</span> - Source materials</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`/02-secondary-sources`</span> - Literature</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`/03-datasets`</span> - Structured data</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">etc.</span><span class="co">]</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## File Naming Convention</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Explain your system</span><span class="co">]</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>Example: <span class="in">`YYYY-MM-DD_source_description_version.ext`</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Collection</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Archives visited:** <span class="co">[</span><span class="ot">list</span><span class="co">]</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dates:** <span class="co">[</span><span class="ot">list</span><span class="co">]</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Equipment used:** <span class="co">[</span><span class="ot">camera, scanner, etc.</span><span class="co">]</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Software &amp; Tools</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Transcription: <span class="co">[</span><span class="ot">tool</span><span class="co">]</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analysis: <span class="co">[</span><span class="ot">tool</span><span class="co">]</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualization: <span class="co">[</span><span class="ot">tool</span><span class="co">]</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Formats</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Images: TIFF (archival), JPEG (access copies)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Text: TEI XML for editions, TXT for notes</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tabular: CSV with UTF-8 encoding</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Backup Strategy</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Primary: UPPA Nextcloud</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Secondary: External HD (weekly)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tertiary: Huma-Num (monthly)</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rights &amp; Licensing</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data license:** <span class="co">[</span><span class="ot">CC-BY, CC0, etc.</span><span class="co">]</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Code license:** <span class="co">[</span><span class="ot">if applicable</span><span class="co">]</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Restrictions:** <span class="co">[</span><span class="ot">e.g., embargo until publication</span><span class="co">]</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Email:** your.email@univ-pau.fr</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ORCID:** 0000-0000-0000-0000</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Changelog</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2025-09-15: Initial setup</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2026-01-10: Added transcriptions folder</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">etc.</span><span class="co">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="additional-resources---european-international" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources---european-international">Additional Resources - European &amp; International</h2>
+<section id="training-platforms" class="level3">
+<h3 class="anchored" data-anchor-id="training-platforms">Training Platforms</h3>
+<ul>
+<li><strong><a href="https://campus.dariah.eu/">DARIAH-Campus</a></strong> - DH training courses</li>
+<li><strong><a href="https://fostlh.eu/">FOSTLH</a></strong> - Heritage science training</li>
+<li><strong><a href="http://training.parthenos-project.eu/">PARTHENOS Training</a></strong> - Research infrastructures</li>
+<li><strong><a href="https://librarycarpentry.org/">Library Carpentry</a></strong> - Data skills for librarians/researchers</li>
+</ul>
+</section>
+<section id="guidelines-standards" class="level3">
+<h3 class="anchored" data-anchor-id="guidelines-standards">Guidelines &amp; Standards</h3>
+<ul>
+<li><strong><a href="https://www.go-fair.org/">FAIR Principles</a></strong> - Findable, Accessible, Interoperable, Reusable</li>
+<li><strong><a href="https://www.gida-global.org/care">CARE Principles</a></strong> - For Indigenous data governance</li>
+<li><strong><a href="https://www.dublincore.org/">Dublin Core</a></strong> - Metadata standard</li>
+<li><strong><a href="https://iiif.io/">IIIF</a></strong> - International Image Interoperability Framework</li>
+</ul>
+</section>
+<section id="communities" class="level3">
+<h3 class="anchored" data-anchor-id="communities">Communities</h3>
+<ul>
+<li><strong><a href="https://adho.org/">ADHO</a></strong> - Alliance of Digital Humanities Organizations</li>
+<li><strong><a href="https://www.humanisti.ca/">Humanistica</a></strong> - French-speaking DH association</li>
+<li><strong><a href="https://dig-hum.de/">DHd</a></strong> - German-language DH community</li>
+<li><strong><a href="https://dhcenternet.org/">centerNet</a></strong> - International DH centers network</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="getting-help" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Support Resources
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>At UPPA:</strong> - Julien Rabaud (SCD &amp; Pôle Numérique): <a href="mailto:julien.rabaud@univ-pau.fr">julien.rabaud@univ-pau.fr</a> - Research Data Management support</p>
+<p><strong>National (France):</strong> - <a href="https://doranum.fr/faq-donnees-recherche/">DoRANum FAQ</a> - <a href="https://www.huma-num.fr/nous-contacter">Huma-Num support</a></p>
+<p><strong>European:</strong> - <a href="https://www.dariah.eu/helpdesk/">DARIAH Helpdesk</a> - <a href="https://www.clarin.eu/content/service-centres">CLARIN Service Centres</a></p>
+<p><strong>International:</strong> - <a href="https://www.rd-alliance.org/">Research Data Alliance</a> - Global community - <a href="https://digitalhumanities.slack.com/">DH Slack channels</a></p>
+</div>
+</div>
 
 
 </section>
@@ -1175,7 +1435,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/file-management.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Last update: 2026-02-09</p>
 </div>

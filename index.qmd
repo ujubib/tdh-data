@@ -13,7 +13,7 @@ author:
           url: https://recherche.univ-pau.fr/fr/science-ouverte/donnees-de-la-recherche.html
 ---
 
-## Welcome!
+## Welcome
 
 This website contains all materials for the **Personal and Research Data Management: Organize, Clean & Enrich** workshop, organized by the UPPA SSH Doctoral School.
 
@@ -76,6 +76,7 @@ Please complete the following **before** the workshop:
 :::
 
 **Technical requirements:**
+
 - Stable internet connection
 - Working camera and microphone (for interaction)
 - A folder with some of your research files (for Archifiltre exploration)

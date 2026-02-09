@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>OpenRefine Tutorials &amp; Resources – Personal and Research Data Management: Organize, Clean &amp; Enrich</title>
+<title>OpenRefine for Digital Humanities – Personal and Research Data Management: Organize, Clean &amp; Enrich</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data"> <i class="bi bi-git" role="img">
+    <a class="nav-link" href="https://github.com/ujubib/tdh-data"> <i class="bi bi-git" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -200,83 +200,96 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started-with-openrefine" id="toc-getting-started-with-openrefine" class="nav-link active" data-scroll-target="#getting-started-with-openrefine">Getting Started with OpenRefine</a></li>
-  <li><a href="#official-documentation" id="toc-official-documentation" class="nav-link" data-scroll-target="#official-documentation">Official Documentation</a>
+  <li><a href="#introduction-to-openrefine" id="toc-introduction-to-openrefine" class="nav-link active" data-scroll-target="#introduction-to-openrefine">Introduction to OpenRefine</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
-  <li><a href="#openrefine-documentation" id="toc-openrefine-documentation" class="nav-link" data-scroll-target="#openrefine-documentation">OpenRefine Documentation</a></li>
+  <li><a href="#official-documentation" id="toc-official-documentation" class="nav-link" data-scroll-target="#official-documentation">Official Documentation</a></li>
   </ul></li>
-  <li><a href="#video-tutorials" id="toc-video-tutorials" class="nav-link" data-scroll-target="#video-tutorials">Video Tutorials</a>
+  <li><a href="#video-tutorials---by-level" id="toc-video-tutorials---by-level" class="nav-link" data-scroll-target="#video-tutorials---by-level">Video Tutorials - By Level</a>
   <ul class="collapse">
-  <li><a href="#beginner-level" id="toc-beginner-level" class="nav-link" data-scroll-target="#beginner-level">📹 Beginner Level</a></li>
-  <li><a href="#intermediate-level" id="toc-intermediate-level" class="nav-link" data-scroll-target="#intermediate-level">📹 Intermediate Level</a></li>
-  <li><a href="#advanced-level" id="toc-advanced-level" class="nav-link" data-scroll-target="#advanced-level">📹 Advanced Level</a></li>
+  <li><a href="#beginner-level-start-here" id="toc-beginner-level-start-here" class="nav-link" data-scroll-target="#beginner-level-start-here">Beginner Level (Start Here!)</a></li>
+  <li><a href="#intermediate-level" id="toc-intermediate-level" class="nav-link" data-scroll-target="#intermediate-level">Intermediate Level</a></li>
+  <li><a href="#advanced-level" id="toc-advanced-level" class="nav-link" data-scroll-target="#advanced-level">Advanced Level</a></li>
   </ul></li>
-  <li><a href="#text-based-tutorials" id="toc-text-based-tutorials" class="nav-link" data-scroll-target="#text-based-tutorials">Text-Based Tutorials</a>
+  <li><a href="#text-based-tutorials---recommended" id="toc-text-based-tutorials---recommended" class="nav-link" data-scroll-target="#text-based-tutorials---recommended">Text-Based Tutorials - Recommended</a>
   <ul class="collapse">
-  <li><a href="#step-by-step-guides" id="toc-step-by-step-guides" class="nav-link" data-scroll-target="#step-by-step-guides">Step-by-Step Guides</a></li>
+  <li><a href="#library-carpentry-comprehensive" id="toc-library-carpentry-comprehensive" class="nav-link" data-scroll-target="#library-carpentry-comprehensive">1. Library Carpentry (Comprehensive)</a></li>
+  <li><a href="#programming-historian-series" id="toc-programming-historian-series" class="nav-link" data-scroll-target="#programming-historian-series">2. Programming Historian Series</a></li>
+  <li><a href="#data-carpentry-social-science-data" id="toc-data-carpentry-social-science-data" class="nav-link" data-scroll-target="#data-carpentry-social-science-data">3. Data Carpentry: Social Science Data</a></li>
+  <li><a href="#gesis-openrefine-tutorial" id="toc-gesis-openrefine-tutorial" class="nav-link" data-scroll-target="#gesis-openrefine-tutorial">4. GESIS: OpenRefine Tutorial</a></li>
+  </ul></li>
+  <li><a href="#openrefine-for-specific-dh-tasks" id="toc-openrefine-for-specific-dh-tasks" class="nav-link" data-scroll-target="#openrefine-for-specific-dh-tasks">OpenRefine for Specific DH Tasks</a>
+  <ul class="collapse">
+  <li><a href="#cleaning-archival-metadata" id="toc-cleaning-archival-metadata" class="nav-link" data-scroll-target="#cleaning-archival-metadata">Cleaning Archival Metadata</a></li>
+  <li><a href="#working-with-historical-names-places" id="toc-working-with-historical-names-places" class="nav-link" data-scroll-target="#working-with-historical-names-places">Working with Historical Names &amp; Places</a></li>
+  <li><a href="#preparing-data-for-visualization" id="toc-preparing-data-for-visualization" class="nav-link" data-scroll-target="#preparing-data-for-visualization">Preparing Data for Visualization</a></li>
+  <li><a href="#transcription-quality-control" id="toc-transcription-quality-control" class="nav-link" data-scroll-target="#transcription-quality-control">Transcription Quality Control</a></li>
   </ul></li>
   <li><a href="#grel-google-refine-expression-language" id="toc-grel-google-refine-expression-language" class="nav-link" data-scroll-target="#grel-google-refine-expression-language">GREL (Google Refine Expression Language)</a>
   <ul class="collapse">
-  <li><a href="#understanding-grel" id="toc-understanding-grel" class="nav-link" data-scroll-target="#understanding-grel">Understanding GREL</a></li>
+  <li><a href="#essential-grel-functions" id="toc-essential-grel-functions" class="nav-link" data-scroll-target="#essential-grel-functions">Essential GREL Functions</a></li>
+  <li><a href="#grel-recipes-for-cultural-heritage" id="toc-grel-recipes-for-cultural-heritage" class="nav-link" data-scroll-target="#grel-recipes-for-cultural-heritage">GREL Recipes for Cultural Heritage</a></li>
+  <li><a href="#grel-cheat-sheet" id="toc-grel-cheat-sheet" class="nav-link" data-scroll-target="#grel-cheat-sheet">GREL Cheat Sheet</a></li>
   </ul></li>
-  <li><a href="#datasets-for-practice" id="toc-datasets-for-practice" class="nav-link" data-scroll-target="#datasets-for-practice">Datasets for Practice</a>
+  <li><a href="#reconciliation-services-for-dh" id="toc-reconciliation-services-for-dh" class="nav-link" data-scroll-target="#reconciliation-services-for-dh">Reconciliation Services for DH</a>
   <ul class="collapse">
-  <li><a href="#sample-datasets" id="toc-sample-datasets" class="nav-link" data-scroll-target="#sample-datasets">Sample Datasets</a></li>
+  <li><a href="#what-is-reconciliation" id="toc-what-is-reconciliation" class="nav-link" data-scroll-target="#what-is-reconciliation">What is Reconciliation?</a></li>
+  <li><a href="#built-in-services" id="toc-built-in-services" class="nav-link" data-scroll-target="#built-in-services">Built-in Services</a></li>
+  <li><a href="#adding-custom-services" id="toc-adding-custom-services" class="nav-link" data-scroll-target="#adding-custom-services">Adding Custom Services</a></li>
   </ul></li>
-  <li><a href="#use-case-libraries" id="toc-use-case-libraries" class="nav-link" data-scroll-target="#use-case-libraries">Use Case Libraries</a>
+  <li><a href="#practice-datasets-for-dh" id="toc-practice-datasets-for-dh" class="nav-link" data-scroll-target="#practice-datasets-for-dh">Practice Datasets for DH</a>
   <ul class="collapse">
-  <li><a href="#real-world-examples" id="toc-real-world-examples" class="nav-link" data-scroll-target="#real-world-examples">Real-World Examples</a></li>
+  <li><a href="#museumgallery-collections" id="toc-museumgallery-collections" class="nav-link" data-scroll-target="#museumgallery-collections">1. Museum/Gallery Collections</a></li>
+  <li><a href="#historical-datasets" id="toc-historical-datasets" class="nav-link" data-scroll-target="#historical-datasets">2. Historical Datasets</a></li>
+  <li><a href="#archival-finding-aids" id="toc-archival-finding-aids" class="nav-link" data-scroll-target="#archival-finding-aids">3. Archival Finding Aids</a></li>
+  <li><a href="#openrefine-sample-datasets" id="toc-openrefine-sample-datasets" class="nav-link" data-scroll-target="#openrefine-sample-datasets">4. OpenRefine Sample Datasets</a></li>
   </ul></li>
-  <li><a href="#advanced-topics" id="toc-advanced-topics" class="nav-link" data-scroll-target="#advanced-topics">Advanced Topics</a>
+  <li><a href="#case-studies-openrefine-in-dh-projects" id="toc-case-studies-openrefine-in-dh-projects" class="nav-link" data-scroll-target="#case-studies-openrefine-in-dh-projects">Case Studies: OpenRefine in DH Projects</a>
   <ul class="collapse">
-  <li><a href="#extensions-and-plugins" id="toc-extensions-and-plugins" class="nav-link" data-scroll-target="#extensions-and-plugins">Extensions and Plugins</a></li>
+  <li><a href="#mapping-the-republic-of-letters" id="toc-mapping-the-republic-of-letters" class="nav-link" data-scroll-target="#mapping-the-republic-of-letters">1. Mapping the Republic of Letters</a></li>
+  <li><a href="#pelagios-project" id="toc-pelagios-project" class="nav-link" data-scroll-target="#pelagios-project">2. Pelagios Project</a></li>
+  <li><a href="#british-library-labs" id="toc-british-library-labs" class="nav-link" data-scroll-target="#british-library-labs">3. British Library Labs</a></li>
   </ul></li>
-  <li><a href="#troubleshooting-tips" id="toc-troubleshooting-tips" class="nav-link" data-scroll-target="#troubleshooting-tips">Troubleshooting &amp; Tips</a>
+  <li><a href="#openrefine-extensions" id="toc-openrefine-extensions" class="nav-link" data-scroll-target="#openrefine-extensions">OpenRefine Extensions</a>
   <ul class="collapse">
-  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues">Common Issues</a></li>
+  <li><a href="#recommended-extensions-for-dh" id="toc-recommended-extensions-for-dh" class="nav-link" data-scroll-target="#recommended-extensions-for-dh">Recommended Extensions for DH</a></li>
+  </ul></li>
   <li><a href="#performance-tips" id="toc-performance-tips" class="nav-link" data-scroll-target="#performance-tips">Performance Tips</a></li>
-  </ul></li>
-  <li><a href="#community-support" id="toc-community-support" class="nav-link" data-scroll-target="#community-support">Community &amp; Support</a>
+  <li><a href="#going-further---advanced-topics" id="toc-going-further---advanced-topics" class="nav-link" data-scroll-target="#going-further---advanced-topics">Going Further - Advanced Topics</a>
   <ul class="collapse">
-  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a></li>
+  <li><a href="#regular-expressions-regex" id="toc-regular-expressions-regex" class="nav-link" data-scroll-target="#regular-expressions-regex">1. Regular Expressions (Regex)</a></li>
+  <li><a href="#batch-processing-multiple-files" id="toc-batch-processing-multiple-files" class="nav-link" data-scroll-target="#batch-processing-multiple-files">2. Batch Processing Multiple Files</a></li>
+  <li><a href="#combining-openrefine-with-other-tools" id="toc-combining-openrefine-with-other-tools" class="nav-link" data-scroll-target="#combining-openrefine-with-other-tools">3. Combining OpenRefine with Other Tools</a></li>
   </ul></li>
-  <li><a href="#comparison-with-other-tools" id="toc-comparison-with-other-tools" class="nav-link" data-scroll-target="#comparison-with-other-tools">Comparison with Other Tools</a>
+  <li><a href="#complementary-tools" id="toc-complementary-tools" class="nav-link" data-scroll-target="#complementary-tools">Complementary Tools</a>
   <ul class="collapse">
-  <li><a href="#when-to-use-openrefine-vs.-alternatives" id="toc-when-to-use-openrefine-vs.-alternatives" class="nav-link" data-scroll-target="#when-to-use-openrefine-vs.-alternatives">When to Use OpenRefine vs.&nbsp;Alternatives</a></li>
+  <li><a href="#before-openrefine" id="toc-before-openrefine" class="nav-link" data-scroll-target="#before-openrefine">Before OpenRefine</a></li>
+  <li><a href="#after-openrefine" id="toc-after-openrefine" class="nav-link" data-scroll-target="#after-openrefine">After OpenRefine</a></li>
+  <li><a href="#integrated-workflows" id="toc-integrated-workflows" class="nav-link" data-scroll-target="#integrated-workflows">Integrated workflows</a></li>
   </ul></li>
-  <li><a href="#regular-expressions-in-openrefine" id="toc-regular-expressions-in-openrefine" class="nav-link" data-scroll-target="#regular-expressions-in-openrefine">Regular Expressions in OpenRefine</a>
-  <ul class="collapse">
-  <li><a href="#regex-resources" id="toc-regex-resources" class="nav-link" data-scroll-target="#regex-resources">Regex Resources</a></li>
-  </ul></li>
-  <li><a href="#books-long-form-resources" id="toc-books-long-form-resources" class="nav-link" data-scroll-target="#books-long-form-resources">Books &amp; Long-Form Resources</a>
-  <ul class="collapse">
-  <li><a href="#recommended-reading" id="toc-recommended-reading" class="nav-link" data-scroll-target="#recommended-reading">Recommended Reading</a></li>
-  </ul></li>
-  <li><a href="#workshops-training-opportunities" id="toc-workshops-training-opportunities" class="nav-link" data-scroll-target="#workshops-training-opportunities">Workshops &amp; Training Opportunities</a>
+  <li><a href="#learning-resources---digital-humanities-focus" id="toc-learning-resources---digital-humanities-focus" class="nav-link" data-scroll-target="#learning-resources---digital-humanities-focus">Learning Resources - Digital Humanities Focus</a>
   <ul class="collapse">
   <li><a href="#online-courses" id="toc-online-courses" class="nav-link" data-scroll-target="#online-courses">Online Courses</a></li>
+  <li><a href="#books-long-form-guides" id="toc-books-long-form-guides" class="nav-link" data-scroll-target="#books-long-form-guides">Books &amp; Long-Form Guides</a></li>
+  <li><a href="#communities" id="toc-communities" class="nav-link" data-scroll-target="#communities">Communities</a></li>
   </ul></li>
-  <li><a href="#project-showcase" id="toc-project-showcase" class="nav-link" data-scroll-target="#project-showcase">Project Showcase</a>
+  <li><a href="#resources-in-other-languages" id="toc-resources-in-other-languages" class="nav-link" data-scroll-target="#resources-in-other-languages">Resources in Other Languages</a>
   <ul class="collapse">
-  <li><a href="#inspiration-from-real-projects" id="toc-inspiration-from-real-projects" class="nav-link" data-scroll-target="#inspiration-from-real-projects">Inspiration from Real Projects</a></li>
+  <li><a href="#french-resources" id="toc-french-resources" class="nav-link" data-scroll-target="#french-resources">French Resources</a></li>
+  <li><a href="#other-european-languages" id="toc-other-european-languages" class="nav-link" data-scroll-target="#other-european-languages">Other European Languages</a></li>
   </ul></li>
-  <li><a href="#keep-learning" id="toc-keep-learning" class="nav-link" data-scroll-target="#keep-learning">Keep Learning</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a>
-  <ul class="collapse">
-  <li><a href="#blogs-tutorials" id="toc-blogs-tutorials" class="nav-link" data-scroll-target="#blogs-tutorials">Blogs &amp; Tutorials</a></li>
-  <li><a href="#cheat-sheets" id="toc-cheat-sheets" class="nav-link" data-scroll-target="#cheat-sheets">Cheat Sheets</a></li>
-  </ul></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
+  <li><a href="#final-tips-for-ssh-researchers" id="toc-final-tips-for-ssh-researchers" class="nav-link" data-scroll-target="#final-tips-for-ssh-researchers">Final Tips for SSH Researchers</a></li>
+  <li><a href="#questions-support" id="toc-questions-support" class="nav-link" data-scroll-target="#questions-support">Questions &amp; Support</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/openrefine.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/archifiltre.html">Additional Resources</a></li><li class="breadcrumb-item"><a href="../resources/openrefine.html">OpenRefine Tutorials</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">OpenRefine Tutorials &amp; Resources</h1>
-<p class="subtitle lead">Videos, Guides, and Advanced Techniques</p>
+<h1 class="title">OpenRefine for Digital Humanities</h1>
+<p class="subtitle lead">Data Cleaning &amp; Transformation for SSH Research</p>
 </div>
 
 
@@ -293,116 +306,133 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="getting-started-with-openrefine" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-openrefine">Getting Started with OpenRefine</h2>
+<section id="introduction-to-openrefine" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-openrefine">Introduction to OpenRefine</h2>
 <p><img src="https://openrefine.org/img/openrefine_logo.svg" class="img-fluid" width="200"></p>
-<p>OpenRefine is a powerful, free tool for working with messy data. Below you’ll find curated resources to continue learning beyond our workshop.</p>
+<p><strong>OpenRefine</strong> is an essential tool for Digital Humanities researchers working with messy, heterogeneous data from diverse sources—archives, surveys, databases, and digitized collections.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why OpenRefine for SSH Research?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Clean inconsistent names (people, places, institutions)</li>
+<li>Standardize dates across different systems</li>
+<li>Reconcile data with authority files (VIAF, GeoNames, Wikidata)</li>
+<li>Prepare data for visualization and analysis</li>
+<li><strong>Reproducible</strong> - export cleaning scripts to reuse</li>
+</ul>
+</div>
+</div>
 <hr>
 </section>
-<section id="official-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="official-documentation">Official Documentation</h2>
-<section id="openrefine-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="openrefine-documentation">OpenRefine Documentation</h3>
-<p>The official docs are comprehensive and well-maintained:</p>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
+<section id="official-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="official-documentation">Official Documentation</h3>
 <ul>
 <li><strong>User Manual:</strong> <a href="https://openrefine.org/docs" class="uri">https://openrefine.org/docs</a>
 <ul>
-<li>Getting started guide</li>
-<li>Interface overview</li>
-<li>All functions explained</li>
-<li>Expression language (GREL) reference</li>
-</ul></li>
-<li><strong>FAQ:</strong> <a href="https://openrefine.org/docs/faq" class="uri">https://openrefine.org/docs/faq</a>
-<ul>
-<li>Common questions answered</li>
-<li>Troubleshooting tips</li>
+<li>Complete guide to all features</li>
+<li>GREL (expression language) reference</li>
+<li>FAQ and troubleshooting</li>
 </ul></li>
 <li><strong>Community Forum:</strong> <a href="https://forum.openrefine.org/" class="uri">https://forum.openrefine.org/</a>
 <ul>
-<li>Active community for questions</li>
-<li>Share workflows and solutions</li>
+<li>Active community</li>
+<li>Search before posting - many answers already exist</li>
 </ul></li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="video-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="video-tutorials">Video Tutorials</h2>
-<section id="beginner-level" class="level3">
-<h3 class="anchored" data-anchor-id="beginner-level">📹 Beginner Level</h3>
-<section id="introduction-to-openrefine-the-carpentries" class="level4">
-<h4 class="anchored" data-anchor-id="introduction-to-openrefine-the-carpentries">1. Introduction to OpenRefine (The Carpentries)</h4>
-<p><strong>Excellent starting point - clear, well-paced</strong></p>
+<section id="video-tutorials---by-level" class="level2">
+<h2 class="anchored" data-anchor-id="video-tutorials---by-level">Video Tutorials - By Level</h2>
+<section id="beginner-level-start-here" class="level3">
+<h3 class="anchored" data-anchor-id="beginner-level-start-here">Beginner Level (Start Here!)</h3>
+<section id="library-carpentry-openrefine" class="level4">
+<h4 class="anchored" data-anchor-id="library-carpentry-openrefine">1. Library Carpentry OpenRefine</h4>
+<p><strong>Best comprehensive introduction for humanities scholars</strong></p>
 <ul>
-<li><strong>Video Series:</strong> <a href="https://www.youtube.com/playlist?list=PLXaKS7yupYiC7eN5Z1G2LLk2qBz8t0FeH">Library Carpentry OpenRefine</a></li>
-<li><strong>Duration:</strong> ~2 hours total (broken into short segments)</li>
-<li><strong>Covers:</strong>
+<li><strong>Playlist:</strong> <a href="https://www.youtube.com/playlist?list=PLXaKS7yupYiC7eN5Z1G2LLk2qBz8t0FeH">Library Carpentry OpenRefine</a></li>
+<li><strong>Duration:</strong> ~2 hours total (short segments)</li>
+<li><strong>Content:</strong>
 <ul>
 <li>Installing OpenRefine</li>
 <li>Creating projects</li>
-<li>Basic transformations</li>
 <li>Faceting and filtering</li>
+<li>Basic transformations</li>
 <li>GREL expressions</li>
 </ul></li>
 </ul>
-<p><strong>Companion materials:</strong> - <strong>Written lesson:</strong> <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a> - <strong>Sample datasets</strong> included</p>
+<p><strong>Written lesson:</strong> - <strong>URL:</strong> <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a> - <strong>Self-paced:</strong> 3-4 hours - <strong>Includes:</strong> Practice datasets - <strong>Why it’s great:</strong> Designed for librarians and humanities researchers</p>
 <hr>
 </section>
-<section id="openrefine-for-data-cleaning-programming-historian" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-for-data-cleaning-programming-historian">2. OpenRefine for Data Cleaning (Programming Historian)</h4>
-<p><strong>Text tutorial with step-by-step instructions</strong></p>
+<section id="programming-historian---cleaning-data" class="level4">
+<h4 class="anchored" data-anchor-id="programming-historian---cleaning-data">2. Programming Historian - Cleaning Data</h4>
+<p><strong>Text-based tutorial with cultural heritage examples</strong></p>
 <ul>
 <li><strong>Tutorial:</strong> <a href="https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine">Cleaning Data with OpenRefine</a></li>
 <li><strong>Level:</strong> Beginner</li>
 <li><strong>Time:</strong> 1-2 hours</li>
-<li><strong>Highlights:</strong>
-<ul>
-<li>Real-world example (museum data)</li>
-<li>Screenshots for every step</li>
-<li>Common pitfalls explained</li>
-</ul></li>
+<li><strong>Example:</strong> Museum collection data</li>
+<li><strong>Strength:</strong> Screenshots for every step, clear explanations</li>
 </ul>
 <hr>
 </section>
-<section id="openrefine-tutorial-harvard-gis-lab" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-tutorial-harvard-gis-lab">3. OpenRefine Tutorial (Harvard GIS Lab)</h4>
-<p><strong>Quick 15-minute introduction</strong></p>
+<section id="openrefine-basics-harvard-gis" class="level4">
+<h4 class="anchored" data-anchor-id="openrefine-basics-harvard-gis">3. OpenRefine Basics (Harvard GIS)</h4>
+<p><strong>Quick 15-minute overview</strong></p>
 <ul>
 <li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=B70J_H_zAWM">OpenRefine Basics</a></li>
 <li><strong>Duration:</strong> 15 minutes</li>
-<li><strong>Best for:</strong> Quick refresher or demo</li>
+<li><strong>Best for:</strong> Quick demo or refresher</li>
 </ul>
 <hr>
 </section>
 </section>
 <section id="intermediate-level" class="level3">
-<h3 class="anchored" data-anchor-id="intermediate-level">📹 Intermediate Level</h3>
-<section id="data-cleaning-with-openrefine-stanford-university" class="level4">
-<h4 class="anchored" data-anchor-id="data-cleaning-with-openrefine-stanford-university">4. Data Cleaning with OpenRefine (Stanford University)</h4>
-<p><strong>Comprehensive workshop recording</strong></p>
+<h3 class="anchored" data-anchor-id="intermediate-level">Intermediate Level</h3>
+<section id="advanced-clustering-reconciliation" class="level4">
+<h4 class="anchored" data-anchor-id="advanced-clustering-reconciliation">4. Advanced Clustering &amp; Reconciliation</h4>
+<p><strong>Stanford University Workshop</strong></p>
 <ul>
 <li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=wGVtycv3SS0">Stanford OpenRefine Workshop</a></li>
 <li><strong>Duration:</strong> 90 minutes</li>
-<li><strong>Covers:</strong>
+<li><strong>Topics:</strong>
 <ul>
-<li>Advanced clustering</li>
-<li>Working with multiple columns</li>
-<li>Splitting and concatenating data</li>
+<li>Advanced clustering algorithms</li>
+<li>Working across multiple columns</li>
+<li>Data reconciliation</li>
 <li>Exporting clean data</li>
 </ul></li>
 </ul>
-<p><strong>Materials:</strong> - <strong>Slides:</strong> Available on <a href="https://library.stanford.edu/research/data-management-services/data-best-practices">Stanford website</a></p>
 <hr>
 </section>
-<section id="openrefine-transformations-and-grel" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-transformations-and-grel">5. OpenRefine: Transformations and GREL</h4>
-<p><strong>Focus on expression language</strong></p>
+<section id="openrefine-for-historical-data" class="level4">
+<h4 class="anchored" data-anchor-id="openrefine-for-historical-data">5. OpenRefine for Historical Data</h4>
+<p><strong>University of Michigan</strong></p>
+<ul>
+<li><strong>Video:</strong> <a href="https://www.youtube.com/results?search_query=openrefine+historical+data">Cleaning Historical Census Data</a></li>
+<li><strong>Focus:</strong> Dealing with historical spelling variations, old place names</li>
+<li><strong>Duration:</strong> 45 minutes</li>
+</ul>
+<hr>
+</section>
+<section id="grel-expression-language" class="level4">
+<h4 class="anchored" data-anchor-id="grel-expression-language">6. GREL: Expression Language</h4>
+<p><strong>Tutorial on transformation expressions</strong></p>
 <ul>
 <li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=5tsyz3ibYzk">GREL Tutorial</a></li>
 <li><strong>Duration:</strong> 45 minutes</li>
 <li><strong>Topics:</strong>
 <ul>
-<li>GREL syntax explained</li>
+<li>GREL syntax</li>
 <li>String operations</li>
 <li>Conditional statements</li>
 <li>Date parsing</li>
@@ -412,526 +442,705 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="advanced-level" class="level3">
-<h3 class="anchored" data-anchor-id="advanced-level">📹 Advanced Level</h3>
-<section id="web-scraping-and-api-calls-with-openrefine" class="level4">
-<h4 class="anchored" data-anchor-id="web-scraping-and-api-calls-with-openrefine">6. Web Scraping and API Calls with OpenRefine</h4>
-<p><strong>Enriching data from external sources</strong></p>
+<h3 class="anchored" data-anchor-id="advanced-level">Advanced Level</h3>
+<section id="reconciliation-with-authority-files" class="level4">
+<h4 class="anchored" data-anchor-id="reconciliation-with-authority-files">7. Reconciliation with Authority Files</h4>
+<p><strong>Essential for cultural heritage - match names to standard vocabularies</strong></p>
 <ul>
-<li><strong>Video Tutorial:</strong> <a href="https://www.youtube.com/watch?v=Example_Advanced">Fetching Data from APIs</a></li>
-<li><strong>Written guide:</strong> <a href="https://blog.ouseful.info/tag/openrefine/" class="uri">https://blog.ouseful.info/tag/openrefine/</a></li>
-<li><strong>Covers:</strong>
+<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=5vTjJjWllV4">Reconciliation with Wikidata</a></li>
+<li><strong>Duration:</strong> 30 minutes</li>
+<li><strong>Use cases:</strong>
+<ul>
+<li>Author names → VIAF IDs</li>
+<li>Place names → GeoNames/Wikidata</li>
+<li>Standardizing historical terminology</li>
+</ul></li>
+</ul>
+<p><strong>Written guide:</strong></p>
+<ul>
+<li><a href="https://openrefine.org/docs/manual/reconciling">Reconciliation Services Overview</a></li>
+</ul>
+<hr>
+</section>
+<section id="api-calls-web-scraping" class="level4">
+<h4 class="anchored" data-anchor-id="api-calls-web-scraping">8. API Calls &amp; Web Scraping</h4>
+<p><strong>Enrich data from external sources</strong></p>
+<ul>
+<li><strong>Blog post:</strong> <a href="https://blog.ouseful.info/tag/openrefine/">Tony Hirst - OpenRefine &amp; APIs</a></li>
+<li><strong>Topics:</strong>
 <ul>
 <li>HTTP requests</li>
-<li>Parsing JSON responses</li>
+<li>Parsing JSON</li>
 <li>Rate limiting</li>
 <li>Error handling</li>
 </ul></li>
 </ul>
 <hr>
 </section>
-<section id="openrefine-reconciliation-services" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-reconciliation-services">7. OpenRefine Reconciliation Services</h4>
-<p><strong>Matching your data with external databases</strong></p>
-<ul>
-<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=5vTjJjWllV4">Reconciliation with Wikidata</a></li>
-<li><strong>Duration:</strong> 30 minutes</li>
-<li><strong>Use cases:</strong>
-<ul>
-<li>Matching author names to VIAF IDs</li>
-<li>Geocoding place names</li>
-<li>Standardizing terminology</li>
-</ul></li>
-</ul>
-<p><strong>Documentation:</strong> - <a href="https://openrefine.org/docs/manual/reconciling">Reconciliation Services Overview</a></p>
-<hr>
 </section>
 </section>
-</section>
-<section id="text-based-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="text-based-tutorials">Text-Based Tutorials</h2>
-<section id="step-by-step-guides" class="level3">
-<h3 class="anchored" data-anchor-id="step-by-step-guides">Step-by-Step Guides</h3>
-<section id="library-carpentry-openrefine-lesson" class="level4">
-<h4 class="anchored" data-anchor-id="library-carpentry-openrefine-lesson">1. Library Carpentry: OpenRefine Lesson</h4>
-<p><strong>Gold standard tutorial - widely used in workshops</strong></p>
+<section id="text-based-tutorials---recommended" class="level2">
+<h2 class="anchored" data-anchor-id="text-based-tutorials---recommended">Text-Based Tutorials - Recommended</h2>
+<section id="library-carpentry-comprehensive" class="level3">
+<h3 class="anchored" data-anchor-id="library-carpentry-comprehensive">1. Library Carpentry (Comprehensive)</h3>
+<p><strong>The gold standard</strong></p>
 <ul>
-<li><strong>Link:</strong> <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a></li>
-<li><strong>Time:</strong> 3-4 hours (self-paced)</li>
-<li><strong>Format:</strong> Interactive web lesson</li>
-<li><strong>Datasets:</strong> Included</li>
-<li><strong>Topics:</strong>
+<li><strong>URL:</strong> <a href="https://librarycarpentry.org/lc-open-refine/" class="uri">https://librarycarpentry.org/lc-open-refine/</a></li>
+<li><strong>Time:</strong> 3-4 hours self-paced</li>
+<li><strong>Format:</strong> Interactive web lesson with datasets</li>
+<li><strong>Covers:</strong>
 <ul>
 <li>Importing data</li>
-<li>Layout of OpenRefine</li>
+<li>Interface overview</li>
 <li>Faceting and filtering</li>
 <li>Clustering</li>
-<li>Transforming data</li>
+<li>Transforming data with GREL</li>
 <li>Exporting and scripts</li>
 </ul></li>
 </ul>
-<p><strong>Why it’s great:</strong> Designed for librarians and researchers, no coding background assumed.</p>
+<p><strong>Why it’s excellent:</strong> No coding background needed, humanities-friendly</p>
 <hr>
 </section>
-<section id="gesis-openrefine-tutorial" class="level4">
-<h4 class="anchored" data-anchor-id="gesis-openrefine-tutorial">2. GESIS: OpenRefine Tutorial</h4>
-<p><strong>Academic-focused, very thorough</strong></p>
-<ul>
-<li><strong>Link:</strong> <a href="https://www.gesis.org/en/services/research/tools/openrefine" class="uri">https://www.gesis.org/en/services/research/tools/openrefine</a></li>
-<li><strong>Format:</strong> PDF guide + sample data</li>
-<li><strong>Level:</strong> Beginner to Intermediate</li>
-<li><strong>Specialization:</strong> Social science data</li>
-</ul>
+<section id="programming-historian-series" class="level3">
+<h3 class="anchored" data-anchor-id="programming-historian-series">2. Programming Historian Series</h3>
+<p><strong>Multiple OpenRefine lessons for different tasks</strong></p>
+<ol type="1">
+<li><strong><a href="https://programminghistorian.org/en/lessons/cleaning-data-with-openrefine">Cleaning Data</a></strong></li>
+<li><strong><a href="https://programminghistorian.org/en/lessons/fetch-and-parse-data-with-openrefine">Fetching and Parsing Data from APIs</a></strong></li>
+<li><strong><a href="https://programminghistorian.org/en/lessons/retired/generating-an-ordered-data-set-from-an-OCR-text-file">Working with Linked Open Data</a></strong></li>
+</ol>
+<p><strong>Strength:</strong> Step-by-step, peer-reviewed, maintained</p>
 <hr>
 </section>
-<section id="data-carpentry-openrefine-for-social-science-data" class="level4">
-<h4 class="anchored" data-anchor-id="data-carpentry-openrefine-for-social-science-data">3. Data Carpentry: OpenRefine for Social Science Data</h4>
-<p><strong>Discipline-specific approach</strong></p>
+<section id="data-carpentry-social-science-data" class="level3">
+<h3 class="anchored" data-anchor-id="data-carpentry-social-science-data">3. Data Carpentry: Social Science Data</h3>
+<p><strong>Discipline-specific approach for survey/interview data</strong></p>
 <ul>
-<li><strong>Link:</strong> <a href="https://datacarpentry.org/openrefine-socialsci/" class="uri">https://datacarpentry.org/openrefine-socialsci/</a></li>
+<li><strong>URL:</strong> <a href="https://datacarpentry.org/openrefine-socialsci/" class="uri">https://datacarpentry.org/openrefine-socialsci/</a></li>
 <li><strong>Time:</strong> 2 hours</li>
-<li><strong>Focus:</strong> Survey data, interview transcripts</li>
+<li><strong>Focus:</strong> Survey data, qualitative coding</li>
 <li><strong>Includes:</strong> Practice dataset</li>
 </ul>
 <hr>
 </section>
-<section id="illinois-data-bank-openrefine-guide" class="level4">
-<h4 class="anchored" data-anchor-id="illinois-data-bank-openrefine-guide">4. Illinois Data Bank: OpenRefine Guide</h4>
-<p><strong>Quick reference with examples</strong></p>
+<section id="gesis-openrefine-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="gesis-openrefine-tutorial">4. GESIS: OpenRefine Tutorial</h3>
+<p><strong>Academic-focused, social sciences</strong></p>
 <ul>
-<li><strong>Link:</strong> <a href="https://researchguides.library.wisc.edu/c.php?g=975747&amp;p=7044099" class="uri">https://researchguides.library.wisc.edu/c.php?g=975747&amp;p=7044099</a></li>
-<li><strong>Best for:</strong> Quick lookup of specific functions</li>
-<li><strong>Format:</strong> Searchable guide</li>
+<li><strong>URL:</strong> <a href="https://www.gesis.org/en/services/research/tools/openrefine" class="uri">https://www.gesis.org/en/services/research/tools/openrefine</a></li>
+<li><strong>Format:</strong> PDF guide + datasets</li>
+<li><strong>Level:</strong> Beginner to Intermediate</li>
 </ul>
 <hr>
 </section>
+</section>
+<section id="openrefine-for-specific-dh-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="openrefine-for-specific-dh-tasks">OpenRefine for Specific DH Tasks</h2>
+<section id="cleaning-archival-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="cleaning-archival-metadata">Cleaning Archival Metadata</h3>
+<p><strong>Common issues in archival data:</strong></p>
+<ul>
+<li>Inconsistent date formats (12/3/1887 vs March 12, 1887)</li>
+<li>Variant spellings (François vs Francois)</li>
+<li>Multiple languages (Rome, Roma, Rôme)</li>
+<li>Incomplete records</li>
+</ul>
+<p><strong>OpenRefine solutions:</strong></p>
+<ul>
+<li><strong>Clustering</strong> to find variants</li>
+<li><strong>GREL</strong> to standardize dates</li>
+<li><strong>Facets</strong> to identify gaps</li>
+<li><strong>Reconciliation</strong> to match authority records</li>
+</ul>
+<p><strong>Example workflow:</strong></p>
+<pre><code>1. Import metadata CSV
+2. Cluster names (Edit cells &gt; Cluster and edit)
+3. Standardize dates (Transform &gt; value.toDate())
+4. Fill down missing data (Edit cells &gt; Fill down)
+5. Reconcile with VIAF (Reconcile &gt; Start reconciling)</code></pre>
+<hr>
+</section>
+<section id="working-with-historical-names-places" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-historical-names-places">Working with Historical Names &amp; Places</h3>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><p>Historical spellings (Wien vs Vienna, Pressburg vs Bratislava)</p></li>
+<li><p>Name changes over time</p></li>
+<li><p>Vernacular vs standardized forms</p></li>
+<li><p><strong>GeoNames reconciliation</strong> - modern place names</p></li>
+<li><p><strong>Pleiades</strong> - ancient places (<a href="https://pleiades.stoa.org/" class="uri">https://pleiades.stoa.org/</a>)</p></li>
+<li><p><strong>Wikidata</strong> - multilingual, historical entities</p></li>
+<li><p><strong>Getty TGN</strong> - Thesaurus of Geographic Names</p></li>
+</ul>
+<p><strong>Tutorial:</strong></p>
+<ul>
+<li><a href="https://programminghistorian.org/en/lessons/geocoding-qgis">Reconciling Historical Place Names</a> (includes OpenRefine)</li>
+</ul>
+<hr>
+</section>
+<section id="preparing-data-for-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="preparing-data-for-visualization">Preparing Data for Visualization</h3>
+<p><strong>From messy spreadsheet to clean dataset:</strong></p>
+<p><strong>Before OpenRefine:</strong></p>
+<pre><code>Date       | Event              | Location
+3/12/1848  | Revolution         | paris
+March 1848 | Protests           | PARIS
+12.03.1848 | Declaration signed | Paris, France</code></pre>
+<p><strong>After OpenRefine:</strong></p>
+<pre><code>Date       | Event              | City  | Country
+1848-03-12 | Revolution         | Paris | France
+1848-03-01 | Protests           | Paris | France
+1848-03-12 | Declaration signed | Paris | France</code></pre>
+<p><strong>Now ready for:</strong> Timeline visualization, mapping, network analysis</p>
+<hr>
+</section>
+<section id="transcription-quality-control" class="level3">
+<h3 class="anchored" data-anchor-id="transcription-quality-control">Transcription Quality Control</h3>
+<p><strong>Using OpenRefine to validate crowdsourced transcriptions:</strong></p>
+<ol type="1">
+<li><strong>Import</strong> transcriptions from Transkribus, FromThePage, etc.</li>
+<li><strong>Cluster</strong> variant spellings</li>
+<li><strong>Facet</strong> by transcriber to check consistency</li>
+<li><strong>Filter</strong> blank/incomplete entries</li>
+<li><strong>Flag</strong> suspicious values for review</li>
+</ol>
+<hr>
 </section>
 </section>
 <section id="grel-google-refine-expression-language" class="level2">
 <h2 class="anchored" data-anchor-id="grel-google-refine-expression-language">GREL (Google Refine Expression Language)</h2>
-<section id="understanding-grel" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-grel">Understanding GREL</h3>
-<p>GREL is OpenRefine’s expression language for transformations.</p>
-<section id="official-grel-reference" class="level4">
-<h4 class="anchored" data-anchor-id="official-grel-reference">Official GREL Reference</h4>
+<section id="essential-grel-functions" class="level3">
+<h3 class="anchored" data-anchor-id="essential-grel-functions">Essential GREL Functions</h3>
+<section id="basic-string-operations" class="level4">
+<h4 class="anchored" data-anchor-id="basic-string-operations">Basic String Operations</h4>
+<pre class="grel"><code># Remove whitespace
+value.trim()
+
+# Change case
+value.toLowercase()
+value.toUppercase()
+value.toTitlecase()
+
+# Replace text
+value.replace("old", "new")
+value.replace(/[^a-zA-Z]/, "")    # Regex: keep only letters
+
+# Extract parts
+value.substring(0, 4)              # First 4 characters
+value.split(",")[0]                # Split by comma, take first</code></pre>
+</section>
+<section id="working-with-dates" class="level4">
+<h4 class="anchored" data-anchor-id="working-with-dates">Working with Dates</h4>
+<pre class="grel"><code># Parse date strings
+value.toDate()
+value.toDate("dd/MM/yyyy")         # Specify format
+
+# Format dates
+value.toDate().toString("yyyy-MM-dd")
+value.toDate().toString("MMMM dd, yyyy")
+
+# Date components
+value.toDate().year()
+value.toDate().month()</code></pre>
+</section>
+<section id="conditional-logic" class="level4">
+<h4 class="anchored" data-anchor-id="conditional-logic">Conditional Logic</h4>
+<pre class="grel"><code># If-then-else
+if(value == "N/A", null, value)
+if(value.length() &gt; 10, "long", "short")
+
+# Multiple conditions
+if(value.contains("manuscript"), 
+   "MS", 
+   if(value.contains("book"), "Book", "Other"))</code></pre>
+</section>
+<section id="array-operations" class="level4">
+<h4 class="anchored" data-anchor-id="array-operations">Array Operations</h4>
+<pre class="grel"><code># Split and join
+value.split(";")                   # Create array
+value.split(";").join(" | ")       # Split then rejoin
+forEach(value.split(","), v, v.trim())  # Trim each element</code></pre>
+</section>
+<section id="cross-column-references" class="level4">
+<h4 class="anchored" data-anchor-id="cross-column-references">Cross-Column References</h4>
+<pre class="grel"><code># Reference another column
+cells["Column Name"].value
+
+# Combine columns
+cells["First"].value + " " + cells["Last"].value
+
+# Conditional based on other column
+if(cells["Language"].value == "Latin", "LA", "EN")</code></pre>
+<hr>
+</section>
+</section>
+<section id="grel-recipes-for-cultural-heritage" class="level3">
+<h3 class="anchored" data-anchor-id="grel-recipes-for-cultural-heritage">GREL Recipes for Cultural Heritage</h3>
+<section id="standardize-multiple-date-formats" class="level4">
+<h4 class="anchored" data-anchor-id="standardize-multiple-date-formats">1. Standardize Multiple Date Formats</h4>
+<pre class="grel"><code># Handle: "12/3/1887", "March 12 1887", "1887-03-12"
+if(value.contains("/"), 
+   value.toDate("dd/MM/yyyy"), 
+   if(value.contains("-"),
+      value.toDate("yyyy-MM-dd"),
+      value.toDate("MMMM dd yyyy")
+   )
+).toString("yyyy-MM-dd")</code></pre>
+</section>
+<section id="clean-shelfmarkcall-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="clean-shelfmarkcall-numbers">2. Clean Shelfmark/Call Numbers</h4>
+<pre class="grel"><code># "Ms. Lat. 123" → "MS-LAT-123"
+value.toUppercase()
+     .replace(/[^A-Z0-9]+/, "-")
+     .replace(/^-|-$/, "")</code></pre>
+</section>
+<section id="extract-foliopage-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="extract-foliopage-numbers">3. Extract Folio/Page Numbers</h4>
+<pre class="grel"><code># From "fol. 23r" or "f.23v" → "23r"
+value.replace(/^f(ol)?\.?\s*/i, "")</code></pre>
+</section>
+<section id="transliterate-characters" class="level4">
+<h4 class="anchored" data-anchor-id="transliterate-characters">4. Transliterate Characters</h4>
+<pre class="grel"><code># Basic Latin to ASCII (remove diacritics)
+value.replace("é", "e")
+     .replace("à", "a")
+     .replace("ü", "u")
+     # etc.</code></pre>
+</section>
+<section id="generate-urls-from-identifiers" class="level4">
+<h4 class="anchored" data-anchor-id="generate-urls-from-identifiers">5. Generate URLs from Identifiers</h4>
+<pre class="grel"><code># Create archive.org link from ID
+"https://archive.org/details/" + value
+
+# BnF Gallica link
+"https://gallica.bnf.fr/ark:/12148/" + value</code></pre>
+<hr>
+</section>
+</section>
+<section id="grel-cheat-sheet" class="level3">
+<h3 class="anchored" data-anchor-id="grel-cheat-sheet">GREL Cheat Sheet</h3>
+<p><strong>Official reference:</strong> <a href="https://openrefine.org/docs/manual/grel" class="uri">https://openrefine.org/docs/manual/grel</a></p>
+<p><strong>Printable cheat sheet:</strong></p>
 <ul>
-<li><strong>Documentation:</strong> <a href="https://openrefine.org/docs/manual/grel" class="uri">https://openrefine.org/docs/manual/grel</a></li>
-<li><strong>All functions:</strong> Listed with examples</li>
-<li><strong>Use as:</strong> Cheat sheet while working</li>
+<li><a href="https://gist.github.com/pmgreen/6e133c5dcde65762d29c">GREL Quick Reference</a> (GitHub Gist)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="reconciliation-services-for-dh" class="level2">
+<h2 class="anchored" data-anchor-id="reconciliation-services-for-dh">Reconciliation Services for DH</h2>
+<section id="what-is-reconciliation" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-reconciliation">What is Reconciliation?</h3>
+<p><strong>Match your data against authoritative sources:</strong></p>
+<ul>
+<li>Standardize names → VIAF, ISNI</li>
+<li>Places → GeoNames, Wikidata</li>
+<li>Concepts → Getty AAT, LCSH</li>
+<li>Historical entities → Wikidata, DBpedia</li>
 </ul>
 </section>
-<section id="grel-cheat-sheet" class="level4">
-<h4 class="anchored" data-anchor-id="grel-cheat-sheet">GREL Cheat Sheet</h4>
-<p><strong>Quick reference guide:</strong></p>
-<ul>
-<li><strong>PDF:</strong> <a href="https://web.archive.org/web/20190105063215/code4lib.org/conference/2015/tingle">GREL Functions Cheat Sheet</a></li>
-</ul>
-</section>
-<section id="common-grel-recipes" class="level4">
-<h4 class="anchored" data-anchor-id="common-grel-recipes">Common GREL Recipes</h4>
-<p><strong>Curated examples:</strong></p>
+<section id="built-in-services" class="level3">
+<h3 class="anchored" data-anchor-id="built-in-services">Built-in Services</h3>
 <ol type="1">
-<li><p><strong>Cleaning text:</strong></p>
-<pre><code>value.trim()                    # Remove whitespace
-value.toLowercase()             # Convert to lowercase
-value.toTitlecase()             # Title case
-value.replace("old", "new")     # Replace text</code></pre></li>
-<li><p><strong>Working with dates:</strong></p>
-<pre><code>value.toDate()                          # Parse date
-value.toDate().toString("yyyy-MM-dd")   # Format date</code></pre></li>
-<li><p><strong>Conditional logic:</strong></p>
-<pre><code>if(value == "N/A", null, value)         # Replace N/A with null
-if(value.length() &gt; 10, "long", "short") # Categorize by length</code></pre></li>
-<li><p><strong>Splitting text:</strong></p>
-<pre><code>value.split(",")                # Split by comma
-value.split(",")[0]             # Get first element</code></pre></li>
+<li><strong>Wikidata</strong> - Universal multilingual knowledge base</li>
+<li><strong>VIAF</strong> - Virtual International Authority File (people, institutions)</li>
+<li><strong>GeoNames</strong> - Geographic names database</li>
 </ol>
-<p><strong>More recipes:</strong> <a href="https://github.com/OpenRefine/OpenRefine/wiki/Recipes" class="uri">https://github.com/OpenRefine/OpenRefine/wiki/Recipes</a></p>
+</section>
+<section id="adding-custom-services" class="level3">
+<h3 class="anchored" data-anchor-id="adding-custom-services">Adding Custom Services</h3>
+<p><strong>For Cultural Heritage:</strong></p>
+<ul>
+<li><strong>Getty Vocabularies</strong> (AAT, ULAN, TGN)
+<ul>
+<li>Guide: <a href="https://www.getty.edu/research/tools/vocabularies/" class="uri">https://www.getty.edu/research/tools/vocabularies/</a></li>
+</ul></li>
+<li><strong>FAST</strong> (Faceted Application of Subject Terminology)
+<ul>
+<li><a href="https://www.oclc.org/research/areas/data-science/fast.html" class="uri">https://www.oclc.org/research/areas/data-science/fast.html</a></li>
+</ul></li>
+<li><strong>Pleiades</strong> (Ancient places)
+<ul>
+<li><a href="https://pleiades.stoa.org/" class="uri">https://pleiades.stoa.org/</a></li>
+</ul></li>
+</ul>
+<p><strong>How to add:</strong></p>
+<ol type="1">
+<li>Reconcile &gt; Start reconciling</li>
+<li>Add Standard Service</li>
+<li>Enter reconciliation endpoint URL</li>
+</ol>
+<p><strong>Tutorial:</strong> <a href="https://openrefine.org/docs/manual/reconciling">Using Reconciliation Services</a></p>
 <hr>
 </section>
 </section>
-</section>
-<section id="datasets-for-practice" class="level2">
-<h2 class="anchored" data-anchor-id="datasets-for-practice">Datasets for Practice</h2>
-<section id="sample-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="sample-datasets">Sample Datasets</h3>
-<p>Practice with these publicly available messy datasets:</p>
-<section id="museum-collections-data" class="level4">
-<h4 class="anchored" data-anchor-id="museum-collections-data">1. Museum Collections Data</h4>
+<section id="practice-datasets-for-dh" class="level2">
+<h2 class="anchored" data-anchor-id="practice-datasets-for-dh">Practice Datasets for DH</h2>
+<section id="museumgallery-collections" class="level3">
+<h3 class="anchored" data-anchor-id="museumgallery-collections">1. Museum/Gallery Collections</h3>
 <ul>
-<li><strong>Source:</strong> <a href="https://github.com/MuseumAPI/collection-downloads" class="uri">https://github.com/MuseumAPI/collection-downloads</a></li>
-<li><strong>What’s messy:</strong> Inconsistent dates, duplicate entries, mixed formats</li>
-<li><strong>Good for:</strong> Cultural heritage researchers</li>
-</ul>
-</section>
-<section id="dirty-survey-data" class="level4">
-<h4 class="anchored" data-anchor-id="dirty-survey-data">2. Dirty Survey Data</h4>
+<li><strong>Carnegie Museum of Art:</strong> <a href="https://github.com/cmoa/collection" class="uri">https://github.com/cmoa/collection</a>
 <ul>
-<li><strong>Source:</strong> <a href="https://github.com/Quartz/bad-data-guide">Bad Data Repository</a></li>
-<li><strong>What’s messy:</strong> Missing values, encoding issues, outliers</li>
-<li><strong>Good for:</strong> Social scientists</li>
-</ul>
-</section>
-<section id="public-library-data" class="level4">
-<h4 class="anchored" data-anchor-id="public-library-data">3. Public Library Data</h4>
-<ul>
-<li><strong>Source:</strong> <a href="https://data.imls.gov/" class="uri">https://data.imls.gov/</a></li>
-<li><strong>What’s messy:</strong> Inconsistent naming, special characters</li>
-<li><strong>Good for:</strong> General practice</li>
-</ul>
-</section>
-<section id="openrefine-sample-data" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-sample-data">4. OpenRefine Sample Data</h4>
-<ul>
-<li><strong>Source:</strong> <a href="https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets" class="uri">https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets</a></li>
-<li><strong>Official examples:</strong> Used in documentation</li>
-</ul>
-<hr>
-</section>
-</section>
-</section>
-<section id="use-case-libraries" class="level2">
-<h2 class="anchored" data-anchor-id="use-case-libraries">Use Case Libraries</h2>
-<section id="real-world-examples" class="level3">
-<h3 class="anchored" data-anchor-id="real-world-examples">Real-World Examples</h3>
-<p>Learn from how others use OpenRefine:</p>
-<section id="openrefine-in-digital-humanities" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-in-digital-humanities">1. OpenRefine in Digital Humanities</h4>
-<ul>
-<li><strong>Examples:</strong> <a href="https://digitalhumanities.berkeley.edu/resources/openrefine-dh" class="uri">https://digitalhumanities.berkeley.edu/resources/openrefine-dh</a></li>
-<li><strong>Use cases:</strong>
-<ul>
-<li>Cleaning historical records</li>
-<li>Standardizing place names</li>
-<li>Parsing archival metadata</li>
+<li>30,000+ artworks with metadata</li>
+<li>CSV format, ready to clean</li>
 </ul></li>
-</ul>
-</section>
-<section id="openrefine-for-bibliographic-data" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-for-bibliographic-data">2. OpenRefine for Bibliographic Data</h4>
+<li><strong>Tate Collection:</strong> <a href="https://github.com/tategallery/collection" class="uri">https://github.com/tategallery/collection</a>
 <ul>
-<li><strong>Guide:</strong> <a href="https://www.library.illinois.edu/dcl/openrefine/" class="uri">https://www.library.illinois.edu/dcl/openrefine/</a></li>
-<li><strong>Examples:</strong>
-<ul>
-<li>Author name disambiguation</li>
-<li>ISBN cleaning</li>
-<li>Subject heading normalization</li>
+<li>70,000+ artworks and artists</li>
+<li>Various data quality issues</li>
 </ul></li>
-</ul>
-</section>
-<section id="openrefine-in-scientific-research" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-in-scientific-research">3. OpenRefine in Scientific Research</h4>
+<li><strong>Rijksmuseum:</strong> <a href="https://data.rijksmuseum.nl/" class="uri">https://data.rijksmuseum.nl/</a>
 <ul>
-<li><strong>Case studies:</strong> <a href="https://riojournal.com/articles.php?journal_name=rio&amp;id=10.3897/rio.5.e38136" class="uri">https://riojournal.com/articles.php?journal_name=rio&amp;id=10.3897/rio.5.e38136</a></li>
-<li><strong>Applications:</strong>
-<ul>
-<li>Species name reconciliation</li>
-<li>Geographic coordinates cleanup</li>
-<li>Laboratory data standardization</li>
+<li>Dutch masters collection</li>
+<li>Messy creator names, dates</li>
 </ul></li>
 </ul>
 <hr>
 </section>
+<section id="historical-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="historical-datasets">2. Historical Datasets</h3>
+<ul>
+<li><p><strong>19th Century British Library Books:</strong></p>
+<ul>
+<li><a href="https://doi.org/10.23636/1112" class="uri">https://doi.org/10.23636/1112</a></li>
+<li>OCR text, cataloging data</li>
+</ul></li>
+<li><p><strong>Colonial Correspondence:</strong></p>
+<ul>
+<li><a href="https://doi.org/10.5281/zenodo.5886025">Unsilencing Colonial Archives</a></li>
+<li>Named entity recognition dataset</li>
+</ul></li>
+<li><p><strong>Historical Census Data:</strong></p>
+<ul>
+<li>Various historical census projects</li>
+<li>Inconsistent place names, occupations</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="archival-finding-aids" class="level3">
+<h3 class="anchored" data-anchor-id="archival-finding-aids">3. Archival Finding Aids</h3>
+<ul>
+<li><strong>EAD (Encoded Archival Description) exports</strong>
+<ul>
+<li>Convert to CSV/Excel</li>
+<li>Clean dates, names, locations</li>
+</ul></li>
+</ul>
+<p><strong>Example workflow:</strong></p>
+<ol type="1">
+<li>Export EAD as spreadsheet</li>
+<li>Import to OpenRefine</li>
+<li>Standardize date ranges</li>
+<li>Reconcile place names</li>
+<li>Export clean version</li>
+</ol>
+<hr>
+</section>
+<section id="openrefine-sample-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="openrefine-sample-datasets">4. OpenRefine Sample Datasets</h3>
+<ul>
+<li><strong>Official examples:</strong> <a href="https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets" class="uri">https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets</a></li>
+</ul>
+<hr>
 </section>
 </section>
-<section id="advanced-topics" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-topics">Advanced Topics</h2>
-<section id="extensions-and-plugins" class="level3">
-<h3 class="anchored" data-anchor-id="extensions-and-plugins">Extensions and Plugins</h3>
-<p>OpenRefine supports extensions for specialized tasks:</p>
+<section id="case-studies-openrefine-in-dh-projects" class="level2">
+<h2 class="anchored" data-anchor-id="case-studies-openrefine-in-dh-projects">Case Studies: OpenRefine in DH Projects</h2>
+<section id="mapping-the-republic-of-letters" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-the-republic-of-letters">1. Mapping the Republic of Letters</h3>
+<p><strong>Project:</strong> Stanford visualization of early modern correspondence</p>
+<p><strong>OpenRefine used for:</strong></p>
+<ul>
+<li>Cleaning 55,000+ letters</li>
+<li>Standardizing correspondent names</li>
+<li>Geocoding locations</li>
+<li>Reconciling with VIAF</li>
+</ul>
+<p><strong>Result:</strong> Network visualization, interactive map</p>
+<p><strong>More info:</strong> <a href="http://republicofletters.stanford.edu/" class="uri">http://republicofletters.stanford.edu/</a></p>
+<hr>
+</section>
+<section id="pelagios-project" class="level3">
+<h3 class="anchored" data-anchor-id="pelagios-project">2. Pelagios Project</h3>
+<p><strong>Project:</strong> Linking historical places across ancient sources</p>
+<p><strong>OpenRefine workflow:</strong></p>
+<ul>
+<li>Import various gazetteers</li>
+<li>Standardize place name variants</li>
+<li>Reconcile with Pleiades</li>
+<li>Generate RDF/Linked Data</li>
+</ul>
+<p><strong>More info:</strong> <a href="https://pelagios.org/" class="uri">https://pelagios.org/</a></p>
+<hr>
+</section>
+<section id="british-library-labs" class="level3">
+<h3 class="anchored" data-anchor-id="british-library-labs">3. British Library Labs</h3>
+<p><strong>Various projects using BL datasets</strong></p>
+<p><strong>Common OpenRefine tasks:</strong></p>
+<ul>
+<li>OCR error correction</li>
+<li>Metadata enhancement</li>
+<li>Classification/tagging</li>
+<li>Preparing for visualization</li>
+</ul>
+<p><strong>Competitions:</strong> <a href="https://blogs.bl.uk/digital-scholarship/" class="uri">https://blogs.bl.uk/digital-scholarship/</a></p>
+<hr>
+</section>
+</section>
+<section id="openrefine-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="openrefine-extensions">OpenRefine Extensions</h2>
+<section id="recommended-extensions-for-dh" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-extensions-for-dh">Recommended Extensions for DH</h3>
 <section id="rdf-extension" class="level4">
 <h4 class="anchored" data-anchor-id="rdf-extension">1. RDF Extension</h4>
-<p><strong>For linked data work</strong></p>
+<p><strong>For Linked Open Data projects</strong></p>
 <ul>
 <li><strong>Info:</strong> <a href="https://openrefine.org/docs/manual/rdfextension" class="uri">https://openrefine.org/docs/manual/rdfextension</a></li>
-<li><strong>Use cases:</strong> Semantic web, knowledge graphs</li>
-</ul>
-</section>
-<section id="geocoding-extensions" class="level4">
-<h4 class="anchored" data-anchor-id="geocoding-extensions">2. Geocoding Extensions</h4>
-<p><strong>Add geographic coordinates</strong></p>
-<ul>
-<li><strong>Guide:</strong> <a href="https://github.com/OpenRefine/OpenRefine/wiki/Geocoding" class="uri">https://github.com/OpenRefine/OpenRefine/wiki/Geocoding</a></li>
+<li><strong>Use:</strong> Generate RDF triples, work with ontologies</li>
+<li><strong>Example:</strong> Creating LOD from museum collections</li>
 </ul>
 </section>
 <section id="named-entity-recognition-ner" class="level4">
-<h4 class="anchored" data-anchor-id="named-entity-recognition-ner">3. Named Entity Recognition (NER)</h4>
-<p><strong>Extract entities from text</strong></p>
+<h4 class="anchored" data-anchor-id="named-entity-recognition-ner">2. Named Entity Recognition (NER)</h4>
+<p><strong>Extract entities from text automatically</strong></p>
 <ul>
 <li><strong>Extension:</strong> <a href="https://github.com/stkenny/Refine-NER-Extension" class="uri">https://github.com/stkenny/Refine-NER-Extension</a></li>
-<li><strong>Use case:</strong> Text mining</li>
+<li><strong>Use:</strong> Identify people, places, organizations in corpus</li>
+<li><strong>Example:</strong> Processing historical documents</li>
+</ul>
+</section>
+<section id="wikibase-extension" class="level4">
+<h4 class="anchored" data-anchor-id="wikibase-extension">3. Wikibase Extension</h4>
+<p><strong>For projects using Wikibase (like Wikidata)</strong></p>
+<ul>
+<li><strong>Info:</strong> <a href="https://openrefine.org/docs/manual/wikibase" class="uri">https://openrefine.org/docs/manual/wikibase</a></li>
+<li><strong>Use:</strong> Upload data to institutional Wikibase</li>
+<li><strong>Example:</strong> Creating structured cultural heritage database</li>
 </ul>
 <hr>
 </section>
 </section>
 </section>
-<section id="troubleshooting-tips" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting-tips">Troubleshooting &amp; Tips</h2>
-<section id="common-issues" class="level3">
-<h3 class="anchored" data-anchor-id="common-issues">Common Issues</h3>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Frequent Problems &amp; Solutions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Problem:</strong> OpenRefine won’t start - <strong>Solution:</strong> Check if port 3333 is in use, restart computer</p>
-<p><strong>Problem:</strong> Large files crash OpenRefine - <strong>Solution:</strong> Increase memory allocation (see <a href="https://openrefine.org/docs/manual/installing#increasing-memory-allocation">documentation</a>)</p>
-<p><strong>Problem:</strong> Can’t undo after closing project - <strong>Solution:</strong> Export operations before closing, reimport if needed</p>
-<p><strong>Problem:</strong> Lost work - <strong>Solution:</strong> OpenRefine auto-saves, but export projects regularly</p>
-</div>
-</div>
-</section>
-<section id="performance-tips" class="level3">
-<h3 class="anchored" data-anchor-id="performance-tips">Performance Tips</h3>
-<ul>
-<li><strong>Filter before transforming:</strong> Narrow down data first</li>
-<li><strong>Use facets efficiently:</strong> Close unused facets</li>
-<li><strong>Export regularly:</strong> Don’t rely on auto-save alone</li>
-<li><strong>Split large files:</strong> Process in chunks if very large</li>
-</ul>
+<section id="performance-tips" class="level2">
+<h2 class="anchored" data-anchor-id="performance-tips">Performance Tips</h2>
+<p><strong>For large cultural heritage datasets:</strong></p>
+<ol type="1">
+<li><strong>Filter first</strong> - narrow data before complex operations</li>
+<li><strong>Close unused facets</strong> - they consume memory</li>
+<li><strong>Export regularly</strong> - don’t rely only on auto-save</li>
+<li><strong>Use batches</strong> - process 10k rows at a time</li>
+<li><strong>Document workflow</strong> - export operations as JSON</li>
+</ol>
 <hr>
 </section>
-</section>
-<section id="community-support" class="level2">
-<h2 class="anchored" data-anchor-id="community-support">Community &amp; Support</h2>
-<section id="getting-help" class="level3">
-<h3 class="anchored" data-anchor-id="getting-help">Getting Help</h3>
-<section id="openrefine-forum" class="level4">
-<h4 class="anchored" data-anchor-id="openrefine-forum">1. OpenRefine Forum</h4>
-<ul>
-<li><strong>Link:</strong> <a href="https://forum.openrefine.org/" class="uri">https://forum.openrefine.org/</a></li>
-<li><strong>Very active:</strong> Questions usually answered within 24 hours</li>
-<li><strong>Search first:</strong> Many questions already answered</li>
-</ul>
-</section>
-<section id="github-issues" class="level4">
-<h4 class="anchored" data-anchor-id="github-issues">2. GitHub Issues</h4>
-<ul>
-<li><strong>Link:</strong> <a href="https://github.com/OpenRefine/OpenRefine/issues" class="uri">https://github.com/OpenRefine/OpenRefine/issues</a></li>
-<li><strong>For:</strong> Bug reports, feature requests</li>
-<li><strong>Check existing issues</strong> before posting</li>
-</ul>
-</section>
-<section id="stack-overflow" class="level4">
-<h4 class="anchored" data-anchor-id="stack-overflow">3. Stack Overflow</h4>
-<ul>
-<li><strong>Tag:</strong> <code>openrefine</code></li>
-<li><strong>Link:</strong> <a href="https://stackoverflow.com/questions/tagged/openrefine" class="uri">https://stackoverflow.com/questions/tagged/openrefine</a></li>
-<li><strong>Good for:</strong> Programming-related questions</li>
-</ul>
-<hr>
-</section>
-</section>
-</section>
-<section id="comparison-with-other-tools" class="level2">
-<h2 class="anchored" data-anchor-id="comparison-with-other-tools">Comparison with Other Tools</h2>
-<section id="when-to-use-openrefine-vs.-alternatives" class="level3">
-<h3 class="anchored" data-anchor-id="when-to-use-openrefine-vs.-alternatives">When to Use OpenRefine vs.&nbsp;Alternatives</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 23%">
-<col style="width: 26%">
-<col style="width: 19%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Task</th>
-<th>OpenRefine</th>
-<th>Excel/Sheets</th>
-<th>Python/R</th>
-<th>Database</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Quick data cleaning</td>
-<td>✅ Ideal</td>
-<td>✅ OK</td>
-<td>❌ Overkill</td>
-<td>❌ Overkill</td>
-</tr>
-<tr class="even">
-<td>Large datasets (&gt;100k rows)</td>
-<td>✅ Good</td>
-<td>❌ Slow</td>
-<td>✅ Better</td>
-<td>✅ Best</td>
-</tr>
-<tr class="odd">
-<td>Reconciliation with external data</td>
-<td>✅ Built-in</td>
-<td>❌ Manual</td>
-<td>⚠️ Complex</td>
-<td>⚠️ Complex</td>
-</tr>
-<tr class="even">
-<td>Reproducible workflows</td>
-<td>✅ Yes (export JSON)</td>
-<td>❌ Manual</td>
-<td>✅ Yes (scripts)</td>
-<td>✅ Yes (SQL)</td>
-</tr>
-<tr class="odd">
-<td>Learning curve</td>
-<td>⚠️ Moderate</td>
-<td>✅ Easy</td>
-<td>❌ Steep</td>
-<td>❌ Steep</td>
-</tr>
-<tr class="even">
-<td>No programming required</td>
-<td>✅ Yes</td>
-<td>✅ Yes</td>
-<td>❌ No</td>
-<td>❌ No</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Bottom line:</strong> OpenRefine excels at exploratory data cleaning and transformation without programming.</p>
-<hr>
-</section>
-</section>
-<section id="regular-expressions-in-openrefine" class="level2">
-<h2 class="anchored" data-anchor-id="regular-expressions-in-openrefine">Regular Expressions in OpenRefine</h2>
-<section id="regex-resources" class="level3">
-<h3 class="anchored" data-anchor-id="regex-resources">Regex Resources</h3>
-<p>GREL supports regular expressions for advanced pattern matching.</p>
-<section id="learn-regex" class="level4">
-<h4 class="anchored" data-anchor-id="learn-regex">Learn Regex</h4>
-<ul>
-<li><strong>Interactive tutorial:</strong> <a href="https://regexone.com/" class="uri">https://regexone.com/</a></li>
-<li><strong>Regex tester:</strong> <a href="https://regex101.com/" class="uri">https://regex101.com/</a> (test patterns before using)</li>
-<li><strong>Cheat sheet:</strong> <a href="https://www.rexegg.com/regex-quickstart.html" class="uri">https://www.rexegg.com/regex-quickstart.html</a></li>
-</ul>
-</section>
-<section id="regex-in-openrefine" class="level4">
-<h4 class="anchored" data-anchor-id="regex-in-openrefine">Regex in OpenRefine</h4>
-<p><strong>Common patterns:</strong></p>
-<pre class="grel"><code># Match emails
-value.match(/[\w.-]+@[\w.-]+\.\w+/)
+<section id="going-further---advanced-topics" class="level2">
+<h2 class="anchored" data-anchor-id="going-further---advanced-topics">Going Further - Advanced Topics</h2>
+<section id="regular-expressions-regex" class="level3">
+<h3 class="anchored" data-anchor-id="regular-expressions-regex">1. Regular Expressions (Regex)</h3>
+<p><strong>Essential for pattern matching in historical text</strong></p>
+<p><strong>Learn regex:</strong> - <strong>Interactive tutorial:</strong> <a href="https://regexone.com/" class="uri">https://regexone.com/</a> - <strong>Tester:</strong> <a href="https://regex101.com/" class="uri">https://regex101.com/</a> - <strong>For historians:</strong> <a href="https://regex.libraries.stackexchange.com/">Regex for Archival Research</a></p>
+<p><strong>Example regex for OpenRefine:</strong></p>
+<pre class="grel"><code># Match folio numbers (f. 23r, fol. 45v, etc.)
+value.match(/f(ol)?\.?\s*(\d+[rv]?)/)
 
-# Extract numbers
-value.match(/\d+/)
+# Extract years (1500-1999)
+value.match(/\b(1[5-9]\d{2})\b/)
 
-# Remove non-alphanumeric
-value.replace(/[^a-zA-Z0-9]/, "")
-
-# Find phone numbers (US format)
-value.match(/\d{3}-\d{3}-\d{4}/)</code></pre>
+# Find capitalized words (potential names)
+value.match(/\b[A-Z][a-z]+\b/)</code></pre>
+<hr>
+</section>
+<section id="batch-processing-multiple-files" class="level3">
+<h3 class="anchored" data-anchor-id="batch-processing-multiple-files">2. Batch Processing Multiple Files</h3>
+<p><strong>Process many similar files with same operations:</strong></p>
+<ol type="1">
+<li><strong>Create and test</strong> workflow on sample file</li>
+<li><strong>Export operations</strong> (Extract… in Undo/Redo tab)</li>
+<li><strong>Apply to new files</strong> (Apply… with saved JSON)</li>
+</ol>
+<p><strong>Use case:</strong> Cleaning multiple finding aids, multiple years of data</p>
+<hr>
+</section>
+<section id="combining-openrefine-with-other-tools" class="level3">
+<h3 class="anchored" data-anchor-id="combining-openrefine-with-other-tools">3. Combining OpenRefine with Other Tools</h3>
+<p><strong>Typical DH workflow:</strong></p>
+<pre><code>1. Data collection (archives, databases)
+2. Digitization/transcription
+3. Initial organization (Tropy, file system)
+4. ↓
+5. OPENREFINE: Clean, standardize, reconcile
+6. ↓
+7. Export clean data
+8. Analysis (R, Python, Gephi, Palladio)
+9. Visualization (maps, networks, timelines)
+10. Publication (online exhibit, article, data paper)</code></pre>
 <hr>
 </section>
 </section>
-</section>
-<section id="books-long-form-resources" class="level2">
-<h2 class="anchored" data-anchor-id="books-long-form-resources">Books &amp; Long-Form Resources</h2>
-<section id="recommended-reading" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-reading">Recommended Reading</h3>
-<section id="using-openrefine-packt-publishing" class="level4">
-<h4 class="anchored" data-anchor-id="using-openrefine-packt-publishing">1. Using OpenRefine (Packt Publishing)</h4>
+<section id="complementary-tools" class="level2">
+<h2 class="anchored" data-anchor-id="complementary-tools">Complementary Tools</h2>
+<section id="before-openrefine" class="level3">
+<h3 class="anchored" data-anchor-id="before-openrefine">Before OpenRefine</h3>
 <ul>
-<li><strong>Author:</strong> Ruben Verborgh, Max De Wilde</li>
-<li><strong>Link:</strong> Available on O’Reilly Learning Platform</li>
-<li><strong>Level:</strong> Beginner to Advanced</li>
-<li><strong>Why it’s good:</strong> Comprehensive, includes real projects</li>
+<li><strong>Tropy</strong> - organize images, extract metadata</li>
+<li><strong>Transkribus</strong> - transcribe handwritten sources</li>
+<li><strong>csvkit</strong> - command-line CSV manipulation (for very large files)</li>
 </ul>
 </section>
-<section id="data-wrangling-with-python-oreilly" class="level4">
-<h4 class="anchored" data-anchor-id="data-wrangling-with-python-oreilly">2. Data Wrangling with Python (O’Reilly)</h4>
+<section id="after-openrefine" class="level3">
+<h3 class="anchored" data-anchor-id="after-openrefine">After OpenRefine</h3>
+<p><strong>For analysis &amp; visualization:</strong></p>
 <ul>
-<li>Includes OpenRefine workflows</li>
-<li>Shows how to combine OpenRefine with Python</li>
+<li><strong>Palladio</strong> - Network &amp; geo visualization (Stanford)
+<ul>
+<li><a href="https://hdlab.stanford.edu/palladio/" class="uri">https://hdlab.stanford.edu/palladio/</a></li>
+</ul></li>
+<li><strong>Gephi</strong> - Network analysis
+<ul>
+<li><a href="https://gephi.org/" class="uri">https://gephi.org/</a></li>
+</ul></li>
+<li><strong>Voyant Tools</strong> - Text analysis
+<ul>
+<li><a href="https://voyant-tools.org/" class="uri">https://voyant-tools.org/</a></li>
+</ul></li>
+<li><strong>R / Python</strong> - Statistical analysis, custom visualizations
+<ul>
+<li>R: <code>tidyverse</code> package</li>
+<li>Python: <code>pandas</code> library</li>
+</ul></li>
+</ul>
+</section>
+<section id="integrated-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="integrated-workflows">Integrated workflows</h3>
+<ul>
+<li><strong>Zotero</strong> → metadata export → OpenRefine → clean data</li>
+<li><strong>Omeka</strong> → item export → OpenRefine → enhanced metadata → Omeka import</li>
 </ul>
 <hr>
 </section>
 </section>
-</section>
-<section id="workshops-training-opportunities" class="level2">
-<h2 class="anchored" data-anchor-id="workshops-training-opportunities">Workshops &amp; Training Opportunities</h2>
+<section id="learning-resources---digital-humanities-focus" class="level2">
+<h2 class="anchored" data-anchor-id="learning-resources---digital-humanities-focus">Learning Resources - Digital Humanities Focus</h2>
 <section id="online-courses" class="level3">
 <h3 class="anchored" data-anchor-id="online-courses">Online Courses</h3>
-<section id="data-carpentry-workshops" class="level4">
-<h4 class="anchored" data-anchor-id="data-carpentry-workshops">1. Data Carpentry Workshops</h4>
+<ol type="1">
+<li><strong>DARIAH-Campus</strong>
 <ul>
-<li><strong>Schedule:</strong> <a href="https://datacarpentry.org/workshops-host/" class="uri">https://datacarpentry.org/workshops-host/</a></li>
-<li><strong>Free:</strong> Community-taught workshops</li>
-<li><strong>Global:</strong> Available worldwide</li>
-</ul>
-</section>
-<section id="foster-open-science" class="level4">
-<h4 class="anchored" data-anchor-id="foster-open-science">2. FOSTER Open Science</h4>
+<li><a href="https://campus.dariah.eu/" class="uri">https://campus.dariah.eu/</a></li>
+<li>European DH training platform</li>
+<li>Includes data management modules</li>
+</ul></li>
+<li><strong>Programming Historian</strong>
 <ul>
-<li><strong>Link:</strong> <a href="https://www.fosteropenscience.eu/node/2437" class="uri">https://www.fosteropenscience.eu/node/2437</a></li>
-<li><strong>Includes:</strong> Data management with OpenRefine module</li>
-</ul>
+<li><a href="https://programminghistorian.org/" class="uri">https://programminghistorian.org/</a></li>
+<li>Peer-reviewed tutorials</li>
+<li>OpenRefine + other DH tools</li>
+</ul></li>
+<li><strong>PARTHENOS Training</strong>
+<ul>
+<li><a href="http://training.parthenos-project.eu/" class="uri">http://training.parthenos-project.eu/</a></li>
+<li>Research infrastructure training</li>
+<li>Cultural heritage specific</li>
+</ul></li>
+</ol>
 <hr>
 </section>
-</section>
-</section>
-<section id="project-showcase" class="level2">
-<h2 class="anchored" data-anchor-id="project-showcase">Project Showcase</h2>
-<section id="inspiration-from-real-projects" class="level3">
-<h3 class="anchored" data-anchor-id="inspiration-from-real-projects">Inspiration from Real Projects</h3>
-<p>See how researchers have used OpenRefine:</p>
+<section id="books-long-form-guides" class="level3">
+<h3 class="anchored" data-anchor-id="books-long-form-guides">Books &amp; Long-Form Guides</h3>
 <ol type="1">
-<li><strong><a href="https://www.bl.uk/projects/british-library-openrefine">British Library Digital Collections</a></strong> - Metadata cleanup</li>
-<li><strong><a href="https://pro.europeana.eu/post/data-quality-committee-recommends-openrefine-for-cultural-heritage-data-work">Europeana</a></strong> - Cultural heritage aggregation</li>
-<li><strong><a href="https://www.gbif.org/tool/81747/openrefine">GBIF</a></strong> - Biodiversity data cleaning</li>
+<li><strong>“Using OpenRefine”</strong> - Packt Publishing
+<ul>
+<li>Ruben Verborgh, Max De Wilde</li>
+<li>Comprehensive, includes real projects</li>
+</ul></li>
+<li><strong>“The Historian’s Macroscope”</strong>
+<ul>
+<li>Free online: <a href="http://www.themacroscope.org/" class="uri">http://www.themacroscope.org/</a></li>
+<li>Includes OpenRefine chapter for historians</li>
+</ul></li>
+<li><strong>“The Programming Historian”</strong> - Lessons
+<ul>
+<li><a href="https://programminghistorian.org/en/lessons/" class="uri">https://programminghistorian.org/en/lessons/</a></li>
+<li>Multiple OpenRefine tutorials</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="communities" class="level3">
+<h3 class="anchored" data-anchor-id="communities">Communities</h3>
+<p><strong>Where to ask questions:</strong></p>
+<ol type="1">
+<li><strong>OpenRefine Forum</strong>
+<ul>
+<li><a href="https://forum.openrefine.org/" class="uri">https://forum.openrefine.org/</a></li>
+<li>Very active, friendly community</li>
+<li>Search before asking!</li>
+</ul></li>
+<li><strong>DH Slack</strong>
+<ul>
+<li><a href="https://digitalhumanities.slack.com/" class="uri">https://digitalhumanities.slack.com/</a></li>
+<li>#openrefine channel</li>
+<li>Real-time help</li>
+</ul></li>
+<li><strong>Digital Humanities Questions (DHQ)</strong>
+<ul>
+<li><a href="https://digitalhumanities.stackexchange.com/" class="uri">https://digitalhumanities.stackexchange.com/</a></li>
+<li>Q&amp;A format</li>
+</ul></li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="keep-learning" class="level2">
-<h2 class="anchored" data-anchor-id="keep-learning">Keep Learning</h2>
+<section id="resources-in-other-languages" class="level2">
+<h2 class="anchored" data-anchor-id="resources-in-other-languages">Resources in Other Languages</h2>
+<section id="french-resources" class="level3">
+<h3 class="anchored" data-anchor-id="french-resources">French Resources</h3>
+<p><strong>DoRANum</strong> materials (some in French): - <a href="https://doranum.fr/" class="uri">https://doranum.fr/</a> - Video guides, fact sheets - Check for English subtitles</p>
+<p><strong>Huma-Num</strong> training: - <a href="https://www.huma-num.fr/formations" class="uri">https://www.huma-num.fr/formations</a> - Sometimes offers OpenRefine workshops</p>
+<p><strong>TGIR Huma-Num tools:</strong> - <a href="https://www.huma-num.fr/services-et-outils" class="uri">https://www.huma-num.fr/services-et-outils</a></p>
+</section>
+<section id="other-european-languages" class="level3">
+<h3 class="anchored" data-anchor-id="other-european-languages">Other European Languages</h3>
+<ul>
+<li><strong>Italian:</strong> <a href="https://www.aiucd.it/">AIuCD resources</a></li>
+<li><strong>German:</strong> <a href="https://dig-hum.de/">DHd tutorials</a></li>
+<li><strong>Spanish:</strong> <a href="http://www.humanidadesdigitales.net/">Humanidades Digitales Hispánicas</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="final-tips-for-ssh-researchers" class="level2">
+<h2 class="anchored" data-anchor-id="final-tips-for-ssh-researchers">Final Tips for SSH Researchers</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Next Steps
+<span class="screen-reader-only">Tip</span>Best Practices
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><strong>For long-term projects:</strong></p>
 <ol type="1">
-<li><strong>Practice regularly:</strong> Work with your own research data</li>
-<li><strong>Join the forum:</strong> Learn from others’ questions</li>
-<li><strong>Export your scripts:</strong> Build a personal library of operations</li>
-<li><strong>Share your workflows:</strong> Help the community</li>
-<li><strong>Stay updated:</strong> OpenRefine releases new versions regularly</li>
+<li><strong>Document everything</strong> - Export operations as JSON, keep notes</li>
+<li><strong>Version your datasets</strong> - Name files with dates and versions</li>
+<li><strong>Test workflows early</strong> - Don’t wait until deadline to clean data</li>
+<li><strong>Share knowledge</strong> - Help colleagues learn OpenRefine</li>
+<li><strong>Think FAIR</strong> - Clean data is the first step to FAIR data</li>
 </ol>
+<p><strong>Remember:</strong> - OpenRefine is <strong>non-destructive</strong> - you can always undo - Operations are <strong>reproducible</strong> - save and reuse workflows - The community is <strong>helpful</strong> - don’t hesitate to ask questions</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<section id="blogs-tutorials" class="level3">
-<h3 class="anchored" data-anchor-id="blogs-tutorials">Blogs &amp; Tutorials</h3>
-<ul>
-<li><strong>Tony Hirst’s Blog:</strong> <a href="https://blog.ouseful.info/tag/openrefine/" class="uri">https://blog.ouseful.info/tag/openrefine/</a> (Advanced tips)</li>
-<li><strong>School of Data:</strong> <a href="https://schoolofdata.org/courses/" class="uri">https://schoolofdata.org/courses/</a> (General data literacy)</li>
-</ul>
-</section>
-<section id="cheat-sheets" class="level3">
-<h3 class="anchored" data-anchor-id="cheat-sheets">Cheat Sheets</h3>
-<ul>
-<li><strong><a href="https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf">OpenRefine Cheat Sheet</a></strong> (PDF)</li>
-<li><strong><a href="https://gist.github.com/pmgreen/6e133c5dcde65762d29c">GREL Quick Reference</a></strong> (GitHub Gist)</li>
-</ul>
+<section id="questions-support" class="level2">
+<h2 class="anchored" data-anchor-id="questions-support">Questions &amp; Support</h2>
+<p><strong>For OpenRefine help:</strong> - Forum: <a href="https://forum.openrefine.org/" class="uri">https://forum.openrefine.org/</a> - Documentation: <a href="https://openrefine.org/docs" class="uri">https://openrefine.org/docs</a></p>
+<p><strong>For workshop-specific questions:</strong> <a href="mailto:julien.rabaud@univ-pau.fr">julien.rabaud@univ-pau.fr</a></p>
+<p><strong>Additional DH support:</strong> - <a href="https://www.dariah.eu/helpdesk/">DARIAH Helpdesk</a> - <a href="https://www.huma-num.fr/nous-contacter">Huma-Num contact</a></p>
 <hr>
-</section>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
-<p>For help with OpenRefine in your specific research context:</p>
-<p>📧 <a href="mailto:julien.rabaud@univ-pau.fr">julien.rabaud@univ-pau.fr</a></p>
-<p>Or post on the <a href="https://forum.openrefine.org/">OpenRefine Forum</a> for community support!</p>
 
 
 </section>
@@ -1350,7 +1559,7 @@ value.match(/\d{3}-\d{3}-\d{4}/)</code></pre>
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/openrefine.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Last update: 2026-02-09</p>
 </div>
