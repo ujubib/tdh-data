@@ -1,0 +1,201 @@
+---
+title: "File Organization Tools"
+subtitle: "Archifiltre and Alternatives"
+---
+
+## Archifiltre
+
+![](https://archifiltre.fabrique.social.gouv.fr/app/uploads/2024/07/Aime-par-Chloe-1-e1721076329956-150x150.png){width=100px}
+
+**Archifiltre** is our recommended tool for visualizing and organizing your file structure.
+
+### Key Features
+
+- **Visual treemap** of your entire directory structure
+- **Duplicate detection** across folders
+- **Date-based filtering** to identify old/unused files
+- **Tagging system** for organizing files
+- **Export reports** for documentation
+
+### Download & Documentation
+
+- **Official website:** <https://archifiltre.fabrique.social.gouv.fr/>
+- **Download:** Available for Windows, macOS, and Linux
+- **Documentation:** [User guide](https://archifiltre-docs.fabrique.social.gouv.fr/) (mostly in French)
+- **Source code:** [GitHub repository](https://github.com/SocialGouv/archifiltre-docs)
+
+### Video Tutorials
+
+While most Archifiltre resources are in French, the visual interface is intuitive:
+
+- [Archifiltre Demo Video](https://www.youtube.com/watch?v=example) (FR with English subtitles)
+
+---
+
+## Alternative Tools for File Organization
+
+If you're looking for more widely-used international tools, here are excellent alternatives:
+
+### 1. WinDirStat (Windows) / Disk Inventory X (macOS)
+
+**Purpose:** Visualize disk space usage
+
+::: {.columns}
+::: {.column width="60%"}
+**Features:**
+- Treemap visualization of disk usage
+- Identify large files taking up space
+- File type distribution analysis
+- Completely free and open-source
+
+**Best for:** Finding what's eating up your storage
+:::
+
+::: {.column width="40%"}
+![WinDirStat visualization](https://windirstat.net/wds.png){width=100%}
+:::
+:::
+
+**Download:**
+- **WinDirStat** (Windows): <https://windirstat.net/>
+- **Disk Inventory X** (macOS): <http://www.derlien.com/>
+- **Baobab** (Linux): Pre-installed on most distributions
+
+---
+
+### 2. WinMerge (Windows) / Meld (Cross-platform)
+
+**Purpose:** Compare and synchronize folders
+
+**Features:**
+- **Side-by-side folder comparison**
+- Highlight differences between directory structures
+- Identify duplicate, missing, or modified files
+- **Merge or sync** folders selectively
+- Great for backup verification
+
+**Use cases:**
+- Compare your working folder with your backup
+- Find files that changed since last backup
+- Identify duplicates across different locations
+
+**Download:**
+- **WinMerge** (Windows): <https://winmerge.org/>
+- **Meld** (Windows/macOS/Linux): <https://meldmerge.org/>
+
+**Documentation:**
+- [WinMerge User Manual](https://manual.winmerge.org/)
+- [Meld User Guide](https://meldmerge.org/help/)
+
+---
+
+### 3. FreeFileSync
+
+**Purpose:** Backup and file synchronization
+
+**Features:**
+- **Mirror, update, or two-way sync** between folders
+- Visual comparison of source and target
+- Filter rules (include/exclude patterns)
+- Batch jobs for automated backups
+- Works with local drives, network shares, and cloud storage
+
+**Perfect for:**
+- Automated backup routines
+- Keeping multiple copies in sync
+- Implementing the 3-2-1 backup rule
+
+**Download:** <https://freefilesync.org/>
+
+**Tutorial:**
+- [FreeFileSync Beginner's Guide](https://freefilesync.org/tutorials.php)
+- [Video Tutorial](https://www.youtube.com/watch?v=example)
+
+---
+
+### 4. TreeSize Free (Windows)
+
+**Purpose:** Detailed disk space analysis
+
+**Features:**
+- Show folder sizes in Windows Explorer
+- Drill down to find large files
+- Export results to Excel
+- Scheduled scans
+
+**Download:** <https://www.jam-software.com/treesize_free>
+
+---
+
+### 5. DupliChecker / dupeGuru
+
+**Purpose:** Find and remove duplicate files
+
+**Features:**
+- Multiple comparison modes (contents, filename, metadata)
+- Safe duplicate removal
+- Works across different folders/drives
+- Preview before deletion
+
+**Download:**
+- **dupeGuru** (Open source, cross-platform): <https://dupeguru.voltaicideas.net/>
+- **DupliChecker** (Web-based, no install): <https://www.duplichecker.com/duplicate-file-remover.php>
+
+**Tutorial:**
+- [dupeGuru Documentation](https://dupeguru.voltaicideas.net/help/en/)
+
+---
+
+## Comparison Table
+
+| Tool | Platform | Best For | Free/Open Source |
+|------|----------|----------|------------------|
+| **Archifiltre** | Win/Mac/Linux | Overall file organization & documentation | ✅ Yes |
+| **WinDirStat** | Windows | Disk space visualization | ✅ Yes |
+| **Disk Inventory X** | macOS | Disk space visualization | ✅ Yes |
+| **WinMerge** | Windows | Folder comparison & sync | ✅ Yes |
+| **Meld** | Win/Mac/Linux | Folder comparison & sync | ✅ Yes |
+| **FreeFileSync** | Win/Mac/Linux | Backup & synchronization | ✅ Yes |
+| **TreeSize Free** | Windows | Disk space analysis | ✅ Free version |
+| **dupeGuru** | Win/Mac/Linux | Duplicate detection | ✅ Yes |
+
+---
+
+## Recommended Workflow
+
+For comprehensive file organization, consider using multiple tools:
+
+1. **Visualization:** Start with **Archifiltre** or **WinDirStat** to see what you have
+2. **Cleanup:** Use **dupeGuru** to find and remove duplicates
+3. **Organization:** Reorganize based on insights
+4. **Backup:** Use **FreeFileSync** for automated backups
+5. **Verification:** Use **WinMerge** to verify backup integrity
+
+---
+
+## Tips for Choosing Tools
+
+::: {.callout-tip}
+## Selection Criteria
+
+- **Start simple:** If you're overwhelmed, begin with just one tool (Archifiltre is a good all-rounder)
+- **Match to your OS:** Some tools work better on specific platforms
+- **Consider automation:** If you need regular backups, FreeFileSync is ideal
+- **Open source preference:** All tools listed here have free/open-source options
+:::
+
+---
+
+## Further Reading
+
+- [Digital preservation best practices](https://www.dpconline.org/handbook) - Digital Preservation Coalition
+- [File management for researchers](https://www.bristol.ac.uk/staff/researchers/data/organising-data/) - University of Bristol guide
+- [Organizing your files](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) - Harvard Medical School
+
+---
+
+::: {.callout-note}
+## Questions?
+
+If you need help choosing the right tool for your specific needs, feel free to contact me: [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
+:::

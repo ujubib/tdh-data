@@ -1,0 +1,353 @@
+---
+title: "File Naming & Backup Best Practices"
+subtitle: "Resources and Guidelines"
+---
+
+## File Naming Conventions
+
+Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.
+
+### Key Principles
+
+::: {.callout-important}
+## Quick Reference: File Naming Rules
+
+1. **Use dates:** YYYY-MM-DD format (ISO 8601)
+2. **No spaces:** Use hyphens `-` or underscores `_`
+3. **Be descriptive:** But keep it concise
+4. **Version numbers:** v01, v02, not "final" or "final2"
+5. **Avoid special characters:** No é, à, /, \, ?, *, etc.
+6. **Lowercase:** For consistency (optional but recommended)
+
+**Example:** `2026-02-09_interview_participant-05_v02.docx`
+:::
+
+---
+
+## Comprehensive Guides & Resources
+
+### 1. Stanford Libraries - Best Practices for File Naming
+
+**Excellent starting point with clear examples**
+
+- **Link:** <https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming>
+- **Covers:** Basic rules, versioning, sequential numbering, examples by discipline
+
+**Key takeaways:**
+- Use 3 elements: date, brief description, version
+- Keep names under 32 characters when possible
+- Document your naming convention in a README file
+
+---
+
+### 2. University of Edinburgh - Naming Conventions
+
+**Detailed guide with discipline-specific examples**
+
+- **Link:** <https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming>
+- **PDF Guide:** [File Naming Conventions](https://www.ed.ac.uk/files/atoms/files/file-naming-conventions.pdf)
+
+**Highlights:**
+- Examples for different research contexts
+- Common pitfalls to avoid
+- Templates you can adapt
+
+---
+
+### 3. Princeton Research Data Service
+
+**Short, practical guide with a focus on reproducibility**
+
+- **Link:** <https://libguides.princeton.edu/c.php?g=102546&p=930626>
+
+**Topics covered:**
+- Why naming matters for reproducibility
+- Handling versions vs. dates
+- Special considerations for code files
+
+---
+
+### 4. MIT Libraries - File Naming
+
+**Quick reference card and checklist**
+
+- **Link:** <https://libraries.mit.edu/data-management/store/organize/>
+
+**Useful for:**
+- Quick decision-making
+- Team agreements on naming
+- Printable reference guide
+
+---
+
+### 5. UK Data Service - Organizing Data
+
+**Comprehensive resource covering both naming and organization**
+
+- **Link:** <https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/>
+
+**Excellent for:**
+- Large projects with multiple contributors
+- Long-term archival planning
+- Sharing data with collaborators
+
+---
+
+## Video Tutorials on File Naming
+
+### 📹 File Naming and Folder Structures
+
+- **Video:** [Organizing Research Data](https://www.youtube.com/watch?v=ES1LTlnpLMk) by New York University (8 min)
+- **Content:** Visual walkthrough of good vs bad naming practices
+
+### 📹 Data Organization in Spreadsheets for Social Scientists
+
+- **Video:** [Data Carpentry](https://www.youtube.com/watch?v=3MEJ38BO6Mo) (15 min)
+- **Content:** Beyond file names—organizing data *within* files
+
+---
+
+## Directory Structure Best Practices
+
+### Recommended Reading
+
+1. **[Project Organization](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424)** - PLoS Computational Biology
+   - Classic paper: "A Quick Guide to Organizing Computational Biology Projects"
+   - Focuses on reproducible research structures
+
+2. **[Folder Structure for Research Data](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions)** - Harvard Medical School
+   - Template directory structures
+   - How to organize across project phases
+
+3. **[File Organization Tutorial](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html)** - The Turing Way
+   - Modern, community-driven guide
+   - Includes code and data organization
+
+---
+
+## Backup Strategies: The 3-2-1 Rule
+
+### Understanding 3-2-1
+
+::: {.callout-tip}
+## The 3-2-1 Backup Rule
+
+- **3** copies of your data (original + 2 backups)
+- **2** different media types (e.g., local drive + cloud)
+- **1** copy off-site (cloud or physically elsewhere)
+:::
+
+### Authoritative Resources
+
+#### 1. US-CERT (Cybersecurity & Infrastructure Security Agency)
+
+- **Link:** <https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf>
+- **Content:** Government guidelines on backup strategies
+
+#### 2. Digital Preservation Coalition Handbook
+
+- **Link:** <https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery>
+- **Content:** Long-term preservation perspective
+
+#### 3. Library of Congress - Personal Digital Archiving
+
+- **Link:** <https://www.digitalpreservation.gov/personalarchiving/>
+- **Content:** Practical advice for individuals
+
+---
+
+## Cloud Storage Options for Researchers
+
+### University/Institutional Storage
+
+Most universities provide storage solutions. Check with your institution for:
+
+- Storage quotas
+- Backup policies
+- Access after graduation
+- Data security and compliance
+
+**UPPA-specific:**
+- **Nuage:** <https://nuage.univ-pau.fr> (Nextcloud)
+- **Huma-Num ShareDocs:** <https://documentation.huma-num.fr> (for humanities/social sciences)
+
+### General Cloud Services
+
+::: {.callout-warning}
+## Privacy & Compliance
+
+Before using commercial cloud services, check:
+- Your institution's data policies
+- Funder requirements (e.g., GDPR compliance)
+- Whether data contains sensitive information
+:::
+
+**Research-friendly options:**
+
+- **Nextcloud** (self-hosted or providers): Privacy-focused, open source
+- **Box** (many universities have partnerships)
+- **Google Drive** (check institutional agreement)
+- **Microsoft OneDrive** (if your university uses Microsoft 365)
+- **Zenodo** (for published research data): <https://zenodo.org>
+
+---
+
+## Automated Backup Tools
+
+### Recommended Software
+
+| Tool | Platform | Type | Open Source |
+|------|----------|------|-------------|
+| **FreeFileSync** | Win/Mac/Linux | Sync & Mirror | ✅ Yes |
+| **rsync** | Mac/Linux/Win | Command-line sync | ✅ Yes |
+| **Rclone** | Win/Mac/Linux | Cloud sync | ✅ Yes |
+| **Duplicati** | Win/Mac/Linux | Encrypted backups | ✅ Yes |
+| **Backblaze** | Win/Mac | Cloud backup | ❌ Paid |
+| **Arq Backup** | Win/Mac | Cloud backup | ❌ Paid |
+
+### For Beginners: FreeFileSync Tutorial
+
+1. **Download:** <https://freefilesync.org/>
+2. **Tutorial:** [How to Use FreeFileSync](https://freefilesync.org/tutorials.php)
+3. **Video:** [FreeFileSync Basics](https://www.youtube.com/watch?v=example) (YouTube)
+
+### For Advanced Users: rsync
+
+- **Guide:** [rsync Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
+- **For researchers:** [Backing Up Your Research Data with rsync](https://researchcomputing.princeton.edu/support/knowledge-base/rclone)
+
+---
+
+## File Format Best Practices
+
+### Choosing Preservation-Friendly Formats
+
+Long-term accessibility depends on choosing the right file formats.
+
+#### Key Resources
+
+1. **[Recommended Formats Statement](https://www.loc.gov/preservation/resources/rfs/)** - Library of Congress
+   - Authoritative list of preservation formats by type
+   - Updated regularly
+
+2. **[File Formats for Preservation](https://www.dcc.ac.uk/guidance/briefing-papers/standards-watch-papers/overview-file-formats-preservation)** - Digital Curation Centre
+   - Explains format characteristics
+   - Risk assessment for formats
+
+3. **[Format Recommendations](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-formats)** - Stanford Libraries
+   - Discipline-specific recommendations
+
+#### Quick Reference
+
+| Data Type | Preferred Formats | Avoid |
+|-----------|-------------------|-------|
+| **Text** | .txt, .pdf/A, .xml, .html | .doc, .pages |
+| **Tabular** | .csv, .tsv, .xml | .xlsx, .numbers |
+| **Images** | .tiff, .png, .jpg | .psd, proprietary RAW |
+| **Audio** | .wav, .flac | .mp3 (lossy) |
+| **Video** | .mp4 (H.264), .mkv | .mov, proprietary codecs |
+| **Code** | .py, .r, .txt | IDE-specific formats |
+
+---
+
+## Metadata & Documentation
+
+File names and backups are only part of the story. Document your data!
+
+### README Files
+
+Every research project should have a README file explaining:
+- Purpose of the project/dataset
+- File naming conventions used
+- Directory structure
+- Data collection methods
+- Variable definitions (for datasets)
+
+**Templates:**
+
+- [README Template](https://cornell.app.box.com/v/ReadmeTemplate) - Cornell University
+- [Guide to Writing README](https://data.research.cornell.edu/content/readme) - Cornell RDM
+- [README Generator](https://readme.so/) - Interactive tool
+
+---
+
+## Checklists & Quick Guides
+
+### Downloadable Resources
+
+1. **[Data Organization Checklist](https://osf.io/mv8pj/)** (Open Science Framework)
+   - PDF checklist for file organization
+   - Version control tips
+
+2. **[File Naming Cheat Sheet](https://speakerdeck.com/jennybc/how-to-name-files)** by Jenny Bryan
+   - Famous presentation on file naming
+   - Funny, practical, memorable
+
+3. **[Data Management Plan Checklist](https://dmptool.org/)** - DMPTool
+   - Includes file organization sections
+   - Funder-specific templates
+
+---
+
+## Books & Long-Form Resources
+
+### Recommended Reading
+
+1. **[The Turing Way](https://the-turing-way.netlify.app/)**
+   - Free, community-driven guide to reproducible research
+   - Excellent chapters on data management
+
+2. **[Research Data Management for Academics](https://oxford.universitypressscholarship.com/view/10.1093/oso/9780190051488.001.0001/oso-9780190051488)** - Oxford University Press
+   - Comprehensive textbook
+
+3. **[MANTRA: Research Data Management Training](https://mantra.edina.ac.uk/)**
+   - Free online course from University of Edinburgh
+   - Includes file organization module
+
+---
+
+## Discipline-Specific Guides
+
+### By Field
+
+- **Social Sciences:** [CESSDA Data Management Expert Guide](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide)
+- **Humanities:** [Humanities Data Management](https://hcommons.org/deposits/item/hc:44127/)
+- **Life Sciences:** [EMBL-EBI Data Management](https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website)
+- **Physical Sciences:** [UK Data Archive](https://ukdataservice.ac.uk/) (various disciplines)
+- **Engineering:** [Purdue Data Management](https://www.lib.purdue.edu/research/data)
+
+---
+
+## Getting Help
+
+### Online Communities
+
+- **[Research Data Alliance](https://www.rd-alliance.org/)** - Global community
+- **[Data Curation Network](https://datacurationnetwork.org/)** - Curators helping researchers
+- **Reddit:** r/datahoarder, r/datacurator (practical tips)
+
+### Workshops & Training
+
+- **MANTRA:** <https://mantra.edina.ac.uk/>
+- **Data Carpentry:** <https://datacarpentry.org/lessons/>
+- **FOSTER Open Science:** <https://www.fosteropenscience.eu/learning>
+
+---
+
+::: {.callout-note}
+## Stay Updated
+
+Data management best practices evolve. Bookmark a few key resources and check back periodically for updates:
+
+- Library of Congress Preservation Formats
+- Digital Preservation Coalition Handbook
+- Your institutional data repository guidelines
+:::
+
+---
+
+## Questions?
+
+For personalized advice on your specific research data management needs:
+
+📧 [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)

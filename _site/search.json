@@ -1,0 +1,944 @@
+[
+  {
+    "objectID": "slides.html#todays-agenda",
+    "href": "slides.html#todays-agenda",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Today’s Agenda",
+    "text": "Today’s Agenda\n\nIntroduction: Research data & FAIR principles (10 min)\nArchifiltre: Explore your data organization (20 min)\nBreak (5 min)\nStoring & Backing up: Best practices (20 min)\nOpenRefine: Hands-on data cleaning (60 min)\nQ&A & Wrap-up (5 min)",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#learning-objectives",
+    "href": "slides.html#learning-objectives",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this workshop, you will be able to:\n\nUnderstand key methods for organizing research data\nEffectively sort and structure your datasets\nUse powerful tools for data cleaning and quality control",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#what-are-research-data",
+    "href": "slides.html#what-are-research-data",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "What are Research Data?",
+    "text": "What are Research Data?\n\nFactual records (numerical scores, textual records, images and sound) used as primary sources for scientific research, and that are commonly accepted in the scientific community as necessary to validate research findings.\n\nSource : OECD, OECD Principles and Guidelines for Access to Research Data from Public Funding, Paris, 2007\n\nOECD definition (2007)",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#the-research-data-lifecycle",
+    "href": "slides.html#the-research-data-lifecycle",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "The Research Data Lifecycle",
+    "text": "The Research Data Lifecycle\n\nSource: Callisto",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#fair-principles",
+    "href": "slides.html#fair-principles",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "FAIR Principles",
+    "text": "FAIR Principles\n\nImage credit: ARDC licensed under a Creative Commons Attribution 4.0 International License",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#fair-principles-explained",
+    "href": "slides.html#fair-principles-explained",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "FAIR Principles Explained",
+    "text": "FAIR Principles Explained\n\n\nFindable\n\nPersistent identifiers\nRich metadata\n\nAccessible\n\nOpen protocols\nClear access conditions\n\n\nInteroperable\n\nStandard formats\nVocabularies & ontologies\n\nReusable\n\nClear licensing\nProvenance information",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#why-this-matters",
+    "href": "slides.html#why-this-matters",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Why This Matters",
+    "text": "Why This Matters\n\nReproducibility of research\nCollaboration with colleagues\nCompliance with funder requirements\nLong-term preservation of your work\nIncreased visibility and citations",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#fair-open",
+    "href": "slides.html#fair-open",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "FAIR / OPEN",
+    "text": "FAIR / OPEN\n\nImage source : Consortium of European Social Science Data Archives",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#fair-care",
+    "href": "slides.html#fair-care",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "FAIR / CARE",
+    "text": "FAIR / CARE\n\nImage source : Consortium of European Social Science Data Archives\nThe CARE principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility, and Ethics) specifically concern Indigenous data and govern the control and (re)use of such data under the principles of open science (Carroll et al. 2020). For instance, the Collective Benefit principle states that data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive benefit from the data, e.g. for improved government and citizen engagement. The CARE principles are complementary to the FAIR principles, under the motto ‘be FAIR and CARE’ (Carroll et al. 2020).",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#file-naming-conventions",
+    "href": "slides.html#file-naming-conventions",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "File Naming Conventions",
+    "text": "File Naming Conventions\nGood examples:\n2026-02-09_interview_participant-01_v1.docx\nexperiment-data_2026-01_temperature.csv\nthesis_chapter-03_draft-02.pdf\nBad examples:\nFinal.docx\nFinal_FINAL.docx\ndata.csv\nthesis new version (1).pdf",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#file-naming-rules",
+    "href": "slides.html#file-naming-rules",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "File Naming Rules",
+    "text": "File Naming Rules\n\nUse dates: YYYY-MM-DD format (ISO 8601)\nNo spaces: use hyphens - or underscores _\nBe descriptive: but concise\nVersion numbers: v01, v02 or draft-01, draft-02\nAvoid special characters: é, à, /, , ?, *, etc.\nUse lowercase: for consistency",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#directory-structure",
+    "href": "slides.html#directory-structure",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Directory Structure",
+    "text": "Directory Structure\nmy-research-project/\n├── 01-raw-data/\n├── 02-processed-data/\n├── 03-analysis/\n├── 04-results/\n├── 05-manuscripts/\n├── documentation/\n│   ├── codebook.md\n│   └── README.md\n└── archive/",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#what-is-archifiltre",
+    "href": "slides.html#what-is-archifiltre",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "What is Archifiltre?",
+    "text": "What is Archifiltre?\n\nArchifiltre is a free tool to:\n\nVisualize your file tree structure\nIdentify duplicates and unused files\nClean up your directories\nDocument your data organization\nPrepare data for archiving or sharing",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#archifiltre-features",
+    "href": "slides.html#archifiltre-features",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Archifiltre Features",
+    "text": "Archifiltre Features\n\n\nVisual Analysis\n\nInteractive treemap\nFile size visualization\nDate analysis\nType distribution\n\n\nPractical Tools\n\nDuplicate detection\nBatch operations\nTagging system\nExport reports",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#live-demo-archifiltre",
+    "href": "slides.html#live-demo-archifiltre",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Live Demo: Archifiltre",
+    "text": "Live Demo: Archifiltre\n\n\n\n\n\n\nFollow along!\n\n\n\nOpen Archifiltre on your computer\nSelect a research folder to analyze\nExplore the visualization\n\n\n\n\nWhat to look for:\n\nLarge files taking up space\nOld files not modified recently\nDuplicate files\nPoorly organized subdirectories",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#hands-on-exercise-10-min",
+    "href": "slides.html#hands-on-exercise-10-min",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Hands-On Exercise (10 min)",
+    "text": "Hands-On Exercise (10 min)\n\nChoose one of your research folders\nLoad it into Archifiltre\nIdentify:\n\nDuplicates\nFiles you could delete or archive\nFolders that need reorganization\n\n\n\n\n\n\n\n\nTip\n\n\nDon’t delete anything yet! Just explore and take notes.",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#the-3-2-1-backup-rule",
+    "href": "slides.html#the-3-2-1-backup-rule",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "The 3-2-1 Backup Rule",
+    "text": "The 3-2-1 Backup Rule\n\n\n3 copies of your data\nOn 2 different media types\nWith 1 copy off-site",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#storage-solutions-at-uppa",
+    "href": "slides.html#storage-solutions-at-uppa",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Storage Solutions at UPPA",
+    "text": "Storage Solutions at UPPA\nNuage (Nextcloud)\n\nhttps://nuage.univ-pau.fr\nUniversity-hosted cloud storage\nSync clients for desktop & mobile\nCollaborative features\n\n\n\n\n\n\n\nNote\n\n\nIdeal for active research data and collaboration",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#national-solutions-huma-num",
+    "href": "slides.html#national-solutions-huma-num",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "National Solutions: Huma-Num",
+    "text": "National Solutions: Huma-Num\nShareDocs\n\nFor humanities & social sciences researchers\nFileRun-based platform\nCompatible with Nextcloud clients\nDocumentation: https://documentation.huma-num.fr",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#file-formats-for-preservation",
+    "href": "slides.html#file-formats-for-preservation",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "File Formats for Preservation",
+    "text": "File Formats for Preservation\n\n\nPreferred formats:\n\nText: .txt, .pdf/A, .xml\nImages: .tiff, .png, .jpg\nData: .csv, .json, .xml\nVideo: .mp4, .mkv\n\n\nAvoid if possible:\n\nProprietary formats\nOutdated formats\nFormats requiring specific software\nEncrypted formats (for archiving)",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#resources",
+    "href": "slides.html#resources",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Resources",
+    "text": "Resources\n\n\n\n\n\n\nDORANum - French Research Data Portal\n\n\n\nFile naming guide: https://doranum.fr\nStorage & archiving best practices\nFormat recommendations\nVideo tutorials (in French)\n\n\n\n\n\n\n\n\n\n\nStanford - University Libraries\n\n\n\nData best practices and case studies\nName files\nFormat files\nSensitive data",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#what-is-openrefine",
+    "href": "slides.html#what-is-openrefine",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "What is OpenRefine?",
+    "text": "What is OpenRefine?\n\nOpenRefine is a powerful tool for:\n\nCleaning messy data\nTransforming data formats\nReconciling data with external sources\nExtending data with additional information",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#why-use-openrefine",
+    "href": "slides.html#why-use-openrefine",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Why Use OpenRefine?",
+    "text": "Why Use OpenRefine?\n\nWorks with large datasets (millions of rows)\nNon-destructive: keeps history of all operations\nReproducible: export and reuse cleaning scripts\nNo programming required (but supports expressions)\nFree and open-source",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#common-data-quality-issues",
+    "href": "slides.html#common-data-quality-issues",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Common Data Quality Issues",
+    "text": "Common Data Quality Issues\n\n\nStructure issues:\n\nInconsistent formatting\nExtra whitespace\nMixed case (UPPER/lower)\nWrong data types\n\n\nContent issues:\n\nDuplicates\nMissing values\nSpelling variations\nInconsistent dates",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#live-demo-openrefine-interface",
+    "href": "slides.html#live-demo-openrefine-interface",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Live Demo: OpenRefine Interface",
+    "text": "Live Demo: OpenRefine Interface\nKey components:\n\nProject creation\nData preview\nFacets & filters\nCell transformations\nHistory & undo",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#hands-on-exercise-dirty-data",
+    "href": "slides.html#hands-on-exercise-dirty-data",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Hands-On Exercise: Dirty Data",
+    "text": "Hands-On Exercise: Dirty Data\nWe’ll clean a messy dataset together\n\n\nDownload dirty_data.csv\n\n\nIssues in the data:\n\nName: inconsistent capitalization, extra spaces\nEmail: duplicates\nDate: multiple formats, missing values\nCountry: inconsistent capitalization\nScore: “N/A” values mixed with numbers",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-1-load-the-data",
+    "href": "slides.html#step-1-load-the-data",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 1: Load the Data",
+    "text": "Step 1: Load the Data\n\nClick “Create Project”\nChoose “This Computer”\nSelect dirty_data.csv\nClick “Next”\nVerify preview and click “Create Project”",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-2-clean-the-name-column",
+    "href": "slides.html#step-2-clean-the-name-column",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 2: Clean the “Name” Column",
+    "text": "Step 2: Clean the “Name” Column\nRemove extra whitespace:\n\nClick dropdown on “Name” column\nSelect: Edit cells → Common transforms → Trim leading and trailing whitespace\n\nStandardize capitalization:\n\nSame menu: Common transforms → To titlecase",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-3-find-duplicates-in-email",
+    "href": "slides.html#step-3-find-duplicates-in-email",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 3: Find Duplicates in “Email”",
+    "text": "Step 3: Find Duplicates in “Email”\n\nClick dropdown on “Email” column\nSelect: Facet → Text facet\nLook at the facet panel (left side)\nClick on “Sort by: count”\nDuplicates appear at the top!\n\n\n\n\n\n\n\nTip\n\n\nIn a real project, you’d decide how to handle duplicates (merge, keep first, etc.)",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-4-standardize-dates",
+    "href": "slides.html#step-4-standardize-dates",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 4: Standardize Dates",
+    "text": "Step 4: Standardize Dates\nTransform date format:\n\nClick dropdown on “Date d’inscription” column\nSelect: Edit cells → Transform...\nEnter expression:\n\nvalue.replace(\"/\", \"-\").replace(\" \", \"-\")\n\nPreview and click OK",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-5-clean-country-column",
+    "href": "slides.html#step-5-clean-country-column",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 5: Clean “Country” Column",
+    "text": "Step 5: Clean “Country” Column\nCombine operations:\n\nClick dropdown on “Country” column\nTrim whitespace (as before)\nApply titlecase (as before)\n\nCheck results with facet:\n\nFacet → Text facet\nVerify all countries are now standardized",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-6-fix-score-column",
+    "href": "slides.html#step-6-fix-score-column",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 6: Fix “Score” Column",
+    "text": "Step 6: Fix “Score” Column\nReplace “N/A” with null:\n\nClick dropdown on “Score” column\nSelect: Edit cells → Transform...\nEnter expression:\n\nif(value == \"N/A\", null, value)\n\nClick OK",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#step-7-export-clean-data",
+    "href": "slides.html#step-7-export-clean-data",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Step 7: Export Clean Data",
+    "text": "Step 7: Export Clean Data\n\nClick “Export” (top right)\nChoose format: “Comma-separated value”\nSave as clean_data.csv\n\nDon’t forget:\n\nYou can export your cleaning operations (JSON) to reuse them!\nClick Undo / Redo tab → Extract...",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#openrefine-best-practices",
+    "href": "slides.html#openrefine-best-practices",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "OpenRefine Best Practices",
+    "text": "OpenRefine Best Practices\n\nAlways work on a copy of your data\nUse facets to explore data before transforming\nCheck the preview before applying transformations\nTake notes of your cleaning steps\nExport operations for reproducibility\nValidate results after each major transformation",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#going-further-with-openrefine",
+    "href": "slides.html#going-further-with-openrefine",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Going Further with OpenRefine",
+    "text": "Going Further with OpenRefine\nAdvanced features:\n\nReconciliation: match your data with Wikidata, VIAF, etc.\nClustering: find similar values automatically\nGREL expressions: powerful transformation language\nAPI calls: enrich data from external sources\n\nLearn more:\n\nProgramming Historian tutorials\nOpenRefine documentation: https://openrefine.org/docs",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#what-we-covered-today",
+    "href": "slides.html#what-we-covered-today",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "What We Covered Today",
+    "text": "What We Covered Today\n\nResearch data & FAIR principles\nFile organization best practices\nArchifiltre for visualizing & organizing\nStorage & backup strategies\nOpenRefine for data cleaning",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#key-takeaways",
+    "href": "slides.html#key-takeaways",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n\n\n\n\n\nRemember\n\n\n\nOrganize early: don’t wait until you have chaos\nName carefully: your future self will thank you\nBackup regularly: 3-2-1 rule\nClean systematically: use tools like OpenRefine\nDocument everything: README files are your friends",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#additional-tools-to-explore",
+    "href": "slides.html#additional-tools-to-explore",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Additional Tools to Explore",
+    "text": "Additional Tools to Explore\nTropy - for organizing research images\n\nhttps://tropy.org\nPerfect for archival photos, scanned documents\nPowerfull built-in metadata management\n\n\nMention this as bonus for those working with visual materials",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#resources-documentation",
+    "href": "slides.html#resources-documentation",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Resources & Documentation",
+    "text": "Resources & Documentation\nAll materials available:\n\nCodeberg repository: https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data\nArchifiltre: https://archifiltre.fabrique.social.gouv.fr\nOpenRefine: https://openrefine.org\nDORANum: https://doranum.fr\n\nContact:\n\njulien.rabaud@univ-pau.fr",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "slides.html#questions",
+    "href": "slides.html#questions",
+    "title": "Organize, Clean & Enrich Data",
+    "section": "Questions?",
+    "text": "Questions?\nThank you for your participation\n\n\n\n\n\n\nFeedback\n\n\nPlease share your thoughts on today’s workshop.",
+    "crumbs": [
+      "Workshop",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html",
+    "href": "resources/file-management.html",
+    "title": "File Naming & Backup Best Practices",
+    "section": "",
+    "text": "Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.\n\n\n\n\n\n\n\n\nImportantQuick Reference: File Naming Rules\n\n\n\n\nUse dates: YYYY-MM-DD format (ISO 8601)\nNo spaces: Use hyphens - or underscores _\nBe descriptive: But keep it concise\nVersion numbers: v01, v02, not “final” or “final2”\nAvoid special characters: No é, à, /, , ?, *, etc.\nLowercase: For consistency (optional but recommended)\n\nExample: 2026-02-09_interview_participant-05_v02.docx",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#file-naming-conventions",
+    "href": "resources/file-management.html#file-naming-conventions",
+    "title": "File Naming & Backup Best Practices",
+    "section": "",
+    "text": "Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.\n\n\n\n\n\n\n\n\nImportantQuick Reference: File Naming Rules\n\n\n\n\nUse dates: YYYY-MM-DD format (ISO 8601)\nNo spaces: Use hyphens - or underscores _\nBe descriptive: But keep it concise\nVersion numbers: v01, v02, not “final” or “final2”\nAvoid special characters: No é, à, /, , ?, *, etc.\nLowercase: For consistency (optional but recommended)\n\nExample: 2026-02-09_interview_participant-05_v02.docx",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#comprehensive-guides-resources",
+    "href": "resources/file-management.html#comprehensive-guides-resources",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Comprehensive Guides & Resources",
+    "text": "Comprehensive Guides & Resources\n\n1. Stanford Libraries - Best Practices for File Naming\nExcellent starting point with clear examples\n\nLink: https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming\nCovers: Basic rules, versioning, sequential numbering, examples by discipline\n\nKey takeaways: - Use 3 elements: date, brief description, version - Keep names under 32 characters when possible - Document your naming convention in a README file\n\n\n\n2. University of Edinburgh - Naming Conventions\nDetailed guide with discipline-specific examples\n\nLink: https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming\nPDF Guide: File Naming Conventions\n\nHighlights: - Examples for different research contexts - Common pitfalls to avoid - Templates you can adapt\n\n\n\n3. Princeton Research Data Service\nShort, practical guide with a focus on reproducibility\n\nLink: https://libguides.princeton.edu/c.php?g=102546&p=930626\n\nTopics covered: - Why naming matters for reproducibility - Handling versions vs. dates - Special considerations for code files\n\n\n\n4. MIT Libraries - File Naming\nQuick reference card and checklist\n\nLink: https://libraries.mit.edu/data-management/store/organize/\n\nUseful for: - Quick decision-making - Team agreements on naming - Printable reference guide\n\n\n\n5. UK Data Service - Organizing Data\nComprehensive resource covering both naming and organization\n\nLink: https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/\n\nExcellent for: - Large projects with multiple contributors - Long-term archival planning - Sharing data with collaborators",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#video-tutorials-on-file-naming",
+    "href": "resources/file-management.html#video-tutorials-on-file-naming",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Video Tutorials on File Naming",
+    "text": "Video Tutorials on File Naming\n\n📹 File Naming and Folder Structures\n\nVideo: Organizing Research Data by New York University (8 min)\nContent: Visual walkthrough of good vs bad naming practices\n\n\n\n📹 Data Organization in Spreadsheets for Social Scientists\n\nVideo: Data Carpentry (15 min)\nContent: Beyond file names—organizing data within files",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#directory-structure-best-practices",
+    "href": "resources/file-management.html#directory-structure-best-practices",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Directory Structure Best Practices",
+    "text": "Directory Structure Best Practices\n\nRecommended Reading\n\nProject Organization - PLoS Computational Biology\n\nClassic paper: “A Quick Guide to Organizing Computational Biology Projects”\nFocuses on reproducible research structures\n\nFolder Structure for Research Data - Harvard Medical School\n\nTemplate directory structures\nHow to organize across project phases\n\nFile Organization Tutorial - The Turing Way\n\nModern, community-driven guide\nIncludes code and data organization",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#backup-strategies-the-3-2-1-rule",
+    "href": "resources/file-management.html#backup-strategies-the-3-2-1-rule",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Backup Strategies: The 3-2-1 Rule",
+    "text": "Backup Strategies: The 3-2-1 Rule\n\nUnderstanding 3-2-1\n\n\n\n\n\n\nTipThe 3-2-1 Backup Rule\n\n\n\n\n3 copies of your data (original + 2 backups)\n2 different media types (e.g., local drive + cloud)\n1 copy off-site (cloud or physically elsewhere)\n\n\n\n\n\nAuthoritative Resources\n\n1. US-CERT (Cybersecurity & Infrastructure Security Agency)\n\nLink: https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf\nContent: Government guidelines on backup strategies\n\n\n\n2. Digital Preservation Coalition Handbook\n\nLink: https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery\nContent: Long-term preservation perspective\n\n\n\n3. Library of Congress - Personal Digital Archiving\n\nLink: https://www.digitalpreservation.gov/personalarchiving/\nContent: Practical advice for individuals",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#cloud-storage-options-for-researchers",
+    "href": "resources/file-management.html#cloud-storage-options-for-researchers",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Cloud Storage Options for Researchers",
+    "text": "Cloud Storage Options for Researchers\n\nUniversity/Institutional Storage\nMost universities provide storage solutions. Check with your institution for:\n\nStorage quotas\nBackup policies\nAccess after graduation\nData security and compliance\n\nUPPA-specific: - Nuage: https://nuage.univ-pau.fr (Nextcloud) - Huma-Num ShareDocs: https://documentation.huma-num.fr (for humanities/social sciences)\n\n\nGeneral Cloud Services\n\n\n\n\n\n\nWarningPrivacy & Compliance\n\n\n\nBefore using commercial cloud services, check: - Your institution’s data policies - Funder requirements (e.g., GDPR compliance) - Whether data contains sensitive information\n\n\nResearch-friendly options:\n\nNextcloud (self-hosted or providers): Privacy-focused, open source\nBox (many universities have partnerships)\nGoogle Drive (check institutional agreement)\nMicrosoft OneDrive (if your university uses Microsoft 365)\nZenodo (for published research data): https://zenodo.org",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#automated-backup-tools",
+    "href": "resources/file-management.html#automated-backup-tools",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Automated Backup Tools",
+    "text": "Automated Backup Tools\n\nRecommended Software\n\n\n\nTool\nPlatform\nType\nOpen Source\n\n\n\n\nFreeFileSync\nWin/Mac/Linux\nSync & Mirror\n✅ Yes\n\n\nrsync\nMac/Linux/Win\nCommand-line sync\n✅ Yes\n\n\nRclone\nWin/Mac/Linux\nCloud sync\n✅ Yes\n\n\nDuplicati\nWin/Mac/Linux\nEncrypted backups\n✅ Yes\n\n\nBackblaze\nWin/Mac\nCloud backup\n❌ Paid\n\n\nArq Backup\nWin/Mac\nCloud backup\n❌ Paid\n\n\n\n\n\nFor Beginners: FreeFileSync Tutorial\n\nDownload: https://freefilesync.org/\nTutorial: How to Use FreeFileSync\nVideo: FreeFileSync Basics (YouTube)\n\n\n\nFor Advanced Users: rsync\n\nGuide: rsync Tutorial\nFor researchers: Backing Up Your Research Data with rsync",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#file-format-best-practices",
+    "href": "resources/file-management.html#file-format-best-practices",
+    "title": "File Naming & Backup Best Practices",
+    "section": "File Format Best Practices",
+    "text": "File Format Best Practices\n\nChoosing Preservation-Friendly Formats\nLong-term accessibility depends on choosing the right file formats.\n\nKey Resources\n\nRecommended Formats Statement - Library of Congress\n\nAuthoritative list of preservation formats by type\nUpdated regularly\n\nFile Formats for Preservation - Digital Curation Centre\n\nExplains format characteristics\nRisk assessment for formats\n\nFormat Recommendations - Stanford Libraries\n\nDiscipline-specific recommendations\n\n\n\n\nQuick Reference\n\n\n\nData Type\nPreferred Formats\nAvoid\n\n\n\n\nText\n.txt, .pdf/A, .xml, .html\n.doc, .pages\n\n\nTabular\n.csv, .tsv, .xml\n.xlsx, .numbers\n\n\nImages\n.tiff, .png, .jpg\n.psd, proprietary RAW\n\n\nAudio\n.wav, .flac\n.mp3 (lossy)\n\n\nVideo\n.mp4 (H.264), .mkv\n.mov, proprietary codecs\n\n\nCode\n.py, .r, .txt\nIDE-specific formats",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#metadata-documentation",
+    "href": "resources/file-management.html#metadata-documentation",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Metadata & Documentation",
+    "text": "Metadata & Documentation\nFile names and backups are only part of the story. Document your data!\n\nREADME Files\nEvery research project should have a README file explaining: - Purpose of the project/dataset - File naming conventions used - Directory structure - Data collection methods - Variable definitions (for datasets)\nTemplates:\n\nREADME Template - Cornell University\nGuide to Writing README - Cornell RDM\nREADME Generator - Interactive tool",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#checklists-quick-guides",
+    "href": "resources/file-management.html#checklists-quick-guides",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Checklists & Quick Guides",
+    "text": "Checklists & Quick Guides\n\nDownloadable Resources\n\nData Organization Checklist (Open Science Framework)\n\nPDF checklist for file organization\nVersion control tips\n\nFile Naming Cheat Sheet by Jenny Bryan\n\nFamous presentation on file naming\nFunny, practical, memorable\n\nData Management Plan Checklist - DMPTool\n\nIncludes file organization sections\nFunder-specific templates",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#books-long-form-resources",
+    "href": "resources/file-management.html#books-long-form-resources",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Books & Long-Form Resources",
+    "text": "Books & Long-Form Resources\n\nRecommended Reading\n\nThe Turing Way\n\nFree, community-driven guide to reproducible research\nExcellent chapters on data management\n\nResearch Data Management for Academics - Oxford University Press\n\nComprehensive textbook\n\nMANTRA: Research Data Management Training\n\nFree online course from University of Edinburgh\nIncludes file organization module",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#discipline-specific-guides",
+    "href": "resources/file-management.html#discipline-specific-guides",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Discipline-Specific Guides",
+    "text": "Discipline-Specific Guides\n\nBy Field\n\nSocial Sciences: CESSDA Data Management Expert Guide\nHumanities: Humanities Data Management\nLife Sciences: EMBL-EBI Data Management\nPhysical Sciences: UK Data Archive (various disciplines)\nEngineering: Purdue Data Management",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#getting-help",
+    "href": "resources/file-management.html#getting-help",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Getting Help",
+    "text": "Getting Help\n\nOnline Communities\n\nResearch Data Alliance - Global community\nData Curation Network - Curators helping researchers\nReddit: r/datahoarder, r/datacurator (practical tips)\n\n\n\nWorkshops & Training\n\nMANTRA: https://mantra.edina.ac.uk/\nData Carpentry: https://datacarpentry.org/lessons/\nFOSTER Open Science: https://www.fosteropenscience.eu/learning\n\n\n\n\n\n\n\n\nNoteStay Updated\n\n\n\nData management best practices evolve. Bookmark a few key resources and check back periodically for updates:\n\nLibrary of Congress Preservation Formats\nDigital Preservation Coalition Handbook\nYour institutional data repository guidelines",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "resources/file-management.html#questions",
+    "href": "resources/file-management.html#questions",
+    "title": "File Naming & Backup Best Practices",
+    "section": "Questions?",
+    "text": "Questions?\nFor personalized advice on your specific research data management needs:\n📧 julien.rabaud@univ-pau.fr",
+    "crumbs": [
+      "Additional Resources",
+      "File Naming & Backup"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Personal and Research Data Management Organize, Clean & Enrich",
+    "section": "",
+    "text": "This website contains all materials for the Personal and Research Data Management: Organize, Clean & Enrich workshop, organized by the UPPA SSH Doctoral School.\n\n\n\n\n\n\nNoteWorkshop Information\n\n\n\n\nDate: February 9, 2026\nDuration: 2 hours\nFormat: Online (via Rendez-Vous)\nLanguage: English\nInstructor: Julien Rabaud\n\n\n\n\n\n\n\n\nArchifiltre - Visualize and analyze your file organization\nOpenRefine - Clean and transform messy datasets\n\n\n\n\n\nResearch data & FAIR principles\nFile naming conventions and directory structures\nStorage and backup strategies (3-2-1 rule)\nHands-on data cleaning exercises\n\n\n\n\n\n\n\n\n\nView Slides\nDownload dirty_data.csv\nCodeberg Repository\n\n\n\n\n\nFile Organization Tools\nFile Naming & Backup Best Practices\nOpenRefine Tutorials & Videos\n\n\n\n\n\n\nPlease complete the following before the workshop:\n\n\n\n\n\n\nImportantRequired Installations\n\n\n\n\nArchifiltre - Download here\nOpenRefine - Download here\nSample data - Download dirty_data.csv\n\n\n\nTechnical requirements: - Stable internet connection - Working camera and microphone (for interaction) - A folder with some of your research files (for Archifiltre exploration)\n\n\n\nIf you encounter any installation issues or have questions, please contact:\nJulien Rabaud\n📧 julien.rabaud@univ-pau.fr",
+    "crumbs": [
+      "Workshop",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Personal and Research Data Management Organize, Clean & Enrich",
+    "section": "",
+    "text": "This website contains all materials for the Personal and Research Data Management: Organize, Clean & Enrich workshop, organized by the UPPA SSH Doctoral School.\n\n\n\n\n\n\nNoteWorkshop Information\n\n\n\n\nDate: February 9, 2026\nDuration: 2 hours\nFormat: Online (via Rendez-Vous)\nLanguage: English\nInstructor: Julien Rabaud\n\n\n\n\n\n\n\n\nArchifiltre - Visualize and analyze your file organization\nOpenRefine - Clean and transform messy datasets\n\n\n\n\n\nResearch data & FAIR principles\nFile naming conventions and directory structures\nStorage and backup strategies (3-2-1 rule)\nHands-on data cleaning exercises\n\n\n\n\n\n\n\n\n\nView Slides\nDownload dirty_data.csv\nCodeberg Repository\n\n\n\n\n\nFile Organization Tools\nFile Naming & Backup Best Practices\nOpenRefine Tutorials & Videos\n\n\n\n\n\n\nPlease complete the following before the workshop:\n\n\n\n\n\n\nImportantRequired Installations\n\n\n\n\nArchifiltre - Download here\nOpenRefine - Download here\nSample data - Download dirty_data.csv\n\n\n\nTechnical requirements: - Stable internet connection - Working camera and microphone (for interaction) - A folder with some of your research files (for Archifiltre exploration)\n\n\n\nIf you encounter any installation issues or have questions, please contact:\nJulien Rabaud\n📧 julien.rabaud@univ-pau.fr",
+    "crumbs": [
+      "Workshop",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-schedule",
+    "href": "index.html#workshop-schedule",
+    "title": "Personal and Research Data Management Organize, Clean & Enrich",
+    "section": "Workshop Schedule",
+    "text": "Workshop Schedule\n\n\n\nTime\nActivity\n\n\n\n\n0:00 - 0:10\nIntroduction & FAIR Principles\n\n\n0:10 - 0:30\nArchifiltre Demo & Hands-on\n\n\n0:30 - 0:35\nBreak\n\n\n0:35 - 0:55\nStorage & Backup Best Practices\n\n\n0:55 - 1:55\nOpenRefine: Data Cleaning Workshop\n\n\n1:55 - 2:00\nQ&A & Wrap-up",
+    "crumbs": [
+      "Workshop",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#additional-support",
+    "href": "index.html#additional-support",
+    "title": "Personal and Research Data Management Organize, Clean & Enrich",
+    "section": "Additional Support",
+    "text": "Additional Support\nAfter the workshop, you can:\n\nReview all materials on this website\nConsult the additional resources pages\nReach out for individual support\n\n\n\n\n\n\n\nNoteCC0 License\n\n\n\nAll workshop materials are released under a CC0 1.0 Universal license. You are free to use, modify, and share them.",
+    "crumbs": [
+      "Workshop",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "resources/archifiltre.html",
+    "href": "resources/archifiltre.html",
+    "title": "File Organization Tools",
+    "section": "",
+    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#archifiltre",
+    "href": "resources/archifiltre.html#archifiltre",
+    "title": "File Organization Tools",
+    "section": "",
+    "text": "Archifiltre is our recommended tool for visualizing and organizing your file structure.\n\n\n\nVisual treemap of your entire directory structure\nDuplicate detection across folders\nDate-based filtering to identify old/unused files\nTagging system for organizing files\nExport reports for documentation\n\n\n\n\n\nOfficial website: https://archifiltre.fabrique.social.gouv.fr/\nDownload: Available for Windows, macOS, and Linux\nDocumentation: User guide (mostly in French)\nSource code: GitHub repository\n\n\n\n\nWhile most Archifiltre resources are in French, the visual interface is intuitive:\n\nArchifiltre Demo Video (FR with English subtitles)",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#alternative-tools-for-file-organization",
+    "href": "resources/archifiltre.html#alternative-tools-for-file-organization",
+    "title": "File Organization Tools",
+    "section": "Alternative Tools for File Organization",
+    "text": "Alternative Tools for File Organization\nIf you’re looking for more widely-used international tools, here are excellent alternatives:\n\n1. WinDirStat (Windows) / Disk Inventory X (macOS)\nPurpose: Visualize disk space usage\n\n\nFeatures: - Treemap visualization of disk usage - Identify large files taking up space - File type distribution analysis - Completely free and open-source\nBest for: Finding what’s eating up your storage\n\n\n\n\nWinDirStat visualization\n\n\n\n\nDownload: - WinDirStat (Windows): https://windirstat.net/ - Disk Inventory X (macOS): http://www.derlien.com/ - Baobab (Linux): Pre-installed on most distributions\n\n\n\n2. WinMerge (Windows) / Meld (Cross-platform)\nPurpose: Compare and synchronize folders\nFeatures: - Side-by-side folder comparison - Highlight differences between directory structures - Identify duplicate, missing, or modified files - Merge or sync folders selectively - Great for backup verification\nUse cases: - Compare your working folder with your backup - Find files that changed since last backup - Identify duplicates across different locations\nDownload: - WinMerge (Windows): https://winmerge.org/ - Meld (Windows/macOS/Linux): https://meldmerge.org/\nDocumentation: - WinMerge User Manual - Meld User Guide\n\n\n\n3. FreeFileSync\nPurpose: Backup and file synchronization\nFeatures: - Mirror, update, or two-way sync between folders - Visual comparison of source and target - Filter rules (include/exclude patterns) - Batch jobs for automated backups - Works with local drives, network shares, and cloud storage\nPerfect for: - Automated backup routines - Keeping multiple copies in sync - Implementing the 3-2-1 backup rule\nDownload: https://freefilesync.org/\nTutorial: - FreeFileSync Beginner’s Guide - Video Tutorial\n\n\n\n4. TreeSize Free (Windows)\nPurpose: Detailed disk space analysis\nFeatures: - Show folder sizes in Windows Explorer - Drill down to find large files - Export results to Excel - Scheduled scans\nDownload: https://www.jam-software.com/treesize_free\n\n\n\n5. DupliChecker / dupeGuru\nPurpose: Find and remove duplicate files\nFeatures: - Multiple comparison modes (contents, filename, metadata) - Safe duplicate removal - Works across different folders/drives - Preview before deletion\nDownload: - dupeGuru (Open source, cross-platform): https://dupeguru.voltaicideas.net/ - DupliChecker (Web-based, no install): https://www.duplichecker.com/duplicate-file-remover.php\nTutorial: - dupeGuru Documentation",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#comparison-table",
+    "href": "resources/archifiltre.html#comparison-table",
+    "title": "File Organization Tools",
+    "section": "Comparison Table",
+    "text": "Comparison Table\n\n\n\n\n\n\n\n\n\nTool\nPlatform\nBest For\nFree/Open Source\n\n\n\n\nArchifiltre\nWin/Mac/Linux\nOverall file organization & documentation\n✅ Yes\n\n\nWinDirStat\nWindows\nDisk space visualization\n✅ Yes\n\n\nDisk Inventory X\nmacOS\nDisk space visualization\n✅ Yes\n\n\nWinMerge\nWindows\nFolder comparison & sync\n✅ Yes\n\n\nMeld\nWin/Mac/Linux\nFolder comparison & sync\n✅ Yes\n\n\nFreeFileSync\nWin/Mac/Linux\nBackup & synchronization\n✅ Yes\n\n\nTreeSize Free\nWindows\nDisk space analysis\n✅ Free version\n\n\ndupeGuru\nWin/Mac/Linux\nDuplicate detection\n✅ Yes",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#recommended-workflow",
+    "href": "resources/archifiltre.html#recommended-workflow",
+    "title": "File Organization Tools",
+    "section": "Recommended Workflow",
+    "text": "Recommended Workflow\nFor comprehensive file organization, consider using multiple tools:\n\nVisualization: Start with Archifiltre or WinDirStat to see what you have\nCleanup: Use dupeGuru to find and remove duplicates\nOrganization: Reorganize based on insights\nBackup: Use FreeFileSync for automated backups\nVerification: Use WinMerge to verify backup integrity",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#tips-for-choosing-tools",
+    "href": "resources/archifiltre.html#tips-for-choosing-tools",
+    "title": "File Organization Tools",
+    "section": "Tips for Choosing Tools",
+    "text": "Tips for Choosing Tools\n\n\n\n\n\n\nTipSelection Criteria\n\n\n\n\nStart simple: If you’re overwhelmed, begin with just one tool (Archifiltre is a good all-rounder)\nMatch to your OS: Some tools work better on specific platforms\nConsider automation: If you need regular backups, FreeFileSync is ideal\nOpen source preference: All tools listed here have free/open-source options",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/archifiltre.html#further-reading",
+    "href": "resources/archifiltre.html#further-reading",
+    "title": "File Organization Tools",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nDigital preservation best practices - Digital Preservation Coalition\nFile management for researchers - University of Bristol guide\nOrganizing your files - Harvard Medical School\n\n\n\n\n\n\n\n\nNoteQuestions?\n\n\n\nIf you need help choosing the right tool for your specific needs, feel free to contact me: julien.rabaud@univ-pau.fr",
+    "crumbs": [
+      "Additional Resources",
+      "File Organization Tools"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html",
+    "href": "resources/openrefine.html",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "",
+    "text": "OpenRefine is a powerful, free tool for working with messy data. Below you’ll find curated resources to continue learning beyond our workshop.",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#getting-started-with-openrefine",
+    "href": "resources/openrefine.html#getting-started-with-openrefine",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "",
+    "text": "OpenRefine is a powerful, free tool for working with messy data. Below you’ll find curated resources to continue learning beyond our workshop.",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#official-documentation",
+    "href": "resources/openrefine.html#official-documentation",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Official Documentation",
+    "text": "Official Documentation\n\nOpenRefine Documentation\nThe official docs are comprehensive and well-maintained:\n\nUser Manual: https://openrefine.org/docs\n\nGetting started guide\nInterface overview\nAll functions explained\nExpression language (GREL) reference\n\nFAQ: https://openrefine.org/docs/faq\n\nCommon questions answered\nTroubleshooting tips\n\nCommunity Forum: https://forum.openrefine.org/\n\nActive community for questions\nShare workflows and solutions",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#video-tutorials",
+    "href": "resources/openrefine.html#video-tutorials",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Video Tutorials",
+    "text": "Video Tutorials\n\n📹 Beginner Level\n\n1. Introduction to OpenRefine (The Carpentries)\nExcellent starting point - clear, well-paced\n\nVideo Series: Library Carpentry OpenRefine\nDuration: ~2 hours total (broken into short segments)\nCovers:\n\nInstalling OpenRefine\nCreating projects\nBasic transformations\nFaceting and filtering\nGREL expressions\n\n\nCompanion materials: - Written lesson: https://librarycarpentry.org/lc-open-refine/ - Sample datasets included\n\n\n\n2. OpenRefine for Data Cleaning (Programming Historian)\nText tutorial with step-by-step instructions\n\nTutorial: Cleaning Data with OpenRefine\nLevel: Beginner\nTime: 1-2 hours\nHighlights:\n\nReal-world example (museum data)\nScreenshots for every step\nCommon pitfalls explained\n\n\n\n\n\n3. OpenRefine Tutorial (Harvard GIS Lab)\nQuick 15-minute introduction\n\nVideo: OpenRefine Basics\nDuration: 15 minutes\nBest for: Quick refresher or demo\n\n\n\n\n\n📹 Intermediate Level\n\n4. Data Cleaning with OpenRefine (Stanford University)\nComprehensive workshop recording\n\nVideo: Stanford OpenRefine Workshop\nDuration: 90 minutes\nCovers:\n\nAdvanced clustering\nWorking with multiple columns\nSplitting and concatenating data\nExporting clean data\n\n\nMaterials: - Slides: Available on Stanford website\n\n\n\n5. OpenRefine: Transformations and GREL\nFocus on expression language\n\nVideo: GREL Tutorial\nDuration: 45 minutes\nTopics:\n\nGREL syntax explained\nString operations\nConditional statements\nDate parsing\n\n\n\n\n\n\n📹 Advanced Level\n\n6. Web Scraping and API Calls with OpenRefine\nEnriching data from external sources\n\nVideo Tutorial: Fetching Data from APIs\nWritten guide: https://blog.ouseful.info/tag/openrefine/\nCovers:\n\nHTTP requests\nParsing JSON responses\nRate limiting\nError handling\n\n\n\n\n\n7. OpenRefine Reconciliation Services\nMatching your data with external databases\n\nVideo: Reconciliation with Wikidata\nDuration: 30 minutes\nUse cases:\n\nMatching author names to VIAF IDs\nGeocoding place names\nStandardizing terminology\n\n\nDocumentation: - Reconciliation Services Overview",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#text-based-tutorials",
+    "href": "resources/openrefine.html#text-based-tutorials",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Text-Based Tutorials",
+    "text": "Text-Based Tutorials\n\nStep-by-Step Guides\n\n1. Library Carpentry: OpenRefine Lesson\nGold standard tutorial - widely used in workshops\n\nLink: https://librarycarpentry.org/lc-open-refine/\nTime: 3-4 hours (self-paced)\nFormat: Interactive web lesson\nDatasets: Included\nTopics:\n\nImporting data\nLayout of OpenRefine\nFaceting and filtering\nClustering\nTransforming data\nExporting and scripts\n\n\nWhy it’s great: Designed for librarians and researchers, no coding background assumed.\n\n\n\n2. GESIS: OpenRefine Tutorial\nAcademic-focused, very thorough\n\nLink: https://www.gesis.org/en/services/research/tools/openrefine\nFormat: PDF guide + sample data\nLevel: Beginner to Intermediate\nSpecialization: Social science data\n\n\n\n\n3. Data Carpentry: OpenRefine for Social Science Data\nDiscipline-specific approach\n\nLink: https://datacarpentry.org/openrefine-socialsci/\nTime: 2 hours\nFocus: Survey data, interview transcripts\nIncludes: Practice dataset\n\n\n\n\n4. Illinois Data Bank: OpenRefine Guide\nQuick reference with examples\n\nLink: https://researchguides.library.wisc.edu/c.php?g=975747&p=7044099\nBest for: Quick lookup of specific functions\nFormat: Searchable guide",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#grel-google-refine-expression-language",
+    "href": "resources/openrefine.html#grel-google-refine-expression-language",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "GREL (Google Refine Expression Language)",
+    "text": "GREL (Google Refine Expression Language)\n\nUnderstanding GREL\nGREL is OpenRefine’s expression language for transformations.\n\nOfficial GREL Reference\n\nDocumentation: https://openrefine.org/docs/manual/grel\nAll functions: Listed with examples\nUse as: Cheat sheet while working\n\n\n\nGREL Cheat Sheet\nQuick reference guide:\n\nPDF: GREL Functions Cheat Sheet\n\n\n\nCommon GREL Recipes\nCurated examples:\n\nCleaning text:\nvalue.trim()                    # Remove whitespace\nvalue.toLowercase()             # Convert to lowercase\nvalue.toTitlecase()             # Title case\nvalue.replace(\"old\", \"new\")     # Replace text\nWorking with dates:\nvalue.toDate()                          # Parse date\nvalue.toDate().toString(\"yyyy-MM-dd\")   # Format date\nConditional logic:\nif(value == \"N/A\", null, value)         # Replace N/A with null\nif(value.length() &gt; 10, \"long\", \"short\") # Categorize by length\nSplitting text:\nvalue.split(\",\")                # Split by comma\nvalue.split(\",\")[0]             # Get first element\n\nMore recipes: https://github.com/OpenRefine/OpenRefine/wiki/Recipes",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#datasets-for-practice",
+    "href": "resources/openrefine.html#datasets-for-practice",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Datasets for Practice",
+    "text": "Datasets for Practice\n\nSample Datasets\nPractice with these publicly available messy datasets:\n\n1. Museum Collections Data\n\nSource: https://github.com/MuseumAPI/collection-downloads\nWhat’s messy: Inconsistent dates, duplicate entries, mixed formats\nGood for: Cultural heritage researchers\n\n\n\n2. Dirty Survey Data\n\nSource: Bad Data Repository\nWhat’s messy: Missing values, encoding issues, outliers\nGood for: Social scientists\n\n\n\n3. Public Library Data\n\nSource: https://data.imls.gov/\nWhat’s messy: Inconsistent naming, special characters\nGood for: General practice\n\n\n\n4. OpenRefine Sample Data\n\nSource: https://github.com/OpenRefine/OpenRefine/wiki/Sample-Datasets\nOfficial examples: Used in documentation",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#use-case-libraries",
+    "href": "resources/openrefine.html#use-case-libraries",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Use Case Libraries",
+    "text": "Use Case Libraries\n\nReal-World Examples\nLearn from how others use OpenRefine:\n\n1. OpenRefine in Digital Humanities\n\nExamples: https://digitalhumanities.berkeley.edu/resources/openrefine-dh\nUse cases:\n\nCleaning historical records\nStandardizing place names\nParsing archival metadata\n\n\n\n\n2. OpenRefine for Bibliographic Data\n\nGuide: https://www.library.illinois.edu/dcl/openrefine/\nExamples:\n\nAuthor name disambiguation\nISBN cleaning\nSubject heading normalization\n\n\n\n\n3. OpenRefine in Scientific Research\n\nCase studies: https://riojournal.com/articles.php?journal_name=rio&id=10.3897/rio.5.e38136\nApplications:\n\nSpecies name reconciliation\nGeographic coordinates cleanup\nLaboratory data standardization",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#advanced-topics",
+    "href": "resources/openrefine.html#advanced-topics",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Advanced Topics",
+    "text": "Advanced Topics\n\nExtensions and Plugins\nOpenRefine supports extensions for specialized tasks:\n\n1. RDF Extension\nFor linked data work\n\nInfo: https://openrefine.org/docs/manual/rdfextension\nUse cases: Semantic web, knowledge graphs\n\n\n\n2. Geocoding Extensions\nAdd geographic coordinates\n\nGuide: https://github.com/OpenRefine/OpenRefine/wiki/Geocoding\n\n\n\n3. Named Entity Recognition (NER)\nExtract entities from text\n\nExtension: https://github.com/stkenny/Refine-NER-Extension\nUse case: Text mining",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#troubleshooting-tips",
+    "href": "resources/openrefine.html#troubleshooting-tips",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Troubleshooting & Tips",
+    "text": "Troubleshooting & Tips\n\nCommon Issues\n\n\n\n\n\n\nWarningFrequent Problems & Solutions\n\n\n\nProblem: OpenRefine won’t start - Solution: Check if port 3333 is in use, restart computer\nProblem: Large files crash OpenRefine - Solution: Increase memory allocation (see documentation)\nProblem: Can’t undo after closing project - Solution: Export operations before closing, reimport if needed\nProblem: Lost work - Solution: OpenRefine auto-saves, but export projects regularly\n\n\n\n\nPerformance Tips\n\nFilter before transforming: Narrow down data first\nUse facets efficiently: Close unused facets\nExport regularly: Don’t rely on auto-save alone\nSplit large files: Process in chunks if very large",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#community-support",
+    "href": "resources/openrefine.html#community-support",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Community & Support",
+    "text": "Community & Support\n\nGetting Help\n\n1. OpenRefine Forum\n\nLink: https://forum.openrefine.org/\nVery active: Questions usually answered within 24 hours\nSearch first: Many questions already answered\n\n\n\n2. GitHub Issues\n\nLink: https://github.com/OpenRefine/OpenRefine/issues\nFor: Bug reports, feature requests\nCheck existing issues before posting\n\n\n\n3. Stack Overflow\n\nTag: openrefine\nLink: https://stackoverflow.com/questions/tagged/openrefine\nGood for: Programming-related questions",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#comparison-with-other-tools",
+    "href": "resources/openrefine.html#comparison-with-other-tools",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Comparison with Other Tools",
+    "text": "Comparison with Other Tools\n\nWhen to Use OpenRefine vs. Alternatives\n\n\n\n\n\n\n\n\n\n\nTask\nOpenRefine\nExcel/Sheets\nPython/R\nDatabase\n\n\n\n\nQuick data cleaning\n✅ Ideal\n✅ OK\n❌ Overkill\n❌ Overkill\n\n\nLarge datasets (&gt;100k rows)\n✅ Good\n❌ Slow\n✅ Better\n✅ Best\n\n\nReconciliation with external data\n✅ Built-in\n❌ Manual\n⚠️ Complex\n⚠️ Complex\n\n\nReproducible workflows\n✅ Yes (export JSON)\n❌ Manual\n✅ Yes (scripts)\n✅ Yes (SQL)\n\n\nLearning curve\n⚠️ Moderate\n✅ Easy\n❌ Steep\n❌ Steep\n\n\nNo programming required\n✅ Yes\n✅ Yes\n❌ No\n❌ No\n\n\n\nBottom line: OpenRefine excels at exploratory data cleaning and transformation without programming.",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#regular-expressions-in-openrefine",
+    "href": "resources/openrefine.html#regular-expressions-in-openrefine",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Regular Expressions in OpenRefine",
+    "text": "Regular Expressions in OpenRefine\n\nRegex Resources\nGREL supports regular expressions for advanced pattern matching.\n\nLearn Regex\n\nInteractive tutorial: https://regexone.com/\nRegex tester: https://regex101.com/ (test patterns before using)\nCheat sheet: https://www.rexegg.com/regex-quickstart.html\n\n\n\nRegex in OpenRefine\nCommon patterns:\n# Match emails\nvalue.match(/[\\w.-]+@[\\w.-]+\\.\\w+/)\n\n# Extract numbers\nvalue.match(/\\d+/)\n\n# Remove non-alphanumeric\nvalue.replace(/[^a-zA-Z0-9]/, \"\")\n\n# Find phone numbers (US format)\nvalue.match(/\\d{3}-\\d{3}-\\d{4}/)",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#books-long-form-resources",
+    "href": "resources/openrefine.html#books-long-form-resources",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Books & Long-Form Resources",
+    "text": "Books & Long-Form Resources\n\nRecommended Reading\n\n1. Using OpenRefine (Packt Publishing)\n\nAuthor: Ruben Verborgh, Max De Wilde\nLink: Available on O’Reilly Learning Platform\nLevel: Beginner to Advanced\nWhy it’s good: Comprehensive, includes real projects\n\n\n\n2. Data Wrangling with Python (O’Reilly)\n\nIncludes OpenRefine workflows\nShows how to combine OpenRefine with Python",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#workshops-training-opportunities",
+    "href": "resources/openrefine.html#workshops-training-opportunities",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Workshops & Training Opportunities",
+    "text": "Workshops & Training Opportunities\n\nOnline Courses\n\n1. Data Carpentry Workshops\n\nSchedule: https://datacarpentry.org/workshops-host/\nFree: Community-taught workshops\nGlobal: Available worldwide\n\n\n\n2. FOSTER Open Science\n\nLink: https://www.fosteropenscience.eu/node/2437\nIncludes: Data management with OpenRefine module",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#project-showcase",
+    "href": "resources/openrefine.html#project-showcase",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Project Showcase",
+    "text": "Project Showcase\n\nInspiration from Real Projects\nSee how researchers have used OpenRefine:\n\nBritish Library Digital Collections - Metadata cleanup\nEuropeana - Cultural heritage aggregation\nGBIF - Biodiversity data cleaning",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#keep-learning",
+    "href": "resources/openrefine.html#keep-learning",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Keep Learning",
+    "text": "Keep Learning\n\n\n\n\n\n\nTipNext Steps\n\n\n\n\nPractice regularly: Work with your own research data\nJoin the forum: Learn from others’ questions\nExport your scripts: Build a personal library of operations\nShare your workflows: Help the community\nStay updated: OpenRefine releases new versions regularly",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#additional-resources",
+    "href": "resources/openrefine.html#additional-resources",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nBlogs & Tutorials\n\nTony Hirst’s Blog: https://blog.ouseful.info/tag/openrefine/ (Advanced tips)\nSchool of Data: https://schoolofdata.org/courses/ (General data literacy)\n\n\n\nCheat Sheets\n\nOpenRefine Cheat Sheet (PDF)\nGREL Quick Reference (GitHub Gist)",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  },
+  {
+    "objectID": "resources/openrefine.html#questions",
+    "href": "resources/openrefine.html#questions",
+    "title": "OpenRefine Tutorials & Resources",
+    "section": "Questions?",
+    "text": "Questions?\nFor help with OpenRefine in your specific research context:\n📧 julien.rabaud@univ-pau.fr\nOr post on the OpenRefine Forum for community support!",
+    "crumbs": [
+      "Additional Resources",
+      "OpenRefine Tutorials"
+    ]
+  }
+]

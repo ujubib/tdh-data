@@ -1,0 +1,116 @@
+/*-- scss:defaults --*/
+
+// UPPA colors
+$primary: #003D7A;
+$secondary: #E74C3C;
+$success: #27AE60;
+$info: #3498DB;
+$warning: #F39C12;
+
+// Typography
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-weight: 600;
+
+// Spacing
+$spacer: 1rem;
+
+/*-- scss:rules --*/
+
+// Custom styling for callouts
+.callout {
+  border-left-width: 5px;
+  border-left-color: $primary;
+  margin: 1.5rem 0;
+}
+
+.callout-tip {
+  border-left-color: $success;
+}
+
+.callout-warning {
+  border-left-color: $warning;
+}
+
+.callout-important {
+  border-left-color: $secondary;
+}
+
+.callout-note {
+  border-left-color: $info;
+}
+
+// Table styling
+table {
+  font-size: 0.9rem;
+  
+  thead {
+    background-color: $primary;
+    color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(0, 61, 122, 0.05);
+  }
+}
+
+// Card-like sections
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+// Code blocks
+pre {
+  border-left: 3px solid $primary;
+  background-color: #f8f9fa;
+}
+
+// Links
+a {
+  color: $primary;
+  text-decoration: none;
+  
+  &:hover {
+    color: darken($primary, 15%);
+    text-decoration: underline;
+  }
+}
+
+// Navigation
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+// Sidebar
+.sidebar {
+  border-right: 1px solid #dee2e6;
+  
+  .sidebar-item {
+    padding: 0.5rem 1rem;
+    
+    &:hover {
+      background-color: rgba(0, 61, 122, 0.05);
+    }
+  }
+}
+
+// Grid layout improvements
+.grid {
+  gap: 2rem;
+}
+
+// Video embeds
+iframe {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+// Print improvements
+@media print {
+  .navbar, .sidebar, .page-footer {
+    display: none;
+  }
+}

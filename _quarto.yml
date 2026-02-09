@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: _site
+  resources: 
+    - "*.csv"
+
+website:
+  title: "Personal and Research Data Management: Organize, Clean & Enrich"
+  description: "Workshop materials for doctoral students - UPPA & CHORAL"
+  favicon: img/favicon.png
+  navbar:
+    right:
+      - icon: git
+        href: https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data
+      - icon: envelope
+        href: mailto:julien.rabaud@univ-pau.fr
+
+  sidebar:
+    style: "floating"
+    background: FloralWhite
+    contents:
+      - section: "Workshop"
+        contents:
+          - text: "Home"
+            href: index.qmd
+          - text: "Slides"
+            href: slides.qmd
+      - section: "Additional Resources"
+        contents:
+          - text: "File Organization Tools"
+            href: resources/archifiltre.qmd
+          - text: "File Naming & Backup"
+            href: resources/file-management.qmd
+          - text: "OpenRefine Tutorials"
+            href: resources/openrefine.qmd
+
+  page-footer:
+    background: FloralWhite
+    border: false
+    right: "Last update: {{< meta site-date >}}"
+
+site-date: 2026-02-09
+
+format:
+  html:
+    theme: journal
+    css: styles.css
+    backgroundcolor: FloralWhite
+    lang: en
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    reference-location: margin
+    number-sections: false
+    grid:
+      sidebar-width: 300px
+      body-width: 900px
+      margin-width: 300px
+      gutter-width: 1.5rem

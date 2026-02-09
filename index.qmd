@@ -1,0 +1,117 @@
+---
+title: "Personal and Research Data Management<br> Organize, Clean & Enrich"
+subtitle: "UPPA - ED 481 SSH / Tools for Digital Humanities"
+date: 2026-02-09
+author: 
+    - name: Julien Rabaud
+      orcid: 0000-0002-6604-9777
+      email: julien.rabaud@univ-pau.fr
+      affiliations:
+        - name: Research Library for Applied Mathematics
+          url: https://bibliotheques.univ-pau.fr/fr/infos-pratiques/pau/bibliotheque-de-recherche-de-l-ipra.html
+        - name: Pôle Numérique - Research Data Management support
+          url: https://recherche.univ-pau.fr/fr/science-ouverte/donnees-de-la-recherche.html
+---
+
+## Welcome!
+
+This website contains all materials for the **Personal and Research Data Management: Organize, Clean & Enrich** workshop, organized by the UPPA SSH Doctoral School.
+
+::: {.callout-note}
+### Workshop Information
+
+- **Date:** February 9, 2026
+- **Duration:** 2 hours
+- **Format:** Online (via *Rendez-Vous*)
+- **Language:** English 
+- **Instructor:** Julien Rabaud
+:::
+
+### Workshop Contents
+
+#### Main Tools
+
+- **[Archifiltre](https://archifiltre.fabrique.social.gouv.fr/)** - Visualize and analyze your file organization
+- **[OpenRefine](https://openrefine.org/)** - Clean and transform messy datasets
+
+#### Topics Covered
+
+1. Research data & FAIR principles
+2. File naming conventions and directory structures
+3. Storage and backup strategies (3-2-1 rule)
+4. Hands-on data cleaning exercises
+
+### Quick Links
+
+::: {.grid}
+
+::: {.g-col-6}
+#### For the Workshop
+
+- [View Slides](slides.qmd)
+- [Download `dirty_data.csv`](dirty_data.csv)
+- [Codeberg Repository](hhttps://codeberg.org/uju/ED_Organize-Clean-Enrich-Data)
+:::
+
+::: {.g-col-6}
+#### Additional Resources
+
+- [File Organization Tools](resources/archifiltre.qmd)
+- [File Naming & Backup Best Practices](resources/file-management.qmd)
+- [OpenRefine Tutorials & Videos](resources/openrefine.qmd)
+:::
+
+:::
+
+### Pre-Workshop Preparation
+
+Please complete the following **before** the workshop:
+
+::: {.callout-important}
+## Required Installations
+
+1. **Archifiltre** - [Download here](https://archifiltre.fabrique.social.gouv.fr/)
+2. **OpenRefine** - [Download here](https://openrefine.org/download)
+3. **Sample data** - <button>[Download `dirty_data.csv`](dirty_data.csv){download="dirty_data.csv" target="_blank"}</button> 
+:::
+
+**Technical requirements:**
+- Stable internet connection
+- Working camera and microphone (for interaction)
+- A folder with some of your research files (for Archifiltre exploration)
+
+### Need Help?
+
+If you encounter any installation issues or have questions, please contact:
+
+**Julien Rabaud**  
+📧 [julien.rabaud@univ-pau.fr](mailto:julien.rabaud@univ-pau.fr)
+
+---
+
+## Workshop Schedule
+
+| Time | Activity |
+|------|----------|
+| 0:00 - 0:10 | Introduction & FAIR Principles |
+| 0:10 - 0:30 | Archifiltre Demo & Hands-on |
+| 0:30 - 0:35 | Break |
+| 0:35 - 0:55 | Storage & Backup Best Practices |
+| 0:55 - 1:55 | OpenRefine: Data Cleaning Workshop |
+| 1:55 - 2:00 | Q&A & Wrap-up |
+
+---
+
+## Additional Support
+
+After the workshop, you can:
+
+- Review all materials on this website
+- Consult the [additional resources](resources/file-management.qmd) pages
+- Reach out for individual support
+
+::: {.callout-note}
+## CC0 License
+
+All workshop materials are released under a [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license. You are free to use, modify, and share them.
+:::

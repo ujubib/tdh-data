@@ -1,0 +1,553 @@
+---
+title: "Organize, Clean & Enrich Data"
+subtitle: "With Archifiltre and OpenRefine"
+author: "Julien Rabaud"
+institute: "SCD & Pôle Numérique - UPPA"
+date: "February 9, 2026"
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    css: styles.css
+    footer: "Personal and Research Data Management: Organize, Clean & Enrich - UPPA SSH Doctoral School"
+---
+
+# Welcome! {.center}
+
+## Today's Agenda
+
+::: {.incremental}
+- **Introduction**: Research data & FAIR principles (10 min)
+- **Archifiltre**: Explore your data organization (20 min)
+- **Break** (5 min)
+- **Storing & Backing up**: Best practices (20 min)
+- **OpenRefine**: Hands-on data cleaning (60 min)
+- **Q&A & Wrap-up** (5 min)
+:::
+
+## Learning Objectives
+
+By the end of this workshop, you will be able to:
+
+::: {.incremental}
+1. Understand key methods for **organizing** research data
+2. Effectively **sort and structure** your datasets
+3. Use powerful tools for **data cleaning** and quality control
+:::
+
+# Research Data Basics {.center}
+
+## What are Research Data?
+
+> *Factual records (numerical scores, textual records, images and sound) used as primary sources for scientific research, and that are commonly accepted in the scientific community as necessary to validate research findings.*
+
+Source : OECD, [OECD Principles and Guidelines for Access to Research Data from Public Funding](https://doi.org/10.1787/9789264034020-en-fr), Paris, 2007
+
+
+::: {.notes}
+OECD definition (2007)
+:::
+
+## The Research Data Lifecycle
+
+![Source: [Callisto](https://callisto-formation.fr/course/section.php?id=4642)](img/data-lifecycle.png){width=70%}
+
+## FAIR Principles
+
+![Image credit: [ARDC](https://ardc.edu.au) licensed under a Creative Commons Attribution 4.0 International License](img/FAIR-Data.png){width=80%}
+
+## FAIR Principles Explained
+
+::: {.columns}
+::: {.column width="50%"}
+**F**indable
+
+- Persistent identifiers
+- Rich metadata
+
+**A**ccessible
+
+- Open protocols
+- Clear access conditions
+:::
+
+::: {.column width="50%"}
+**I**nteroperable
+
+- Standard formats
+- Vocabularies & ontologies
+
+**R**eusable
+
+- Clear licensing
+- Provenance information
+:::
+:::
+
+## Why This Matters
+
+::: {.incremental}
+- **Reproducibility** of research
+- **Collaboration** with colleagues
+- **Compliance** with funder requirements
+- **Long-term preservation** of your work
+- **Increased visibility** and citations
+:::
+
+## FAIR / OPEN
+
+![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR)](/img/FAIR-OPEN.webp)
+
+## FAIR / CARE
+
+![Image source : [Consortium of European Social Science Data Archives](https://dag.cessda.eu/Chapter-5/1-Introduction-to-FAIR)](img/FAIR-CARE.webp)
+
+::: {.notes}
+The CARE principles for Indigenous Data Governance (Collective benefit, Authority to control, Responsibility, and Ethics) specifically concern Indigenous data and govern the control and (re)use of such data under the principles of open science (Carroll et al. 2020). For instance, the **Collective Benefit** principle states that data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive benefit from the data, e.g. for improved government and citizen engagement. The CARE principles are complementary to the FAIR principles, under the motto ‘be FAIR and CARE’ (Carroll et al. 2020).
+:::
+
+# File Organization Best Practices {.center}
+
+## File Naming Conventions
+
+**Good examples:**
+
+```
+2026-02-09_interview_participant-01_v1.docx
+experiment-data_2026-01_temperature.csv
+thesis_chapter-03_draft-02.pdf
+```
+
+**Bad examples:**
+
+```
+Final.docx
+Final_FINAL.docx
+data.csv
+thesis new version (1).pdf
+```
+
+## File Naming Rules
+
+::: {.incremental}
+- **Use dates**: `YYYY-MM-DD` format (ISO 8601)
+- **No spaces**: use hyphens `-` or underscores `_`
+- **Be descriptive**: but concise
+- **Version numbers**: v01, v02 or draft-01, draft-02
+- **Avoid special characters**: é, à, /, \, ?, *, etc.
+- **Use lowercase**: for consistency
+:::
+
+## Directory Structure
+
+```
+my-research-project/
+├── 01-raw-data/
+├── 02-processed-data/
+├── 03-analysis/
+├── 04-results/
+├── 05-manuscripts/
+├── documentation/
+│   ├── codebook.md
+│   └── README.md
+└── archive/
+```
+
+# Archifiltre {.center}
+
+::: {.notes}
+Demonstration and hands-on practice
+:::
+
+## What is Archifiltre?
+
+![](https://archifiltre.fabrique.social.gouv.fr/app/uploads/2024/07/Aime-par-Chloe-1-e1721076329956-150x150.png)
+
+**Archifiltre** is a free tool to:
+
+::: {.incremental}
+- **Visualize** your file tree structure
+- **Identify** duplicates and unused files
+- **Clean up** your directories
+- **Document** your data organization
+- **Prepare** data for archiving or sharing
+:::
+
+## Archifiltre Features
+
+::: {.columns}
+::: {.column width="50%"}
+**Visual Analysis**
+
+- Interactive treemap
+- File size visualization
+- Date analysis
+- Type distribution
+:::
+
+::: {.column width="50%"}
+**Practical Tools**
+
+- Duplicate detection
+- Batch operations
+- Tagging system
+- Export reports
+:::
+:::
+
+## Live Demo: Archifiltre
+
+::: {.callout-important}
+## Follow along!
+1. Open Archifiltre on your computer
+2. Select a research folder to analyze
+3. Explore the visualization
+:::
+
+**What to look for:**
+
+- Large files taking up space
+- Old files not modified recently
+- Duplicate files
+- Poorly organized subdirectories
+
+## Hands-On Exercise (10 min)
+
+1. Choose one of your research folders
+2. Load it into Archifiltre
+3. Identify:
+   - Duplicates
+   - Files you could delete or archive
+   - Folders that need reorganization
+
+::: {.callout-tip}
+Don't delete anything yet! Just explore and take notes.
+:::
+
+# Break (5 minutes) {.center}
+
+# Storing & Backing Up Data {.center}
+
+## The 3-2-1 Backup Rule
+
+![](https://doranum.fr/wp-content/uploads/sauvegarde-3-2-1.png){width=70%}
+
+::: {.incremental}
+- **3** copies of your data
+- On **2** different media types
+- With **1** copy off-site
+:::
+
+## Storage Solutions at UPPA
+
+**Nuage (Nextcloud)**
+
+- <https://nuage.univ-pau.fr>
+- University-hosted cloud storage
+- Sync clients for desktop & mobile
+- Collaborative features
+
+::: {.callout-note}
+Ideal for active research data and collaboration
+:::
+
+## National Solutions: Huma-Num
+
+**ShareDocs**
+
+- For humanities & social sciences researchers
+- FileRun-based platform
+- Compatible with Nextcloud clients
+- Documentation: <https://documentation.huma-num.fr>
+
+## File Formats for Preservation
+
+::: {.columns}
+::: {.column width="50%"}
+**Preferred formats:**
+
+- **Text**: .txt, .pdf/A, .xml
+- **Images**: .tiff, .png, .jpg
+- **Data**: .csv, .json, .xml
+- **Video**: .mp4, .mkv
+:::
+
+::: {.column width="50%"}
+**Avoid if possible:**
+
+- Proprietary formats
+- Outdated formats
+- Formats requiring specific software
+- Encrypted formats (for archiving)
+:::
+:::
+
+## Resources
+
+::: {.callout-tip}
+## DORANum - French Research Data Portal
+
+- File naming guide: <https://doranum.fr>
+- Storage & archiving best practices
+- Format recommendations
+- Video tutorials (in French)
+:::
+
+::: {.callout-tip}
+## Stanford - University Libraries
+
+- [Data best practices and case studies](https://guides.library.stanford.edu/data-best-practices)
+- Name files
+- Format files
+- Sensitive data
+:::
+
+
+# OpenRefine {.center}
+
+::: {.notes}
+Main hands-on exercise
+:::
+
+## What is OpenRefine?
+
+![](https://openrefine.org/img/openrefine_logo.svg){width=30%}
+
+**OpenRefine** is a powerful tool for:
+
+::: {.incremental}
+- **Cleaning** messy data
+- **Transforming** data formats
+- **Reconciling** data with external sources
+- **Extending** data with additional information
+:::
+
+## Why Use OpenRefine?
+
+::: {.incremental}
+- Works with **large datasets** (millions of rows)
+- **Non-destructive**: keeps history of all operations
+- **Reproducible**: export and reuse cleaning scripts
+- **No programming** required (but supports expressions)
+- **Free and open-source**
+:::
+
+## Common Data Quality Issues
+
+::: {.columns}
+::: {.column width="50%"}
+**Structure issues:**
+
+- Inconsistent formatting
+- Extra whitespace
+- Mixed case (UPPER/lower)
+- Wrong data types
+:::
+
+::: {.column width="50%"}
+**Content issues:**
+
+- Duplicates
+- Missing values
+- Spelling variations
+- Inconsistent dates
+:::
+:::
+
+## Live Demo: OpenRefine Interface
+
+**Key components:**
+
+- Project creation
+- Data preview
+- Facets & filters
+- Cell transformations
+- History & undo
+
+## Hands-On Exercise: Dirty Data
+
+**We'll clean a messy dataset together**
+
+::: {#boutonTemplate style="text-align:center;"}
+<button style='font-size:1.1em !important'>[Download `dirty_data.csv`](dirty_data.csv){download="dirty_data.csv" target="_blank"}</button>
+:::
+
+**Issues in the data:**
+
+- Name: inconsistent capitalization, extra spaces
+- Email: duplicates
+- Date: multiple formats, missing values
+- Country: inconsistent capitalization
+- Score: "N/A" values mixed with numbers
+
+## Step 1: Load the Data
+
+1. Click **"Create Project"**
+2. Choose **"This Computer"**
+3. Select `dirty_data.csv`
+4. Click **"Next"**
+5. Verify preview and click **"Create Project"**
+
+## Step 2: Clean the "Name" Column
+
+**Remove extra whitespace:**
+
+1. Click dropdown on **"Name"** column
+2. Select: `Edit cells` → `Common transforms` → `Trim leading and trailing whitespace`
+
+**Standardize capitalization:**
+
+3. Same menu: `Common transforms` → `To titlecase`
+
+## Step 3: Find Duplicates in "Email"
+
+1. Click dropdown on **"Email"** column
+2. Select: `Facet` → `Text facet`
+3. Look at the facet panel (left side)
+4. Click on **"Sort by: count"**
+5. Duplicates appear at the top!
+
+::: {.callout-tip}
+In a real project, you'd decide how to handle duplicates (merge, keep first, etc.)
+:::
+
+## Step 4: Standardize Dates
+
+**Transform date format:**
+
+1. Click dropdown on **"Date d'inscription"** column
+2. Select: `Edit cells` → `Transform...`
+3. Enter expression:
+
+```
+value.replace("/", "-").replace(" ", "-")
+```
+
+4. Preview and click **OK**
+
+## Step 5: Clean "Country" Column
+
+**Combine operations:**
+
+1. Click dropdown on **"Country"** column
+2. Trim whitespace (as before)
+3. Apply titlecase (as before)
+
+**Check results with facet:**
+
+4. `Facet` → `Text facet`
+5. Verify all countries are now standardized
+
+## Step 6: Fix "Score" Column
+
+**Replace "N/A" with null:**
+
+1. Click dropdown on **"Score"** column
+2. Select: `Edit cells` → `Transform...`
+3. Enter expression:
+
+```
+if(value == "N/A", null, value)
+```
+
+4. Click **OK**
+
+## Step 7: Export Clean Data
+
+1. Click **"Export"** (top right)
+2. Choose format: **"Comma-separated value"**
+3. Save as `clean_data.csv`
+
+**Don't forget:**
+
+- You can export your cleaning **operations** (JSON) to reuse them!
+- Click `Undo / Redo` tab → `Extract...`
+
+## OpenRefine Best Practices
+
+::: {.incremental}
+1. **Always work on a copy** of your data
+2. **Use facets** to explore data before transforming
+3. **Check the preview** before applying transformations
+4. **Take notes** of your cleaning steps
+5. **Export operations** for reproducibility
+6. **Validate results** after each major transformation
+:::
+
+## Going Further with OpenRefine
+
+**Advanced features:**
+
+- **Reconciliation**: match your data with Wikidata, VIAF, etc.
+- **Clustering**: find similar values automatically
+- **GREL expressions**: powerful transformation language
+- **API calls**: enrich data from external sources
+
+**Learn more:**
+
+- Programming Historian tutorials
+- OpenRefine documentation: <https://openrefine.org/docs>
+
+# Wrap-Up {.center}
+
+## What We Covered Today
+
+::: {.incremental}
+1. Research data & FAIR principles
+2. File organization best practices
+3. Archifiltre for visualizing & organizing
+4. Storage & backup strategies
+5. OpenRefine for data cleaning
+:::
+
+## Key Takeaways
+
+::: {.callout-important}
+## Remember
+
+- **Organize early**: don't wait until you have chaos
+- **Name carefully**: your future self will thank you
+- **Backup regularly**: 3-2-1 rule
+- **Clean systematically**: use tools like OpenRefine
+- **Document everything**: README files are your friends
+:::
+
+## Additional Tools to Explore
+
+**Tropy** - for organizing research images
+
+- <https://tropy.org>
+- Perfect for archival photos, scanned documents
+- Powerfull built-in metadata management
+
+::: {.notes}
+Mention this as bonus for those working with visual materials
+:::
+
+## Resources & Documentation
+
+**All materials available:**
+
+- Codeberg repository: <https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data>
+- Archifiltre: <https://archifiltre.fabrique.social.gouv.fr>
+- OpenRefine: <https://openrefine.org>
+- DORANum: <https://doranum.fr>
+
+**Contact:**
+
+- julien.rabaud@univ-pau.fr
+
+## Questions? {.center}
+
+**Thank you for your participation**
+
+::: {.callout-tip}
+## Feedback
+Please share your thoughts on today's workshop.
+:::
+
+# {.center}
+
+**Good luck with your research data**
