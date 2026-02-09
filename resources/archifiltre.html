@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data"> <i class="bi bi-git" role="img">
+    <a class="nav-link" href="https://github.com/ujubib/tdh-data"> <i class="bi bi-git" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -203,6 +203,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#archifiltre" id="toc-archifiltre" class="nav-link active" data-scroll-target="#archifiltre">Archifiltre</a>
   <ul class="collapse">
   <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">Key Features</a></li>
+  <li><a href="#why-archifiltre-for-digital-humanities" id="toc-why-archifiltre-for-digital-humanities" class="nav-link" data-scroll-target="#why-archifiltre-for-digital-humanities">Why Archifiltre for Digital Humanities?</a></li>
+  <li><a href="#use-cases-in-ssh-research" id="toc-use-cases-in-ssh-research" class="nav-link" data-scroll-target="#use-cases-in-ssh-research">Use Cases in SSH Research</a></li>
   <li><a href="#download-documentation" id="toc-download-documentation" class="nav-link" data-scroll-target="#download-documentation">Download &amp; Documentation</a></li>
   <li><a href="#video-tutorials" id="toc-video-tutorials" class="nav-link" data-scroll-target="#video-tutorials">Video Tutorials</a></li>
   </ul></li>
@@ -212,14 +214,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#winmerge-windows-meld-cross-platform" id="toc-winmerge-windows-meld-cross-platform" class="nav-link" data-scroll-target="#winmerge-windows-meld-cross-platform">2. WinMerge (Windows) / Meld (Cross-platform)</a></li>
   <li><a href="#freefilesync" id="toc-freefilesync" class="nav-link" data-scroll-target="#freefilesync">3. FreeFileSync</a></li>
   <li><a href="#treesize-free-windows" id="toc-treesize-free-windows" class="nav-link" data-scroll-target="#treesize-free-windows">4. TreeSize Free (Windows)</a></li>
-  <li><a href="#duplichecker-dupeguru" id="toc-duplichecker-dupeguru" class="nav-link" data-scroll-target="#duplichecker-dupeguru">5. DupliChecker / dupeGuru</a></li>
   </ul></li>
   <li><a href="#comparison-table" id="toc-comparison-table" class="nav-link" data-scroll-target="#comparison-table">Comparison Table</a></li>
   <li><a href="#recommended-workflow" id="toc-recommended-workflow" class="nav-link" data-scroll-target="#recommended-workflow">Recommended Workflow</a></li>
   <li><a href="#tips-for-choosing-tools" id="toc-tips-for-choosing-tools" class="nav-link" data-scroll-target="#tips-for-choosing-tools">Tips for Choosing Tools</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  <li><a href="#further-reading---digital-humanities" id="toc-further-reading---digital-humanities" class="nav-link" data-scroll-target="#further-reading---digital-humanities">Further Reading - Digital Humanities</a>
+  <ul class="collapse">
+  <li><a href="#data-management-for-dh" id="toc-data-management-for-dh" class="nav-link" data-scroll-target="#data-management-for-dh">Data Management for DH</a></li>
+  <li><a href="#european-infrastructure" id="toc-european-infrastructure" class="nav-link" data-scroll-target="#european-infrastructure">European Infrastructure</a></li>
+  <li><a href="#project-examples" id="toc-project-examples" class="nav-link" data-scroll-target="#project-examples">Project Examples</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/archifiltre.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -246,8 +252,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="archifiltre" class="level2">
 <h2 class="anchored" data-anchor-id="archifiltre">Archifiltre</h2>
-<p><img src="https://archifiltre.fabrique.social.gouv.fr/app/uploads/2024/07/Aime-par-Chloe-1-e1721076329956-150x150.png" class="img-fluid" width="100"></p>
-<p><strong>Archifiltre</strong> is our recommended tool for visualizing and organizing your file structure.</p>
+<p><img src="https://archifiltre.fabrique.social.gouv.fr/app/uploads/2024/07/Aime-par-Chloe-1-e1721076329956-150x150.png" class="img-fluid" width="150"></p>
+<p><strong>Archifiltre</strong> is our recommended tool for visualizing and organizing your file structure. It is a free, open-source tool developed by French archivists, particularly relevant for humanities researchers.</p>
 <section id="key-features" class="level3">
 <h3 class="anchored" data-anchor-id="key-features">Key Features</h3>
 <ul>
@@ -257,6 +263,26 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Tagging system</strong> for organizing files</li>
 <li><strong>Export reports</strong> for documentation</li>
 </ul>
+</section>
+<section id="why-archifiltre-for-digital-humanities" class="level3">
+<h3 class="anchored" data-anchor-id="why-archifiltre-for-digital-humanities">Why Archifiltre for Digital Humanities?</h3>
+<ul>
+<li><strong>Visualize research archives</strong> - see your entire project structure at a glance</li>
+<li><strong>Identify duplicates</strong> - find redundant files across versions</li>
+<li><strong>Date analysis</strong> - track when files were created/modified across long-term projects</li>
+<li><strong>Prepare for data deposit</strong> - organize before archiving in institutional repositories</li>
+<li><strong>Document collections</strong> - generate reports for data management plans</li>
+</ul>
+</section>
+<section id="use-cases-in-ssh-research" class="level3">
+<h3 class="anchored" data-anchor-id="use-cases-in-ssh-research">Use Cases in SSH Research</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Managing sources:</strong> - Organize interview recordings - Track multiple transcription versions - Map archival photograph collections - Identify gaps in data collection</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Project documentation:</strong> - Prepare data for deposit (Zenodo, Nakala) - Document for Data Management Plans - Clean up before thesis submission - Create inventory for collaborators</p>
+</div>
+</div>
 </section>
 <section id="download-documentation" class="level3">
 <h3 class="anchored" data-anchor-id="download-documentation">Download &amp; Documentation</h3>
@@ -289,46 +315,85 @@ ul.task-list li input[type="checkbox"] {
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://windirstat.net/wds.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="..\img/windirstat.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>WinDirStat visualization</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>Download:</strong> - <strong>WinDirStat</strong> (Windows): <a href="https://windirstat.net/" class="uri">https://windirstat.net/</a> - <strong>Disk Inventory X</strong> (macOS): <a href="http://www.derlien.com/" class="uri">http://www.derlien.com/</a> - <strong>Baobab</strong> (Linux): Pre-installed on most distributions</p>
+<p><strong>Download:</strong></p>
+<ul>
+<li><strong>WinDirStat</strong> (Windows): <a href="https://windirstat.net/" class="uri">https://windirstat.net/</a></li>
+<li><strong>Disk Inventory X</strong> (macOS): <a href="http://www.derlien.com/" class="uri">http://www.derlien.com/</a></li>
+<li><strong>Baobab</strong> (Linux): Pre-installed on most distributions</li>
+</ul>
 <hr>
 </section>
 <section id="winmerge-windows-meld-cross-platform" class="level3">
 <h3 class="anchored" data-anchor-id="winmerge-windows-meld-cross-platform">2. WinMerge (Windows) / Meld (Cross-platform)</h3>
 <p><strong>Purpose:</strong> Compare and synchronize folders</p>
-<p><strong>Features:</strong> - <strong>Side-by-side folder comparison</strong> - Highlight differences between directory structures - Identify duplicate, missing, or modified files - <strong>Merge or sync</strong> folders selectively - Great for backup verification</p>
-<p><strong>Use cases:</strong> - Compare your working folder with your backup - Find files that changed since last backup - Identify duplicates across different locations</p>
-<p><strong>Download:</strong> - <strong>WinMerge</strong> (Windows): <a href="https://winmerge.org/" class="uri">https://winmerge.org/</a> - <strong>Meld</strong> (Windows/macOS/Linux): <a href="https://meldmerge.org/" class="uri">https://meldmerge.org/</a></p>
-<p><strong>Documentation:</strong> - <a href="https://manual.winmerge.org/">WinMerge User Manual</a> - <a href="https://meldmerge.org/help/">Meld User Guide</a></p>
+<p><strong>Features:</strong></p>
+<ul>
+<li><strong>Side-by-side folder comparison</strong></li>
+<li>Highlight differences between directory structures</li>
+<li>Identify duplicate, missing, or modified files</li>
+<li><strong>Merge or sync</strong> folders selectively</li>
+<li>Great for backup verification</li>
+</ul>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Compare your working folder with your backup</li>
+<li>Find files that changed since last backup</li>
+<li>Identify duplicates across different locations</li>
+</ul>
+<p><strong>Download:</strong></p>
+<ul>
+<li><strong>WinMerge</strong> (Windows): <a href="https://winmerge.org/" class="uri">https://winmerge.org/</a></li>
+<li><strong>Meld</strong> (Windows/macOS/Linux): <a href="https://meldmerge.org/" class="uri">https://meldmerge.org/</a></li>
+</ul>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li><a href="https://manual.winmerge.org/">WinMerge User Manual</a></li>
+<li><a href="https://meldmerge.org/help/">Meld User Guide</a></li>
+</ul>
 <hr>
 </section>
 <section id="freefilesync" class="level3">
 <h3 class="anchored" data-anchor-id="freefilesync">3. FreeFileSync</h3>
 <p><strong>Purpose:</strong> Backup and file synchronization</p>
-<p><strong>Features:</strong> - <strong>Mirror, update, or two-way sync</strong> between folders - Visual comparison of source and target - Filter rules (include/exclude patterns) - Batch jobs for automated backups - Works with local drives, network shares, and cloud storage</p>
-<p><strong>Perfect for:</strong> - Automated backup routines - Keeping multiple copies in sync - Implementing the 3-2-1 backup rule</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li><strong>Mirror, update, or two-way sync</strong> between folders</li>
+<li>Visual comparison of source and target</li>
+<li>Filter rules (include/exclude patterns)</li>
+<li>Batch jobs for automated backups</li>
+<li>Works with local drives, network shares, and cloud storage</li>
+</ul>
+<p><strong>Perfect for:</strong></p>
+<ul>
+<li>Automated backup routines</li>
+<li>Keeping multiple copies in sync</li>
+<li>Implementing the 3-2-1 backup rule</li>
+</ul>
 <p><strong>Download:</strong> <a href="https://freefilesync.org/" class="uri">https://freefilesync.org/</a></p>
-<p><strong>Tutorial:</strong> - <a href="https://freefilesync.org/tutorials.php">FreeFileSync Beginner’s Guide</a> - <a href="https://www.youtube.com/watch?v=example">Video Tutorial</a></p>
+<p><strong>Tutorial:</strong></p>
+<ul>
+<li><a href="https://freefilesync.org/tutorials.php">FreeFileSync Beginner’s Guide</a></li>
+<li><a href="https://www.youtube.com/watch?v=example">Video Tutorial</a></li>
+</ul>
 <hr>
 </section>
 <section id="treesize-free-windows" class="level3">
 <h3 class="anchored" data-anchor-id="treesize-free-windows">4. TreeSize Free (Windows)</h3>
 <p><strong>Purpose:</strong> Detailed disk space analysis</p>
-<p><strong>Features:</strong> - Show folder sizes in Windows Explorer - Drill down to find large files - Export results to Excel - Scheduled scans</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Show folder sizes in Windows Explorer</li>
+<li>Drill down to find large files</li>
+<li>Export results to Excel</li>
+<li>Scheduled scans</li>
+</ul>
 <p><strong>Download:</strong> <a href="https://www.jam-software.com/treesize_free" class="uri">https://www.jam-software.com/treesize_free</a></p>
-<hr>
-</section>
-<section id="duplichecker-dupeguru" class="level3">
-<h3 class="anchored" data-anchor-id="duplichecker-dupeguru">5. DupliChecker / dupeGuru</h3>
-<p><strong>Purpose:</strong> Find and remove duplicate files</p>
-<p><strong>Features:</strong> - Multiple comparison modes (contents, filename, metadata) - Safe duplicate removal - Works across different folders/drives - Preview before deletion</p>
-<p><strong>Download:</strong> - <strong>dupeGuru</strong> (Open source, cross-platform): <a href="https://dupeguru.voltaicideas.net/" class="uri">https://dupeguru.voltaicideas.net/</a> - <strong>DupliChecker</strong> (Web-based, no install): <a href="https://www.duplichecker.com/duplicate-file-remover.php" class="uri">https://www.duplichecker.com/duplicate-file-remover.php</a></p>
-<p><strong>Tutorial:</strong> - <a href="https://dupeguru.voltaicideas.net/help/en/">dupeGuru Documentation</a></p>
 <hr>
 </section>
 </section>
@@ -392,12 +457,6 @@ ul.task-list li input[type="checkbox"] {
 <td>Disk space analysis</td>
 <td>✅ Free version</td>
 </tr>
-<tr class="even">
-<td><strong>dupeGuru</strong></td>
-<td>Win/Mac/Linux</td>
-<td>Duplicate detection</td>
-<td>✅ Yes</td>
-</tr>
 </tbody>
 </table>
 <hr>
@@ -436,12 +495,30 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 </section>
-<section id="further-reading" class="level2">
-<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<section id="further-reading---digital-humanities" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading---digital-humanities">Further Reading - Digital Humanities</h2>
+<section id="data-management-for-dh" class="level3">
+<h3 class="anchored" data-anchor-id="data-management-for-dh">Data Management for DH</h3>
 <ul>
-<li><a href="https://www.dpconline.org/handbook">Digital preservation best practices</a> - Digital Preservation Coalition</li>
-<li><a href="https://www.bristol.ac.uk/staff/researchers/data/organising-data/">File management for researchers</a> - University of Bristol guide</li>
-<li><a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">Organizing your files</a> - Harvard Medical School</li>
+<li><strong><a href="https://www.dariah.eu/activities/training-and-education/">DARIAH Guide to Data Management</a></strong> - European infrastructure for arts &amp; humanities</li>
+<li><strong><a href="https://collectionsasdata.github.io/">Collections as Data</a></strong> - Making collections computational</li>
+<li><strong><a href="http://digitalhumanities.org/dhq/">DHQ: Digital Humanities Quarterly</a></strong> - Methodology articles</li>
+</ul>
+</section>
+<section id="european-infrastructure" class="level3">
+<h3 class="anchored" data-anchor-id="european-infrastructure">European Infrastructure</h3>
+<ul>
+<li><strong><a href="https://pro.europeana.eu/page/research">Europeana Research</a></strong> - European cultural heritage</li>
+<li><strong><a href="https://www.huma-num.fr/services-et-outils">Huma-Num Services</a></strong> - French SSH infrastructure</li>
+<li><strong><a href="https://www.dariah.eu/activities/working-groups/">DARIAH Working Groups</a></strong> - Thematic networks</li>
+</ul>
+</section>
+<section id="project-examples" class="level3">
+<h3 class="anchored" data-anchor-id="project-examples">Project Examples</h3>
+<ul>
+<li><strong><a href="https://vtm.epfl.ch/">Venice Time Machine</a></strong> - Historical digitization</li>
+<li><strong><a href="https://pelagios.org/">Pelagios Network</a></strong> - Linking places in history</li>
+<li><strong><a href="http://republicofletters.stanford.edu/">Mapping the Republic of Letters</a></strong> - Correspondence networks</li>
 </ul>
 <hr>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -459,6 +536,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -535,7 +613,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ujubib\.github\.io\/tdh-data\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -875,7 +953,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    </div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ujubib/tdh-data/blob/main/resources/archifiltre.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ujubib/tdh-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Last update: 2026-02-09</p>
 </div>
