@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>File Naming &amp; Backup Best Practices – Personal and Research Data Management: Organize, Clean &amp; Enrich</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-10d6bfaa2f8bcb121088c7d3a1816829.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7bc5d518d705a825abc54c1a67b1ce5e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-10d6bfaa2f8bcb121088c7d3a1816829.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-73c4b1cf70280f5b8978babe5897752b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-73c4b1cf70280f5b8978babe5897752b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-73c4b1cf70280f5b8978babe5897752b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../\img\logoUPPA-RepFr.png" alt="" class="navbar-logo light-content">
+    <img src="../\img\logoUPPA-RepFr.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Personal and Research Data Management: Organize, Clean &amp; Enrich</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://codeberg.org/uju/ED_Organize-Clean-Enrich-Data"> <i class="bi bi-git" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:julien.rabaud@univ-pau.fr"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/archifiltre.html">Additional Resources</a></li><li class="breadcrumb-item"><a href="../resources/file-management.html">File Naming &amp; Backup</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../\img\logoUPPA-RepFr.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../\img\logoUPPA-RepFr.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Additional Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources/archifiltre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">File Organization Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources/file-management.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">File Naming &amp; Backup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources/openrefine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OpenRefine Tutorials</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#file-naming-conventions" id="toc-file-naming-conventions" class="nav-link active" data-scroll-target="#file-naming-conventions">File Naming Conventions</a>
+  <ul class="collapse">
+  <li><a href="#key-principles" id="toc-key-principles" class="nav-link" data-scroll-target="#key-principles">Key Principles</a></li>
+  </ul></li>
+  <li><a href="#comprehensive-guides-resources" id="toc-comprehensive-guides-resources" class="nav-link" data-scroll-target="#comprehensive-guides-resources">Comprehensive Guides &amp; Resources</a>
+  <ul class="collapse">
+  <li><a href="#stanford-libraries---best-practices-for-file-naming" id="toc-stanford-libraries---best-practices-for-file-naming" class="nav-link" data-scroll-target="#stanford-libraries---best-practices-for-file-naming">1. Stanford Libraries - Best Practices for File Naming</a></li>
+  <li><a href="#university-of-edinburgh---naming-conventions" id="toc-university-of-edinburgh---naming-conventions" class="nav-link" data-scroll-target="#university-of-edinburgh---naming-conventions">2. University of Edinburgh - Naming Conventions</a></li>
+  <li><a href="#princeton-research-data-service" id="toc-princeton-research-data-service" class="nav-link" data-scroll-target="#princeton-research-data-service">3. Princeton Research Data Service</a></li>
+  <li><a href="#mit-libraries---file-naming" id="toc-mit-libraries---file-naming" class="nav-link" data-scroll-target="#mit-libraries---file-naming">4. MIT Libraries - File Naming</a></li>
+  <li><a href="#uk-data-service---organizing-data" id="toc-uk-data-service---organizing-data" class="nav-link" data-scroll-target="#uk-data-service---organizing-data">5. UK Data Service - Organizing Data</a></li>
+  </ul></li>
+  <li><a href="#video-tutorials-on-file-naming" id="toc-video-tutorials-on-file-naming" class="nav-link" data-scroll-target="#video-tutorials-on-file-naming">Video Tutorials on File Naming</a>
+  <ul class="collapse">
+  <li><a href="#file-naming-and-folder-structures" id="toc-file-naming-and-folder-structures" class="nav-link" data-scroll-target="#file-naming-and-folder-structures">📹 File Naming and Folder Structures</a></li>
+  <li><a href="#data-organization-in-spreadsheets-for-social-scientists" id="toc-data-organization-in-spreadsheets-for-social-scientists" class="nav-link" data-scroll-target="#data-organization-in-spreadsheets-for-social-scientists">📹 Data Organization in Spreadsheets for Social Scientists</a></li>
+  </ul></li>
+  <li><a href="#directory-structure-best-practices" id="toc-directory-structure-best-practices" class="nav-link" data-scroll-target="#directory-structure-best-practices">Directory Structure Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#recommended-reading" id="toc-recommended-reading" class="nav-link" data-scroll-target="#recommended-reading">Recommended Reading</a></li>
+  </ul></li>
+  <li><a href="#backup-strategies-the-3-2-1-rule" id="toc-backup-strategies-the-3-2-1-rule" class="nav-link" data-scroll-target="#backup-strategies-the-3-2-1-rule">Backup Strategies: The 3-2-1 Rule</a>
+  <ul class="collapse">
+  <li><a href="#understanding-3-2-1" id="toc-understanding-3-2-1" class="nav-link" data-scroll-target="#understanding-3-2-1">Understanding 3-2-1</a></li>
+  <li><a href="#authoritative-resources" id="toc-authoritative-resources" class="nav-link" data-scroll-target="#authoritative-resources">Authoritative Resources</a></li>
+  </ul></li>
+  <li><a href="#cloud-storage-options-for-researchers" id="toc-cloud-storage-options-for-researchers" class="nav-link" data-scroll-target="#cloud-storage-options-for-researchers">Cloud Storage Options for Researchers</a>
+  <ul class="collapse">
+  <li><a href="#universityinstitutional-storage" id="toc-universityinstitutional-storage" class="nav-link" data-scroll-target="#universityinstitutional-storage">University/Institutional Storage</a></li>
+  <li><a href="#general-cloud-services" id="toc-general-cloud-services" class="nav-link" data-scroll-target="#general-cloud-services">General Cloud Services</a></li>
+  </ul></li>
+  <li><a href="#automated-backup-tools" id="toc-automated-backup-tools" class="nav-link" data-scroll-target="#automated-backup-tools">Automated Backup Tools</a>
+  <ul class="collapse">
+  <li><a href="#recommended-software" id="toc-recommended-software" class="nav-link" data-scroll-target="#recommended-software">Recommended Software</a></li>
+  <li><a href="#for-beginners-freefilesync-tutorial" id="toc-for-beginners-freefilesync-tutorial" class="nav-link" data-scroll-target="#for-beginners-freefilesync-tutorial">For Beginners: FreeFileSync Tutorial</a></li>
+  <li><a href="#for-advanced-users-rsync" id="toc-for-advanced-users-rsync" class="nav-link" data-scroll-target="#for-advanced-users-rsync">For Advanced Users: rsync</a></li>
+  </ul></li>
+  <li><a href="#file-format-best-practices" id="toc-file-format-best-practices" class="nav-link" data-scroll-target="#file-format-best-practices">File Format Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#choosing-preservation-friendly-formats" id="toc-choosing-preservation-friendly-formats" class="nav-link" data-scroll-target="#choosing-preservation-friendly-formats">Choosing Preservation-Friendly Formats</a></li>
+  </ul></li>
+  <li><a href="#metadata-documentation" id="toc-metadata-documentation" class="nav-link" data-scroll-target="#metadata-documentation">Metadata &amp; Documentation</a>
+  <ul class="collapse">
+  <li><a href="#readme-files" id="toc-readme-files" class="nav-link" data-scroll-target="#readme-files">README Files</a></li>
+  </ul></li>
+  <li><a href="#checklists-quick-guides" id="toc-checklists-quick-guides" class="nav-link" data-scroll-target="#checklists-quick-guides">Checklists &amp; Quick Guides</a>
+  <ul class="collapse">
+  <li><a href="#downloadable-resources" id="toc-downloadable-resources" class="nav-link" data-scroll-target="#downloadable-resources">Downloadable Resources</a></li>
+  </ul></li>
+  <li><a href="#books-long-form-resources" id="toc-books-long-form-resources" class="nav-link" data-scroll-target="#books-long-form-resources">Books &amp; Long-Form Resources</a>
+  <ul class="collapse">
+  <li><a href="#recommended-reading-1" id="toc-recommended-reading-1" class="nav-link" data-scroll-target="#recommended-reading-1">Recommended Reading</a></li>
+  </ul></li>
+  <li><a href="#discipline-specific-guides" id="toc-discipline-specific-guides" class="nav-link" data-scroll-target="#discipline-specific-guides">Discipline-Specific Guides</a>
+  <ul class="collapse">
+  <li><a href="#by-field" id="toc-by-field" class="nav-link" data-scroll-target="#by-field">By Field</a></li>
+  </ul></li>
+  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help">Getting Help</a>
+  <ul class="collapse">
+  <li><a href="#online-communities" id="toc-online-communities" class="nav-link" data-scroll-target="#online-communities">Online Communities</a></li>
+  <li><a href="#workshops-training" id="toc-workshops-training" class="nav-link" data-scroll-target="#workshops-training">Workshops &amp; Training</a></li>
+  </ul></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/archifiltre.html">Additional Resources</a></li><li class="breadcrumb-item"><a href="../resources/file-management.html">File Naming &amp; Backup</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">File Naming &amp; Backup Best Practices</h1>
+<p class="subtitle lead">Resources and Guidelines</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="file-naming-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="file-naming-conventions">File Naming Conventions</h2>
+<p>Good file naming is fundamental to research data management. Here are comprehensive resources to help you develop and maintain consistent naming practices.</p>
+<section id="key-principles" class="level3">
+<h3 class="anchored" data-anchor-id="key-principles">Key Principles</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Quick Reference: File Naming Rules
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Use dates:</strong> YYYY-MM-DD format (ISO 8601)</li>
+<li><strong>No spaces:</strong> Use hyphens <code>-</code> or underscores <code>_</code></li>
+<li><strong>Be descriptive:</strong> But keep it concise</li>
+<li><strong>Version numbers:</strong> v01, v02, not “final” or “final2”</li>
+<li><strong>Avoid special characters:</strong> No é, à, /, , ?, *, etc.</li>
+<li><strong>Lowercase:</strong> For consistency (optional but recommended)</li>
+</ol>
+<p><strong>Example:</strong> <code>2026-02-09_interview_participant-05_v02.docx</code></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="comprehensive-guides-resources" class="level2">
+<h2 class="anchored" data-anchor-id="comprehensive-guides-resources">Comprehensive Guides &amp; Resources</h2>
+<section id="stanford-libraries---best-practices-for-file-naming" class="level3">
+<h3 class="anchored" data-anchor-id="stanford-libraries---best-practices-for-file-naming">1. Stanford Libraries - Best Practices for File Naming</h3>
+<p><strong>Excellent starting point with clear examples</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming" class="uri">https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming</a></li>
+<li><strong>Covers:</strong> Basic rules, versioning, sequential numbering, examples by discipline</li>
+</ul>
+<p><strong>Key takeaways:</strong> - Use 3 elements: date, brief description, version - Keep names under 32 characters when possible - Document your naming convention in a README file</p>
+<hr>
+</section>
+<section id="university-of-edinburgh---naming-conventions" class="level3">
+<h3 class="anchored" data-anchor-id="university-of-edinburgh---naming-conventions">2. University of Edinburgh - Naming Conventions</h3>
+<p><strong>Detailed guide with discipline-specific examples</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming" class="uri">https://www.ed.ac.uk/information-services/research-support/research-data-service/after/organising-data/file-naming</a></li>
+<li><strong>PDF Guide:</strong> <a href="https://www.ed.ac.uk/files/atoms/files/file-naming-conventions.pdf">File Naming Conventions</a></li>
+</ul>
+<p><strong>Highlights:</strong> - Examples for different research contexts - Common pitfalls to avoid - Templates you can adapt</p>
+<hr>
+</section>
+<section id="princeton-research-data-service" class="level3">
+<h3 class="anchored" data-anchor-id="princeton-research-data-service">3. Princeton Research Data Service</h3>
+<p><strong>Short, practical guide with a focus on reproducibility</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://libguides.princeton.edu/c.php?g=102546&amp;p=930626" class="uri">https://libguides.princeton.edu/c.php?g=102546&amp;p=930626</a></li>
+</ul>
+<p><strong>Topics covered:</strong> - Why naming matters for reproducibility - Handling versions vs.&nbsp;dates - Special considerations for code files</p>
+<hr>
+</section>
+<section id="mit-libraries---file-naming" class="level3">
+<h3 class="anchored" data-anchor-id="mit-libraries---file-naming">4. MIT Libraries - File Naming</h3>
+<p><strong>Quick reference card and checklist</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://libraries.mit.edu/data-management/store/organize/" class="uri">https://libraries.mit.edu/data-management/store/organize/</a></li>
+</ul>
+<p><strong>Useful for:</strong> - Quick decision-making - Team agreements on naming - Printable reference guide</p>
+<hr>
+</section>
+<section id="uk-data-service---organizing-data" class="level3">
+<h3 class="anchored" data-anchor-id="uk-data-service---organizing-data">5. UK Data Service - Organizing Data</h3>
+<p><strong>Comprehensive resource covering both naming and organization</strong></p>
+<ul>
+<li><strong>Link:</strong> <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/" class="uri">https://ukdataservice.ac.uk/learning-hub/research-data-management/organise-data/file-naming/</a></li>
+</ul>
+<p><strong>Excellent for:</strong> - Large projects with multiple contributors - Long-term archival planning - Sharing data with collaborators</p>
+<hr>
+</section>
+</section>
+<section id="video-tutorials-on-file-naming" class="level2">
+<h2 class="anchored" data-anchor-id="video-tutorials-on-file-naming">Video Tutorials on File Naming</h2>
+<section id="file-naming-and-folder-structures" class="level3">
+<h3 class="anchored" data-anchor-id="file-naming-and-folder-structures">📹 File Naming and Folder Structures</h3>
+<ul>
+<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=ES1LTlnpLMk">Organizing Research Data</a> by New York University (8 min)</li>
+<li><strong>Content:</strong> Visual walkthrough of good vs bad naming practices</li>
+</ul>
+</section>
+<section id="data-organization-in-spreadsheets-for-social-scientists" class="level3">
+<h3 class="anchored" data-anchor-id="data-organization-in-spreadsheets-for-social-scientists">📹 Data Organization in Spreadsheets for Social Scientists</h3>
+<ul>
+<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=3MEJ38BO6Mo">Data Carpentry</a> (15 min)</li>
+<li><strong>Content:</strong> Beyond file names—organizing data <em>within</em> files</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="directory-structure-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="directory-structure-best-practices">Directory Structure Best Practices</h2>
+<section id="recommended-reading" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-reading">Recommended Reading</h3>
+<ol type="1">
+<li><strong><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424">Project Organization</a></strong> - PLoS Computational Biology
+<ul>
+<li>Classic paper: “A Quick Guide to Organizing Computational Biology Projects”</li>
+<li>Focuses on reproducible research structures</li>
+</ul></li>
+<li><strong><a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">Folder Structure for Research Data</a></strong> - Harvard Medical School
+<ul>
+<li>Template directory structures</li>
+<li>How to organize across project phases</li>
+</ul></li>
+<li><strong><a href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-storage.html">File Organization Tutorial</a></strong> - The Turing Way
+<ul>
+<li>Modern, community-driven guide</li>
+<li>Includes code and data organization</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="backup-strategies-the-3-2-1-rule" class="level2">
+<h2 class="anchored" data-anchor-id="backup-strategies-the-3-2-1-rule">Backup Strategies: The 3-2-1 Rule</h2>
+<section id="understanding-3-2-1" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-3-2-1">Understanding 3-2-1</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The 3-2-1 Backup Rule
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>3</strong> copies of your data (original + 2 backups)</li>
+<li><strong>2</strong> different media types (e.g., local drive + cloud)</li>
+<li><strong>1</strong> copy off-site (cloud or physically elsewhere)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="authoritative-resources" class="level3">
+<h3 class="anchored" data-anchor-id="authoritative-resources">Authoritative Resources</h3>
+<section id="us-cert-cybersecurity-infrastructure-security-agency" class="level4">
+<h4 class="anchored" data-anchor-id="us-cert-cybersecurity-infrastructure-security-agency">1. US-CERT (Cybersecurity &amp; Infrastructure Security Agency)</h4>
+<ul>
+<li><strong>Link:</strong> <a href="https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf" class="uri">https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf</a></li>
+<li><strong>Content:</strong> Government guidelines on backup strategies</li>
+</ul>
+</section>
+<section id="digital-preservation-coalition-handbook" class="level4">
+<h4 class="anchored" data-anchor-id="digital-preservation-coalition-handbook">2. Digital Preservation Coalition Handbook</h4>
+<ul>
+<li><strong>Link:</strong> <a href="https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery" class="uri">https://www.dpconline.org/handbook/technical-solutions-and-tools/backup-and-recovery</a></li>
+<li><strong>Content:</strong> Long-term preservation perspective</li>
+</ul>
+</section>
+<section id="library-of-congress---personal-digital-archiving" class="level4">
+<h4 class="anchored" data-anchor-id="library-of-congress---personal-digital-archiving">3. Library of Congress - Personal Digital Archiving</h4>
+<ul>
+<li><strong>Link:</strong> <a href="https://www.digitalpreservation.gov/personalarchiving/" class="uri">https://www.digitalpreservation.gov/personalarchiving/</a></li>
+<li><strong>Content:</strong> Practical advice for individuals</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="cloud-storage-options-for-researchers" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-storage-options-for-researchers">Cloud Storage Options for Researchers</h2>
+<section id="universityinstitutional-storage" class="level3">
+<h3 class="anchored" data-anchor-id="universityinstitutional-storage">University/Institutional Storage</h3>
+<p>Most universities provide storage solutions. Check with your institution for:</p>
+<ul>
+<li>Storage quotas</li>
+<li>Backup policies</li>
+<li>Access after graduation</li>
+<li>Data security and compliance</li>
+</ul>
+<p><strong>UPPA-specific:</strong> - <strong>Nuage:</strong> <a href="https://nuage.univ-pau.fr" class="uri">https://nuage.univ-pau.fr</a> (Nextcloud) - <strong>Huma-Num ShareDocs:</strong> <a href="https://documentation.huma-num.fr" class="uri">https://documentation.huma-num.fr</a> (for humanities/social sciences)</p>
+</section>
+<section id="general-cloud-services" class="level3">
+<h3 class="anchored" data-anchor-id="general-cloud-services">General Cloud Services</h3>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Privacy &amp; Compliance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before using commercial cloud services, check: - Your institution’s data policies - Funder requirements (e.g., GDPR compliance) - Whether data contains sensitive information</p>
+</div>
+</div>
+<p><strong>Research-friendly options:</strong></p>
+<ul>
+<li><strong>Nextcloud</strong> (self-hosted or providers): Privacy-focused, open source</li>
+<li><strong>Box</strong> (many universities have partnerships)</li>
+<li><strong>Google Drive</strong> (check institutional agreement)</li>
+<li><strong>Microsoft OneDrive</strong> (if your university uses Microsoft 365)</li>
+<li><strong>Zenodo</strong> (for published research data): <a href="https://zenodo.org" class="uri">https://zenodo.org</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="automated-backup-tools" class="level2">
+<h2 class="anchored" data-anchor-id="automated-backup-tools">Automated Backup Tools</h2>
+<section id="recommended-software" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-software">Recommended Software</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Platform</th>
+<th>Type</th>
+<th>Open Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>FreeFileSync</strong></td>
+<td>Win/Mac/Linux</td>
+<td>Sync &amp; Mirror</td>
+<td>✅ Yes</td>
+</tr>
+<tr class="even">
+<td><strong>rsync</strong></td>
+<td>Mac/Linux/Win</td>
+<td>Command-line sync</td>
+<td>✅ Yes</td>
+</tr>
+<tr class="odd">
+<td><strong>Rclone</strong></td>
+<td>Win/Mac/Linux</td>
+<td>Cloud sync</td>
+<td>✅ Yes</td>
+</tr>
+<tr class="even">
+<td><strong>Duplicati</strong></td>
+<td>Win/Mac/Linux</td>
+<td>Encrypted backups</td>
+<td>✅ Yes</td>
+</tr>
+<tr class="odd">
+<td><strong>Backblaze</strong></td>
+<td>Win/Mac</td>
+<td>Cloud backup</td>
+<td>❌ Paid</td>
+</tr>
+<tr class="even">
+<td><strong>Arq Backup</strong></td>
+<td>Win/Mac</td>
+<td>Cloud backup</td>
+<td>❌ Paid</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="for-beginners-freefilesync-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="for-beginners-freefilesync-tutorial">For Beginners: FreeFileSync Tutorial</h3>
+<ol type="1">
+<li><strong>Download:</strong> <a href="https://freefilesync.org/" class="uri">https://freefilesync.org/</a></li>
+<li><strong>Tutorial:</strong> <a href="https://freefilesync.org/tutorials.php">How to Use FreeFileSync</a></li>
+<li><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=example">FreeFileSync Basics</a> (YouTube)</li>
+</ol>
+</section>
+<section id="for-advanced-users-rsync" class="level3">
+<h3 class="anchored" data-anchor-id="for-advanced-users-rsync">For Advanced Users: rsync</h3>
+<ul>
+<li><strong>Guide:</strong> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories">rsync Tutorial</a></li>
+<li><strong>For researchers:</strong> <a href="https://researchcomputing.princeton.edu/support/knowledge-base/rclone">Backing Up Your Research Data with rsync</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="file-format-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="file-format-best-practices">File Format Best Practices</h2>
+<section id="choosing-preservation-friendly-formats" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-preservation-friendly-formats">Choosing Preservation-Friendly Formats</h3>
+<p>Long-term accessibility depends on choosing the right file formats.</p>
+<section id="key-resources" class="level4">
+<h4 class="anchored" data-anchor-id="key-resources">Key Resources</h4>
+<ol type="1">
+<li><strong><a href="https://www.loc.gov/preservation/resources/rfs/">Recommended Formats Statement</a></strong> - Library of Congress
+<ul>
+<li>Authoritative list of preservation formats by type</li>
+<li>Updated regularly</li>
+</ul></li>
+<li><strong><a href="https://www.dcc.ac.uk/guidance/briefing-papers/standards-watch-papers/overview-file-formats-preservation">File Formats for Preservation</a></strong> - Digital Curation Centre
+<ul>
+<li>Explains format characteristics</li>
+<li>Risk assessment for formats</li>
+</ul></li>
+<li><strong><a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-formats">Format Recommendations</a></strong> - Stanford Libraries
+<ul>
+<li>Discipline-specific recommendations</li>
+</ul></li>
+</ol>
+</section>
+<section id="quick-reference" class="level4">
+<h4 class="anchored" data-anchor-id="quick-reference">Quick Reference</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Data Type</th>
+<th>Preferred Formats</th>
+<th>Avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Text</strong></td>
+<td>.txt, .pdf/A, .xml, .html</td>
+<td>.doc, .pages</td>
+</tr>
+<tr class="even">
+<td><strong>Tabular</strong></td>
+<td>.csv, .tsv, .xml</td>
+<td>.xlsx, .numbers</td>
+</tr>
+<tr class="odd">
+<td><strong>Images</strong></td>
+<td>.tiff, .png, .jpg</td>
+<td>.psd, proprietary RAW</td>
+</tr>
+<tr class="even">
+<td><strong>Audio</strong></td>
+<td>.wav, .flac</td>
+<td>.mp3 (lossy)</td>
+</tr>
+<tr class="odd">
+<td><strong>Video</strong></td>
+<td>.mp4 (H.264), .mkv</td>
+<td>.mov, proprietary codecs</td>
+</tr>
+<tr class="even">
+<td><strong>Code</strong></td>
+<td>.py, .r, .txt</td>
+<td>IDE-specific formats</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+</section>
+<section id="metadata-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-documentation">Metadata &amp; Documentation</h2>
+<p>File names and backups are only part of the story. Document your data!</p>
+<section id="readme-files" class="level3">
+<h3 class="anchored" data-anchor-id="readme-files">README Files</h3>
+<p>Every research project should have a README file explaining: - Purpose of the project/dataset - File naming conventions used - Directory structure - Data collection methods - Variable definitions (for datasets)</p>
+<p><strong>Templates:</strong></p>
+<ul>
+<li><a href="https://cornell.app.box.com/v/ReadmeTemplate">README Template</a> - Cornell University</li>
+<li><a href="https://data.research.cornell.edu/content/readme">Guide to Writing README</a> - Cornell RDM</li>
+<li><a href="https://readme.so/">README Generator</a> - Interactive tool</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="checklists-quick-guides" class="level2">
+<h2 class="anchored" data-anchor-id="checklists-quick-guides">Checklists &amp; Quick Guides</h2>
+<section id="downloadable-resources" class="level3">
+<h3 class="anchored" data-anchor-id="downloadable-resources">Downloadable Resources</h3>
+<ol type="1">
+<li><strong><a href="https://osf.io/mv8pj/">Data Organization Checklist</a></strong> (Open Science Framework)
+<ul>
+<li>PDF checklist for file organization</li>
+<li>Version control tips</li>
+</ul></li>
+<li><strong><a href="https://speakerdeck.com/jennybc/how-to-name-files">File Naming Cheat Sheet</a></strong> by Jenny Bryan
+<ul>
+<li>Famous presentation on file naming</li>
+<li>Funny, practical, memorable</li>
+</ul></li>
+<li><strong><a href="https://dmptool.org/">Data Management Plan Checklist</a></strong> - DMPTool
+<ul>
+<li>Includes file organization sections</li>
+<li>Funder-specific templates</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="books-long-form-resources" class="level2">
+<h2 class="anchored" data-anchor-id="books-long-form-resources">Books &amp; Long-Form Resources</h2>
+<section id="recommended-reading-1" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-reading-1">Recommended Reading</h3>
+<ol type="1">
+<li><strong><a href="https://the-turing-way.netlify.app/">The Turing Way</a></strong>
+<ul>
+<li>Free, community-driven guide to reproducible research</li>
+<li>Excellent chapters on data management</li>
+</ul></li>
+<li><strong><a href="https://oxford.universitypressscholarship.com/view/10.1093/oso/9780190051488.001.0001/oso-9780190051488">Research Data Management for Academics</a></strong> - Oxford University Press
+<ul>
+<li>Comprehensive textbook</li>
+</ul></li>
+<li><strong><a href="https://mantra.edina.ac.uk/">MANTRA: Research Data Management Training</a></strong>
+<ul>
+<li>Free online course from University of Edinburgh</li>
+<li>Includes file organization module</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="discipline-specific-guides" class="level2">
+<h2 class="anchored" data-anchor-id="discipline-specific-guides">Discipline-Specific Guides</h2>
+<section id="by-field" class="level3">
+<h3 class="anchored" data-anchor-id="by-field">By Field</h3>
+<ul>
+<li><strong>Social Sciences:</strong> <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide">CESSDA Data Management Expert Guide</a></li>
+<li><strong>Humanities:</strong> <a href="https://hcommons.org/deposits/item/hc:44127/">Humanities Data Management</a></li>
+<li><strong>Life Sciences:</strong> <a href="https://www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website">EMBL-EBI Data Management</a></li>
+<li><strong>Physical Sciences:</strong> <a href="https://ukdataservice.ac.uk/">UK Data Archive</a> (various disciplines)</li>
+<li><strong>Engineering:</strong> <a href="https://www.lib.purdue.edu/research/data">Purdue Data Management</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="getting-help" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help">Getting Help</h2>
+<section id="online-communities" class="level3">
+<h3 class="anchored" data-anchor-id="online-communities">Online Communities</h3>
+<ul>
+<li><strong><a href="https://www.rd-alliance.org/">Research Data Alliance</a></strong> - Global community</li>
+<li><strong><a href="https://datacurationnetwork.org/">Data Curation Network</a></strong> - Curators helping researchers</li>
+<li><strong>Reddit:</strong> r/datahoarder, r/datacurator (practical tips)</li>
+</ul>
+</section>
+<section id="workshops-training" class="level3">
+<h3 class="anchored" data-anchor-id="workshops-training">Workshops &amp; Training</h3>
+<ul>
+<li><strong>MANTRA:</strong> <a href="https://mantra.edina.ac.uk/" class="uri">https://mantra.edina.ac.uk/</a></li>
+<li><strong>Data Carpentry:</strong> <a href="https://datacarpentry.org/lessons/" class="uri">https://datacarpentry.org/lessons/</a></li>
+<li><strong>FOSTER Open Science:</strong> <a href="https://www.fosteropenscience.eu/learning" class="uri">https://www.fosteropenscience.eu/learning</a></li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Stay Updated
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Data management best practices evolve. Bookmark a few key resources and check back periodically for updates:</p>
+<ul>
+<li>Library of Congress Preservation Formats</li>
+<li>Digital Preservation Coalition Handbook</li>
+<li>Your institutional data repository guidelines</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
+<p>For personalized advice on your specific research data management needs:</p>
+<p>📧 <a href="mailto:julien.rabaud@univ-pau.fr">julien.rabaud@univ-pau.fr</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Last update: 2026-02-09</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
