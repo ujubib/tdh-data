@@ -917,7 +917,7 @@
     "href": "resources/openrefine.html#final-tips-for-ssh-researchers",
     "title": "OpenRefine for Digital Humanities",
     "section": "Final Tips for SSH Researchers",
-    "text": "Final Tips for SSH Researchers\n\n\n\n\n\n\nTipBest Practices\n\n\n\nFor long-term projects:\n\nDocument everything - Export operations as JSON, keep notes\nVersion your datasets - Name files with dates and versions\nTest workflows early - Don’t wait until deadline to clean data\nShare knowledge - Help colleagues learn OpenRefine\nThink FAIR - Clean data is the first step to FAIR data\n\nRemember: - OpenRefine is non-destructive - you can always undo - Operations are reproducible - save and reuse workflows - The community is helpful - don’t hesitate to ask questions",
+    "text": "Final Tips for SSH Researchers\n\n\n\n\n\n\nTipBest Practices\n\n\n\nFor long-term projects:\n\nDocument everything - Export operations as JSON, keep notes\nVersion your datasets - Name files with dates and versions\nTest workflows early - Don’t wait until deadline to clean data\nShare knowledge - Help colleagues learn OpenRefine\nThink FAIR - Clean data is the first step to FAIR data\n\nRemember:\n\nOpenRefine is non-destructive - you can always undo\nOperations are reproducible - save and reuse workflows\nThe community is helpful - don’t hesitate to ask questions",
     "crumbs": [
       "Additional Resources",
       "OpenRefine Tutorials"
@@ -928,7 +928,7 @@
     "href": "resources/openrefine.html#questions-support",
     "title": "OpenRefine for Digital Humanities",
     "section": "Questions & Support",
-    "text": "Questions & Support\nFor OpenRefine help: - Forum: https://forum.openrefine.org/ - Documentation: https://openrefine.org/docs\nFor workshop-specific questions: julien.rabaud@univ-pau.fr\nAdditional DH support: - DARIAH Helpdesk - Huma-Num contact",
+    "text": "Questions & Support\nFor OpenRefine help:\n\nForum: https://forum.openrefine.org/\nDocumentation: https://openrefine.org/docs\n\nFor workshop-specific questions: julien.rabaud@univ-pau.fr",
     "crumbs": [
       "Additional Resources",
       "OpenRefine Tutorials"
